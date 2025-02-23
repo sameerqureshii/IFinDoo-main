@@ -1,0 +1,2434 @@
+<!DOCTYPE html>
+<head>
+  <!--[ Theme Color ]-->
+  <meta content="#E0F2F1" name="theme-color" />
+  <meta content="#E0F2F1" name="msapplication-navbutton-color" />
+  <meta content="#E0F2F1" name="msapplication-TileColor" />
+  <meta content="#E0F2F1" name="apple-mobile-web-app-status-bar-style" />
+
+  <link
+    defer=""
+    href="data:text/css;base64,Lyogcm9vdCAqLw0KLmRhcmsgLmF0XDpkYXJrLXNlY29uZGFyeTJ7YmFja2dyb3VuZDojMTIxMzFBIWltcG9ydGFudDtjb2xvcjojZmZmIWltcG9ydGFudH0NCi5hdFw6ZGFyay1ncmV5LWZpbGwye2ZpbGw6IzY5NkM4MH0uYXRcOmRhcmstZ3JleS1jb2xvcjJ7Y29sb3I6IzY5NkM4MH0NCi5zaXRlLW1haW4ge21hcmdpbi10b3A6IC0yMTJweCFpbXBvcnRhbnQ7fSNhdC1tYWluQWRze2Rpc3BsYXk6bm9uZX1AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA5ODBweCl7IC5jb250ZW50e3BhZGRpbmc6MzBweCAwISBpbXBvcnRhbnR9fS5nb29tZWRpYXttYXJnaW46IC0xMnB4IDAgYXV0byFpbXBvcnRhbnQ7fQ0KIC8qIGJyZWFkY3J1bWJzICovDQouZml4ZWRfX2JyZWFkY3J1bWJ7ZGlzcGxheTogYmxvY2s7fS5icmVhZGNydW1icyB7b3ZlcmZsb3c6IGhpZGRlbjsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7IGZvbnQtc2l6ZTogMTNweDsgY29sb3I6ICMyMjIhaW1wb3J0YW50OyB9IC5icmVhZGNydW1icyBhIHtjb2xvcjogIzIyMiFpbXBvcnRhbnQ7IG1hcmdpbjogMCAycHg7IGxpbmUtaGVpZ2h0OiBub3JtYWw7IH0gLmJyZWFkY3J1bWJzIC5icmVhZGhvbWUgYSB7IG1hcmdpbjogMCA1cHggMCAwOyB9IC5icmVhZGNydW1icyAuYnJlYWRsYWJlbDpsYXN0LWNoaWxkIHsgbWFyZ2luOiAwIDAgMCA0cHg7IH0gLmJyZWFkY3J1bWJzIGE6aG92ZXIgeyBjb2xvcjogIzA5ODRlMzsgfSAuYnJlYWRjcnVtYnMgc3ZnIHsgd2lkdGg6IDE2cHg7IGhlaWdodDogMTZweDsgdmVydGljYWwtYWxpZ246IC00cHg7IH0gLmJyZWFkY3J1bWJzIHN2ZyBwYXRoIHsgZmlsbDogIzAwMDsgfQ0KLyogUmVsYXRlZCAqLw0KLnJlbGF0ZWQtcG9zdHMgeyBvdmVyZmxvdzogaGlkZGVuOyBtYXJnaW46IDUwcHggMCAzMHB4OyBwb3NpdGlvbjogcmVsYXRpdmU7IGRpc3BsYXk6IGJsb2NrO30ucmVsYXRlZHtkaXNwbGF5OiBncmlkO2dhcDogMTBweDsgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnIgMWZyIDFmciAxZnI7fSAjcmVsYXRlZC1wb3N0c3tvdmVyZmxvdzpoaWRkZW47bWFyZ2luOjA7ZGlzcGxheTpub25lfS5yZWxhdGVkIGxpe292ZXJmbG93OiBoaWRkZW47IHBvc2l0aW9uOiByZWxhdGl2ZTsgYm94LXNpemluZzogYm9yZGVyLWJveDsgZGlzcGxheTogZmxleDsgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgZmxleDogMSAxIGF1dG87fS5yZWxhdGVkLXRodW1ie292ZXJmbG93OmhpZGRlbjt9LnJlbGF0ZWQgbGkgLnJlbGF0ZWQtaW1ne2Rpc3BsYXk6IGZsZXg7IHBvc2l0aW9uOiByZWxhdGl2ZTsgYm94LXNpemluZzogYm9yZGVyLWJveDsgbWluLWhlaWdodDogOTEuMXB4OyB3aWR0aDogMTAwJTsgdHJhbnNpdGlvbjogYWxsIC4zcyBlYXNlLW91dDt9LnJlbGF0ZWQtdGl0bGV7Zm9udC13ZWlnaHQ6NTAwO3Bvc2l0aW9uOnJlbGF0aXZlO21hcmdpbi10b3A6IDEzcHg7fS5yZWxhdGVkLXRpdGxlIGF7dGV4dC1kZWNvcmF0aW9uOiBub25lOyBmb250LXdlaWdodDogNzAwOyBkaXNwbGF5OiAtd2Via2l0LWJveDsgLXdlYmtpdC1saW5lLWNsYW1wOiAyOyAtd2Via2l0LWJveC1vcmllbnQ6IHZlcnRpY2FsOyBvdmVyZmxvdzogaGlkZGVuO2ZvbnQtc2l6ZTogMThweDt9LnJlbGF0ZWQgbGk6bnRoLW9mLXR5cGUoMyksLnJlbGF0ZWQgbGk6bnRoLW9mLXR5cGUoNiksLnJlbGF0ZWQgbGk6bnRoLW9mLXR5cGUoOSl7bWFyZ2luLXJpZ2h0OjB9LnJlbGF0ZWQgLnJlbGF0ZWQtdGh1bWI6aG92ZXIgLnJlbGF0ZWQtaW1nOmFmdGVye2JhY2tncm91bmQ6cmdiYSgwLDAsMCwwLjM4KX1AbWVkaWEgKG1heC13aWR0aDogNjQwcHgpeyNyZWxhdGVkLXBvc3RzIC5yZWxhdGVke2dyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDFmciFpbXBvcnRhbnQ7fX1AbWVkaWEgKG1heC13aWR0aDogODQwcHgpey5yZWxhdGVke2dyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDFmciAxZnIhaW1wb3J0YW50O319DQovKiBTaGFyZSBidXR0b24gKi8NCi5yZXNwby1zaGFyaW5nIHsgZGlyZWN0aW9uOiBsdHI7IGRpc3BsYXk6IGJsb2NrOyBvcGFjaXR5OiAxOyB0ZXh0LWFsaWduOiBjZW50ZXI7IH0gLnJlc3BvLXNoYXJpbmctYnV0dG9uX19saW5rIHsgYm94LXNpemluZzogYm9yZGVyLWJveDsgLW1vei10cmFuc2l0aW9uOiBvcGFjaXR5IC4ycyBlYXNlLWluLHRvcCAuMnMgZWFzZS1pbjsgLW1zLXRyYW5zaXRpb246IG9wYWNpdHkgLjJzIGVhc2UtaW4sdG9wIC4ycyBlYXNlLWluOyAtby10cmFuc2l0aW9uOiBvcGFjaXR5IC4ycyBlYXNlLWluLHRvcCAuMnMgZWFzZS1pbjsgLW1vei1ib3JkZXItcmFkaXVzOiAwOyBib3JkZXItcmFkaXVzOiAwOyBjdXJzb3I6IHBvaW50ZXI7IGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2IoMCAwIDAgLyA0JSksIDAgMTJweCAyOHB4ICNkZGQ7IGRpc3BsYXk6IGlubGluZS1ibG9jazsgZm9udC1zaXplOiAxMnB4OyBoZWlnaHQ6IDQwcHg7IGxpbmUtaGVpZ2h0OiA0MHB4OyBtYXJnaW4tcmlnaHQ6IDhweDsgcGFkZGluZzogMCAxMHB4OyBwb3NpdGlvbjogcmVsYXRpdmU7IHRleHQtYWxpZ246IGNlbnRlcjsgdG9wOiAwOyB2ZXJ0aWNhbC1hbGlnbjogdG9wOyB3aGl0ZS1zcGFjZTogbm93cmFwOyB9IC5yZXNwby1zaGFyaW5nLW1vcmUtY29udGVudCB7IGRpc3BsYXk6IGJsb2NrOyB9IC5yZXNwby1zaGFyaW5nLWJ1dHRvbl9fbGluayB7IGRpc3BsYXk6IGlubGluZS1ibG9jazsgdGV4dC1kZWNvcmF0aW9uOiBub25lOyBjb2xvcjogI2ZmZjsgbWFyZ2luOiAwIGF1dG87IHRyYW5zaXRpb246IGFsbCAuM3M7IG1pbi13aWR0aDogMTAwcHg7IG1hcmdpbjogNXB4IDVweDsgfSAucmVzcG8tc2hhcmluZy1idXR0b25fX2xpbms6aG92ZXIgeyBvcGFjaXR5OiAuODsgdG9wOiAtNHB4OyB9IC5yZXNwby1zaGFyaW5nLWJ1dHRvbl9faWNvbiBzdmcgeyBoZWlnaHQ6IDIwcHg7IHdpZHRoOiAyMHB4OyBwb3NpdGlvbjogcmVsYXRpdmU7IHRvcDogMTBweDsgdmVydGljYWwtYWxpZ246IHRvcDsgfSAucmVzcG8tc2hhcmluZy1idXR0b24gc3ZnIHBhdGggeyBmaWxsOiAjZmZmOyB9IC5yZXNwby1zaGFyaW5nLWJ1dHRvbl9faWNvbiB7IGN1cnNvcjogcG9pbnRlcjsgfSAucmVzcG8tc2hhcmluZy1idXR0b25fX2ljb24geyBmb250LXdlaWdodDogbm9ybWFsOyB9LmRhcmsgLnJlc3BvLXNoYXJpbmctYnV0dG9uX19saW5re2JveC1zaGFkb3c6bm9uZTt9DQovKiBUaW1lICovDQpzcGFuLmNsb2NrLXRpbWV7Zm9udC1zaXplOiAxMHB4O30uYWN0aXZle2NvbG9yOiNmODg7Zm9udC13ZWlnaHQ6NzAwfQ0KLyotLS0gcG9zdCAtLS0qLw0KI2p1ZHVsLXBvc3QgLnBvc3QtdGl0bGUge2ZvbnQtc2l6ZTogMjRweDsgcGFkZGluZy10b3A6IDIwcHg7fS5wb3N0X3RpbWVzbWFwe2p1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjttYXJnaW4tYm90dG9tOiAxOHB4O3BhZGRpbmc6IDIwcHggMDsgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7IGZvbnQtc2l6ZTogMTJweDsgY29sb3I6ICMyMjI7IGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjO30uYXV0aG9yYXZhLXggeyBkaXNwbGF5OiBibG9jazsgd2lkdGg6IDM2cHg7IGhlaWdodDogMzZweDsgYm9yZGVyLXJhZGl1czogNTAlOyBvdmVyZmxvdzogaGlkZGVuOyB9DQogLmhlcm9fdGl0bGV7bWFyZ2luOiAwIGF1dG87dHJhbnNpdGlvbjogYWxsIC4zczt9LnBvc3QgeyBwYWRkaW5nOiAwIDEycHg7IG1hcmdpbjogMDsgfQ0KICAubWFyZ2luIHttYXJnaW46IDIwcHggYXV0bzt0ZXh0LWFsaWduOiBjZW50ZXI7fS5ub3RpZnkgeyBiYWNrZ3JvdW5kOmdyZWVuOyBjb2xvcjogI2ZmZiFpbXBvcnRhbnQ7IHBhZGRpbmc6IDVweCAyMHB4OyB0ZXh0LWFsaWduOiBjZW50ZXI7IHBvc2l0aW9uOiBhYnNvbHV0ZTt6LWluZGV4Ojk7IHJpZ2h0OiAyOCU7IHRvcDo1cHg7IGJvcmRlci1yYWRpdXM6IDVweDsgfS5wb3N0LWJvZHkgYmxvY2txdW90ZTo6YWZ0ZXJ7Y29udGVudDogJ0RvdWJsZSBjbGljayB0byBjb3B5JzsgcG9zaXRpb246IGFic29sdXRlOyB0b3A6IDA7IHJpZ2h0OiA1cHg7IGZvbnQtc2l6ZTogMTBweDsgZGlzcGxheTogaW5saW5lLWJsb2NrOyBjb2xvcjojMDA5Njg4OyBmb250LXdlaWdodDogNzAwOyBwYWRkaW5nOiA1cHg7IHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7fS5kb3dubG9hZC13cmFwcGVye2Rpc3BsYXk6IGlubGluZS1ibG9jazt9LmJ0bjpob3ZlcnthbmltYXRpb246IHNoYWtlIDE1MG1zIDIgbGluZWFyO30NCi5wb3N0LWJvZHkgaDIge2ZvbnQtc2l6ZTogMjdweCAhaW1wb3J0YW50O30ucG9zdC1ib2R5IGgze2ZvbnQtc2l6ZTogMjVweH0ucG9zdC1ib2R5IGg0e2ZvbnQtc2l6ZTogMjNweH0NCi5wb3N0LWJvZHkgYmxvY2txdW90ZSB7IGJhY2tncm91bmQtY29sb3I6ICNFMEYyRjE7IGJvcmRlci1yYWRpdXM6IC4yNXJlbTsgcGFkZGluZzogNDBweCAyMHB4IDIwcHg7IG1hcmdpbjogMXJlbSAwIDEuMnJlbTsgYm9yZGVyOiAxcHggc29saWQgIzAwOTY4ODsgcG9zaXRpb246IHJlbGF0aXZlOyB9IC5jbG9jayB7IHBhZGRpbmc6IDA7ICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTt9LmRhcmsgLnBvc3QtYm9keSBibG9ja3F1b3RlLCAuZGFyayAuZG93bmxvYWQtbGluaywgLmRhcmsgLmJ0bntiYWNrZ3JvdW5kOiMxMjEzMUE7Y29sb3I6IzY5NkM4MDtib3JkZXItY29sb3I6I2ZmZiFpbXBvcnRhbnR9LmRhcmsgLnBvc3QtYm9keSBibG9ja3F1b3RlOjphZnRlcntjb2xvcjojZmZmfQ0KLmRvd25sb2FkLWxpbmsgYSBzdmd7d2lkdGg6MjBweDttYXJnaW4tcmlnaHQ6IDRweDtoZWlnaHQ6MjBweDtkaXNwbGF5OmlubGluZS1ibG9jazt2ZXJ0aWNhbC1hbGlnbjptaWRkbGV9LmRvd25sb2FkLWxpbmsgYSwgYS5idG57dGV4dC1kZWNvcmF0aW9uOm5vbmU7Y29sb3I6ICNmZmYhaW1wb3J0YW50O30uZG93bmxvYWQtbGluaywuYnRuLC5kb3dubG9hZC1saW5rOjphZnRlciwuYnRuOjphZnRlcntkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IHBhZGRpbmc6IDE2cHggMjBweDsgZm9udC1zaXplOiAxOHB4OyBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoNDVkZWcsIHRyYW5zcGFyZW50IDUlLCAjMDA5Njg4IDUlKTttYXJnaW46IDAgMTJweDsgYm9yZGVyOiAwOyBjb2xvcjogI2ZmZjsgbGV0dGVyLXNwYWNpbmc6IDNweDsgbGluZS1oZWlnaHQ6IDE7IGJveC1zaGFkb3c6IDZweCAwcHggMHB4ICNjY2M7IG91dGxpbmU6IHRyYW5zcGFyZW50OyBwb3NpdGlvbjogcmVsYXRpdmU7fS5teWJ1dHRvbntkaXNwbGF5Om5vbmV9LmJnLW92ZXJsYXl4e2JhY2tncm91bmQ6cmdiYSgwLDAsMCwwLjYpO3otaW5kZXg6OTk5IWltcG9ydGFudDtoZWlnaHQ6MTAwdmg7d2lkdGg6MTAwJTtwb3NpdGlvbjpmaXhlZDtsZWZ0OjA7dG9wOjA7cmlnaHQ6MDtib3R0b206MDt6LWluZGV4OjA7LXdlYmtpdC10cmFuc2l0aW9uOmJhY2tncm91bmQgMC4xNXMgbGluZWFyOy1vLXRyYW5zaXRpb246YmFja2dyb3VuZCAwLjE1cyBsaW5lYXI7dHJhbnNpdGlvbjpiYWNrZ3JvdW5kIDAuMTVzIGxpbmVhcn0jZWxlbWVudF90b19wb3BfdXB7ZGlzcGxheTpub25lO3otaW5kZXg6OTk5OTtvcGFjaXR5OjE7b3ZlcmZsb3c6aGlkZGVuO3RvcDoxMDBweH1AbWVkaWEgKG1heC13aWR0aDo0ODBweCl7LmVsZW1lbnRfcG9wX3VwX3dyYXB7bWF4LXdpZHRoOjkwJSFpbXBvcnRhbnR9fS5lbGVtZW50X3BvcF91cF93cmFwe3Bvc2l0aW9uOmZpeGVkO3otaW5kZXg6OTk5OTk7LXdlYmtpdC10cmFuc2Zvcm06dHJhbnNsYXRlKDUwJSw1MCUpO2xlZnQ6NTAlO3RvcDogNTAlO3JpZ2h0OjUwJTt0cmFuc2Zvcm06dHJhbnNsYXRlKC01MCUsLTUwJSk7LXdlYmtpdC10cmFuc2l0aW9uOi13ZWJraXQtdHJhbnNmb3JtIDAuM3MgZWFzZS1vdXQ7LW8tdHJhbnNpdGlvbjotby10cmFuc2Zvcm0gMC4zcyBlYXNlLW91dDt0cmFuc2l0aW9uOi13ZWJraXQtdHJhbnNmb3JtIDAuM3MgZWFzZS1vdXQ7LW8tdHJhbnNpdGlvbjp0cmFuc2Zvcm0gMC4zcyBlYXNlLW91dDt0cmFuc2l0aW9uOnRyYW5zZm9ybSAwLjNzIGVhc2Utb3V0O3RyYW5zaXRpb246dHJhbnNmb3JtIDAuM3MgZWFzZS1vdXQsLXdlYmtpdC10cmFuc2Zvcm0gMC4zcyBlYXNlLW91dDtkaXNwbGF5OmlubGluZS1ibG9jazt2ZXJ0aWNhbC1hbGlnbjptaWRkbGU7d2lkdGg6MzIwcHg7Ym94LXNoYWRvdzowIDVweCAzNXB4IHJnYigwIDAgMC83JSk7LXdlYmtpdC1ib3gtc2l6aW5nOmJvcmRlci1ib3g7LW1vei1ib3gtc2l6aW5nOmJvcmRlci1ib3g7Ym94LXNpemluZzpib3JkZXItYm94O21hcmdpbjozMHB4IGF1dG87cGFkZGluZzoxNXB4O21heC13aWR0aDo4MCU7YmFja2dyb3VuZC1jb2xvcjojZmZmZGZjO2JvcmRlci1yYWRpdXM6NnB4O2JvcmRlcjoxcHggc29saWQgcmdiYSgwLDAsMCwwLjIpO292ZXJmbG93LXk6YXV0bzttYXgtaGVpZ2h0OmNhbGMoMTAwdmggLSA3MHB4KX0uZWxlbWVudF9wb3BfdXBfaGVhZGVyIC5lbGVtZW50X3BvcF91cF9jbG9zZXtjdXJzb3I6cG9pbnRlcjtmb250LXdlaWdodDpib2xkO3otaW5kZXg6NX0uZWxlbWVudF9wb3BfdXBfaGVhZGVye2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7cG9zaXRpb246cmVsYXRpdmU7anVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW47Ym9yZGVyLWJvdHRvbToxcHggI0U1RTVFNSBzb2xpZDtwYWRkaW5nOjAgMCAxM3B4O21hcmdpbi1ib3R0b206MTBweH0uZWxlbWVudF9wb3BfdXBfY29udGVudHtvdXRsaW5lOjA7d2lkdGg6MTAwJTtwb3NpdGlvbjpyZWxhdGl2ZTtkaXNwbGF5OmZsZXg7anVzdGlmeS1jb250ZW50OmNlbnRlcjthbGlnbi1pdGVtczpjZW50ZXI7LXdlYmtpdC1mbGV4LWRpcmVjdGlvbjpjb2x1bW47LW1zLWZsZXgtZGlyZWN0aW9uOmNvbHVtbjtmbGV4LWRpcmVjdGlvbjpjb2x1bW47bWF4LWhlaWdodDpjYWxjKDEwMHZoIC0gNzBweCl9LmVsZW1lbnRfcG9wX3VwX3RpbWVyX2J1dHRvbntkaXNwbGF5Om5vbmU7cG9zaXRpb246cmVsYXRpdmU7YmFja2dyb3VuZDojZTZmZmU2O3BhZGRpbmc6MTJweH0uZWxlbWVudF9wb3BfdXBfYWR7bWFyZ2luOjRweCAwIDRweDtwb3NpdGlvbjpyZWxhdGl2ZTtib3JkZXI6IDFweCBzb2xpZCAjY2NjO2Rpc3BsYXk6aW5saW5lLWJsb2NrO3dpZHRoOjMwMHB4O2hlaWdodDoyMDBweH0uZWxlbWVudF9wb3BfdXBfdGltZXJ7Zm9udC1zaXplOjExcHg7Zm9udC13ZWlnaHQ6NzAwO2NvbG9yOmJyb3duO2JhY2tncm91bmQ6I2ZhZWJlYjtwYWRkaW5nOjEycHggMDt0ZXh0LWFsaWduOmNlbnRlcjtwb3NpdGlvbjpyZWxhdGl2ZX0uZG93bmxvYWRhZG9wZW57YmFja2dyb3VuZC1jb2xvcjojZjNmMmYyO2NvbG9yOiMwMDAhaW1wb3J0YW50O2JveC1zaXppbmc6Ym9yZGVyLWJveDtwYWRkaW5nOjNweCA2MHB4O2ZvbnQtc2l6ZTowLjg3NXJlbTtmb250LXdlaWdodDo2MDA7aW5zZXQ6MC4xMjVyZW07dGV4dC1hbGlnbjpjZW50ZXI7Zm9udC1mYW1pbHk6IkZpcmEgQ29kZSBWRiIsIkZpcmEgQ29kZSIsbW9ub3NwYWNlO2xldHRlci1zcGFjaW5nOjAuMXB4O3RleHQtdHJhbnNmb3JtOmNhcGl0YWxpemU7Ym9yZGVyOjFweCBzb2xpZCAjMjEyMTIxIWltcG9ydGFudH0uZWxlbWVudF9wb3BfdXBfdGltZXJfYnV0dG9uIHB7bWFyZ2luOjVweCAwIDVweDt0ZXh0LWFsaWduOmNlbnRlcjtkaXNwbGF5OmJsb2NrO2ZvbnQtc2l6ZToxMXB4fS5lbGVtZW50X3BvcF91cF90aW1lcl9idXR0b24gcC5kdGV4dHtmb250LXNpemU6MTBweDtjb2xvcjpncmVlbn0uZWxlbWVudF9wb3BfdXBfdGltZXJfYnV0dG9uIHAuZnJlZWRvd25hZHttYXJnaW46MTVweCAwIDVweCFpbXBvcnRhbnR9LmVsZW1lbnRfcG9wX3VwX3RpdGxle2ZvbnQtd2VpZ2h0OmJvbGR9LmVsZW1lbnRfcG9wX3VwX19idXR0b25fY29udGVudHttYXJnaW4tdG9wOjEycHg7cG9zaXRpb246cmVsYXRpdmU7d2lkdGg6MTAwJTtib3gtc2l6aW5nOmJvcmRlci1ib3h9LnRlcm1zaGVhZHsganVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW59LnRlcm1zaGVhZCBzcGFuLmNsb3NleHtjdXJzb3I6cG9pbnRlcjt6LWluZGV4Ojk7fSAuY2xpY2tfcG9we3Bvc2l0aW9uOnJlbGF0aXZlfSNhdF90ZXJtc3t6LWluZGV4OiA5OTk5OyBkaXNwbGF5OiBub25lOyBvdmVyZmxvdzogaGlkZGVuO30gLnRlcm1zX3dyYXB7cGFkZGluZzogMTVweDsgd2lkdGg6IDUwMHB4OyB0b3A6IDUwJTsgZGlzcGxheTogaW5saW5lLWJsb2NrOyByaWdodDogNTAlOyBsZWZ0OiA0MyU7IGFsaWduLWl0ZW1zOiBjZW50ZXI7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7IHotaW5kZXg6IDk5OTsgcG9zaXRpb246IGZpeGVkOyBtYXgtd2lkdGg6IDk1JTsgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwtNTAlKXNjYWxlKDAuNyk7IG1hcmdpbjogMCBhdXRvOyBib3JkZXItcmFkaXVzOiA2cHg7IGJvcmRlcjogMnB4IHNvbGlkICMwMDk2ODg7IG92ZXJmbG93LXk6IGF1dG87IG1heC1oZWlnaHQ6IGNhbGMoMTAwdmggLSA3MHB4KTsgdmVydGljYWwtYWxpZ246IG1pZGRsZTsgYm94LXNoYWRvdzogMCA1cHggMzVweCByZ2IoMCAwIDAgLyAyMCUpO30udGVybXNfY29udGVudHtkaXNwbGF5OiBmbGV4O2p1c3RpZnktY29udGVudDogY2VudGVyO2ZsZXgtZGlyZWN0aW9uOiBjb2x1bW47IGFsaWduLWl0ZW1zOiBjZW50ZXI7fSAudGVybXNoZWFkIHtib3JkZXItYm90dG9tOiAxcHggc29saWQgI2NjYzsgbWFyZ2luLWJvdHRvbTogMTVweDsgcGFkZGluZzogMXB4IDAgMTBweDsgd2lkdGg6IDEwMCU7IGZvbnQtc2l6ZTogMjVweDsgZm9udC13ZWlnaHQ6IDcwMDt9LnRlcm1zX2NvbnRlbnQgPiBwe2Rpc3BsYXk6IGlubGluZS1ibG9jazsgcGFkZGluZzogNnB4O30NCi5wb3N0LWJvZHkgaDEsIC5wb3N0LWJvZHkgaDIsIC5wb3N0LWJvZHkgaDMsIC5wb3N0LWJvZHkgaDQsIC5wb3N0LWJvZHkgaDUsIC5wb3N0LWJvZHkgaDYgeyAgZm9udC13ZWlnaHQ6IDcwMDsgbWFyZ2luOiAwIDAgMTVweDsgfQ0KLnBvc3QtYm9keXtsaW5lLWhlaWdodDoxLjhlbTtvdmVyZmxvdzpoaWRkZW59DQp0ZXh0YXJlYSwucHJlY29kZXt3aWR0aDoxMDAlOy1tb3otYm94LXNpemluZzpib3JkZXItYm94Oy13ZWJraXQtYm94LXNpemluZzpib3JkZXItYm94O2JveC1zaXppbmc6Ym9yZGVyLWJveH0NCi5wb3N0LWJvZHkgcHJle3Bvc2l0aW9uOnJlbGF0aXZlO3BhZGRpbmctdG9wOjE4cHg7bGluZS1oZWlnaHQ6IDEuMzt9DQoucG9zdC1ib2R5IHByZTo6YmVmb3Jle2ZvbnQtc2l6ZToxNHB4O3Bvc2l0aW9uOnZhcigtLTZhcXkwMSk7dG9wOjA7cGFkZGluZzowIDEwcHg7bGVmdDowO3JpZ2h0OjA7Y29sb3I6I2ZmZjsNCmRpc3BsYXk6YmxvY2s7bWFyZ2luOjA7Y29udGVudDomIzM5O0NvZGVsaW5lcyAtIGRvdWJsZWNsaWNrIHRvIHNlbGVjdCBhbGwhJiMzOTs7aGVpZ2h0OjE4cHg7YmFja2dyb3VuZDojZDJjYmI4fQ0KLnNlcGFyYXRvciBhe21hcmdpbi1sZWZ0OjAhaW1wb3J0YW50O21hcmdpbi1yaWdodDowIWltcG9ydGFudH0NCi5wb3N0LWJvZHkgaW1ne21heC13aWR0aDoxMDAlO2hlaWdodDphdXRvO3BhZGRpbmc6MDttYXJnaW46MCBhdXRvO2Rpc3BsYXk6YmxvY2t9LmF0LWFkc2Jsb2NrIHsgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjsgcGFkZGluZzogMjBweDsgcG9zaXRpb246IHJlbGF0aXZlOyBib3gtc2hhZG93OiAwIDAgMzVweCByZ2IoMCAwIDAgLyA5JSk7IGJvcmRlcjogMXB4IGRhc2hlZDsgfQ0KLyotLS0gY3VzdG9tIGNvbW1lbnRzIC0tLSovDQouY29tbWVudHMgaDR7bWFyZ2luLWJvdHRvbToyMHB4fS5ibG9nLXBvc3Rze2Rpc3BsYXk6YmxvY2shaW1wb3J0YW50fQ0KLmRsYnRue2Rpc3BsYXk6aW5saW5lLWJsb2NrO3BhZGRpbmc6NXB4IDIwcHg7YmFja2dyb3VuZDojMDBBMzc2O2JvcmRlci1yYWRpdXM6M3B4O2NvbG9yOiNmZmYhaW1wb3J0YW50O3RleHQtYWxpZ246Y2VudGVyfQ0KLmRsYnRuOmhvdmVye2JhY2tncm91bmQ6b3JhbmdlfS5kYXJrIC5jb21tZW50LnJlcGx5IC5jb21tZW50LWJvZHl7YmFja2dyb3VuZC1jb2xvcjojMTIxMzFBIWltcG9ydGFudH0NCi5oaWRlLWNvbnRlbnR7ZGlzcGxheTpub25lO21hcmdpbjowO3BhZGRpbmc6MDt9DQphLnNob3djb250ZW50LCNjb21tZW50cyBhLmhpZGRlbmNvbnRlbnR7ZGlzcGxheTpibG9jazt0ZXh0LWRlY29yYXRpb246bm9uZTtwb3NpdGlvbjpyZWxhdGl2ZTtmb250LXdlaWdodDo0MDA7Zm9udC1zaXplOjE1cHg7cGFkZGluZzoxMi41cHggMDtib3JkZXI6MnB4IHNvbGlkO2JvcmRlci1yYWRpdXM6NXB4O3RleHQtYWxpZ246Y2VudGVyO21hcmdpbjozMHB4IGF1dG87bGV0dGVyLXNwYWNpbmc6MXB4O3RyYW5zaXRpb246YWxsIC4zc30NCiNjb21tZW50cyBhLmhpZGRlbmNvbnRlbnQge2JhY2tncm91bmQ6I2ZmZjtjb2xvcjojYWNiM2I4O3RyYW5zaXRpb246YWxsIC4zc30NCmEuc2hvd2NvbnRlbnQ6aG92ZXJ7YmFja2dyb3VuZDojZmZmO2NvbG9yOiM1NTkzZjA7fQ0KI2NvbW1lbnRzIGEuaGlkZGVuY29udGVudDpob3ZlcntiYWNrZ3JvdW5kOiNhY2IzYjg7Y29sb3I6I2ZmZjt9LmNvbW1lbnQtY29udGVudHttYXJnaW4tYm90dG9tOiAzOXB4OyBwb3NpdGlvbjogcmVsYXRpdmU7ZGlzcGxheTp2YXIoLS11MmZ4dXEpO2ZsZXgtZGlyZWN0aW9uOiBjb2x1bW47fSNuZXh0cG9zdCwjcG9zdHBhZ2VyLCNwcmV2cG9zdHtoZWlnaHQ6YXV0bztwYWRkaW5nOjB9ICNuZXh0cG9zdCwjcHJldnBvc3R7ZGlzcGxheTppbmxpbmUtYmxvY2t9ICNuZXh0cG9zdCwjcG9zdHBhZ2VyLCNwcmV2cG9zdHstbW96LWJveC1zaXppbmc6Ym9yZGVyLWJveDstd2Via2l0LWJveC1zaXppbmc6Ym9yZGVyLWJveDtib3gtc2l6aW5nOmJvcmRlci1ib3g7bWFyZ2luOjEwcHggMDt9ICNwcmV2cG9zdHtmbG9hdDpyaWdodDt0ZXh0LWFsaWduOmxlZnR9Lm5vdHh0e3BhZGRpbmc6MCA4cHg7ZGlzcGxheTppbmxpbmUtYmxvY2s7dmVydGljYWwtYWxpZ246bWlkZGxlO30gI25leHRwb3N0OmhvdmVyIHN2ZywjcHJldnBvc3Q6aG92ZXIgc3Zne30gLnMtd29yZCwuYy13b3Jke2Zsb2F0OmxlZnQ7bWFyZ2luLXJpZ2h0OjVweH0gLmV4cGFuZC1tb3JlIC5kaXNxdXMtYm94LC5leHBhbmQtbW9yZSAuYmxvZ2dlci1ib3gsLmV4cGFuZC1tb3JlIC5jLXdvcmR7ZGlzcGxheTpibG9ja30gLmV4cGFuZC1tb3JlIC5zLXdvcmQsLmMtd29yZHtkaXNwbGF5Om5vbmV9IC5yZXBseS1zdmd7ZmxvYXQ6bGVmdDttYXJnaW4tdG9wOi0zcHg7fUAtd2Via2l0LWtleWZyYW1lcyBpbmRpY2F0b3J7MCV7b3BhY2l0eTowfTUwJXtvcGFjaXR5OjF9MTAwJXtvcGFjaXR5OjB9fSBALW1vei1rZXlmcmFtZXMgaW5kaWNhdG9yezAle29wYWNpdHk6MH01MCV7b3BhY2l0eToxfTEwMCV7b3BhY2l0eTowfX0gQGtleWZyYW1lcyBpbmRpY2F0b3J7MCV7b3BhY2l0eTowfTUwJXtvcGFjaXR5OjF9MTAwJXtvcGFjaXR5OjB9fQ0KI2N1c3RvbS1jb21tZW50c3ttYXJnaW46MjBweCAwfSAuY29tbWVudC1hdmF0YXIsLmNvbW1lbnQtYm9keSwuY29tbWVudC1oZWFkZXItZGV0aWx7b3ZlcmZsb3c6aGlkZGVufSAjY3VzdG9tLWNvbW1lbnRzIGg0e2ZvbnQtc2l6ZToyMHB4O21hcmdpbi1ib3R0b206MjBweDtjb2xvcjojMDAwO2ZvbnQtd2VpZ2h0OjcwMDtib3JkZXItYm90dG9tOjFweCBzb2xpZCAjZGRkO3BhZGRpbmctYm90dG9tOiAxMHB4O30gLmNvbW1lbnQtYXZhdGFye2Zsb2F0OmxlZnQ7bWFyZ2luOmF1dG87ZGlzcGxheTpibG9jazt3aWR0aDozNnB4O2hlaWdodDozNnB4O2JhY2tncm91bmQ6I2RkZDtib3JkZXItcmFkaXVzOjUwJTttYXJnaW4tdG9wOiAwcHg7fSAuY29tbWVudHMgLnJlcGxpZXMgLmNvbW1lbnQtYXZhdGFye3dpZHRoOjMycHg7aGVpZ2h0OjMycHh9LmNvbW1lbnRzIC5jb21tZW50cy1jb250ZW50IHsgZm9udC1zaXplOiAxNHB4OyBtYXJnaW4tYm90dG9tOiAzMHB4OyBiYWNrZ3JvdW5kOiAjZmZmOyBwYWRkaW5nOiAxN3B4OyBib3JkZXItcmFkaXVzOiAxMHB4OyB0cmFuc2l0aW9uOiBhbGwgLjVzIGVhc2U7IH0gLmNvbW1lbnQtaGVhZGVyLWRldGlse30gLmNvbW1lbnQtdXJse2Rpc3BsYXk6bm9uZX0gLmNvbW1lbnQtbGlzdHttYXJnaW4tYm90dG9tOjE1cHg7cGFkZGluZy1ib3R0b206MTVweDtib3JkZXItYm90dG9tOiAxcHggc29saWQgI2RkZH0gdWwuY29tbWVudHN7bWFyZ2luOjAgMCAyMHB4O3BhZGRpbmc6MH0gLmNvbW1lbnQtYm9keXtmb250LXNpemU6MTRweDttYXJnaW46MCAxMHB4IDIwcHg7Ym9yZGVyOiAxcHggc29saWQgIzAwOTY4ODsgcGFkZGluZzogMjBweDtib3JkZXItcmFkaXVzOiA0cHg7IHBvc2l0aW9uOnJlbGF0aXZlO30gLmNvbW1lbnQucmVwbHl7cG9zaXRpb246cmVsYXRpdmU7fSAuY29tbWVudC5yZXBseSAuY29tbWVudC1ib2R5e21hcmdpbjogMCAyNXB4IDEwcHg7IGJhY2tncm91bmQ6ICNFMEYyRjE7fSAuY29tbWVudC1mb290ZXJ7Zm9udC1zaXplOjEycHg7cG9zaXRpb246cmVsYXRpdmU7bWFyZ2luOiAwO30gLmEtcmVwbHl7cG9zaXRpb246dmFyKC0tNmFxeTAxKTsgYm90dG9tOiAxMnB4O2JvcmRlcjogMXB4IHNvbGlkICNjY2M7Zm9udC1zaXplOiAxMnB4OyBkaXNwbGF5OnZhcigtLXUyZnh1cSk7cGFkZGluZzogM3B4IDEycHg7IGZsZXgtZGlyZWN0aW9uOiByb3c7IGZvbnQtd2VpZ2h0OiA3MDA7fSAuY3VzdG9tLWNvbW1lbnRzLXBhZ2Vye21hcmdpbi1ib3R0b206MjBweH0gI2N1c3RvbS1jb21tZW50cyAjY29tbWVudC1lZGl0b3J7bWFyZ2luOjA7d2lkdGg6IDEwMCU7fSAuY29tbWVudHMucmVwbGllc3ttYXJnaW4tYm90dG9tOjEwcHh9IC5hLXVuZG97YmFja2dyb3VuZDojMzMzO3BhZGRpbmc6MnB4IDVweDtib3JkZXItcmFkaXVzOjJweDtjb2xvcjojZmZmIWltcG9ydGFudDtkaXNwbGF5Om5vbmV9IC5jb21tZW50LWxpc3QgLmEtdW5kb3tkaXNwbGF5OmlubGluZS1ibG9jazttYXJnaW46MjBweCAwO2ZvbnQtc2l6ZToxMnB4fSAuYS1kZWxldGV7ZGlzcGxheTpub25lO3Bvc2l0aW9uOnZhcigtLTZhcXkwMSk7cmlnaHQ6MTBweDtjb2xvcjogI2RkZCAhaW1wb3J0YW50O30gLmNvbW1lbnQtbGlzdDpob3ZlciAuYS1kZWxldGUsLnJlcGxpZXM6aG92ZXIgLmEtZGVsZXRle2Rpc3BsYXk6aW5saW5lIWltcG9ydGFudH0gLmNvbW1lbnQtaGVhZGVyIC5hLWRlbGV0ZXtmb250LXNpemU6MTJweH0gLmNvbW1lbnQtYXV0aG9ye2ZvbnQtd2VpZ2h0OjcwMH0uY29tbWVudC1hdXRob3IgYXtjb2xvcjojNzU1MzllfS5jb21tZW50LWhlYWRlcntmb250LXNpemU6MTRweDt0ZXh0LXRyYW5zZm9ybTpjYXBpdGFsaXplO30gYnV0dG9uLGJ1dHRvbltkaXNhYmxlZF06YWN0aXZle2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtib3JkZXItcmFkaXVzOjNweDtib3JkZXI6MXB4IHNvbGlkICM0OWE1YmY7cGFkZGluZzozcHggMTBweDt0ZXh0LWRlY29yYXRpb246bm9uZTtiYWNrZ3JvdW5kOmxpbmVhci1ncmFkaWVudCh0byBib3R0b20sIzkzY2VkZSAwLCM3NWJkZDEgNDElLCM0OWE1YmYgMTAwJSk7Y29sb3I6I2ZmZjtkaXNwbGF5OmlubGluZS1ibG9jazt0ZXh0LXNoYWRvdzoxcHggMXB4IDAgIzUyOGVjYztib3gtc2hhZG93Omluc2V0IDFweCAxcHggMCAwICNiYmRhZjc7Y3Vyc29yOnBvaW50ZXJ9IGJ1dHRvbjpob3Zlcntjb2xvcjojMDAwfSBidXR0b246YWN0aXZle2NvbG9yOiMwMDB9IGJ1dHRvbltkaXNhYmxlZF0sYnV0dG9uW2Rpc2FibGVkXTphY3RpdmV7Y29sb3I6IzAwMDtjdXJzb3I6ZGVmYXVsdH1AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0ODBweCl7LnBvc3QtYm9keSB7ZGlzcGxheTogYmxvY2shaW1wb3J0YW50O319DQo="
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link rel="stylesheet" href="css/Dividends.css" />
+  <link rel="stylesheet" href="css/MediaQuery.css" />
+  <link rel="stylesheet" href="css/Body.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+    rel="stylesheet"
+  />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link
+    href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link
+    href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="fonts/icomoon/style.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link href="/" rel="bookmark" title="IFinDoo" />
+  <link rel="icon" href="ifindoo2.png" type="image/icon" />
+  <link
+    href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <i class="bx bx-menu"></i>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="Image/ifindoo2.png" style="width: 50px; height: 50px" />
+          IFinDoo</a
+        >
+      </div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name"
+            ><img src="Image/ifindoo2.png" style="width: 50px; height: 50px" />
+            IFinDoo</span
+          >
+          <i class="bx bx-x"></i>
+        </div>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#">Markets</a>
+            <i class="bx bxs-chevron-down htmlcss-arrow arrow"></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li><a href="Crypto Shorts.html">Crypto Shorts</a></li>
+              <li><a href="Blue Chips.html">Blue Chips</a></li>
+              <li><a href="Countries.html">Countries</a></li>
+              <li><a href="World Economy.html">World Economy</a></li>
+              <li class="more">
+                <span
+                  ><a href="#">Tools</a>
+                  <i class="bx bxs-chevron-right arrow more-arrow"></i>
+                </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li>
+                    <a href="Crypto Calculator.html">Crypto Calculator</a>
+                  </li>
+                  <li><a href="Budget Calculate.html">Budget Calculator</a></li>
+                  <li>
+                    <a href="Currency Converter.html">Currency Converter</a>
+                  </li>
+                  <li><a href="Loan Calculator.html">Loan Calculator</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="active">Assets</a>
+            <i class="bx bxs-chevron-down asset-arrow arrow"></i>
+            <ul class="asset-sub-menu sub-menu">
+              <li><a href="Crypto.html">Crypto</a></li>
+              <li><a href="Metaverse.html" class="active">Metaverse</a></li>
+              <li><a href="NFT.html">NFTs</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Stocks</a>
+            <i class="bx bxs-chevron-down stock-arrow arrow"></i>
+            <ul class="stock-sub-menu sub-menu">
+              <li><a href="Dividends.html">Technology</a></li>
+              <li><a href="Social Media.html">Social Media</a></li>
+              <li><a href="Ecommerce.html">Ecommerce</a></li>
+              <li><a href="Banks.html">Banks</a></li>
+              <li><a href="Cars.html">Cars</a></li>
+              <li><a href="Sports.html">Sports</a></li>
+              <li><a href="Games.html">Games</a></li>
+              <li><a href="Foods.html">Foods</a></li>
+              <li><a href="Movie.html">Movie Industry</a></li>
+              <li><a href="Industrials.html">Industrials</a></li>
+              <li><a href="Healthcare.html">Healthcare</a></li>
+              <li><a href="Energy.html">Energy</a></li>
+              <li><a href="Real Estate.html">Real Estate</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Community</a>
+            <i class="bx bxs-chevron-down community-arrow arrow"></i>
+            <ul class="community-sub-menu sub-menu">
+              <li><a href="Hot Topics.html">Hot Topic</a></li>
+              <li><a href="Blogs.html">Blogs</a></li>
+              <li><a href="Scams.html">Scams</a></li>
+              <li><a href="Quotes.html">Quotes</a></li>
+            </ul>
+          </li>
+          <li><a href="Trade Guide.html">Trade Guide</a></li>
+        </ul>
+      </div>
+
+      <div id="Anutrickz_translateBTN" class="" title="translate langauge">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.8"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
+          />
+        </svg>
+        <div class="hide" id="ATLang_list">
+          <ul>
+            <li class="language-list" data-google-lang="en">
+              <img src="https://flagcdn.com/w20/us.png" />&nbsp;&nbsp; English
+            </li>
+            <li class="language-list" data-google-lang="zh">
+              <img src="https://flagcdn.com/w20/cn.png" />&nbsp;&nbsp; Chinese
+            </li>
+            <li class="language-list" data-google-lang="hi">
+              <img src="https://flagcdn.com/w20/in.png" />&nbsp;&nbsp; Hindi
+            </li>
+            <li class="language-list" data-google-lang="es">
+              <img src="https://flagcdn.com/w20/es.png" />&nbsp;&nbsp; Spanish
+            </li>
+            <li class="language-list" data-google-lang="fr">
+              <img src="https://flagcdn.com/w20/fr.png" />&nbsp;&nbsp; French
+            </li>
+            <li class="language-list" data-google-lang="ar">
+              <img src="https://flagcdn.com/w20/eg.png" />&nbsp;&nbsp; Arabic
+            </li>
+            <li class="language-list" data-google-lang="pt">
+              <img src="https://flagcdn.com/w20/br.png" />&nbsp;&nbsp;
+              Portuguese
+            </li>
+            <li class="language-list" data-google-lang="ru">
+              <img src="https://flagcdn.com/w20/ru.png" />&nbsp;&nbsp; Russian
+            </li>
+            <li class="language-list" data-google-lang="id">
+              <img src="https://flagcdn.com/w20/id.png" />&nbsp;&nbsp;
+              Indonesian
+            </li>
+            <li class="language-list" data-google-lang="ur">
+              <img src="https://flagcdn.com/w20/pk.png" />&nbsp;&nbsp; Urdu
+            </li>
+            <li class="language-list" data-google-lang="ja">
+              <img src="https://flagcdn.com/w20/jp.png" />&nbsp;&nbsp; Japanese
+            </li>
+            <li class="language-list" data-google-lang="de">
+              <img src="https://flagcdn.com/w20/de.png" />&nbsp;&nbsp; German
+            </li>
+            <li class="language-list" data-google-lang="tr">
+              <img src="https://flagcdn.com/w20/tr.png" />&nbsp;&nbsp; Turkish
+            </li>
+            <li class="language-list" data-google-lang="ko">
+              <img src="https://flagcdn.com/w20/kr.png" />&nbsp;&nbsp; Korean
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="#userProfile">
+        <svg
+          xmlns="https://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.8"
+          stroke="currentColor"
+          class="w-6 h-6 userProfile"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+          />
+        </svg>
+      </a>
+      <div class="search-box" title="search">
+        <i class="bx bx-search"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="floatSocial">
+    <li class="floatingSocial">
+      <a href="#" class="twitter"
+        ><span>Twitter</span><i class="fa fa-twitter"></i
+      ></a>
+    </li>
+    <li class="floatingSocial">
+      <a href="#" class="instagram"
+        ><span>Instagram</span><i class="fa fa-instagram"></i
+      ></a>
+    </li>
+    <li class="floatingSocial">
+      <a href="#" class="facebook"
+        ><span>Facebook</span><i class="fa fa-facebook"></i
+      ></a>
+    </li>
+  </div>
+
+  <div id="cd-nav">
+    <a id="cd-nav-trigger" href="#0" class="cd-nav-trigger"><span></span></a>
+    <div>
+      <ul id="cd-main-nav">
+        <li><a href="#apecoinSection">Apecoin</a></li>
+        <li><a href="#internetSection">ICP</a></li>
+        <li><a href="#decentralandSection">Decentraland</a></li>
+        <li><a href="#axieSection">Axie Infinity</a></li>
+        <li><a href="#sandboxSection">The Sandbox</a></li>
+        <li><a href="#thetaSection">Theta Network</a></li>
+        <li><a href="#enjinSection">Enjin Coin</a></li>
+        <li><a href="#zilliqaSection">Zilliqa</a></li>
+        <li><a href="#stacksSection">Stacks</a></li>
+        <li><a href="#renderSection">Render Token</a></li>
+        <li><a href="#sushiswapSection">SushiSwap</a></li>
+        <li><a href="#magicSection">Magic</a></li>
+        <li><a href="#maskSection">Mask Network</a></li>
+        <li><a href="#ontologySection">Ontology</a></li>
+        <li><a href="#waxSection">Wax</a></li>
+        <li><a href="#illuviumSection">Illuvium</a></li>
+        <li><a href="#playdappSection">PlayDapp</a></li>
+        <li><a href="#chromiaSection">Chromia</a></li>
+        <li><a href="#flokiSection">Floki</a></li>
+        <li><a href="#wemixSection">Wemix</a></li>
+        <li><a href="#fullchartSection">Full Chart</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dividends_text">
+    <div class="dividends_title">
+      <h2 id="dividends_title">What is Metaverse?</h2>
+    </div>
+    <div class="dividends_para">
+      <div id="dividends_para">
+        The metaverse is a term used to describe a virtual world where users can
+        interact with each other and digital objects in a seemingly real
+        environment. Metaverse coins are cryptocurrencies that are used within
+        the metaverse, allowing users to purchase virtual goods, experiences,
+        and services. These coins are designed to be used within specific
+        virtual worlds and are typically used to create a seamless and
+        integrated virtual experience. <br /><br />
+
+        One of the key features of metaverse coins is their ability to be used
+        within virtual worlds. This allows for a seamless integration of virtual
+        transactions with the real world, reducing friction and making the
+        metaverse experience more enjoyable and accessible. By allowing users to
+        purchase virtual goods, experiences, and services with ease, metaverse
+        coins are an essential part of the metaverse experience. <br /><br />
+
+        Another feature of metaverse coins is their decentralization. Like other
+        cryptocurrencies, metaverse coins operate independently of central banks
+        or governments, allowing for a more open and transparent market. This
+        can lead to greater access and participation in the metaverse market, as
+        anyone with an internet connection can create, trade, and own metaverse
+        coins. <br /><br />
+
+        The potential for profits in the metaverse coin market is significant,
+        as the value of these coins can be driven by factors such as scarcity,
+        uniqueness, and popularity. Some metaverse coins have seen significant
+        growth in value in recent years, making them a lucrative investment
+        opportunity for those interested in the virtual world and gaming
+        markets. <br /><br />
+
+        In conclusion, the metaverse is a virtual world where users can interact
+        with each other and digital objects in a seemingly real environment.
+        Metaverse coins are cryptocurrencies that are used within the metaverse,
+        allowing users to purchase virtual goods, experiences, and services with
+        ease. The use of metaverse coins creates a seamless integration of
+        virtual transactions with the real world and operates independently of
+        central banks or governments, allowing for a more open and transparent
+        market. The potential for profits in the metaverse coin market is
+        significant, driven by factors such as scarcity, uniqueness, and
+        popularity, making it an exciting investment opportunity for those
+        interested in the virtual world and gaming markets.
+      </div>
+    </div>
+  </div>
+
+  <!-- Apecoin -->
+  <section id="apecoinSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Apecoin</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/APEUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:APEUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          Apecoin is a metaverse coin that is designed for use within virtual
+          worlds and gaming platforms. It has a limited maximum supply, which
+          helps to maintain its value and stability within the virtual economy.
+          The creators of Apecoin aim to provide a decentralized and secure
+          digital currency that can be used across multiple virtual worlds and
+          gaming platforms. They believe that Apecoin has the potential to
+          revolutionize the way people play and transact within virtual worlds.
+          <br /><br />
+
+          Apecoin is built on a decentralized platform, which means that it
+          operates on a peer-to-peer network, without the need for a central
+          authority. This helps to ensure that transactions are secure, fast and
+          reliable. The creators of Apecoin have also implemented various
+          features to help with the scalability and security of the currency,
+          such as the use of smart contracts and a secure consensus mechanism.
+          <br /><br />
+
+          Investing in Apecoin can be a profitable venture, as the demand for
+          metaverse coins continues to grow. As more and more people get
+          involved in virtual worlds and gaming platforms, the demand for
+          metaverse coins is expected to increase. This can drive up the price
+          of Apecoin, which can result in substantial profits for investors.
+          However, as with any investment, it is important to carefully consider
+          the risks involved and to do your own research before making any
+          decisions.
+        </div>
+      </div>
+      <!-- Apecoin Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/APEUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">APE price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:APEUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- Apecoin Widget END -->
+
+  <!-- Internet Computer -->
+  <section id="internetSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Internet Computer</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/ICPUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:ICPUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          The Internet Computer is a blockchain-based metaverse that aims to
+          revolutionize the way the internet works. It was created by Dfinity
+          Foundation, a Swiss non-profit organization, with the goal of creating
+          a decentralized, open and secure internet. The Internet Computer has
+          its own native cryptocurrency called ICP, which is used for
+          transactions and as a store of value within the metaverse.
+          <br /><br />
+
+          The Internet Computer operates on a unique decentralized
+          infrastructure that enables developers to run any software, including
+          dApps and web applications, without the need for servers or cloud
+          providers. This infrastructure is designed to be fast, secure, and
+          scalable, making it an ideal platform for a metaverse. The Internet
+          Computer also has a limited maximum supply of ICP, which helps to
+          maintain its value and stability within the metaverse economy.
+          <br /><br />
+
+          Investing in ICP can be a lucrative venture, as the demand for
+          blockchain-based metaverse technologies is expected to grow in the
+          coming years. As more and more people adopt the Internet Computer as
+          their preferred platform for a decentralized internet, the demand for
+          ICP is expected to increase. This can drive up the price of ICP,
+          providing substantial profits for investors. However, as with any
+          investment, it is important to carefully consider the risks involved
+          and to do your own research before making any decisions. <br /><br />
+        </div>
+      </div>
+      <!-- Internet Computer Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/ICPUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">ICP price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:ICPUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- Internet Computer Widget END -->
+
+  <!-- Decentraland -->
+  <section id="decentralandSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Decentraland Coin</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/MANAUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:MANAUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          Decentraland is a virtual world built on the Ethereum blockchain where
+          users can create, experience, and monetize their content and
+          applications. It is a decentralized, community-driven platform where
+          users can buy, sell and trade virtual real estate and digital assets.
+          Decentraland has its own native cryptocurrency called MANA, which is
+          used as the currency within the virtual world and as a store of value.
+          <br /><br />
+
+          Decentraland was created by a team of blockchain and gaming
+          enthusiasts who believe in a decentralized and community-driven
+          virtual world where users have full control over their assets and
+          experiences. Decentraland is designed to be a fully immersive and
+          interactive world, where users can engage in virtual commerce, gaming,
+          and social activities. <br /><br />
+
+          Investing in Decentraland and MANA can be a lucrative opportunity, as
+          the demand for blockchain-based virtual worlds is expected to grow in
+          the coming years. As more and more people adopt Decentraland as their
+          preferred platform for a decentralized virtual world, the demand for
+          MANA is expected to increase. This can drive up the price of MANA,
+          providing substantial profits for investors. However, as with any
+          investment, it is important to carefully consider the risks involved
+          and to do your own research before making any decisions. <br /><br />
+        </div>
+      </div>
+      <!-- Decentraland Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/MANAUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">MANA price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:MANAUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- Decentraland Widget END -->
+
+  <!-- Axie Infinity -->
+  <section id="axieSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Axie Infinity</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/AXSUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:AXSUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          Axie Infinity is a decentralized metaverse built on the Ethereum
+          blockchain, where players can breed, battle, and trade creatures
+          called Axies. These Axies are unique, collectible creatures that
+          players can buy, sell, and trade with other players. Axie Infinity has
+          its own native cryptocurrency called SLP, which is used as the
+          currency within the metaverse and as a store of value. <br /><br />
+
+          Axie Infinity was created by a team of blockchain and gaming
+          enthusiasts who believe in a decentralized and community-driven gaming
+          experience. The team aims to provide a platform where players can have
+          complete control over their assets and experiences, and where the
+          virtual world can grow and evolve based on the collective imagination
+          of the players. <br /><br />
+
+          Investing in Axie Infinity and SLP can be a lucrative opportunity, as
+          the demand for blockchain-based gaming platforms is expected to grow
+          in the coming years. As more and more people adopt Axie Infinity as
+          their preferred platform for decentralized gaming, the demand for SLP
+          is expected to increase. This can drive up the price of SLP, providing
+          substantial profits for investors. However, as with any investment, it
+          is important to carefully consider the risks involved and to do your
+          own research before making any decisions.
+        </div>
+      </div>
+      <!-- Axie Infinity Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/AXSUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">AXS price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:AXSUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- Axie Infinity Widget END -->
+
+  <!-- The Sandbox -->
+  <section id="sandboxSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">The Sandbox</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/SANDUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:SANDUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          The Sandbox is a decentralized metaverse platform where users can
+          create, play and monetize their gaming experiences. It is built on the
+          Ethereum blockchain, and users can buy, sell and trade virtual assets
+          within the platform. The Sandbox has its own native cryptocurrency
+          called SAND, which is used as the currency within the metaverse and as
+          a store of value. <br /><br />
+
+          The Sandbox was created by a team of gaming and blockchain enthusiasts
+          who believe in a decentralized and community-driven gaming experience.
+          The team aims to provide a platform where users can have complete
+          control over their assets and experiences, and where the virtual world
+          can grow and evolve based on the collective imagination of the users.
+          <br /><br />
+
+          Investing in The Sandbox and SAND can be a lucrative opportunity, as
+          the demand for blockchain-based gaming platforms is expected to grow
+          in the coming years. As more and more people adopt The Sandbox as
+          their preferred platform for decentralized gaming, the demand for SAND
+          is expected to increase. This can drive up the price of SAND,
+          providing substantial profits for investors. However, as with any
+          investment, it is important to carefully consider the risks involved
+          and to do your own research before making any decisions.
+        </div>
+      </div>
+      <!-- The Sandbox Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/SANDUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">SAND price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:SANDUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- The Sandbox Widget END -->
+
+  <!-- THETA -->
+  <section id="thetaSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Theta Network</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/THETAUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:THETAUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          The Theta Network is a decentralized blockchain-based platform that
+          enables the distribution of high-bandwidth video content. It is
+          designed to provide a more efficient and cost-effective way of
+          delivering video content to users all over the world. Theta has its
+          own native cryptocurrency called THETA, which is used as the currency
+          within the network and as a store of value. <br /><br />
+
+          The Theta Network was created by a team of video and blockchain
+          experts who believe in a decentralized and community-driven video
+          delivery network. The team aims to provide a platform where users can
+          have access to high-quality video content without the need for
+          intermediaries and high costs. <br /><br />
+
+          Investing in The Theta Network and THETA can be a lucrative
+          opportunity, as the demand for blockchain-based video delivery
+          solutions is expected to grow in the coming years. As more and more
+          people adopt The Theta Network as their preferred platform for
+          decentralized video delivery, the demand for THETA is expected to
+          increase. This can drive up the price of THETA, providing substantial
+          profits for investors. However, as with any investment, it is
+          important to carefully consider the risks involved and to do your own
+          research before making any decisions.
+        </div>
+      </div>
+      <!-- THETA Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/THETAUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">THETA price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:THETAUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- THETA Widget END -->
+
+  <!-- Enjin Coin -->
+  <section id="enjinSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Enjin Coin</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/ENJUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:ENJUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          Enjin Coin is a cryptocurrency designed for the gaming and metaverse
+          community. It is built on the Ethereum blockchain, and is aimed at
+          creating a decentralized ecosystem for the creation, distribution, and
+          management of virtual goods. Enjin Coin has its own native currency
+          called ENJ, which is used as the currency within the metaverse and as
+          a store of value. <br /><br />
+
+          Enjin Coin was created by the Enjin team, a group of gaming and
+          blockchain enthusiasts who believe in a decentralized and
+          community-driven gaming experience. The team aims to provide a
+          platform where users can have complete control over their assets and
+          experiences, and where the virtual world can grow and evolve based on
+          the collective imagination of the users. <br /><br />
+
+          Investing in Enjin Coin and ENJ can be a lucrative opportunity, as the
+          demand for blockchain-based gaming solutions is expected to grow in
+          the coming years. As more and more people adopt Enjin Coin as their
+          preferred platform for decentralized gaming, the demand for ENJ is
+          expected to increase. This can drive up the price of ENJ, providing
+          substantial profits for investors. However, as with any investment, it
+          is important to carefully consider the risks involved and to do your
+          own research before making any decisions.
+        </div>
+      </div>
+      <!-- Enjin Coin Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/ENJUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">ENJ price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:ENJUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- Enjin Coin Widget END -->
+
+  <!-- Zilliqa -->
+  <section id="zilliqaSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Zilliqa</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/ZILUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:ZILUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          Zilliqa is a high-performance blockchain platform that uses sharding
+          technology to scale its network and handle large amounts of
+          transactions. It is designed to support decentralized applications and
+          to provide a secure and efficient way to transfer value within the
+          network. Zilliqa has its own native cryptocurrency called ZIL, which
+          is used as the currency within the network and as a store of value.
+          <br /><br />
+
+          Zilliqa was created by a team of experts in computer science and
+          cryptography, who believe in a decentralized and secure way of
+          handling transactions and digital assets. The team aims to provide a
+          platform that is able to scale efficiently and securely, and that can
+          support the growing demand for decentralized applications.
+          <br /><br />
+
+          Investing in Zilliqa and ZIL can be a lucrative opportunity, as the
+          demand for high-performance blockchain solutions is expected to grow
+          in the coming years. As more and more people adopt Zilliqa as their
+          preferred platform for decentralized applications, the demand for ZIL
+          is expected to increase. This can drive up the price of ZIL, providing
+          substantial profits for investors. However, as with any investment, it
+          is important to carefully consider the risks involved and to do your
+          own research before making any decisions.
+        </div>
+      </div>
+      <!-- ZILLIQA Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/ZILUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">ZIL price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:ZILUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- Zilliqa Widget END -->
+
+  <!-- Stacks -->
+  <section id="stacksSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Stacks</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/STXUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:STXUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          Stacks is a decentralized platform that provides a secure and
+          efficient way to build, manage, and transfer digital assets. It is
+          built on the Bitcoin blockchain and uses the blockchain's security and
+          stability to provide a robust foundation for its own ecosystem. Stacks
+          has its own native cryptocurrency called STX, which is used as the
+          currency within the network and as a store of value. <br /><br />
+
+          Stacks was created by the Blockstack team, a group of experts in
+          cryptography and blockchain technology. The team aims to provide a
+          platform that is secure, scalable, and user-friendly, and that enables
+          people to own their digital identity and control their assets. They
+          believe in a decentralized and open internet, where people can freely
+          create and build without the need for intermediaries. <br /><br />
+
+          Investing in Stacks and STX can be a lucrative opportunity, as the
+          demand for secure and scalable blockchain solutions is expected to
+          grow in the coming years. As more and more people adopt Stacks as
+          their preferred platform for decentralized applications, the demand
+          for STX is expected to increase. This can drive up the price of STX,
+          providing substantial profits for investors. However, as with any
+          investment, it is important to carefully consider the risks involved
+          and to do your own research before making any decisions.
+        </div>
+      </div>
+      <!-- Stacks Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/STXUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">STX price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:STXUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- Stacks Widget END -->
+
+  <!-- Render Token -->
+  <section id="renderSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Render Token</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/RNDRUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:RNDRUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          Render Token is a cryptocurrency that is used within the Render
+          Network, a decentralized platform for cloud computing. The Render
+          Network provides a secure and efficient way for people to access cloud
+          computing resources, and Render Token is used to pay for these
+          resources and as a store of value. The platform aims to provide a
+          decentralized alternative to traditional cloud computing solutions,
+          which are often centralized and controlled by a few large companies.
+          <br /><br />
+
+          Render Token was created by a team of experts in computer science and
+          blockchain technology, who believe in a decentralized and open
+          internet. The team aims to provide a platform that is secure,
+          scalable, and accessible to everyone, and that enables people to
+          access cloud computing resources without having to rely on centralized
+          providers. <br /><br />
+
+          Investing in Render Token can be a lucrative opportunity, as the
+          demand for decentralized cloud computing solutions is expected to grow
+          in the coming years. As more and more people adopt the Render Network
+          as their preferred platform for cloud computing, the demand for Render
+          Token is expected to increase. This can drive up the price of Render
+          Token, providing substantial profits for investors. However, as with
+          any investment, it is important to carefully consider the risks
+          involved and to do your own research before making any decisions.
+        </div>
+      </div>
+      <!-- Render Token Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/RNDRUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">RNDR price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:RNDRUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- Render Token Widget END -->
+
+  <!-- SushiSwap -->
+  <section id="sushiswapSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">SushiSwap</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/SUSHIUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:SUSHIUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          SushiSwap is a decentralized platform for trading cryptocurrency and
+          other digital assets. It is built on the Ethereum blockchain and is
+          designed to be a more efficient and user-friendly alternative to
+          traditional centralized exchanges. SushiSwap allows users to trade a
+          wide variety of assets in a secure and decentralized manner, and it
+          also provides liquidity pools for traders to earn rewards.
+          <br /><br />
+
+          SushiSwap was created anonymously in 2020 by a person or group of
+          people using the pseudonym "Chef Nomi." The creator's identity is
+          unknown, but the project quickly gained popularity in the crypto
+          community due to its innovative approach to decentralized exchanges.
+          SushiSwap aims to provide a platform that is more accessible and
+          user-friendly than traditional decentralized exchanges, and it has a
+          strong focus on community and decentralization. <br /><br />
+
+          Investing in SushiSwap can be a lucrative opportunity, as the demand
+          for decentralized exchanges is expected to grow in the coming years.
+          As more and more people adopt SushiSwap as their preferred platform
+          for trading cryptocurrency, the demand for the SushiSwap token is
+          expected to increase. This can drive up the price of the token,
+          providing substantial profits for investors. However, as with any
+          investment, it is important to carefully consider the risks involved
+          and to do your own research before making any decisions.
+        </div>
+      </div>
+      <!-- SushiSwap Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/SUSHIUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">SUSHI price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:SUSHIUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- SushiSwap Widget END -->
+
+  <!-- MAGIC -->
+  <section id="magicSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">MAGIC</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/MAGICUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:MAGICUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          Magic is a decentralized metaverse platform that allows users to
+          create and experience digital content and games in a virtual world. It
+          is built on the Ethereum blockchain and uses the power of blockchain
+          technology to create a more secure and accessible virtual world. Magic
+          aims to provide a platform where users can express themselves, connect
+          with others, and experience new and exciting content in a
+          decentralized environment. <br /><br />
+
+          Magic was created by the team behind the popular online game "Eternal
+          Magic." The platform was designed to provide a more accessible and
+          user-friendly metaverse experience, and it has quickly gained
+          popularity among the gaming and crypto communities. Magic's virtual
+          world is designed to be a safe and inclusive environment for users of
+          all ages, and it has a strong focus on community and decentralization.
+          <br /><br />
+
+          Investing in Magic can be a profitable opportunity, as the demand for
+          metaverse platforms is expected to grow in the coming years. As more
+          and more users adopt Magic as their preferred platform for
+          experiencing virtual content, the demand for the Magic token is
+          expected to increase. This can drive up the price of the token,
+          providing substantial profits for investors. However, as with any
+          investment, it is important to carefully consider the risks involved
+          and to do your own research before making any decisions.
+        </div>
+      </div>
+      <!-- MAGIC Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/MAGICUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">MAGIC price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:MAGICUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- MAGIC Widget END -->
+
+  <!-- Mask Network -->
+  <section id="maskSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Mask Network</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/MASKUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCEUS:MASKUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          Mask Network is a decentralized metaverse platform that provides users
+          with the ability to communicate and interact with each other while
+          preserving their privacy. It combines elements of social media,
+          gaming, and blockchain technology to create a new type of virtual
+          world that puts the power of control and privacy back in the hands of
+          its users. The platform is built on the Ethereum blockchain and uses
+          its smart contract functionality to ensure the security and privacy of
+          user data. <br /><br />
+
+          Mask Network was created by a team of experienced developers and
+          blockchain enthusiasts who are passionate about creating a more secure
+          and private online experience. The team is dedicated to developing new
+          and innovative ways for users to interact with each other in a virtual
+          environment that protects their privacy and personal information.
+          <br /><br />
+
+          Investing in Mask Network can be a profitable opportunity for those
+          who believe in the growth of the decentralized metaverse market. As
+          more users adopt Mask Network as their preferred platform for online
+          communication and interaction, the demand for the MASK token is
+          expected to increase. This can drive up the price of the token,
+          providing substantial profits for investors. However, it is important
+          to carefully consider the risks involved and to do your own research
+          before making any investment decisions.
+        </div>
+      </div>
+      <!-- Mask Network Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/MASKUSD/?exchange=BINANCEUS/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">MASK price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCEUS:MASKUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- Mask Network Widget END -->
+
+  <!-- Ontology -->
+  <section id="ontologySection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Ontology</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/ONTUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:ONTUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          Ontology is a decentralized blockchain platform that provides a
+          metaverse infrastructure for decentralized applications and services.
+          It was created by a Chinese company called Onchain and aims to provide
+          a secure, scalable and flexible blockchain infrastructure for a
+          variety of use cases, including identity verification, data exchange,
+          and digital asset management. The platform has a modular architecture,
+          allowing developers to build decentralized applications and services
+          quickly and efficiently. <br /><br />
+
+          The Ontology network has a total supply of 1 billion ONT tokens, which
+          can be used to access the platform’s various services and to pay for
+          transaction fees. ONT is a dual-token system, with ONT being the
+          governance token and ONG being the utility token that is used for gas
+          fees. <br /><br />
+
+          Investing in Ontology can be a profitable opportunity for those who
+          believe in the growth of the decentralized metaverse market. As the
+          platform gains more adoption and expands its network of partnerships,
+          the demand for ONT is expected to increase. This can drive up the
+          price of the token, providing substantial profits for investors.
+          However, it is important to carefully consider the risks involved and
+          to do your own research before making any investment decisions.
+        </div>
+      </div>
+      <!-- Ontology Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/ONTUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">ONT price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:ONTUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- Ontology Widget END -->
+
+  <!-- WAX -->
+  <section id="waxSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">WAX</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/WAXPUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:WAXPUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          WAX (Worldwide Asset eXchange) is a decentralized platform for virtual
+          item trading, focusing on the video game and collectibles industries.
+          It was founded in 2017 by the team behind OPSkins, a leading
+          marketplace for virtual item trading. The WAX platform enables users
+          to create, buy, sell and trade virtual items, such as in-game items,
+          collectible cards and digital art, in a safe and secure manner.
+          <br /><br />
+
+          WAX has a fixed maximum supply of 185,000,000 tokens, with a
+          circulating supply of around 138,000,000 tokens as of January 2023.
+          The token is used to access the platform’s services, such as voting on
+          proposals, paying transaction fees and participating in governance.
+          <br /><br />
+
+          Investing in WAX can provide potential profits for those who believe
+          in the growth of the virtual item trading market. As the platform
+          continues to grow and expand its network of partnerships, the demand
+          for WAX tokens is expected to increase. This can drive up the price of
+          the token, providing substantial profits for investors. However, it is
+          important to carefully consider the risks involved and to do your own
+          research before making any investment decisions.
+        </div>
+      </div>
+      <!-- WAX Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/WAXPUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">WAXP price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:WAXPUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- WAX Widget END -->
+
+  <!-- Illuvium -->
+  <section id="illuviumSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Illuvium</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/ILVUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:ILVUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          Illuvium is a decentralized metaverse platform that aims to create a
+          virtual world where users can interact and engage with digital assets
+          and experiences. It aims to provide a new level of creativity and
+          innovation in the virtual world, by allowing users to create, trade
+          and monetize their virtual creations. The platform is being developed
+          by a team of experienced technology and gaming professionals.
+          <br /><br />
+
+          Illuvium has a fixed maximum supply of 200,000,000 tokens, with a
+          circulating supply of around 170,000,000 tokens as of January 2023.
+          The token is used as the platform’s native currency, allowing users to
+          access and purchase virtual goods and services. <br /><br />
+
+          Investing in Illuvium may provide potential profits for those who
+          believe in the growth of the virtual world market. As the platform
+          continues to attract users and gain traction, the demand for Illuvium
+          tokens is expected to increase. This can drive up the price of the
+          token, providing substantial profits for investors. However, as with
+          any investment, it is important to carefully consider the risks
+          involved and to do your own research before making any investment
+          decisions.
+        </div>
+      </div>
+      <!-- Illuvium Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/ILVUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">ILV price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:ILVUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- Illuvium Widget END -->
+
+  <!-- PlayDapp -->
+  <section id="playdappSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">PlayDapp</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/PLAUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:PLAUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          PlayDapp is a decentralized metaverse platform that enables users to
+          play, create and share games, digital assets and experiences with each
+          other. It aims to provide a new level of gaming and creativity by
+          allowing users to fully immerse themselves in the virtual world.
+          PlayDapp was created by a team of experienced game developers and
+          technology professionals. <br /><br />
+
+          The platform has a fixed maximum supply of 2,000,000,000 tokens, with
+          a circulating supply of around 1,800,000,000 tokens as of January
+          2023. The token is used as the platform's native currency, allowing
+          users to access and purchase virtual goods and services. <br /><br />
+
+          Investing in PlayDapp may provide potential profits for those who
+          believe in the growth of the gaming and virtual world market. As the
+          platform continues to attract users and gain traction, the demand for
+          PlayDapp tokens is expected to increase. This can drive up the price
+          of the token, providing substantial profits for investors. However, as
+          with any investment, it is important to carefully consider the risks
+          involved and to do your own research before making any investment
+          decisions.
+        </div>
+      </div>
+      <!-- PlayDapp Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/PLAUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">PLA price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:PLAUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- PlayDapp Widget END -->
+
+  <!-- Chromia -->
+  <section id="chromiaSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Chromia</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="float: right">
+            <div class="tradingview-widget-container__widget"></div>
+            <div>
+              <a
+                href="https://www.tradingview.com/symbols/CHRUSD/technicals/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text"></span
+              ></a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+              async
+            >
+                {
+                "interval": "1m",
+                "width": 418,
+                "isTransparent": false,
+                "height": 405,
+                "symbol": "BINANCE:CHRUSD",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          Chromia is a blockchain-based metaverse that aims to provide a more
+          decentralized and scalable platform for decentralized applications
+          (dApps) and games. It was created by a team of blockchain experts and
+          game developers in Sweden. Chromia utilizes a relational blockchain
+          technology that allows for more flexible and efficient data management
+          and is designed to support dApps with high performance and security
+          requirements. <br /><br />
+
+          The max supply of Chromia tokens (CHR) is 1 billion. CHR tokens are
+          used to power transactions and smart contract execution within the
+          Chromia metaverse. The CHR token also serves as a form of governance,
+          allowing token holders to vote on important decisions and upgrades to
+          the network. In addition, CHR tokens can be used as a means of payment
+          within the Chromia ecosystem, providing utility and value to users.
+          <br /><br />
+
+          The Chromia metaverse offers a number of benefits to users, including
+          low fees, fast transaction speeds, and the ability to easily build and
+          deploy dApps. With its relational blockchain technology, Chromia is
+          well-suited for gaming and other dApps that require fast and efficient
+          data management. The Chromia metaverse also provides an opportunity
+          for users to participate in its growth and development through the CHR
+          token, as well as generate profit by building and operating dApps
+          within the ecosystem.
+        </div>
+      </div>
+      <!-- Chromia Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/CHRUSD/?exchange=BINANCE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">CHR price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "BINANCE:CHRUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- Chromia Widget END -->
+
+  <!-- FLOKI Network -->
+  <section id="flokiSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">FLOKI Network</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          FLOKI is a metaverse project that seeks to create a decentralized and
+          immersive virtual world. It is built on the Ethereum blockchain and
+          aims to offer a decentralized platform for gamers, artists, and
+          developers to create, play and sell their own games, experiences and
+          virtual assets. The creator of FLOKI is not publicly disclosed. The
+          maximum supply of FLOKI tokens is capped at 100 million. <br /><br />
+
+          FLOKI is a token that can be used to purchase virtual assets and
+          access various games and experiences within the FLOKI metaverse.
+          Profits can be earned by participating in the FLOKI ecosystem, such as
+          selling virtual assets or creating popular games and experiences that
+          attract users. With the growing popularity of metaverses, FLOKI offers
+          an opportunity to participate in this growing industry and reap the
+          rewards of a successful metaverse. <br /><br />
+
+          FLOKI's focus on decentralized gaming and virtual worlds sets it apart
+          from other metaverse projects and creates a unique value proposition
+          for users. Additionally, FLOKI's use of the Ethereum blockchain
+          provides a secure and transparent platform for transactions, making it
+          a promising investment opportunity for those interested in the
+          metaverse space. The FLOKI metaverse holds potential for growth as the
+          virtual world and gaming industry continues to grow in popularity and
+          FLOKI's user base expands.
+        </div>
+      </div>
+      <!-- FLOKI Network Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/FLOKIUSD/?exchange=CRYPTO/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">FLOKI price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "CRYPTO:FLOKIUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- FLOKI Network Widget END -->
+
+  <!-- WEMIX -->
+  <section id="wemixSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">WEMIX</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          WEMIX is a blockchain-based virtual world metaverse platform. It aims
+          to provide users with an immersive and interactive virtual world
+          experience through its decentralized platform. It's designed to allow
+          users to participate in various activities such as gaming,
+          socializing, and shopping. WEMIX's native token, WMX, is the
+          platform's primary currency used for transactions and as an investment
+          asset. <br /><br />
+
+          The creator of WEMIX is yet to be publicly disclosed, but it's known
+          that the platform is being developed by a team of blockchain and
+          virtual world experts. The max supply of WMX is capped at 200 million
+          tokens, and the token is currently listed on several decentralized
+          exchanges. WEMIX operates as a community-driven platform, and users
+          can participate in various governance activities and vote on key
+          decisions regarding the platform's development. <br /><br />
+
+          WEMIX is a relatively new metaverse platform, and its success and
+          profit potential are yet to be determined. However, its innovative
+          approach to virtual world experiences and its use of blockchain
+          technology have generated a significant level of interest among
+          investors and the crypto community. Investing in WMX is a speculative
+          investment, and investors should carefully consider the risks and
+          uncertainties before making any investment decisions.
+        </div>
+      </div>
+      <!-- WEMIX Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/WEMIXUSD/?exchange=CRYPTO/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">WEMIX price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "CRYPTO:WEMIXUSD",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- WEMIX Widget END -->
+
+  <!-- Tech Company Stocks -->
+  <section id="fullchartSection">
+    <div class="dividends_title">
+      <h2 id="dividends_title">Full Chart</h2>
+    </div>
+    <div class="itemBox Tech">
+      <!-- TradingView Widget BEGIN -->
+      <div class="tradingview-widget-container">
+        <div id="tradingview_c53b6"></div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/tv.js"
+        ></script>
+        <script type="text/javascript">
+          new TradingView.MediumWidget({
+            symbols: [
+              ["ApeCoin", "BINANCE:APEUSD|1y"],
+              ["Internet Computer", "BINANCE:ICPUSD|1y"],
+              ["Decentraland", "BINANCE:MANAUSD|1y"],
+              ["Axie Infinity", "BINANCE:AXSUSD|1y"],
+              ["The Sandbox", "BINANCE:SANDUSD|1y"],
+              ["Theta Network", "BINANCE:THETAUSD|1y"],
+              ["Enjin Coin", "BINANCE:ENJUSD|1y"],
+              ["Zilliqa", "BINANCE:ZILUSD|1y"],
+              ["Stacks", "BINANCE:STXUSD|1y"],
+              ["Render Token", "BINANCE:RNDRUSD|1y"],
+              ["SushiSwap", "BINANCE:SUSHIUSD|1y"],
+              ["Magic", "BINANCE:MAGICUSD|1y"],
+              ["Mask Network", "BINANCEUS:MASKUSD|1y"],
+              ["Ontology", "BINANCE:ONTUSD|1y"],
+              ["WAX", "BINANCE:WAXUSD|1y"],
+              ["Illuvium", "BINANCE:ILVUSD|1y"],
+              ["PlayDapp", "BINANCE:PLAUSD|1y"],
+              ["Chromia", "BINANCE:CHRUSD|1y"],
+              ["Floki", "CRYPTO:FLOKIUSD|1y"],
+              ["Wemix", "CRYPTO:WEMIXUSD|1y"],
+            ],
+            chartOnly: false,
+            width: "100%",
+            height: "400px",
+            locale: "en",
+            colorTheme: "light",
+            autosize: false,
+            showVolume: true,
+            hideDateRanges: false,
+            scalePosition: "right",
+            scaleMode: "Normal",
+            fontFamily:
+              "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+            fontSize: "10",
+            noTimeScale: false,
+            valuesTracking: "1",
+            chartType: "area",
+            gridLineColor: "#e9e9ea",
+            lineColor: "rgba(91, 156, 246, 1)",
+            topColor: "rgba(41, 98, 255, 0.3)",
+            bottomColor: "rgba(41, 98, 255, 0)",
+            widgetFontColor: "rgba(0, 0, 0, 0.93)",
+            color: "rgba(91, 156, 246, 1)",
+            container_id: "tradingview_5b8c7",
+          });
+        </script>
+      </div>
+      <div class="tradingview-widget-copyright">
+        <a
+          href="https://www.tradingview.com/widget/"
+          rel="noopener"
+          target="_blank"
+          ><span class="blue-text">Chart</span></a
+        >
+        by TradingView
+      </div>
+    </div>
+  </section>
+
+  <!-- Share API -->
+  <div id="api">
+    <span id="api-value"
+      ><iconify-icon
+        icon="bx:share"
+        rotate="180deg"
+        flip="vertical"
+      ></iconify-icon
+    ></span>
+  </div>
+  <script>
+    const api = document.getElementById("api");
+    // function for web share api
+    function webShareAPI(header, description, link) {
+      navigator
+        .share({
+          title: header,
+          text: description,
+          url: link,
+        })
+        .then(() => console.log("Successful share"))
+        .catch((error) => console.log("Error sharing", error));
+    }
+    if (navigator.share) {
+      // Show button if it supports webShareAPI
+      api.style.display = "block";
+      api.addEventListener("click", () =>
+        webShareAPI(
+          "Share this Website to your friends",
+          "description",
+          "www.ifindoo.com"
+        )
+      );
+    } else {
+      // Hide button if it supports webShareAPI
+      api.style.display = "none";
+      console.error("Your Browser doesn't support Web Share API");
+      document.write("Your Browser doesn't support Web Share API");
+    }
+  </script>
+
+  <!-- Scroll To Top -->
+  <div id="progress">
+    <span id="progress-value">&#8682;</span>
+  </div>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 text-center">
+            <h2>Our Newsletter</h2>
+            <p>Subscribe us to get the latest news on up to date</p>
+          </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input class="inputLoan" type="email" name="email" /><input
+                class="inputLoan"
+                type="submit"
+                value="Subscribe"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-12 footer-info">
+            <a href="#" class="footerLogo d-flex align-items-center">
+              <span>IFinDoo</span>
+            </a>
+            <p>
+              Ifindoo means Knot, Ifindoo or ifindo is an Zulu language Word
+              which is the originated from South Africa, Ifindoo is a Financial
+              Website, Where users are going to get every news related to
+              cryptocurrency, stockmarket, exchanges, scams we also covers the
+              hot topics and trends of Digital World, Join Us for the Best
+              Experience , Soon Launching Crypto Wallet, Coin And NFT Marketing
+              Place!!
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i> <a href="index.html">Home</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Crypto Shorts.html">Crypto Shorts</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Blue Chips.html">Blue Chips</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Countries.html">Countries</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="World Economy.html">World Economy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Assets</h4>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Crypto.html">Crypto</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Metaverse.html">Metaverse</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i> <a href="NFT.html">NFTs</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Community</h4>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Hot Topics.html">Hot Topics</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Blogs.html">Blogs</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Scams.html">Scams</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Quotes.html">Quotes</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Tweets.html">Tweets</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Our Tools</h4>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Crypto Calculator.html">Crypto Calculator</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Budget Calculate.html">Budget Calculator</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Currency Converter.html">Currency Converter</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Loan Calculator.html">Loan Calculator</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="containerr">
+      <div class="copyright">
+        Copyright
+        <strong><span id="currentYear">2020</span> <span>IFinDoo</span></strong
+        >. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <script src="js/Home.js"></script>
+
+  <!-- MainJS-->
+  <script src="js/app.js"></script>
+  <script src="js/modernizr.custom.86080.js"></script>
+  <script src="js/popper.min.js"></script>
+  <!-- <script src="js/bootstrap.min.js"></script> -->
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/main.js"></script>
+  <script
+    defer
+    src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
+    integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+    data-cf-beacon='{"rayId":"787acec57e74d1d0","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.11.3","si":100}'
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://kit.fontawesome.com/yourcode.js"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/jquery-3.6.1.js"></script>
+  <script src="js/jquery-3.6.1.min.js"></script>
+</body>
+</html>

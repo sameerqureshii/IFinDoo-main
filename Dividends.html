@@ -1,0 +1,2667 @@
+<!DOCTYPE html>
+<head>
+  <!--[ Theme Color ]-->
+  <meta content="#E0F2F1" name="theme-color" />
+  <meta content="#E0F2F1" name="msapplication-navbutton-color" />
+  <meta content="#E0F2F1" name="msapplication-TileColor" />
+  <meta content="#E0F2F1" name="apple-mobile-web-app-status-bar-style" />
+
+  <link
+    defer=""
+    href="data:text/css;base64,Lyogcm9vdCAqLw0KLmRhcmsgLmF0XDpkYXJrLXNlY29uZGFyeTJ7YmFja2dyb3VuZDojMTIxMzFBIWltcG9ydGFudDtjb2xvcjojZmZmIWltcG9ydGFudH0NCi5hdFw6ZGFyay1ncmV5LWZpbGwye2ZpbGw6IzY5NkM4MH0uYXRcOmRhcmstZ3JleS1jb2xvcjJ7Y29sb3I6IzY5NkM4MH0NCi5zaXRlLW1haW4ge21hcmdpbi10b3A6IC0yMTJweCFpbXBvcnRhbnQ7fSNhdC1tYWluQWRze2Rpc3BsYXk6bm9uZX1AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA5ODBweCl7IC5jb250ZW50e3BhZGRpbmc6MzBweCAwISBpbXBvcnRhbnR9fS5nb29tZWRpYXttYXJnaW46IC0xMnB4IDAgYXV0byFpbXBvcnRhbnQ7fQ0KIC8qIGJyZWFkY3J1bWJzICovDQouZml4ZWRfX2JyZWFkY3J1bWJ7ZGlzcGxheTogYmxvY2s7fS5icmVhZGNydW1icyB7b3ZlcmZsb3c6IGhpZGRlbjsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7IGZvbnQtc2l6ZTogMTNweDsgY29sb3I6ICMyMjIhaW1wb3J0YW50OyB9IC5icmVhZGNydW1icyBhIHtjb2xvcjogIzIyMiFpbXBvcnRhbnQ7IG1hcmdpbjogMCAycHg7IGxpbmUtaGVpZ2h0OiBub3JtYWw7IH0gLmJyZWFkY3J1bWJzIC5icmVhZGhvbWUgYSB7IG1hcmdpbjogMCA1cHggMCAwOyB9IC5icmVhZGNydW1icyAuYnJlYWRsYWJlbDpsYXN0LWNoaWxkIHsgbWFyZ2luOiAwIDAgMCA0cHg7IH0gLmJyZWFkY3J1bWJzIGE6aG92ZXIgeyBjb2xvcjogIzA5ODRlMzsgfSAuYnJlYWRjcnVtYnMgc3ZnIHsgd2lkdGg6IDE2cHg7IGhlaWdodDogMTZweDsgdmVydGljYWwtYWxpZ246IC00cHg7IH0gLmJyZWFkY3J1bWJzIHN2ZyBwYXRoIHsgZmlsbDogIzAwMDsgfQ0KLyogUmVsYXRlZCAqLw0KLnJlbGF0ZWQtcG9zdHMgeyBvdmVyZmxvdzogaGlkZGVuOyBtYXJnaW46IDUwcHggMCAzMHB4OyBwb3NpdGlvbjogcmVsYXRpdmU7IGRpc3BsYXk6IGJsb2NrO30ucmVsYXRlZHtkaXNwbGF5OiBncmlkO2dhcDogMTBweDsgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnIgMWZyIDFmciAxZnI7fSAjcmVsYXRlZC1wb3N0c3tvdmVyZmxvdzpoaWRkZW47bWFyZ2luOjA7ZGlzcGxheTpub25lfS5yZWxhdGVkIGxpe292ZXJmbG93OiBoaWRkZW47IHBvc2l0aW9uOiByZWxhdGl2ZTsgYm94LXNpemluZzogYm9yZGVyLWJveDsgZGlzcGxheTogZmxleDsgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgZmxleDogMSAxIGF1dG87fS5yZWxhdGVkLXRodW1ie292ZXJmbG93OmhpZGRlbjt9LnJlbGF0ZWQgbGkgLnJlbGF0ZWQtaW1ne2Rpc3BsYXk6IGZsZXg7IHBvc2l0aW9uOiByZWxhdGl2ZTsgYm94LXNpemluZzogYm9yZGVyLWJveDsgbWluLWhlaWdodDogOTEuMXB4OyB3aWR0aDogMTAwJTsgdHJhbnNpdGlvbjogYWxsIC4zcyBlYXNlLW91dDt9LnJlbGF0ZWQtdGl0bGV7Zm9udC13ZWlnaHQ6NTAwO3Bvc2l0aW9uOnJlbGF0aXZlO21hcmdpbi10b3A6IDEzcHg7fS5yZWxhdGVkLXRpdGxlIGF7dGV4dC1kZWNvcmF0aW9uOiBub25lOyBmb250LXdlaWdodDogNzAwOyBkaXNwbGF5OiAtd2Via2l0LWJveDsgLXdlYmtpdC1saW5lLWNsYW1wOiAyOyAtd2Via2l0LWJveC1vcmllbnQ6IHZlcnRpY2FsOyBvdmVyZmxvdzogaGlkZGVuO2ZvbnQtc2l6ZTogMThweDt9LnJlbGF0ZWQgbGk6bnRoLW9mLXR5cGUoMyksLnJlbGF0ZWQgbGk6bnRoLW9mLXR5cGUoNiksLnJlbGF0ZWQgbGk6bnRoLW9mLXR5cGUoOSl7bWFyZ2luLXJpZ2h0OjB9LnJlbGF0ZWQgLnJlbGF0ZWQtdGh1bWI6aG92ZXIgLnJlbGF0ZWQtaW1nOmFmdGVye2JhY2tncm91bmQ6cmdiYSgwLDAsMCwwLjM4KX1AbWVkaWEgKG1heC13aWR0aDogNjQwcHgpeyNyZWxhdGVkLXBvc3RzIC5yZWxhdGVke2dyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDFmciFpbXBvcnRhbnQ7fX1AbWVkaWEgKG1heC13aWR0aDogODQwcHgpey5yZWxhdGVke2dyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDFmciAxZnIhaW1wb3J0YW50O319DQovKiBTaGFyZSBidXR0b24gKi8NCi5yZXNwby1zaGFyaW5nIHsgZGlyZWN0aW9uOiBsdHI7IGRpc3BsYXk6IGJsb2NrOyBvcGFjaXR5OiAxOyB0ZXh0LWFsaWduOiBjZW50ZXI7IH0gLnJlc3BvLXNoYXJpbmctYnV0dG9uX19saW5rIHsgYm94LXNpemluZzogYm9yZGVyLWJveDsgLW1vei10cmFuc2l0aW9uOiBvcGFjaXR5IC4ycyBlYXNlLWluLHRvcCAuMnMgZWFzZS1pbjsgLW1zLXRyYW5zaXRpb246IG9wYWNpdHkgLjJzIGVhc2UtaW4sdG9wIC4ycyBlYXNlLWluOyAtby10cmFuc2l0aW9uOiBvcGFjaXR5IC4ycyBlYXNlLWluLHRvcCAuMnMgZWFzZS1pbjsgLW1vei1ib3JkZXItcmFkaXVzOiAwOyBib3JkZXItcmFkaXVzOiAwOyBjdXJzb3I6IHBvaW50ZXI7IGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2IoMCAwIDAgLyA0JSksIDAgMTJweCAyOHB4ICNkZGQ7IGRpc3BsYXk6IGlubGluZS1ibG9jazsgZm9udC1zaXplOiAxMnB4OyBoZWlnaHQ6IDQwcHg7IGxpbmUtaGVpZ2h0OiA0MHB4OyBtYXJnaW4tcmlnaHQ6IDhweDsgcGFkZGluZzogMCAxMHB4OyBwb3NpdGlvbjogcmVsYXRpdmU7IHRleHQtYWxpZ246IGNlbnRlcjsgdG9wOiAwOyB2ZXJ0aWNhbC1hbGlnbjogdG9wOyB3aGl0ZS1zcGFjZTogbm93cmFwOyB9IC5yZXNwby1zaGFyaW5nLW1vcmUtY29udGVudCB7IGRpc3BsYXk6IGJsb2NrOyB9IC5yZXNwby1zaGFyaW5nLWJ1dHRvbl9fbGluayB7IGRpc3BsYXk6IGlubGluZS1ibG9jazsgdGV4dC1kZWNvcmF0aW9uOiBub25lOyBjb2xvcjogI2ZmZjsgbWFyZ2luOiAwIGF1dG87IHRyYW5zaXRpb246IGFsbCAuM3M7IG1pbi13aWR0aDogMTAwcHg7IG1hcmdpbjogNXB4IDVweDsgfSAucmVzcG8tc2hhcmluZy1idXR0b25fX2xpbms6aG92ZXIgeyBvcGFjaXR5OiAuODsgdG9wOiAtNHB4OyB9IC5yZXNwby1zaGFyaW5nLWJ1dHRvbl9faWNvbiBzdmcgeyBoZWlnaHQ6IDIwcHg7IHdpZHRoOiAyMHB4OyBwb3NpdGlvbjogcmVsYXRpdmU7IHRvcDogMTBweDsgdmVydGljYWwtYWxpZ246IHRvcDsgfSAucmVzcG8tc2hhcmluZy1idXR0b24gc3ZnIHBhdGggeyBmaWxsOiAjZmZmOyB9IC5yZXNwby1zaGFyaW5nLWJ1dHRvbl9faWNvbiB7IGN1cnNvcjogcG9pbnRlcjsgfSAucmVzcG8tc2hhcmluZy1idXR0b25fX2ljb24geyBmb250LXdlaWdodDogbm9ybWFsOyB9LmRhcmsgLnJlc3BvLXNoYXJpbmctYnV0dG9uX19saW5re2JveC1zaGFkb3c6bm9uZTt9DQovKiBUaW1lICovDQpzcGFuLmNsb2NrLXRpbWV7Zm9udC1zaXplOiAxMHB4O30uYWN0aXZle2NvbG9yOiNmODg7Zm9udC13ZWlnaHQ6NzAwfQ0KLyotLS0gcG9zdCAtLS0qLw0KI2p1ZHVsLXBvc3QgLnBvc3QtdGl0bGUge2ZvbnQtc2l6ZTogMjRweDsgcGFkZGluZy10b3A6IDIwcHg7fS5wb3N0X3RpbWVzbWFwe2p1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjttYXJnaW4tYm90dG9tOiAxOHB4O3BhZGRpbmc6IDIwcHggMDsgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7IGZvbnQtc2l6ZTogMTJweDsgY29sb3I6ICMyMjI7IGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjO30uYXV0aG9yYXZhLXggeyBkaXNwbGF5OiBibG9jazsgd2lkdGg6IDM2cHg7IGhlaWdodDogMzZweDsgYm9yZGVyLXJhZGl1czogNTAlOyBvdmVyZmxvdzogaGlkZGVuOyB9DQogLmhlcm9fdGl0bGV7bWFyZ2luOiAwIGF1dG87dHJhbnNpdGlvbjogYWxsIC4zczt9LnBvc3QgeyBwYWRkaW5nOiAwIDEycHg7IG1hcmdpbjogMDsgfQ0KICAubWFyZ2luIHttYXJnaW46IDIwcHggYXV0bzt0ZXh0LWFsaWduOiBjZW50ZXI7fS5ub3RpZnkgeyBiYWNrZ3JvdW5kOmdyZWVuOyBjb2xvcjogI2ZmZiFpbXBvcnRhbnQ7IHBhZGRpbmc6IDVweCAyMHB4OyB0ZXh0LWFsaWduOiBjZW50ZXI7IHBvc2l0aW9uOiBhYnNvbHV0ZTt6LWluZGV4Ojk7IHJpZ2h0OiAyOCU7IHRvcDo1cHg7IGJvcmRlci1yYWRpdXM6IDVweDsgfS5wb3N0LWJvZHkgYmxvY2txdW90ZTo6YWZ0ZXJ7Y29udGVudDogJ0RvdWJsZSBjbGljayB0byBjb3B5JzsgcG9zaXRpb246IGFic29sdXRlOyB0b3A6IDA7IHJpZ2h0OiA1cHg7IGZvbnQtc2l6ZTogMTBweDsgZGlzcGxheTogaW5saW5lLWJsb2NrOyBjb2xvcjojMDA5Njg4OyBmb250LXdlaWdodDogNzAwOyBwYWRkaW5nOiA1cHg7IHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7fS5kb3dubG9hZC13cmFwcGVye2Rpc3BsYXk6IGlubGluZS1ibG9jazt9LmJ0bjpob3ZlcnthbmltYXRpb246IHNoYWtlIDE1MG1zIDIgbGluZWFyO30NCi5wb3N0LWJvZHkgaDIge2ZvbnQtc2l6ZTogMjdweCAhaW1wb3J0YW50O30ucG9zdC1ib2R5IGgze2ZvbnQtc2l6ZTogMjVweH0ucG9zdC1ib2R5IGg0e2ZvbnQtc2l6ZTogMjNweH0NCi5wb3N0LWJvZHkgYmxvY2txdW90ZSB7IGJhY2tncm91bmQtY29sb3I6ICNFMEYyRjE7IGJvcmRlci1yYWRpdXM6IC4yNXJlbTsgcGFkZGluZzogNDBweCAyMHB4IDIwcHg7IG1hcmdpbjogMXJlbSAwIDEuMnJlbTsgYm9yZGVyOiAxcHggc29saWQgIzAwOTY4ODsgcG9zaXRpb246IHJlbGF0aXZlOyB9IC5jbG9jayB7IHBhZGRpbmc6IDA7ICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTt9LmRhcmsgLnBvc3QtYm9keSBibG9ja3F1b3RlLCAuZGFyayAuZG93bmxvYWQtbGluaywgLmRhcmsgLmJ0bntiYWNrZ3JvdW5kOiMxMjEzMUE7Y29sb3I6IzY5NkM4MDtib3JkZXItY29sb3I6I2ZmZiFpbXBvcnRhbnR9LmRhcmsgLnBvc3QtYm9keSBibG9ja3F1b3RlOjphZnRlcntjb2xvcjojZmZmfQ0KLmRvd25sb2FkLWxpbmsgYSBzdmd7d2lkdGg6MjBweDttYXJnaW4tcmlnaHQ6IDRweDtoZWlnaHQ6MjBweDtkaXNwbGF5OmlubGluZS1ibG9jazt2ZXJ0aWNhbC1hbGlnbjptaWRkbGV9LmRvd25sb2FkLWxpbmsgYSwgYS5idG57dGV4dC1kZWNvcmF0aW9uOm5vbmU7Y29sb3I6ICNmZmYhaW1wb3J0YW50O30uZG93bmxvYWQtbGluaywuYnRuLC5kb3dubG9hZC1saW5rOjphZnRlciwuYnRuOjphZnRlcntkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IHBhZGRpbmc6IDE2cHggMjBweDsgZm9udC1zaXplOiAxOHB4OyBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoNDVkZWcsIHRyYW5zcGFyZW50IDUlLCAjMDA5Njg4IDUlKTttYXJnaW46IDAgMTJweDsgYm9yZGVyOiAwOyBjb2xvcjogI2ZmZjsgbGV0dGVyLXNwYWNpbmc6IDNweDsgbGluZS1oZWlnaHQ6IDE7IGJveC1zaGFkb3c6IDZweCAwcHggMHB4ICNjY2M7IG91dGxpbmU6IHRyYW5zcGFyZW50OyBwb3NpdGlvbjogcmVsYXRpdmU7fS5teWJ1dHRvbntkaXNwbGF5Om5vbmV9LmJnLW92ZXJsYXl4e2JhY2tncm91bmQ6cmdiYSgwLDAsMCwwLjYpO3otaW5kZXg6OTk5IWltcG9ydGFudDtoZWlnaHQ6MTAwdmg7d2lkdGg6MTAwJTtwb3NpdGlvbjpmaXhlZDtsZWZ0OjA7dG9wOjA7cmlnaHQ6MDtib3R0b206MDt6LWluZGV4OjA7LXdlYmtpdC10cmFuc2l0aW9uOmJhY2tncm91bmQgMC4xNXMgbGluZWFyOy1vLXRyYW5zaXRpb246YmFja2dyb3VuZCAwLjE1cyBsaW5lYXI7dHJhbnNpdGlvbjpiYWNrZ3JvdW5kIDAuMTVzIGxpbmVhcn0jZWxlbWVudF90b19wb3BfdXB7ZGlzcGxheTpub25lO3otaW5kZXg6OTk5OTtvcGFjaXR5OjE7b3ZlcmZsb3c6aGlkZGVuO3RvcDoxMDBweH1AbWVkaWEgKG1heC13aWR0aDo0ODBweCl7LmVsZW1lbnRfcG9wX3VwX3dyYXB7bWF4LXdpZHRoOjkwJSFpbXBvcnRhbnR9fS5lbGVtZW50X3BvcF91cF93cmFwe3Bvc2l0aW9uOmZpeGVkO3otaW5kZXg6OTk5OTk7LXdlYmtpdC10cmFuc2Zvcm06dHJhbnNsYXRlKDUwJSw1MCUpO2xlZnQ6NTAlO3RvcDogNTAlO3JpZ2h0OjUwJTt0cmFuc2Zvcm06dHJhbnNsYXRlKC01MCUsLTUwJSk7LXdlYmtpdC10cmFuc2l0aW9uOi13ZWJraXQtdHJhbnNmb3JtIDAuM3MgZWFzZS1vdXQ7LW8tdHJhbnNpdGlvbjotby10cmFuc2Zvcm0gMC4zcyBlYXNlLW91dDt0cmFuc2l0aW9uOi13ZWJraXQtdHJhbnNmb3JtIDAuM3MgZWFzZS1vdXQ7LW8tdHJhbnNpdGlvbjp0cmFuc2Zvcm0gMC4zcyBlYXNlLW91dDt0cmFuc2l0aW9uOnRyYW5zZm9ybSAwLjNzIGVhc2Utb3V0O3RyYW5zaXRpb246dHJhbnNmb3JtIDAuM3MgZWFzZS1vdXQsLXdlYmtpdC10cmFuc2Zvcm0gMC4zcyBlYXNlLW91dDtkaXNwbGF5OmlubGluZS1ibG9jazt2ZXJ0aWNhbC1hbGlnbjptaWRkbGU7d2lkdGg6MzIwcHg7Ym94LXNoYWRvdzowIDVweCAzNXB4IHJnYigwIDAgMC83JSk7LXdlYmtpdC1ib3gtc2l6aW5nOmJvcmRlci1ib3g7LW1vei1ib3gtc2l6aW5nOmJvcmRlci1ib3g7Ym94LXNpemluZzpib3JkZXItYm94O21hcmdpbjozMHB4IGF1dG87cGFkZGluZzoxNXB4O21heC13aWR0aDo4MCU7YmFja2dyb3VuZC1jb2xvcjojZmZmZGZjO2JvcmRlci1yYWRpdXM6NnB4O2JvcmRlcjoxcHggc29saWQgcmdiYSgwLDAsMCwwLjIpO292ZXJmbG93LXk6YXV0bzttYXgtaGVpZ2h0OmNhbGMoMTAwdmggLSA3MHB4KX0uZWxlbWVudF9wb3BfdXBfaGVhZGVyIC5lbGVtZW50X3BvcF91cF9jbG9zZXtjdXJzb3I6cG9pbnRlcjtmb250LXdlaWdodDpib2xkO3otaW5kZXg6NX0uZWxlbWVudF9wb3BfdXBfaGVhZGVye2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7cG9zaXRpb246cmVsYXRpdmU7anVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW47Ym9yZGVyLWJvdHRvbToxcHggI0U1RTVFNSBzb2xpZDtwYWRkaW5nOjAgMCAxM3B4O21hcmdpbi1ib3R0b206MTBweH0uZWxlbWVudF9wb3BfdXBfY29udGVudHtvdXRsaW5lOjA7d2lkdGg6MTAwJTtwb3NpdGlvbjpyZWxhdGl2ZTtkaXNwbGF5OmZsZXg7anVzdGlmeS1jb250ZW50OmNlbnRlcjthbGlnbi1pdGVtczpjZW50ZXI7LXdlYmtpdC1mbGV4LWRpcmVjdGlvbjpjb2x1bW47LW1zLWZsZXgtZGlyZWN0aW9uOmNvbHVtbjtmbGV4LWRpcmVjdGlvbjpjb2x1bW47bWF4LWhlaWdodDpjYWxjKDEwMHZoIC0gNzBweCl9LmVsZW1lbnRfcG9wX3VwX3RpbWVyX2J1dHRvbntkaXNwbGF5Om5vbmU7cG9zaXRpb246cmVsYXRpdmU7YmFja2dyb3VuZDojZTZmZmU2O3BhZGRpbmc6MTJweH0uZWxlbWVudF9wb3BfdXBfYWR7bWFyZ2luOjRweCAwIDRweDtwb3NpdGlvbjpyZWxhdGl2ZTtib3JkZXI6IDFweCBzb2xpZCAjY2NjO2Rpc3BsYXk6aW5saW5lLWJsb2NrO3dpZHRoOjMwMHB4O2hlaWdodDoyMDBweH0uZWxlbWVudF9wb3BfdXBfdGltZXJ7Zm9udC1zaXplOjExcHg7Zm9udC13ZWlnaHQ6NzAwO2NvbG9yOmJyb3duO2JhY2tncm91bmQ6I2ZhZWJlYjtwYWRkaW5nOjEycHggMDt0ZXh0LWFsaWduOmNlbnRlcjtwb3NpdGlvbjpyZWxhdGl2ZX0uZG93bmxvYWRhZG9wZW57YmFja2dyb3VuZC1jb2xvcjojZjNmMmYyO2NvbG9yOiMwMDAhaW1wb3J0YW50O2JveC1zaXppbmc6Ym9yZGVyLWJveDtwYWRkaW5nOjNweCA2MHB4O2ZvbnQtc2l6ZTowLjg3NXJlbTtmb250LXdlaWdodDo2MDA7aW5zZXQ6MC4xMjVyZW07dGV4dC1hbGlnbjpjZW50ZXI7Zm9udC1mYW1pbHk6IkZpcmEgQ29kZSBWRiIsIkZpcmEgQ29kZSIsbW9ub3NwYWNlO2xldHRlci1zcGFjaW5nOjAuMXB4O3RleHQtdHJhbnNmb3JtOmNhcGl0YWxpemU7Ym9yZGVyOjFweCBzb2xpZCAjMjEyMTIxIWltcG9ydGFudH0uZWxlbWVudF9wb3BfdXBfdGltZXJfYnV0dG9uIHB7bWFyZ2luOjVweCAwIDVweDt0ZXh0LWFsaWduOmNlbnRlcjtkaXNwbGF5OmJsb2NrO2ZvbnQtc2l6ZToxMXB4fS5lbGVtZW50X3BvcF91cF90aW1lcl9idXR0b24gcC5kdGV4dHtmb250LXNpemU6MTBweDtjb2xvcjpncmVlbn0uZWxlbWVudF9wb3BfdXBfdGltZXJfYnV0dG9uIHAuZnJlZWRvd25hZHttYXJnaW46MTVweCAwIDVweCFpbXBvcnRhbnR9LmVsZW1lbnRfcG9wX3VwX3RpdGxle2ZvbnQtd2VpZ2h0OmJvbGR9LmVsZW1lbnRfcG9wX3VwX19idXR0b25fY29udGVudHttYXJnaW4tdG9wOjEycHg7cG9zaXRpb246cmVsYXRpdmU7d2lkdGg6MTAwJTtib3gtc2l6aW5nOmJvcmRlci1ib3h9LnRlcm1zaGVhZHsganVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW59LnRlcm1zaGVhZCBzcGFuLmNsb3NleHtjdXJzb3I6cG9pbnRlcjt6LWluZGV4Ojk7fSAuY2xpY2tfcG9we3Bvc2l0aW9uOnJlbGF0aXZlfSNhdF90ZXJtc3t6LWluZGV4OiA5OTk5OyBkaXNwbGF5OiBub25lOyBvdmVyZmxvdzogaGlkZGVuO30gLnRlcm1zX3dyYXB7cGFkZGluZzogMTVweDsgd2lkdGg6IDUwMHB4OyB0b3A6IDUwJTsgZGlzcGxheTogaW5saW5lLWJsb2NrOyByaWdodDogNTAlOyBsZWZ0OiA0MyU7IGFsaWduLWl0ZW1zOiBjZW50ZXI7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7IHotaW5kZXg6IDk5OTsgcG9zaXRpb246IGZpeGVkOyBtYXgtd2lkdGg6IDk1JTsgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwtNTAlKXNjYWxlKDAuNyk7IG1hcmdpbjogMCBhdXRvOyBib3JkZXItcmFkaXVzOiA2cHg7IGJvcmRlcjogMnB4IHNvbGlkICMwMDk2ODg7IG92ZXJmbG93LXk6IGF1dG87IG1heC1oZWlnaHQ6IGNhbGMoMTAwdmggLSA3MHB4KTsgdmVydGljYWwtYWxpZ246IG1pZGRsZTsgYm94LXNoYWRvdzogMCA1cHggMzVweCByZ2IoMCAwIDAgLyAyMCUpO30udGVybXNfY29udGVudHtkaXNwbGF5OiBmbGV4O2p1c3RpZnktY29udGVudDogY2VudGVyO2ZsZXgtZGlyZWN0aW9uOiBjb2x1bW47IGFsaWduLWl0ZW1zOiBjZW50ZXI7fSAudGVybXNoZWFkIHtib3JkZXItYm90dG9tOiAxcHggc29saWQgI2NjYzsgbWFyZ2luLWJvdHRvbTogMTVweDsgcGFkZGluZzogMXB4IDAgMTBweDsgd2lkdGg6IDEwMCU7IGZvbnQtc2l6ZTogMjVweDsgZm9udC13ZWlnaHQ6IDcwMDt9LnRlcm1zX2NvbnRlbnQgPiBwe2Rpc3BsYXk6IGlubGluZS1ibG9jazsgcGFkZGluZzogNnB4O30NCi5wb3N0LWJvZHkgaDEsIC5wb3N0LWJvZHkgaDIsIC5wb3N0LWJvZHkgaDMsIC5wb3N0LWJvZHkgaDQsIC5wb3N0LWJvZHkgaDUsIC5wb3N0LWJvZHkgaDYgeyAgZm9udC13ZWlnaHQ6IDcwMDsgbWFyZ2luOiAwIDAgMTVweDsgfQ0KLnBvc3QtYm9keXtsaW5lLWhlaWdodDoxLjhlbTtvdmVyZmxvdzpoaWRkZW59DQp0ZXh0YXJlYSwucHJlY29kZXt3aWR0aDoxMDAlOy1tb3otYm94LXNpemluZzpib3JkZXItYm94Oy13ZWJraXQtYm94LXNpemluZzpib3JkZXItYm94O2JveC1zaXppbmc6Ym9yZGVyLWJveH0NCi5wb3N0LWJvZHkgcHJle3Bvc2l0aW9uOnJlbGF0aXZlO3BhZGRpbmctdG9wOjE4cHg7bGluZS1oZWlnaHQ6IDEuMzt9DQoucG9zdC1ib2R5IHByZTo6YmVmb3Jle2ZvbnQtc2l6ZToxNHB4O3Bvc2l0aW9uOnZhcigtLTZhcXkwMSk7dG9wOjA7cGFkZGluZzowIDEwcHg7bGVmdDowO3JpZ2h0OjA7Y29sb3I6I2ZmZjsNCmRpc3BsYXk6YmxvY2s7bWFyZ2luOjA7Y29udGVudDomIzM5O0NvZGVsaW5lcyAtIGRvdWJsZWNsaWNrIHRvIHNlbGVjdCBhbGwhJiMzOTs7aGVpZ2h0OjE4cHg7YmFja2dyb3VuZDojZDJjYmI4fQ0KLnNlcGFyYXRvciBhe21hcmdpbi1sZWZ0OjAhaW1wb3J0YW50O21hcmdpbi1yaWdodDowIWltcG9ydGFudH0NCi5wb3N0LWJvZHkgaW1ne21heC13aWR0aDoxMDAlO2hlaWdodDphdXRvO3BhZGRpbmc6MDttYXJnaW46MCBhdXRvO2Rpc3BsYXk6YmxvY2t9LmF0LWFkc2Jsb2NrIHsgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjsgcGFkZGluZzogMjBweDsgcG9zaXRpb246IHJlbGF0aXZlOyBib3gtc2hhZG93OiAwIDAgMzVweCByZ2IoMCAwIDAgLyA5JSk7IGJvcmRlcjogMXB4IGRhc2hlZDsgfQ0KLyotLS0gY3VzdG9tIGNvbW1lbnRzIC0tLSovDQouY29tbWVudHMgaDR7bWFyZ2luLWJvdHRvbToyMHB4fS5ibG9nLXBvc3Rze2Rpc3BsYXk6YmxvY2shaW1wb3J0YW50fQ0KLmRsYnRue2Rpc3BsYXk6aW5saW5lLWJsb2NrO3BhZGRpbmc6NXB4IDIwcHg7YmFja2dyb3VuZDojMDBBMzc2O2JvcmRlci1yYWRpdXM6M3B4O2NvbG9yOiNmZmYhaW1wb3J0YW50O3RleHQtYWxpZ246Y2VudGVyfQ0KLmRsYnRuOmhvdmVye2JhY2tncm91bmQ6b3JhbmdlfS5kYXJrIC5jb21tZW50LnJlcGx5IC5jb21tZW50LWJvZHl7YmFja2dyb3VuZC1jb2xvcjojMTIxMzFBIWltcG9ydGFudH0NCi5oaWRlLWNvbnRlbnR7ZGlzcGxheTpub25lO21hcmdpbjowO3BhZGRpbmc6MDt9DQphLnNob3djb250ZW50LCNjb21tZW50cyBhLmhpZGRlbmNvbnRlbnR7ZGlzcGxheTpibG9jazt0ZXh0LWRlY29yYXRpb246bm9uZTtwb3NpdGlvbjpyZWxhdGl2ZTtmb250LXdlaWdodDo0MDA7Zm9udC1zaXplOjE1cHg7cGFkZGluZzoxMi41cHggMDtib3JkZXI6MnB4IHNvbGlkO2JvcmRlci1yYWRpdXM6NXB4O3RleHQtYWxpZ246Y2VudGVyO21hcmdpbjozMHB4IGF1dG87bGV0dGVyLXNwYWNpbmc6MXB4O3RyYW5zaXRpb246YWxsIC4zc30NCiNjb21tZW50cyBhLmhpZGRlbmNvbnRlbnQge2JhY2tncm91bmQ6I2ZmZjtjb2xvcjojYWNiM2I4O3RyYW5zaXRpb246YWxsIC4zc30NCmEuc2hvd2NvbnRlbnQ6aG92ZXJ7YmFja2dyb3VuZDojZmZmO2NvbG9yOiM1NTkzZjA7fQ0KI2NvbW1lbnRzIGEuaGlkZGVuY29udGVudDpob3ZlcntiYWNrZ3JvdW5kOiNhY2IzYjg7Y29sb3I6I2ZmZjt9LmNvbW1lbnQtY29udGVudHttYXJnaW4tYm90dG9tOiAzOXB4OyBwb3NpdGlvbjogcmVsYXRpdmU7ZGlzcGxheTp2YXIoLS11MmZ4dXEpO2ZsZXgtZGlyZWN0aW9uOiBjb2x1bW47fSNuZXh0cG9zdCwjcG9zdHBhZ2VyLCNwcmV2cG9zdHtoZWlnaHQ6YXV0bztwYWRkaW5nOjB9ICNuZXh0cG9zdCwjcHJldnBvc3R7ZGlzcGxheTppbmxpbmUtYmxvY2t9ICNuZXh0cG9zdCwjcG9zdHBhZ2VyLCNwcmV2cG9zdHstbW96LWJveC1zaXppbmc6Ym9yZGVyLWJveDstd2Via2l0LWJveC1zaXppbmc6Ym9yZGVyLWJveDtib3gtc2l6aW5nOmJvcmRlci1ib3g7bWFyZ2luOjEwcHggMDt9ICNwcmV2cG9zdHtmbG9hdDpyaWdodDt0ZXh0LWFsaWduOmxlZnR9Lm5vdHh0e3BhZGRpbmc6MCA4cHg7ZGlzcGxheTppbmxpbmUtYmxvY2s7dmVydGljYWwtYWxpZ246bWlkZGxlO30gI25leHRwb3N0OmhvdmVyIHN2ZywjcHJldnBvc3Q6aG92ZXIgc3Zne30gLnMtd29yZCwuYy13b3Jke2Zsb2F0OmxlZnQ7bWFyZ2luLXJpZ2h0OjVweH0gLmV4cGFuZC1tb3JlIC5kaXNxdXMtYm94LC5leHBhbmQtbW9yZSAuYmxvZ2dlci1ib3gsLmV4cGFuZC1tb3JlIC5jLXdvcmR7ZGlzcGxheTpibG9ja30gLmV4cGFuZC1tb3JlIC5zLXdvcmQsLmMtd29yZHtkaXNwbGF5Om5vbmV9IC5yZXBseS1zdmd7ZmxvYXQ6bGVmdDttYXJnaW4tdG9wOi0zcHg7fUAtd2Via2l0LWtleWZyYW1lcyBpbmRpY2F0b3J7MCV7b3BhY2l0eTowfTUwJXtvcGFjaXR5OjF9MTAwJXtvcGFjaXR5OjB9fSBALW1vei1rZXlmcmFtZXMgaW5kaWNhdG9yezAle29wYWNpdHk6MH01MCV7b3BhY2l0eToxfTEwMCV7b3BhY2l0eTowfX0gQGtleWZyYW1lcyBpbmRpY2F0b3J7MCV7b3BhY2l0eTowfTUwJXtvcGFjaXR5OjF9MTAwJXtvcGFjaXR5OjB9fQ0KI2N1c3RvbS1jb21tZW50c3ttYXJnaW46MjBweCAwfSAuY29tbWVudC1hdmF0YXIsLmNvbW1lbnQtYm9keSwuY29tbWVudC1oZWFkZXItZGV0aWx7b3ZlcmZsb3c6aGlkZGVufSAjY3VzdG9tLWNvbW1lbnRzIGg0e2ZvbnQtc2l6ZToyMHB4O21hcmdpbi1ib3R0b206MjBweDtjb2xvcjojMDAwO2ZvbnQtd2VpZ2h0OjcwMDtib3JkZXItYm90dG9tOjFweCBzb2xpZCAjZGRkO3BhZGRpbmctYm90dG9tOiAxMHB4O30gLmNvbW1lbnQtYXZhdGFye2Zsb2F0OmxlZnQ7bWFyZ2luOmF1dG87ZGlzcGxheTpibG9jazt3aWR0aDozNnB4O2hlaWdodDozNnB4O2JhY2tncm91bmQ6I2RkZDtib3JkZXItcmFkaXVzOjUwJTttYXJnaW4tdG9wOiAwcHg7fSAuY29tbWVudHMgLnJlcGxpZXMgLmNvbW1lbnQtYXZhdGFye3dpZHRoOjMycHg7aGVpZ2h0OjMycHh9LmNvbW1lbnRzIC5jb21tZW50cy1jb250ZW50IHsgZm9udC1zaXplOiAxNHB4OyBtYXJnaW4tYm90dG9tOiAzMHB4OyBiYWNrZ3JvdW5kOiAjZmZmOyBwYWRkaW5nOiAxN3B4OyBib3JkZXItcmFkaXVzOiAxMHB4OyB0cmFuc2l0aW9uOiBhbGwgLjVzIGVhc2U7IH0gLmNvbW1lbnQtaGVhZGVyLWRldGlse30gLmNvbW1lbnQtdXJse2Rpc3BsYXk6bm9uZX0gLmNvbW1lbnQtbGlzdHttYXJnaW4tYm90dG9tOjE1cHg7cGFkZGluZy1ib3R0b206MTVweDtib3JkZXItYm90dG9tOiAxcHggc29saWQgI2RkZH0gdWwuY29tbWVudHN7bWFyZ2luOjAgMCAyMHB4O3BhZGRpbmc6MH0gLmNvbW1lbnQtYm9keXtmb250LXNpemU6MTRweDttYXJnaW46MCAxMHB4IDIwcHg7Ym9yZGVyOiAxcHggc29saWQgIzAwOTY4ODsgcGFkZGluZzogMjBweDtib3JkZXItcmFkaXVzOiA0cHg7IHBvc2l0aW9uOnJlbGF0aXZlO30gLmNvbW1lbnQucmVwbHl7cG9zaXRpb246cmVsYXRpdmU7fSAuY29tbWVudC5yZXBseSAuY29tbWVudC1ib2R5e21hcmdpbjogMCAyNXB4IDEwcHg7IGJhY2tncm91bmQ6ICNFMEYyRjE7fSAuY29tbWVudC1mb290ZXJ7Zm9udC1zaXplOjEycHg7cG9zaXRpb246cmVsYXRpdmU7bWFyZ2luOiAwO30gLmEtcmVwbHl7cG9zaXRpb246dmFyKC0tNmFxeTAxKTsgYm90dG9tOiAxMnB4O2JvcmRlcjogMXB4IHNvbGlkICNjY2M7Zm9udC1zaXplOiAxMnB4OyBkaXNwbGF5OnZhcigtLXUyZnh1cSk7cGFkZGluZzogM3B4IDEycHg7IGZsZXgtZGlyZWN0aW9uOiByb3c7IGZvbnQtd2VpZ2h0OiA3MDA7fSAuY3VzdG9tLWNvbW1lbnRzLXBhZ2Vye21hcmdpbi1ib3R0b206MjBweH0gI2N1c3RvbS1jb21tZW50cyAjY29tbWVudC1lZGl0b3J7bWFyZ2luOjA7d2lkdGg6IDEwMCU7fSAuY29tbWVudHMucmVwbGllc3ttYXJnaW4tYm90dG9tOjEwcHh9IC5hLXVuZG97YmFja2dyb3VuZDojMzMzO3BhZGRpbmc6MnB4IDVweDtib3JkZXItcmFkaXVzOjJweDtjb2xvcjojZmZmIWltcG9ydGFudDtkaXNwbGF5Om5vbmV9IC5jb21tZW50LWxpc3QgLmEtdW5kb3tkaXNwbGF5OmlubGluZS1ibG9jazttYXJnaW46MjBweCAwO2ZvbnQtc2l6ZToxMnB4fSAuYS1kZWxldGV7ZGlzcGxheTpub25lO3Bvc2l0aW9uOnZhcigtLTZhcXkwMSk7cmlnaHQ6MTBweDtjb2xvcjogI2RkZCAhaW1wb3J0YW50O30gLmNvbW1lbnQtbGlzdDpob3ZlciAuYS1kZWxldGUsLnJlcGxpZXM6aG92ZXIgLmEtZGVsZXRle2Rpc3BsYXk6aW5saW5lIWltcG9ydGFudH0gLmNvbW1lbnQtaGVhZGVyIC5hLWRlbGV0ZXtmb250LXNpemU6MTJweH0gLmNvbW1lbnQtYXV0aG9ye2ZvbnQtd2VpZ2h0OjcwMH0uY29tbWVudC1hdXRob3IgYXtjb2xvcjojNzU1MzllfS5jb21tZW50LWhlYWRlcntmb250LXNpemU6MTRweDt0ZXh0LXRyYW5zZm9ybTpjYXBpdGFsaXplO30gYnV0dG9uLGJ1dHRvbltkaXNhYmxlZF06YWN0aXZle2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtib3JkZXItcmFkaXVzOjNweDtib3JkZXI6MXB4IHNvbGlkICM0OWE1YmY7cGFkZGluZzozcHggMTBweDt0ZXh0LWRlY29yYXRpb246bm9uZTtiYWNrZ3JvdW5kOmxpbmVhci1ncmFkaWVudCh0byBib3R0b20sIzkzY2VkZSAwLCM3NWJkZDEgNDElLCM0OWE1YmYgMTAwJSk7Y29sb3I6I2ZmZjtkaXNwbGF5OmlubGluZS1ibG9jazt0ZXh0LXNoYWRvdzoxcHggMXB4IDAgIzUyOGVjYztib3gtc2hhZG93Omluc2V0IDFweCAxcHggMCAwICNiYmRhZjc7Y3Vyc29yOnBvaW50ZXJ9IGJ1dHRvbjpob3Zlcntjb2xvcjojMDAwfSBidXR0b246YWN0aXZle2NvbG9yOiMwMDB9IGJ1dHRvbltkaXNhYmxlZF0sYnV0dG9uW2Rpc2FibGVkXTphY3RpdmV7Y29sb3I6IzAwMDtjdXJzb3I6ZGVmYXVsdH1AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0ODBweCl7LnBvc3QtYm9keSB7ZGlzcGxheTogYmxvY2shaW1wb3J0YW50O319DQo="
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link rel="stylesheet" href="css/Dividends.css" />
+  <link rel="stylesheet" href="css/MediaQuery.css" />
+  <link rel="stylesheet" href="css/Body.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+    rel="stylesheet"
+  />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link
+    href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link
+    href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="fonts/icomoon/style.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link href="/" rel="bookmark" title="IFinDoo" />
+  <link rel="icon" href="ifindoo2.png" type="image/icon" />
+  <link
+    href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <i class="bx bx-menu"></i>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="Image/ifindoo2.png" style="width: 50px; height: 50px" />
+          IFinDoo</a
+        >
+      </div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name"
+            ><img src="Image/ifindoo2.png" style="width: 50px; height: 50px" />
+            IFinDoo</span
+          >
+          <i class="bx bx-x"></i>
+        </div>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#">Markets</a>
+            <i class="bx bxs-chevron-down htmlcss-arrow arrow"></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li><a href="Crypto Shorts.html">Crypto Shorts</a></li>
+              <li><a href="Blue Chips.html">Blue Chips</a></li>
+              <li><a href="Countries.html">Countries</a></li>
+              <li><a href="World Economy.html">World Economy</a></li>
+              <li class="more">
+                <span
+                  ><a href="#">Tools</a>
+                  <i class="bx bxs-chevron-right arrow more-arrow"></i>
+                </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li>
+                    <a href="Crypto Calculator.html">Crypto Calculator</a>
+                  </li>
+                  <li><a href="Budget Calculate.html">Budget Calculator</a></li>
+                  <li>
+                    <a href="Currency Converter.html">Currency Converter</a>
+                  </li>
+                  <li><a href="Loan Calculator.html">Loan Calculator</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Assets</a>
+            <i class="bx bxs-chevron-down asset-arrow arrow"></i>
+            <ul class="asset-sub-menu sub-menu">
+              <li><a href="Crypto.html">Crypto</a></li>
+              <li><a href="Metaverse.html">Metaverse</a></li>
+              <li><a href="NFT.html">NFTs</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="active">Stocks</a>
+            <i class="bx bxs-chevron-down stock-arrow arrow"></i>
+            <ul class="stock-sub-menu sub-menu">
+              <li><a href="Dividends.html" class="active">Technology</a></li>
+              <li><a href="Social Media.html">Social Media</a></li>
+              <li><a href="Ecommerce.html">Ecommerce</a></li>
+              <li><a href="Banks.html">Banks</a></li>
+              <li><a href="Cars.html">Cars</a></li>
+              <li><a href="Sports.html">Sports</a></li>
+              <li><a href="Games.html">Games</a></li>
+              <li><a href="Foods.html">Foods</a></li>
+              <li><a href="Movie.html">Movie Industry</a></li>
+              <li><a href="Industrials.html">Industrials</a></li>
+              <li><a href="Healthcare.html">Healthcare</a></li>
+              <li><a href="Energy.html">Energy</a></li>
+              <li><a href="Real Estate.html">Real Estate</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Community</a>
+            <i class="bx bxs-chevron-down community-arrow arrow"></i>
+            <ul class="community-sub-menu sub-menu">
+              <li><a href="Hot Topics.html">Hot Topic</a></li>
+              <li><a href="Blogs.html">Blogs</a></li>
+              <li><a href="Scams.html">Scams</a></li>
+              <li><a href="Quotes.html">Quotes</a></li>
+            </ul>
+          </li>
+          <li><a href="Trade Guide.html">Trade Guide</a></li>
+        </ul>
+      </div>
+
+      <div id="Anutrickz_translateBTN" class="" title="translate langauge">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.8"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
+          />
+        </svg>
+        <div class="hide" id="ATLang_list">
+          <ul>
+            <li class="language-list" data-google-lang="en">
+              <img src="https://flagcdn.com/w20/us.png" />&nbsp;&nbsp; English
+            </li>
+            <li class="language-list" data-google-lang="zh">
+              <img src="https://flagcdn.com/w20/cn.png" />&nbsp;&nbsp; Chinese
+            </li>
+            <li class="language-list" data-google-lang="hi">
+              <img src="https://flagcdn.com/w20/in.png" />&nbsp;&nbsp; Hindi
+            </li>
+            <li class="language-list" data-google-lang="es">
+              <img src="https://flagcdn.com/w20/es.png" />&nbsp;&nbsp; Spanish
+            </li>
+            <li class="language-list" data-google-lang="fr">
+              <img src="https://flagcdn.com/w20/fr.png" />&nbsp;&nbsp; French
+            </li>
+            <li class="language-list" data-google-lang="ar">
+              <img src="https://flagcdn.com/w20/eg.png" />&nbsp;&nbsp; Arabic
+            </li>
+            <li class="language-list" data-google-lang="pt">
+              <img src="https://flagcdn.com/w20/br.png" />&nbsp;&nbsp;
+              Portuguese
+            </li>
+            <li class="language-list" data-google-lang="ru">
+              <img src="https://flagcdn.com/w20/ru.png" />&nbsp;&nbsp; Russian
+            </li>
+            <li class="language-list" data-google-lang="id">
+              <img src="https://flagcdn.com/w20/id.png" />&nbsp;&nbsp;
+              Indonesian
+            </li>
+            <li class="language-list" data-google-lang="ur">
+              <img src="https://flagcdn.com/w20/pk.png" />&nbsp;&nbsp; Urdu
+            </li>
+            <li class="language-list" data-google-lang="ja">
+              <img src="https://flagcdn.com/w20/jp.png" />&nbsp;&nbsp; Japanese
+            </li>
+            <li class="language-list" data-google-lang="de">
+              <img src="https://flagcdn.com/w20/de.png" />&nbsp;&nbsp; German
+            </li>
+            <li class="language-list" data-google-lang="tr">
+              <img src="https://flagcdn.com/w20/tr.png" />&nbsp;&nbsp; Turkish
+            </li>
+            <li class="language-list" data-google-lang="ko">
+              <img src="https://flagcdn.com/w20/kr.png" />&nbsp;&nbsp; Korean
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="#userProfile">
+        <svg
+          xmlns="https://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.8"
+          stroke="currentColor"
+          class="w-6 h-6 userProfile"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+          />
+        </svg>
+      </a>
+      <div class="search-box" title="search">
+        <i class="bx bx-search"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="floatSocial">
+    <li class="floatingSocial">
+      <a href="#" class="twitter"
+        ><span>Twitter</span><i class="fa fa-twitter"></i
+      ></a>
+    </li>
+    <li class="floatingSocial">
+      <a href="#" class="instagram"
+        ><span>Instagram</span><i class="fa fa-instagram"></i
+      ></a>
+    </li>
+    <li class="floatingSocial">
+      <a href="#" class="facebook"
+        ><span>Facebook</span><i class="fa fa-facebook"></i
+      ></a>
+    </li>
+  </div>
+
+  <div id="cd-nav">
+    <a id="cd-nav-trigger" href="#0" class="cd-nav-trigger"><span></span></a>
+    <div>
+      <ul id="cd-main-nav">
+        <li><a href="#appleSection">Apple</a></li>
+        <li><a href="#microsoftSection">Microsoft</a></li>
+        <li><a href="#amazonSection">Amazon</a></li>
+        <li><a href="#googleSection">Google</a></li>
+        <li><a href="#metaSection">Meta</a></li>
+        <li><a href="#teslaSection">Tesla</a></li>
+        <li><a href="#nvidiaSection">Nvidia</a></li>
+        <li><a href="#intelSection">Intel</a></li>
+        <li><a href="#ciscoSection">Cisco</a></li>
+        <li><a href="#adobeSection">Adobe</a></li>
+        <li><a href="#zoomSection">Zoom</a></li>
+        <li><a href="#netflixSection">Netflix</a></li>
+        <li><a href="#paypalSection">PayPal</a></li>
+        <li><a href="#oracleSection">Oracle</a></li>
+        <li><a href="#dropboxSection">Dropbox</a></li>
+        <li><a href="#shopifySection">Shopify</a></li>
+        <li><a href="#ibmSection">IBM</a></li>
+        <li><a href="#broadcomSection">Broadcom</a></li>
+        <li><a href="#qualcommSection">Qualcomm</a></li>
+        <li><a href="#taiwanSection">Taiwan</a></li>
+        <li><a href="#at&tSection">AT&T</a></li>
+        <li><a href="#uberSection">Uber</a></li>
+        <li><a href="#onsemiSection">On Semi</a></li>
+        <li><a href="#comcastSection">Comcast</a></li>
+        <li><a href="#hpSection">HP</a></li>
+        <li><a href="#mongodbSection">MongoDB</a></li>
+        <li><a href="#dellSection">Dell</a></li>
+        <li><a href="#godaddySection">GoDaddy</a></li>
+        <li><a href="#fullchartSection">FullChart</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dividends_text">
+    <div class="dividends_title">
+      <h2 id="dividends_title">Technology Company Stocks</h2>
+    </div>
+    <div class="dividends_para">
+      <div id="dividends_para">
+        Technology companies are among the most popular stocks for investors to
+        buy due to their potential for significant growth and innovation. These
+        companies often operate in fast-paced and dynamic industries, such as
+        software, internet, and semiconductors, which can lead to rapid changes
+        in stock prices. <br /><br />
+
+        One example of a technology company that has seen strong stock
+        performance in recent years is Apple. The company's stock has more than
+        doubled in the past five years, thanks in part to the success of its
+        iPhone and iPad products. Additionally, Apple has a strong brand and
+        loyal customer base, which helps to drive demand for its products. The
+        company also has a diverse revenue stream from its services segment,
+        which includes the App Store, iCloud, Apple Music, and Apple Pay. This
+        has helped to mitigate the risk of reliance on a single product.
+        <br /><br />
+
+        Another technology company that has seen strong stock performance is
+        Amazon. The company has disrupted traditional retail through its
+        e-commerce platform, which has become a go-to destination for many
+        consumers. Additionally, Amazon has expanded into other areas, such as
+        cloud computing and advertising, which has helped to drive its stock
+        price higher. Despite the company's size and dominance in the e-commerce
+        space, Amazon's stock has still managed to deliver strong returns for
+        investors. However, it's important to note that Amazon's business model
+        is based on low margins, which can be a concern for some investors.
+        <br /><br />
+
+        Technology companies operating in the semiconductor industry, such as
+        Intel and Qualcomm, have also seen strong stock performance in recent
+        years. The demand for semiconductors has been driven by the increasing
+        use of technology in various industries and the growing popularity of
+        smartphones and other mobile devices. These companies often have a
+        diversified customer base and a stable revenue stream, which can help to
+        mitigate the risk of reliance on a single product or customer. However,
+        the semiconductor industry is highly competitive and subject to rapid
+        technological changes, which can lead to significant volatility in stock
+        prices. <br /><br />
+
+        As with any stock, investing in technology companies comes with risk.
+        It's important to keep in mind that past performance is not necessarily
+        indicative of future results and that you should conduct thorough
+        research before making any investment decisions. It's also important to
+        diversify your portfolio and consider the risk-return trade-off when
+        investing in technology stocks.
+      </div>
+    </div>
+  </div>
+
+  <!-- Apple -->
+  <section id="appleSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Apple Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Apple Inc. is one of the largest and most valuable companies in the
+          world, and its stock is a popular choice among investors. The company
+          designs, manufactures, and sells a wide range of consumer electronics,
+          computer software, and online services. The stock is known for its
+          stability and consistent performance, and it has been a solid
+          long-term investment for many shareholders. Apple's stock has
+          performed well in recent years, reaching all-time highs in 2020 and
+          2021, driven by strong demand for its products, particularly the
+          iPhone. As of January 2021, Apple's market capitalization was over $2
+          trillion, making it the most valuable publicly traded company in the
+          world. <br /><br />
+
+          Investing in Apple stock can be a smart choice for those looking for a
+          stable, long-term investment. The company has a strong track record of
+          innovation and growth, and it has a diverse range of products and
+          services that generate significant revenue. Additionally, Apple has a
+          loyal customer base and a strong brand, which helps to ensure
+          consistent demand for its products. However, as with any stock, there
+          is always the risk that the company's performance may not meet
+          expectations. Therefore, it's important to conduct thorough research
+          and consider your risk tolerance before investing in Apple stock.
+          <br /><br />
+
+          It's also worth noting that Apple has a history of returning value to
+          shareholders through stock buybacks and dividends. In 2020, the
+          company announced an increase to its dividend and a new $430 billion
+          investment plan which includes $430 billion in investments over the
+          next five years. This news helped to boost the stock price and it's
+          expected that Apple will continue to return value to shareholders in
+          the future. Overall, Apple stock can be considered a safe and
+          profitable investment for those with a long-term perspective.
+        </div>
+      </div>
+      <!-- Apple Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-AAPL/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">AAPL price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+          {
+          "symbol": "NASDAQ:AAPL",
+          "width": "1000",
+          "locale": "en",
+          "colorTheme": "light",
+          "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+  <!-- Apple Widget END -->
+
+  <!-- Microsoft -->
+  <section id="microsoftSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Microsoft Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Microsoft Corporation is one of the largest and most valuable
+          companies in the world, and its stock is a popular choice among
+          investors. The company is known for its software products,
+          particularly the Windows operating system and the Office Suite of
+          productivity software. Microsoft has also been expanding into other
+          areas such as cloud computing, artificial intelligence, and gaming,
+          which has helped to diversify its revenue streams. As of January 2021,
+          Microsoft's market capitalization was over $2 trillion, making it one
+          of the most valuable publicly traded companies in the world.
+          <br /><br />
+
+          Investing in Microsoft stock can be a smart choice for those looking
+          for a stable, long-term investment. The company has a strong track
+          record of innovation and growth, and it has a diverse range of
+          products and services that generate significant revenue. Additionally,
+          Microsoft has a loyal customer base and a strong brand, which helps to
+          ensure consistent demand for its products. However, as with any stock,
+          there is always the risk that the company's performance may not meet
+          expectations. Therefore, it's important to conduct thorough research
+          and consider your risk tolerance before investing in Microsoft stock.
+          <br /><br />
+
+          Microsoft has also been known to return value to shareholders through
+          stock buybacks and dividends. The company has consistently paid
+          dividends to shareholders since 2003 and it has increased the dividend
+          payouts every year. As of January 2021, the company has a dividend
+          yield of 0.44%. This consistent return of value to shareholders has
+          helped to make Microsoft stock an attractive investment for dividend
+          investors. Overall, Microsoft stock can be considered a safe and
+          profitable investment for those with a long-term perspective.
+        </div>
+      </div>
+      <!-- Microsoft Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-MSFT/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">MSFT price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:MSFT",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Microsoft Widget END -->
+  </section>
+  <br /><br />
+  <!-- Microsoft-->
+
+  <!-- Amazon -->
+  <section id="amazonSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Amazon Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Amazon.com, Inc. is one of the largest and most valuable companies in
+          the world, and its stock is a popular choice among investors. The
+          company is known for its e-commerce business, which includes online
+          retail sales, as well as other services such as cloud computing,
+          advertising, and logistics. Amazon has also been expanding into other
+          areas such as grocery delivery, streaming media, and artificial
+          intelligence, which has helped to diversify its revenue streams. As of
+          January 2021, Amazon's market capitalization was over $1.5 trillion,
+          making it one of the most valuable publicly traded companies in the
+          world. <br /><br />
+
+          Investing in Amazon stock can be a smart choice for those looking for
+          a long-term investment. The company has a strong track record of
+          innovation and growth, and it has a diverse range of products and
+          services that generate significant revenue. Additionally, Amazon has a
+          large and loyal customer base, and a strong brand, which helps to
+          ensure consistent demand for its products and services. However, as
+          with any stock, there is always the risk that the company's
+          performance may not meet expectations. Therefore, it's important to
+          conduct thorough research and consider your risk tolerance before
+          investing in Amazon stock. <br /><br />
+
+          Amazon has a history of reinvesting profits back into the company,
+          which has helped to drive growth in the past. However, Amazon has also
+          been known to return value to shareholders through stock buybacks and
+          dividends, the company started paying dividends to shareholders in
+          2020, the yield is around 0.8%. This return of value to shareholders,
+          combined with the company's strong growth prospects, makes Amazon
+          stock an attractive investment for both growth and income investors.
+          Overall, Amazon stock can be considered a safe and profitable
+          investment for those with a long-term perspective.
+        </div>
+      </div>
+      <!-- Amazon Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-AMZN/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">AMZN price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:AMZN",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Amazon Widget END -->
+  </section>
+  <br /><br />
+  <!-- Amazon-->
+
+  <!-- Google -->
+  <section id="googleSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Google Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Alphabet Inc., commonly known as Google, is one of the largest and
+          most valuable companies in the world, and its stock is a popular
+          choice among investors. The company is known for its search engine and
+          advertising business, as well as other services such as cloud
+          computing, YouTube, and hardware products. Google has also been
+          expanding into other areas such as artificial intelligence, autonomous
+          vehicles, and smart home devices, which has helped to diversify its
+          revenue streams. As of January 2021, Alphabet's market capitalization
+          was over $1.5 trillion, making it one of the most valuable publicly
+          traded companies in the world. <br /><br />
+
+          Investing in Alphabet stock can be a smart choice for those looking
+          for a long-term investment. The company has a strong track record of
+          innovation and growth, and it has a diverse range of products and
+          services that generate significant revenue. Additionally, Google has a
+          large and loyal customer base and a strong brand, which helps to
+          ensure consistent demand for its products. However, as with any stock,
+          there is always the risk that the company's performance may not meet
+          expectations. Therefore, it's important to conduct thorough research
+          and consider your risk tolerance before investing in Alphabet stock.
+          <br /><br />
+
+          Alphabet has a history of reinvesting profits back into the company,
+          which has helped to drive growth in the past. However, the company has
+          also been known to return value to shareholders through stock buybacks
+          and dividends. The company started paying dividends to shareholders in
+          2012 and as of January 2021, the dividend yield is around 1.2%. This
+          return of value to shareholders, combined with the company's strong
+          growth prospects, makes Alphabet stock an attractive investment for
+          both growth and income investors. Overall, Alphabet stock can be
+          considered a safe and profitable investment for those with a long-term
+          perspective.
+        </div>
+      </div>
+      <!-- Google Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-GOOGL/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">GOOGL price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:GOOGL",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Google Widget END -->
+  </section>
+  <br /><br />
+  <!-- Google-->
+
+  <!-- Meta(Facebook) -->
+  <section id="metaSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Meta Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Facebook, Inc. is one of the largest and most popular social media
+          platforms in the world, and its stock is a popular choice among
+          investors. The company operates a range of products and services
+          including Facebook, Instagram, WhatsApp and Oculus VR. Facebook has
+          also been expanding into other areas such as e-commerce, artificial
+          intelligence, and virtual reality, which has helped to diversify its
+          revenue streams. As of January 2021, Facebook's market capitalization
+          was over $800 billion, making it one of the most valuable publicly
+          traded companies in the world. <br /><br />
+
+          Investing in Facebook stock can be a smart choice for those looking
+          for a long-term investment. The company has a strong track record of
+          user growth and engagement, and it has a diverse range of products and
+          services that generate significant revenue. Additionally, Facebook has
+          a large and loyal user base and a strong brand, which helps to ensure
+          consistent demand for its products and services. However, as with any
+          stock, there is always the risk that the company's performance may not
+          meet expectations, or it may face regulatory or legal challenges.
+          Therefore, it's important to conduct thorough research and consider
+          your risk tolerance before investing in Facebook stock. <br /><br />
+
+          Facebook has a history of reinvesting profits back into the company,
+          which has helped to drive growth in the past. However, the company has
+          also been known to return value to shareholders through stock buybacks
+          and dividends. The company started paying dividends to shareholders in
+          2020, the yield is around 0.5%. This return of value to shareholders,
+          combined with the company's strong growth prospects, makes Facebook
+          stock an attractive investment for both growth and income investors.
+          Overall, Facebook stock can be considered a safe and profitable
+          investment for those with a long-term perspective.
+        </div>
+      </div>
+      <!-- Meta(Facebook) Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-META/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">META price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:META",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Meta(Facebook) Widget END -->
+  </section>
+  <br /><br />
+  <!-- Meta(Facebook)-->
+
+  <!-- Tesla -->
+  <section id="teslaSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Tesla Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Tesla, Inc. is an American multinational corporation that designs,
+          manufactures, and sells electric vehicles, energy storage and solar
+          panel products. It is also one of the most popular and valuable
+          publicly traded companies in the world, and its stock is a popular
+          choice among investors. Tesla's market capitalization was over $800
+          billion as of January 2021, making it one of the most valuable
+          publicly traded companies in the world. The company's success is
+          driven by its innovative technology, strong brand and leadership
+          position in the electric vehicle market. <br /><br />
+
+          Investing in Tesla stock can be a risky but potentially rewarding
+          choice for investors. The company has a history of significant growth
+          and disruption in the automotive industry, but it also operates in a
+          highly competitive and constantly evolving market. Additionally,
+          Tesla's financials are highly dependent on the production and sales of
+          electric vehicles, which makes it sensitive to changes in consumer
+          demand, government regulations and technological advancements.
+          Therefore, it's important to conduct thorough research and consider
+          your risk tolerance before investing in Tesla stock. <br /><br />
+
+          However, despite the risks, Tesla has a strong track record of
+          innovation and growth, and it has a diverse range of products and
+          services that generate significant revenue. Additionally, Tesla has a
+          large and loyal customer base, a strong brand and it is considered a
+          leader in electric vehicle market, which helps to ensure consistent
+          demand for its products and services. The company has also been
+          expanding into other areas such as energy storage, solar panel and
+          autonomous driving, which has helped to diversify its revenue streams.
+          Furthermore, many analysts consider Tesla as a long-term growth play,
+          and the company has been consistently beating earnings estimates,
+          which has led to significant stock price appreciation in recent years.
+        </div>
+      </div>
+      <!-- Tesla Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-TSLA/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">TSLA price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:TSLA",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Tesla Widget END -->
+  </section>
+  <br /><br />
+  <!-- Tesla-->
+
+  <!-- NVIDIA -->
+  <section id="nvidiaSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">NVIDIA Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          NVIDIA Corporation is an American multinational technology company
+          that designs graphics processing units (GPUs) for the gaming and
+          professional markets, as well as system on a chip units (SoCs) for the
+          mobile computing and automotive market. Its products are widely used
+          in gaming, data center, professional visualization, and self-driving
+          car development. As of January 2021, NVIDIA's market capitalization
+          was over $300 billion, making it one of the most valuable publicly
+          traded technology companies in the world. <br /><br />
+
+          Investing in NVIDIA stock can be a smart choice for those looking for
+          a long-term investment. The company has a strong track record of
+          growth and innovation, particularly in the areas of gaming, data
+          center, and artificial intelligence. NVIDIA's GPU technology is widely
+          used in these industries and the company is considered a leader in
+          these markets. Additionally, NVIDIA has a diversified revenue stream,
+          which helps to ensure consistent demand for its products and services.
+          However, as with any stock, there is always the risk that the
+          company's performance may not meet expectations, or it may face
+          regulatory or legal challenges. Therefore, it's important to conduct
+          thorough research and consider your risk tolerance before investing in
+          NVIDIA stock. <br /><br />
+
+          NVIDIA has been consistently investing in R&D, which has helped it to
+          be at the forefront of the latest technological advancements in AI,
+          data center, and self-driving cars. The company has also been
+          expanding into other areas such as healthcare, retail and autonomous
+          driving, which has helped to diversify its revenue streams.
+          Furthermore, many analysts consider NVIDIA as a long-term growth play
+          and the company has been consistently beating earnings estimates,
+          which has led to significant stock price appreciation in recent years.
+          The company also started paying dividends to shareholders in 2021, the
+          yield is around 0.3%. This return of value to shareholders, combined
+          with the company's strong growth prospects, makes NVIDIA stock an
+          attractive investment for both growth and income investors.
+        </div>
+      </div>
+      <!-- NVIDIA Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-NVDA/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">NVDA price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:NVDA",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- NVIDIA Widget END -->
+  </section>
+  <br /><br />
+  <!-- NVIDIA-->
+
+  <!-- Intel -->
+  <section id="intelSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Intel Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Intel Corporation is an American multinational corporation that
+          designs, manufactures, and sells computer hardware, including
+          microprocessors, motherboards, and other computer components. It is
+          one of the largest and most well-known technology companies in the
+          world, and its stock is a popular choice among investors. As of
+          January 2021, Intel's market capitalization was over $200 billion,
+          making it one of the most valuable publicly traded technology
+          companies in the world. <br /><br />
+
+          Investing in Intel stock can be a smart choice for those looking for a
+          long-term investment. The company has a long history of steady growth,
+          a solid balance sheet and a diversified revenue stream from its
+          various businesses such as data center, PC, IoT, Memory and AI. Intel
+          is considered as a leader in the semiconductor industry, and its
+          products are widely used in various industries such as personal
+          computers, data centers, and Internet of Things (IoT). Additionally,
+          Intel has a strong brand, a large and loyal customer base, and a
+          diversified revenue stream which helps to ensure consistent demand for
+          its products and services. However, as with any stock, there is always
+          the risk that the company's performance may not meet expectations, or
+          it may face regulatory or legal challenges. Therefore, it's important
+          to conduct thorough research and consider your risk tolerance before
+          investing in Intel stock. <br /><br />
+
+          Despite facing challenges in recent years in the form of increasing
+          competition and changing industry dynamics, Intel has continued to
+          innovate and adapt to these changes. The company has been investing
+          heavily in research and development, which has helped it to stay at
+          the forefront of the latest technological advancements in areas such
+          as artificial intelligence, data center, and 5G. Additionally, Intel
+          has been expanding into other areas such as autonomous driving, which
+          has helped to diversify its revenue streams. Furthermore, many
+          analysts consider Intel as a long-term growth play and the company has
+          been consistently beating earnings estimates, which has led to
+          significant stock price appreciation in recent years.
+        </div>
+      </div>
+      <!-- Intel Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-INTC/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">INTC price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:INTC",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Intel Widget END -->
+  </section>
+  <br /><br />
+  <!-- Intel-->
+
+  <!-- Cisco -->
+  <section id="ciscoSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Cisco Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Cisco Systems, Inc. is an American multinational technology
+          conglomerate that develops, manufactures, and sells networking
+          hardware, telecommunications equipment, and other high-technology
+          services and products. Its products and services are widely used in
+          various industries such as enterprise, service providers, and
+          government. Cisco is considered as a leader in the networking
+          equipment industry. As of January 2021, Cisco's market capitalization
+          was over $190 billion, making it one of the most valuable publicly
+          traded technology companies in the world. <br /><br />
+
+          Investing in Cisco stock can be a smart choice for those looking for a
+          long-term investment. The company has a long history of steady growth,
+          a solid balance sheet and a diversified revenue stream. Cisco's
+          products and services are widely used in various industries such as
+          enterprise, service providers, and government, which helps to ensure
+          consistent demand for its products and services. Additionally, Cisco
+          has a strong brand, a large and loyal customer base, and a diversified
+          revenue stream. The company is also focusing on expanding into new
+          areas such as cybersecurity, which has helped to diversify its revenue
+          streams and drive growth. However, as with any stock, there is always
+          the risk that the company's performance may not meet expectations, or
+          it may face regulatory or legal challenges. Therefore, it's important
+          to conduct thorough research and consider your risk tolerance before
+          investing in Cisco stock. <br /><br />
+
+          Cisco has been consistently investing in R&D, which has helped it to
+          be at the forefront of the latest technological advancements in areas
+          such as networking, security, and IoT. Additionally, the company has
+          been expanding into new areas such as cybersecurity, which has helped
+          to diversify its revenue streams and drive growth. Furthermore, many
+          analysts consider Cisco as a long-term growth play and the company has
+          been consistently beating earnings estimates, which has led to
+          significant stock price appreciation in recent years. The company also
+          started paying dividends to shareholders in 2011, the yield is around
+          2.8%. This return of value to shareholders, combined with the
+          company's strong growth prospects, makes Cisco stock an attractive
+          investment for both growth and income investors.
+        </div>
+      </div>
+      <!-- Cisco Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-CSCO/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">CSCO price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:CSCO",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Cisco Widget END -->
+  </section>
+  <br /><br />
+  <!-- Cisco-->
+
+  <!-- Adobe -->
+  <section id="adobeSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Adobe Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Adobe Inc. is an American multinational computer software company that
+          creates and sells multimedia and creativity software products. Adobe's
+          products are widely used by professionals, businesses, and consumers
+          around the world and its most well-known products include Photoshop,
+          Illustrator, and Acrobat. As of January 2021, Adobe's market
+          capitalization was over $140 billion, making it one of the most
+          valuable publicly traded software companies in the world. <br /><br />
+
+          Investing in Adobe stock can be a smart choice for those looking for a
+          long-term investment. The company has a long history of steady growth,
+          a solid balance sheet, and a diversified revenue stream. Adobe's
+          products are widely used by professionals, businesses, and consumers
+          around the world, which helps to ensure consistent demand for its
+          products and services. Additionally, Adobe has a strong brand, a large
+          and loyal customer base, and a diversified revenue stream. The company
+          also has a subscription-based business model that provides a
+          consistent and recurring revenue stream, which helps to ensure a
+          stable and predictable revenue stream. However, as with any stock,
+          there is always the risk that the company's performance may not meet
+          expectations, or it may face regulatory or legal challenges.
+          Therefore, it's important to conduct thorough research and consider
+          your risk tolerance before investing in Adobe stock. <br /><br />
+
+          Adobe's business is driven by its flagship Creative Cloud software
+          suite, which includes products such as Photoshop, Illustrator, and
+          Acrobat. The company has been consistently investing in R&D, which has
+          helped it to be at the forefront of the latest technological
+          advancements in areas such as artificial intelligence, digital
+          marketing and analytics. Additionally, the company has been expanding
+          into new areas such as e-commerce, which has helped to diversify its
+          revenue streams and drive growth. Furthermore, many analysts consider
+          Adobe as a long-term growth play and the company has been consistently
+          beating earnings estimates, which has led to significant stock price
+          appreciation in recent years. The company also started paying
+          dividends to shareholders in 2018, and the yield is around 0.6%. This
+          return of value to shareholders, combined with the company's strong
+          growth prospects, makes Adobe stock an attractive investment for both
+          growth and income investors.
+        </div>
+      </div>
+      <!-- Adobe Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-ADBE/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">ADBE price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:ADBE",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Adobe Widget END -->
+  </section>
+  <br /><br />
+  <!-- Adobe-->
+
+  <!-- Zoom -->
+  <section id="zoomSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Zoom Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Zoom Video Communications, Inc. is an American company that provides
+          remote conferencing services using cloud computing. Zoom's platform
+          includes video conferencing, online meetings, chat, and mobile
+          collaboration. Zoom's services are widely used by businesses, schools
+          and government organizations to facilitate remote communication and
+          collaboration. As of January 2021, Zoom's market capitalization was
+          over $100 billion, making it one of the most valuable publicly traded
+          technology companies in the world. <br /><br />
+
+          Investing in Zoom stock can be a smart choice for those looking for a
+          long-term investment. The company has seen rapid growth in recent
+          years, thanks to the increased demand for remote communication and
+          collaboration services due to the COVID-19 pandemic. Additionally,
+          Zoom has a strong brand, a large and loyal customer base, and a
+          diversified revenue stream. The company's subscription-based business
+          model provides a consistent and recurring revenue stream, which helps
+          to ensure a stable and predictable revenue stream. However, as with
+          any stock, there is always the risk that the company's performance may
+          not meet expectations, or it may face regulatory or legal challenges.
+          Therefore, it's important to conduct thorough research and consider
+          your risk tolerance before investing in Zoom stock. <br /><br />
+
+          Zoom's business is driven by its flagship video conferencing platform,
+          which has become one of the most popular platforms for remote
+          communication and collaboration. The company has been consistently
+          investing in R&D, which has helped it to be at the forefront of the
+          latest technological advancements in areas such as artificial
+          intelligence, and virtual reality. Additionally, the company has been
+          expanding into new areas such as telehealth, which has helped to
+          diversify its revenue streams and drive growth. Furthermore, many
+          analysts consider Zoom as a long-term growth play and the company has
+          been consistently beating earnings estimates, which has led to
+          significant stock price appreciation in recent years. The company also
+          started paying dividends to shareholders in 2021, and the yield is
+          around 0%. This return of value to shareholders, combined with the
+          company's strong growth prospects, makes Zoom stock an attractive
+          investment for both growth and income investors.
+        </div>
+      </div>
+      <!-- Zoom Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-ZM/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">ZM price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:ZM",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Zoom Widget END -->
+  </section>
+  <br /><br />
+  <!-- Zoom-->
+
+  <!-- Netflix -->
+  <section id="netflixSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Netflix Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Netflix, Inc. is an American streaming company that offers a wide
+          variety of TV shows, movies, and original content through a monthly
+          subscription service. The company was founded in 1997 and initially
+          offered a rental-by-mail service for DVDs. In 2007, Netflix introduced
+          streaming, which quickly became the company's primary business. As of
+          January 2021, Netflix had over 208 million subscribers in more than
+          190 countries. <br /><br />
+
+          Investing in Netflix stock can be a smart choice for those looking for
+          a long-term growth investment. The company has seen rapid growth in
+          recent years, thanks to the increasing popularity of streaming and the
+          shift away from traditional TV. Additionally, Netflix has a strong
+          brand, a large and loyal customer base, and a diversified content
+          portfolio. The company's subscription-based business model provides a
+          consistent and recurring revenue stream, which helps to ensure a
+          stable and predictable revenue stream. However, as with any stock,
+          there is always the risk that the company's performance may not meet
+          expectations, or it may face regulatory or legal challenges.
+          Therefore, it's important to conduct thorough research and consider
+          your risk tolerance before investing in Netflix stock. <br /><br />
+
+          Netflix has continued to perform well in the stock market, and it has
+          been one of the best-performing technology stocks in recent years. The
+          company has also been expanding its international reach, which has
+          helped to drive growth. Netflix's original content has also played a
+          significant role in its success, as it has helped to attract and
+          retain subscribers. The company has been investing heavily in content
+          creation, which has helped to diversify its content portfolio and
+          drive growth. However, it's worth noting that competition in the
+          streaming market has been increasing, with new players like Disney+
+          and HBO Max entering the market. Despite this, Netflix continues to
+          perform well, and many analysts consider it a strong long-term growth
+          play.
+        </div>
+      </div>
+      <!-- Netflix Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-NFLX/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">NFLX price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:NFLX",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Netflix Widget END -->
+  </section>
+  <br /><br />
+  <!-- Netflix-->
+
+  <!-- PayPal -->
+  <section id="paypalSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">PayPal Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Paypal Holdings, Inc. is an American company that operates a global
+          online payments system that supports online money transfers. The
+          company was founded in 1998 and was acquired by eBay in 2002. In 2015,
+          PayPal became an independent company. As of January 2021, PayPal had
+          over 300 million active accounts in more than 200 markets worldwide.
+          <br /><br />
+
+          Investing in PayPal stock can be a smart choice for those looking for
+          a long-term growth investment. The company has seen rapid growth in
+          recent years, thanks to the increasing popularity of e-commerce and
+          the shift away from traditional banking. Additionally, PayPal has a
+          strong brand, a large and loyal customer base, and a diversified
+          revenue stream. The company's business model is based on transaction
+          fees, which provides a consistent and recurring revenue stream, which
+          helps to ensure a stable and predictable revenue stream. However, as
+          with any stock, there is always the risk that the company's
+          performance may not meet expectations, or it may face regulatory or
+          legal challenges. Therefore, it's important to conduct thorough
+          research and consider your risk tolerance before investing in PayPal
+          stock. <br /><br />
+
+          Paypal has been consistently growing its customer base and revenue,
+          which has been reflected in its stock performance. The company has
+          been expanding its services beyond online payments, with the launch of
+          Venmo, which is a popular peer-to-peer payments service, and the
+          acquisition of Venmo's parent company, Venmo. Furthermore, the company
+          has been expanding into new areas such as cryptocurrency, which has
+          helped to diversify its revenue streams and drive growth.
+          Additionally, PayPal has been expanding its reach into new markets,
+          particularly in Asia and Latin America, which has helped to drive
+          growth. Many analysts consider PayPal as a long-term growth play, and
+          the company has been consistently beating earnings estimates, which
+          has led to significant stock price appreciation in recent years.
+        </div>
+      </div>
+      <!-- PayPal Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-PYPL/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">PYPL price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:PYPL",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- PayPal Widget END -->
+  </section>
+  <br /><br />
+  <!-- PayPal-->
+
+  <!-- Oracle -->
+  <section id="oracleSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Oracle Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Oracle Corporation is an American multinational computer technology
+          corporation that specializes in developing and marketing computer
+          hardware systems and enterprise software products. It was founded in
+          1977 by Larry Ellison, Bob Miner, and Ed Oates. Oracle is one of the
+          largest software companies in the world and has a diverse range of
+          products including databases, middleware, and applications, as well as
+          cloud services. As of 2021, Oracle is a publicly traded company and
+          its stock is listed on the New York Stock Exchange. <br /><br />
+
+          Investing in Oracle stock can be a smart choice for those looking for
+          a long-term growth investment. The company has a strong track record
+          of financial performance and a diversified revenue stream.
+          Additionally, Oracle has a large and loyal customer base, and its
+          products and services are widely used in many industries, such as
+          finance, healthcare, and government. The company's shift to cloud
+          computing and software as a service (SaaS) has also been a major
+          growth driver in recent years. This allows Oracle to generate a
+          consistent and recurring revenue stream, which helps to ensure a
+          stable and predictable revenue stream. <br /><br />
+
+          However, as with any stock, there is always the risk that the
+          company's performance may not meet expectations, or it may face
+          regulatory or legal challenges. Furthermore, Oracle is facing intense
+          competition from other technology companies, particularly in the cloud
+          computing space. Therefore, it's important to conduct thorough
+          research and consider your risk tolerance before investing in Oracle
+          stock. Despite these challenges, many analysts consider Oracle as a
+          strong long-term growth play and the company has been consistently
+          generating strong revenue and earnings, which has led to significant
+          stock price appreciation in recent years.
+        </div>
+      </div>
+      <!-- Oracle Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NYSE-ORCL/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">ORCL price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NYSE:ORCL",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Oracle Widget END -->
+  </section>
+  <br /><br />
+  <!-- Oracle-->
+
+  <!-- Dropbox -->
+  <section id="dropboxSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Dropbox Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Dropbox is an American company that specializes in file hosting and
+          synchronization services. It was founded in 2007 by Drew Houston and
+          Arash Ferdowsi. Dropbox provides a cloud-based storage and
+          collaboration platform that allows users to store, share, and access
+          files and documents from anywhere. The company went public in 2018 and
+          its stock is listed on the Nasdaq stock exchange. <br /><br />
+
+          Dropbox stock has had a roller coaster ride since its initial public
+          offering, with the stock price experiencing both highs and lows. The
+          company has been able to grow its revenue consistently, but it has
+          been struggling to turn a profit. The company's shift to a
+          subscription-based revenue model has helped to stabilize its revenue
+          stream, but it is still not yet profitable. Additionally, Dropbox
+          faces intense competition from other cloud storage providers such as
+          Google Drive and Microsoft OneDrive. <br /><br />
+
+          Investing in Dropbox stock can be a risky proposition, as the
+          company's financial performance is not yet strong enough to justify
+          its current valuation. Additionally, the company's shift to a
+          subscription-based revenue model is not yet fully realized, and it may
+          take some time before the company is able to turn a profit. However,
+          the company's user base continues to grow and the company has been
+          able to increase its revenue consistently. If the company can continue
+          to grow its revenue and eventually become profitable, it could
+          potentially be a good investment opportunity. As always, it's
+          important to conduct thorough research and consider your risk
+          tolerance before investing in any stock.
+        </div>
+      </div>
+      <!-- Dropbox Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-DBX/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">DBX price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:DBX",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Dropbox Widget END -->
+  </section>
+  <br /><br />
+  <!-- Dropbox-->
+
+  <!-- Shopify -->
+  <section id="shopifySection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Shopify Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Shopify is a Canadian e-commerce company that provides a platform for
+          businesses to create and manage their online stores. It was founded in
+          2006 by Tobias Lütke, Daniel Weinand, and Scott Lake. The company went
+          public in 2015 and its stock is listed on the New York Stock Exchange
+          (NYSE). <br /><br />
+
+          Investing in Shopify stock can be a smart choice for those looking for
+          a long-term growth investment, as the company has a strong track
+          record of financial performance and a diversified revenue stream.
+          Shopify's platform enables small and medium-sized businesses to set up
+          and manage their online stores and it has been able to grow its user
+          base consistently. Additionally, the company has a wide range of
+          features and apps that allow businesses to customize their stores and
+          it has been able to generate a consistent and recurring revenue
+          stream, which helps to ensure a stable and predictable revenue stream.
+          <br /><br />
+
+          However, as with any stock, there is always the risk that the
+          company's performance may not meet expectations, or it may face
+          regulatory or legal challenges. Furthermore, Shopify is facing intense
+          competition from other e-commerce platforms such as Amazon and
+          Alibaba. Therefore, it's important to conduct thorough research and
+          consider your risk tolerance before investing in Shopify stock.
+          Despite these challenges, many analysts consider Shopify as a strong
+          long-term growth play and the company has been consistently generating
+          strong revenue and earnings, which has led to significant stock price
+          appreciation in recent years.
+        </div>
+      </div>
+      <!-- Shopify Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NYSE-SHOP/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">SHOP price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NYSE:SHOP",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Shopify Widget END -->
+  </section>
+  <br /><br />
+  <!-- Shopify-->
+
+  <!-- IBM -->
+  <section id="ibmSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">IBM Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          International Business Machines (IBM) is an American multinational
+          technology company that specializes in computer hardware, middleware,
+          and software, and provides consulting and hosting services. It was
+          founded in 1911 and is one of the world's oldest and largest
+          technology companies. IBM's stock is listed on the New York Stock
+          Exchange (NYSE). <br /><br />
+
+          Investing in IBM stock can be a good choice for those looking for a
+          stable and established company with a long history of financial
+          performance. The company has a diverse range of businesses, including
+          cloud computing, artificial intelligence, and blockchain technology,
+          which has helped to ensure a stable and recurring revenue stream.
+          Additionally, IBM has a strong brand and reputation, and it is
+          considered a leader in the technology industry. <br /><br />
+
+          However, IBM has faced challenges in recent years, such as the decline
+          of its traditional hardware and software businesses, increased
+          competition, and a shift in technology trends. As a result, the
+          company's financial performance has been under pressure, and its stock
+          price has been relatively stagnant in recent years. Additionally, IBM
+          has been struggling to grow its revenue, which has been a concern for
+          investors. Therefore, it's important to conduct thorough research and
+          consider your risk tolerance before investing in IBM stock. Despite
+          these challenges, IBM is still a large and diversified company with a
+          long history of financial performance, and it has been making efforts
+          to realign its business and focus on growth areas such as cloud
+          computing, artificial intelligence and blockchain technology, which
+          could offer long-term growth opportunities.
+        </div>
+      </div>
+      <!-- IBM Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NYSE-IBM/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">IBM price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NYSE:IBM",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- IBM Widget END -->
+  </section>
+  <br /><br />
+  <!-- IBM-->
+
+  <!-- Broadcom -->
+  <section id="broadcomSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Broadcom Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Broadcom Inc. is a multinational semiconductor company that designs,
+          develops, and supplies a range of integrated circuits and other
+          electronic components used in a variety of technology products such as
+          smartphones, data centers, and networking equipment. The company was
+          founded in 1991 and is headquartered in San Jose, California.
+          Broadcom's stock is listed on the NASDAQ stock exchange. <br /><br />
+
+          Investing in Broadcom stock can be a good choice for those looking for
+          a technology company with a strong track record of financial
+          performance and a diversified product portfolio. The company has a
+          wide range of products and services that cater to a variety of
+          technology markets such as data centers, wireless and wired
+          infrastructure, and software. Additionally, Broadcom has a strong
+          balance sheet and generates significant free cash flow, which has
+          helped it to return value to shareholders through share repurchases
+          and dividends. <br /><br />
+
+          However, as with any stock, there is always the risk that the
+          company's performance may not meet expectations, or it may face
+          regulatory or legal challenges. Furthermore, Broadcom is facing
+          intense competition from other semiconductor companies, and it is
+          heavily dependent on a small number of customers. Additionally, the
+          company is also exposed to the cyclicality of the semiconductor
+          market, which can affect its financial performance. Therefore, it's
+          important to conduct thorough research and consider your risk
+          tolerance before investing in Broadcom stock. Despite these
+          challenges, many analysts consider Broadcom as a strong long-term
+          growth play and the company has been consistently generating strong
+          revenue and earnings, which has led to significant stock price
+          appreciation in recent years.
+        </div>
+      </div>
+      <!-- Broadcom Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-AVGO/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">AVGO price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:AVGO",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Broadcom Widget END -->
+  </section>
+  <br /><br />
+  <!-- Broadcom-->
+
+  <!-- Qualcomm -->
+  <section id="qualcommSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Qualcomm Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Qualcomm Inc. is a multinational semiconductor and telecommunications
+          equipment company that designs, develops and supplies a range of
+          wireless technology products, including processors, modems, and other
+          semiconductors. The company was founded in 1985 and is headquartered
+          in San Diego, California. Qualcomm's stock is listed on the NASDAQ
+          stock exchange. <br /><br />
+
+          Investing in Qualcomm stock can be a good choice for those looking for
+          a technology company with a strong track record of financial
+          performance and a diversified product portfolio. The company's
+          products and services are widely used in smartphones and other mobile
+          devices, providing it with a stable and recurring revenue stream.
+          Additionally, Qualcomm has a strong intellectual property portfolio
+          and generates significant free cash flow, which has helped it to
+          return value to shareholders through share repurchases and dividends.
+          <br /><br />
+
+          However, as with any stock, there is always the risk that the
+          company's performance may not meet expectations, or it may face
+          regulatory or legal challenges. Furthermore, Qualcomm is facing
+          intense competition from other semiconductor companies, and it is
+          heavily dependent on a small number of customers. Additionally, the
+          company is also exposed to the cyclicality of the semiconductor
+          market, which can affect its financial performance. Furthermore,
+          Qualcomm has been facing significant legal challenges, including
+          anti-trust and patent infringement lawsuits. Therefore, it's important
+          to conduct thorough research and consider your risk tolerance before
+          investing in Qualcomm stock. Despite these challenges, many analysts
+          consider Qualcomm as a strong long-term growth play and the company
+          has been consistently generating strong revenue and earnings, which
+          has led to significant stock price appreciation in recent years.
+        </div>
+      </div>
+      <!-- Qualcomm Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-QCOM/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">QCOM price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:QCOM",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Qualcomm Widget END -->
+  </section>
+  <br /><br />
+  <!-- Qualcomm-->
+
+  <!-- Taiwan Semiconductor Manufacturing -->
+  <section id="taiwanSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Taiwan Semiconductor Manufacturing Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Taiwan Semiconductor Manufacturing Company (TSMC) is one of the
+          world's largest semiconductor foundries, providing a wide range of
+          integrated circuit (IC) manufacturing services. The company was
+          founded in 1987 and is headquartered in Hsinchu, Taiwan. TSMC's stock
+          is listed on the Taiwan Stock Exchange. <br /><br />
+
+          Investing in TSMC stock can be a good choice for those looking for a
+          technology company with a strong track record of financial performance
+          and a diversified customer base. TSMC is the world's largest dedicated
+          semiconductor foundry and is a key supplier to many major technology
+          companies, including Apple, Qualcomm, and Nvidia. Additionally, the
+          company has a strong intellectual property portfolio, and generates
+          significant free cash flow, which has helped it to return value to
+          shareholders through share repurchases and dividends. <br /><br />
+
+          However, as with any stock, there is always the risk that the
+          company's performance may not meet expectations, or it may face
+          regulatory or legal challenges. Furthermore, TSMC is facing intense
+          competition from other semiconductor foundries, and it is heavily
+          dependent on a small number of customers. Additionally, the company is
+          also exposed to the cyclicality of the semiconductor market, which can
+          affect its financial performance. Furthermore, TSMC is heavily
+          dependent on the US market and any trade tensions between the US and
+          China can affect the company's performance. Therefore, it's important
+          to conduct thorough research and consider your risk tolerance before
+          investing in TSMC stock. Despite these challenges, many analysts
+          consider TSMC as a strong long-term growth play and the company has
+          been consistently generating strong revenue and earnings, which has
+          led to significant stock price appreciation in recent years.
+        </div>
+      </div>
+      <!-- Taiwan Semiconductor Manufacturing Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NYSE-TSM/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">TSM price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NYSE:TSM",
+            "width": "1000",
+            "height": "250",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Taiwan Semiconductor Manufacturing Widget END -->
+  </section>
+  <br /><br />
+  <!-- Taiwan Semiconductor Manufacturing-->
+
+  <!-- AT&T -->
+  <section id="at&tSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">AT&T Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          AT&T Inc. is an American multinational conglomerate holding company
+          headquartered at Whitacre Tower in Dallas, Texas. It is one of the
+          world's largest telecommunications companies and is the second largest
+          provider of mobile telephone services and the largest provider of
+          fixed telephone services in the United States. The company's stock is
+          traded on the New York Stock Exchange (NYSE) under the ticker symbol
+          T. <br /><br />
+
+          Investing in AT&T stock can be a good choice for those looking for a
+          blue-chip dividend stock with a long history of paying dividends. The
+          company has a strong reputation for its stable and predictable cash
+          flow, which has helped it to consistently pay dividends to
+          shareholders. Furthermore, AT&T is a diversified company with a wide
+          range of businesses, including wireless, broadband, and media. The
+          company's acquisition of Time Warner has given it a strong media
+          presence, which has helped to diversify its revenue streams.
+          <br /><br />
+
+          However, as with any stock, there is always the risk that the
+          company's performance may not meet expectations, or it may face
+          regulatory or legal challenges. Additionally, AT&T is facing intense
+          competition from other telecommunications companies, and it is heavily
+          dependent on the US market. Furthermore, the company has a large debt
+          load, which can affect its financial performance. Therefore, it's
+          important to conduct thorough research and consider your risk
+          tolerance before investing in AT&T stock. Despite these challenges,
+          the company has a long history of paying dividends, and it is
+          considered to be a solid blue-chip stock that may provide consistent
+          returns over time.
+        </div>
+      </div>
+      <!-- AT&T Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NYSE-T/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">T price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NYSE:T",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- AT&T Widget END -->
+  </section>
+  <br /><br />
+  <!-- AT&T-->
+
+  <!-- Uber -->
+  <section id="uberSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Uber Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Uber Technologies Inc. is an American multinational transportation
+          network company that offers a variety of services, including
+          ride-hailing, ride-sharing, and food delivery. The company's stock is
+          traded on the New York Stock Exchange (NYSE) under the ticker symbol
+          UBER. Uber went public in May 2019 and its initial public offering
+          (IPO) was one of the most highly anticipated of the year. <br /><br />
+
+          Investing in Uber stock can be a good choice for those looking for a
+          high-growth stock in the technology and transportation sectors. The
+          company has a strong market position in the ride-hailing industry, and
+          it has recently expanded its services to include food delivery and
+          other on-demand transportation options. Additionally, Uber has a
+          global reach, which can provide diversification benefits. However, the
+          company is still not profitable yet and it is facing intense
+          competition from other ride-hailing companies, as well as from
+          traditional taxi and transportation companies. Furthermore, the
+          company has a large debt load and it is heavily dependent on the US
+          market. <br /><br />
+
+          Therefore, it's important to conduct thorough research and consider
+          your risk tolerance before investing in Uber stock. Despite these
+          challenges, the company has a strong market position, and it has the
+          potential for significant growth in the future. However, it is
+          important to consider that like any other stocks, investing in Uber
+          stock carries a level of risk, and it is important to keep in mind
+          that past performance is not indicative of future results.
+        </div>
+      </div>
+      <!-- Uber Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NYSE-Uber/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">Uber price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NYSE:Uber",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Uber Widget END -->
+  </section>
+  <br /><br />
+  <!-- Uber-->
+
+  <!-- ON Semiconductor -->
+  <section id="onsemiSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">ON Semiconductor Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          ON Semiconductor is a global semiconductor company that designs,
+          manufactures, and sells a wide range of semiconductor products and
+          solutions. The company's stock is traded on the NASDAQ under the
+          ticker symbol ON. ON Semiconductor is a leading supplier of power
+          management and analog semiconductors, and it serves a wide range of
+          industries, including automotive, industrial, medical, and
+          communications. <br /><br />
+
+          Investing in ON Semiconductor stock can be a good choice for those
+          looking for a diversified semiconductor company that serves a wide
+          range of industries. The company has a strong market position in the
+          power management and analog semiconductor markets, and it has a
+          diversified customer base that provides a level of stability.
+          Furthermore, the company has a global reach and it has a strong
+          balance sheet. <br /><br />
+
+          However, investing in ON Semiconductor stock also carries some risk.
+          The semiconductor industry is highly competitive, and the company
+          operates in cyclical markets that are subject to fluctuations in
+          demand. Additionally, the company's revenue and income are heavily
+          dependent on a small number of customers, which can pose a risk.
+          Therefore, it's important to conduct thorough research and consider
+          your risk tolerance before investing in ON Semiconductor stock.
+          Despite these challenges, the company has a strong market position,
+          and it has the potential for growth in the future.
+        </div>
+      </div>
+      <!-- ON Semiconductor Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-ON/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">ON price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:ON",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- ON Semiconductor Widget END -->
+  </section>
+  <br /><br />
+  <!-- ON Semiconductor-->
+
+  <!-- Comcast -->
+  <section id="comcastSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Comcast Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Comcast Corporation is an American multinational mass media and
+          telecommunications conglomerate. Its stock is traded on the NASDAQ
+          under the ticker symbol CMCSA. The company is one of the largest mass
+          media and telecommunications companies in the world, providing cable
+          television, internet, telephone and other services to customers in the
+          US and internationally. <br /><br />
+
+          Investing in Comcast stock can be a good choice for those looking for
+          a diversified media and telecommunications company. The company has a
+          strong market position in the cable television and internet markets,
+          and it has a diversified revenue stream that includes its NBCUniversal
+          segment, which owns and operates the NBC and Telemundo broadcast
+          networks, cable channels such as USA Network, and theme parks.
+          Furthermore, the company has a global reach, and it has a strong
+          balance sheet. <br /><br />
+
+          However, investing in Comcast stock also carries some risk. The media
+          and telecommunications industry is highly competitive, and the company
+          operates in a cyclical market that is subject to fluctuations in
+          demand. Additionally, the company's revenue and income are heavily
+          dependent on a small number of customers, which can pose a risk.
+          Therefore, it's important to conduct thorough research and consider
+          your risk tolerance before investing in Comcast stock. Despite these
+          challenges, the company has a strong market position, and it has the
+          potential for growth in the future.
+        </div>
+      </div>
+      <!-- Comcast Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-CMCSA/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">CMCSA price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:CMCSA",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Comcast Widget END -->
+  </section>
+  <br /><br />
+  <!-- Comcast-->
+
+  <!-- HP -->
+  <section id="hpSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">HP Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Hewlett Packard (HP) is an American multinational information
+          technology company. Its stock is traded on the New York Stock Exchange
+          under the ticker symbol HPQ. The company operates in the personal
+          computer, printer and imaging, and related services market. It offers
+          a wide range of products, including personal computers, printers,
+          software, and services. <br /><br />
+
+          Investing in HP stock can be a good choice for those looking for a
+          diversified technology company. The company has a strong market
+          position in the personal computer and printer markets, and it has a
+          diversified revenue stream that includes its personal systems and
+          printing segments. Additionally, HP has a history of consistent
+          dividend payments, which can provide income for investors.
+          Furthermore, the company has a global reach and has a strong balance
+          sheet. <br /><br />
+
+          However, investing in HP stock also carries some risk. The technology
+          industry is highly competitive, and the company operates in a cyclical
+          market that is subject to fluctuations in demand. Additionally, the
+          company's revenue and income are heavily dependent on a small number
+          of customers and products, which can pose a risk. Therefore, it's
+          important to conduct thorough research and consider your risk
+          tolerance before investing in HP stock. Despite these challenges, the
+          company has a strong market position, and it has the potential for
+          growth in the future.
+        </div>
+      </div>
+      <!-- HP Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NYSE-HPQ/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">HPQ price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NYSE:HPQ",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- HP Widget END -->
+  </section>
+  <br /><br />
+  <!-- HP-->
+
+  <!-- MongoDB -->
+  <section id="mongodbSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">MongoDB Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          MongoDB is an American software company that develops and provides
+          commercial support for the open-source NoSQL database MongoDB. The
+          company's stock is traded on the NASDAQ stock exchange under the
+          ticker symbol MDB. MongoDB is known for its flexible and scalable
+          document-oriented database, which is widely used in big data, content
+          management, and mobile applications. <br /><br />
+
+          Investing in MongoDB stock can be a good choice for those looking to
+          invest in the growing field of big data and cloud computing. The
+          company has a strong market position in the NoSQL database market and
+          has a robust pipeline of product innovation. Additionally, MongoDB has
+          a strong financial position, with a history of consistent revenue
+          growth. Furthermore, the company has a global reach and has a strong
+          balance sheet. <br /><br />
+
+          However, investing in MongoDB stock also carries some risk. The
+          company operates in a highly competitive market, and it faces
+          competition from other NoSQL databases such as Amazon DynamoDB and
+          Google Firestore. Additionally, the company's revenue and income are
+          heavily dependent on a small number of customers and products, which
+          can pose a risk. Therefore, it's important to conduct thorough
+          research and consider your risk tolerance before investing in MongoDB
+          stock. Despite these challenges, MongoDB has a strong market position
+          and it has the potential for growth in the future.
+        </div>
+      </div>
+      <!-- MongoDB Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NASDAQ-MDB/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">MDB price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NASDAQ:MDB",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- MongoDB Widget END -->
+  </section>
+  <br /><br />
+  <!-- MongoDB-->
+
+  <!-- Dell -->
+  <section id="dellSection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">Dell Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Dell Technologies is an American multinational computer technology
+          company that develops, sells, repairs, and supports computers and
+          related products and services. The company's stock is traded on the
+          NYSE stock exchange under the ticker symbol DELL. Dell Technologies is
+          one of the largest technology companies in the world, with a wide
+          range of products and services that serve both consumers and
+          businesses. <br /><br />
+
+          Investing in Dell stock can be a good choice for those looking to
+          invest in the technology sector. The company has a strong market
+          position in the PC and server market and has a robust pipeline of
+          product innovation. Additionally, Dell Technologies has a strong
+          financial position, with a history of consistent revenue growth. The
+          company has a global reach and has a strong balance sheet.
+          <br /><br />
+
+          However, investing in Dell stock also carries some risk. The company
+          operates in a highly competitive market, and it faces competition from
+          other technology companies such as HP, Lenovo, and Apple.
+          Additionally, the company's revenue and income are heavily dependent
+          on a small number of customers and products, which can pose a risk.
+          Therefore, it's important to conduct thorough research and consider
+          your risk tolerance before investing in Dell stock. Despite these
+          challenges, Dell Technologies has a strong market position and it has
+          the potential for growth in the future.
+        </div>
+      </div>
+      <!-- Dell Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NYSE-DELL/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">DELL price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NYSE:DELL",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Dell Widget END -->
+  </section>
+  <br /><br />
+  <!-- Dell-->
+
+  <!-- GoDaddy -->
+  <section id="godaddySection">
+    <div class="companyText">
+      <div class="companyTitle">
+        <h2 id="companyTitle">GoDaddy Company</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          GoDaddy is a publicly traded company that specializes in providing web
+          hosting and domain registration services. The company's stock is
+          traded on the New York Stock Exchange under the ticker symbol GDDY.
+          GoDaddy went public in 2015 and has seen steady growth in its stock
+          price since then. As of 2021, the company has a market capitalization
+          of over $16 billion. <br /><br />
+
+          One of the main drivers of GoDaddy's success has been its strong
+          customer base. The company has over 18 million customers worldwide,
+          and this number continues to grow as more and more people turn to the
+          internet for their business and personal needs. GoDaddy's stock has
+          also benefited from the overall growth of the technology sector, as
+          more and more companies rely on the internet for their operations.
+          <br /><br />
+
+          Despite the company's success, GoDaddy's stock has been subject to
+          some volatility in recent years. This is in part due to the company's
+          high valuation and concerns about its ability to continue growing at
+          its current pace. However, many analysts remain bullish on the
+          company's future prospects, citing its strong customer base and market
+          position as reasons to be optimistic about its stock.
+        </div>
+      </div>
+      <!-- GoDaddy Widget BEGIN -->
+      <div class="tradingview-widget-container centerWidget">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com/symbols/NYSE-GDDY/"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">GDDY price today</span></a
+          >
+          by TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
+          async
+        >
+            {
+            "symbol": "NYSE:GDDY",
+            "width": "1000",
+            "locale": "en",
+            "colorTheme": "light",
+            "isTransparent": false
+          }
+        </script>
+      </div>
+    </div>
+    <!-- GoDaddy Widget END -->
+  </section>
+  <br /><br />
+  <!-- GoDaddy-->
+
+  <!-- Tech Company Stocks -->
+  <section id="fullchartSection">
+    <div class="dividends_title">
+      <h2 id="dividends_title">Full Chart</h2>
+    </div>
+    <div class="itemBox Tech">
+      <!-- TradingView Widget BEGIN -->
+      <div class="tradingview-widget-container">
+        <div id="tradingview_c53b6"></div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/tv.js"
+        ></script>
+        <script type="text/javascript">
+          new TradingView.MediumWidget({
+            symbols: [
+              ["Apple", "AAPL|1y"],
+              ["Microsoft", "MSFT|1y"],
+              ["Amazon", "NASDAQ:AMZN|1y"],
+              ["Google", "GOOGL|1y"],
+              ["Meta", "NASDAQ:META|1y"],
+              ["Tesla", "NASDAQ:TSLA|12M"],
+              ["NVIDIA", "NVDA | 1y"],
+              ["Intel", "INTC | 1y"],
+              ["Cisco", "CSCO | 1y"],
+              ["Adobe", "NASDAQ:ADBE|1y"],
+              ["Zoom", "ZM | 1y"],
+              ["Netflix", "NASDAQ:NFLX|12M"],
+              ["PayPal", "PYPL | 1y"],
+              ["Oracle", "ORCL | 1y"],
+              ["Dropbox", "DBX|1y"],
+              ["Shopify", "NYSE:SHOP|1y"],
+              ["IBM", "IBM | 1y"],
+              ["Broadcom", "NASDAQ:AVGO|1y"],
+
+              ["Qualcomm", "QCOM | 1y"],
+              ["Taiwan Semiconductor", "NYSE:TSM | 1y"],
+              ["AT&T", "T | 1y"],
+              ["Uber", "UBER | 1y"],
+              ["ON Semiconductor", "ON | 1y"],
+              ["Comcast", "CMCSA | 1y"],
+              ["HP", "HPQ | 1y"],
+              ["Mongodb ", "MDB | 1y"],
+              ["Dell", "DELL | 1y"],
+              ["Godaddy", "GDDY | 1y"],
+            ],
+            chartOnly: false,
+            width: "100%",
+            height: "400px",
+            locale: "en",
+            colorTheme: "light",
+            autosize: false,
+            showVolume: true,
+            hideDateRanges: false,
+            scalePosition: "right",
+            scaleMode: "Normal",
+            fontFamily:
+              "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+            fontSize: "10",
+            noTimeScale: false,
+            valuesTracking: "1",
+            chartType: "area",
+            gridLineColor: "#e9e9ea",
+            lineColor: "rgba(91, 156, 246, 1)",
+            topColor: "rgba(41, 98, 255, 0.3)",
+            bottomColor: "rgba(41, 98, 255, 0)",
+            widgetFontColor: "rgba(0, 0, 0, 0.93)",
+            color: "rgba(91, 156, 246, 1)",
+            container_id: "tradingview_5b8c7",
+          });
+        </script>
+      </div>
+      <div class="tradingview-widget-copyright">
+        <a
+          href="https://www.tradingview.com/widget/"
+          rel="noopener"
+          target="_blank"
+          ><span class="blue-text">Chart</span></a
+        >
+        by TradingView
+      </div>
+    </div>
+  </section>
+
+  <!-- Share API -->
+  <div id="api">
+    <span id="api-value"
+      ><iconify-icon
+        icon="bx:share"
+        rotate="180deg"
+        flip="vertical"
+      ></iconify-icon
+    ></span>
+  </div>
+  <script>
+    const api = document.getElementById("api");
+    // function for web share api
+    function webShareAPI(header, description, link) {
+      navigator
+        .share({
+          title: header,
+          text: description,
+          url: link,
+        })
+        .then(() => console.log("Successful share"))
+        .catch((error) => console.log("Error sharing", error));
+    }
+    if (navigator.share) {
+      // Show button if it supports webShareAPI
+      api.style.display = "block";
+      api.addEventListener("click", () =>
+        webShareAPI(
+          "Share this Website to your friends",
+          "description",
+          "www.ifindoo.com"
+        )
+      );
+    } else {
+      // Hide button if it supports webShareAPI
+      api.style.display = "none";
+      console.error("Your Browser doesn't support Web Share API");
+      document.write("Your Browser doesn't support Web Share API");
+    }
+  </script>
+
+  <!-- Scroll To Top -->
+  <div id="progress">
+    <span id="progress-value">&#8682;</span>
+  </div>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 text-center">
+            <h2>Our Newsletter</h2>
+            <p>Subscribe us to get the latest news on up to date</p>
+          </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input class="inputLoan" type="email" name="email" /><input
+                class="inputLoan"
+                type="submit"
+                value="Subscribe"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-12 footer-info">
+            <a href="#" class="footerLogo d-flex align-items-center">
+              <span>IFinDoo</span>
+            </a>
+            <p>
+              Ifindoo means Knot, Ifindoo or ifindo is an Zulu language Word
+              which is the originated from South Africa, Ifindoo is a Financial
+              Website, Where users are going to get every news related to
+              cryptocurrency, stockmarket, exchanges, scams we also covers the
+              hot topics and trends of Digital World, Join Us for the Best
+              Experience , Soon Launching Crypto Wallet, Coin And NFT Marketing
+              Place!!
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i> <a href="index.html">Home</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Crypto Shorts.html">Crypto Shorts</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Blue Chips.html">Blue Chips</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Countries.html">Countries</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="World Economy.html">World Economy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Assets</h4>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Crypto.html">Crypto</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Metaverse.html">Metaverse</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i> <a href="NFT.html">NFTs</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Community</h4>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Hot Topics.html">Hot Topics</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Blogs.html">Blogs</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Scams.html">Scams</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Quotes.html">Quotes</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Tweets.html">Tweets</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Our Tools</h4>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Crypto Calculator.html">Crypto Calculator</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Budget Calculate.html">Budget Calculator</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Currency Converter.html">Currency Converter</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="Loan Calculator.html">Loan Calculator</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="containerr">
+      <div class="copyright">
+        Copyright
+        <strong><span id="currentYear">2020</span> <span>IFinDoo</span></strong
+        >. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <script src="js/Home.js"></script>
+
+  <!-- MainJS-->
+  <script src="js/app.js"></script>
+  <script src="js/modernizr.custom.86080.js"></script>
+  <script src="js/popper.min.js"></script>
+  <!-- <script src="js/bootstrap.min.js"></script> -->
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/main.js"></script>
+  <script
+    defer
+    src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
+    integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+    data-cf-beacon='{"rayId":"787acec57e74d1d0","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.11.3","si":100}'
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://kit.fontawesome.com/yourcode.js"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/jquery-3.6.1.js"></script>
+  <script src="js/jquery-3.6.1.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,3939 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--[ Theme Color ]-->
+    <meta content="#E0F2F1" name="theme-color" />
+    <meta content="#E0F2F1" name="msapplication-navbutton-color" />
+    <meta content="#E0F2F1" name="msapplication-TileColor" />
+    <meta content="#E0F2F1" name="apple-mobile-web-app-status-bar-style" />
+
+    <link
+      defer=""
+      href="data:text/css;base64,Lyogcm9vdCAqLw0KLmRhcmsgLmF0XDpkYXJrLXNlY29uZGFyeTJ7YmFja2dyb3VuZDojMTIxMzFBIWltcG9ydGFudDtjb2xvcjojZmZmIWltcG9ydGFudH0NCi5hdFw6ZGFyay1ncmV5LWZpbGwye2ZpbGw6IzY5NkM4MH0uYXRcOmRhcmstZ3JleS1jb2xvcjJ7Y29sb3I6IzY5NkM4MH0NCi5zaXRlLW1haW4ge21hcmdpbi10b3A6IC0yMTJweCFpbXBvcnRhbnQ7fSNhdC1tYWluQWRze2Rpc3BsYXk6bm9uZX1AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA5ODBweCl7IC5jb250ZW50e3BhZGRpbmc6MzBweCAwISBpbXBvcnRhbnR9fS5nb29tZWRpYXttYXJnaW46IC0xMnB4IDAgYXV0byFpbXBvcnRhbnQ7fQ0KIC8qIGJyZWFkY3J1bWJzICovDQouZml4ZWRfX2JyZWFkY3J1bWJ7ZGlzcGxheTogYmxvY2s7fS5icmVhZGNydW1icyB7b3ZlcmZsb3c6IGhpZGRlbjsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7IGZvbnQtc2l6ZTogMTNweDsgY29sb3I6ICMyMjIhaW1wb3J0YW50OyB9IC5icmVhZGNydW1icyBhIHtjb2xvcjogIzIyMiFpbXBvcnRhbnQ7IG1hcmdpbjogMCAycHg7IGxpbmUtaGVpZ2h0OiBub3JtYWw7IH0gLmJyZWFkY3J1bWJzIC5icmVhZGhvbWUgYSB7IG1hcmdpbjogMCA1cHggMCAwOyB9IC5icmVhZGNydW1icyAuYnJlYWRsYWJlbDpsYXN0LWNoaWxkIHsgbWFyZ2luOiAwIDAgMCA0cHg7IH0gLmJyZWFkY3J1bWJzIGE6aG92ZXIgeyBjb2xvcjogIzA5ODRlMzsgfSAuYnJlYWRjcnVtYnMgc3ZnIHsgd2lkdGg6IDE2cHg7IGhlaWdodDogMTZweDsgdmVydGljYWwtYWxpZ246IC00cHg7IH0gLmJyZWFkY3J1bWJzIHN2ZyBwYXRoIHsgZmlsbDogIzAwMDsgfQ0KLyogUmVsYXRlZCAqLw0KLnJlbGF0ZWQtcG9zdHMgeyBvdmVyZmxvdzogaGlkZGVuOyBtYXJnaW46IDUwcHggMCAzMHB4OyBwb3NpdGlvbjogcmVsYXRpdmU7IGRpc3BsYXk6IGJsb2NrO30ucmVsYXRlZHtkaXNwbGF5OiBncmlkO2dhcDogMTBweDsgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnIgMWZyIDFmciAxZnI7fSAjcmVsYXRlZC1wb3N0c3tvdmVyZmxvdzpoaWRkZW47bWFyZ2luOjA7ZGlzcGxheTpub25lfS5yZWxhdGVkIGxpe292ZXJmbG93OiBoaWRkZW47IHBvc2l0aW9uOiByZWxhdGl2ZTsgYm94LXNpemluZzogYm9yZGVyLWJveDsgZGlzcGxheTogZmxleDsgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgZmxleDogMSAxIGF1dG87fS5yZWxhdGVkLXRodW1ie292ZXJmbG93OmhpZGRlbjt9LnJlbGF0ZWQgbGkgLnJlbGF0ZWQtaW1ne2Rpc3BsYXk6IGZsZXg7IHBvc2l0aW9uOiByZWxhdGl2ZTsgYm94LXNpemluZzogYm9yZGVyLWJveDsgbWluLWhlaWdodDogOTEuMXB4OyB3aWR0aDogMTAwJTsgdHJhbnNpdGlvbjogYWxsIC4zcyBlYXNlLW91dDt9LnJlbGF0ZWQtdGl0bGV7Zm9udC13ZWlnaHQ6NTAwO3Bvc2l0aW9uOnJlbGF0aXZlO21hcmdpbi10b3A6IDEzcHg7fS5yZWxhdGVkLXRpdGxlIGF7dGV4dC1kZWNvcmF0aW9uOiBub25lOyBmb250LXdlaWdodDogNzAwOyBkaXNwbGF5OiAtd2Via2l0LWJveDsgLXdlYmtpdC1saW5lLWNsYW1wOiAyOyAtd2Via2l0LWJveC1vcmllbnQ6IHZlcnRpY2FsOyBvdmVyZmxvdzogaGlkZGVuO2ZvbnQtc2l6ZTogMThweDt9LnJlbGF0ZWQgbGk6bnRoLW9mLXR5cGUoMyksLnJlbGF0ZWQgbGk6bnRoLW9mLXR5cGUoNiksLnJlbGF0ZWQgbGk6bnRoLW9mLXR5cGUoOSl7bWFyZ2luLXJpZ2h0OjB9LnJlbGF0ZWQgLnJlbGF0ZWQtdGh1bWI6aG92ZXIgLnJlbGF0ZWQtaW1nOmFmdGVye2JhY2tncm91bmQ6cmdiYSgwLDAsMCwwLjM4KX1AbWVkaWEgKG1heC13aWR0aDogNjQwcHgpeyNyZWxhdGVkLXBvc3RzIC5yZWxhdGVke2dyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDFmciFpbXBvcnRhbnQ7fX1AbWVkaWEgKG1heC13aWR0aDogODQwcHgpey5yZWxhdGVke2dyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDFmciAxZnIhaW1wb3J0YW50O319DQovKiBTaGFyZSBidXR0b24gKi8NCi5yZXNwby1zaGFyaW5nIHsgZGlyZWN0aW9uOiBsdHI7IGRpc3BsYXk6IGJsb2NrOyBvcGFjaXR5OiAxOyB0ZXh0LWFsaWduOiBjZW50ZXI7IH0gLnJlc3BvLXNoYXJpbmctYnV0dG9uX19saW5rIHsgYm94LXNpemluZzogYm9yZGVyLWJveDsgLW1vei10cmFuc2l0aW9uOiBvcGFjaXR5IC4ycyBlYXNlLWluLHRvcCAuMnMgZWFzZS1pbjsgLW1zLXRyYW5zaXRpb246IG9wYWNpdHkgLjJzIGVhc2UtaW4sdG9wIC4ycyBlYXNlLWluOyAtby10cmFuc2l0aW9uOiBvcGFjaXR5IC4ycyBlYXNlLWluLHRvcCAuMnMgZWFzZS1pbjsgLW1vei1ib3JkZXItcmFkaXVzOiAwOyBib3JkZXItcmFkaXVzOiAwOyBjdXJzb3I6IHBvaW50ZXI7IGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2IoMCAwIDAgLyA0JSksIDAgMTJweCAyOHB4ICNkZGQ7IGRpc3BsYXk6IGlubGluZS1ibG9jazsgZm9udC1zaXplOiAxMnB4OyBoZWlnaHQ6IDQwcHg7IGxpbmUtaGVpZ2h0OiA0MHB4OyBtYXJnaW4tcmlnaHQ6IDhweDsgcGFkZGluZzogMCAxMHB4OyBwb3NpdGlvbjogcmVsYXRpdmU7IHRleHQtYWxpZ246IGNlbnRlcjsgdG9wOiAwOyB2ZXJ0aWNhbC1hbGlnbjogdG9wOyB3aGl0ZS1zcGFjZTogbm93cmFwOyB9IC5yZXNwby1zaGFyaW5nLW1vcmUtY29udGVudCB7IGRpc3BsYXk6IGJsb2NrOyB9IC5yZXNwby1zaGFyaW5nLWJ1dHRvbl9fbGluayB7IGRpc3BsYXk6IGlubGluZS1ibG9jazsgdGV4dC1kZWNvcmF0aW9uOiBub25lOyBjb2xvcjogI2ZmZjsgbWFyZ2luOiAwIGF1dG87IHRyYW5zaXRpb246IGFsbCAuM3M7IG1pbi13aWR0aDogMTAwcHg7IG1hcmdpbjogNXB4IDVweDsgfSAucmVzcG8tc2hhcmluZy1idXR0b25fX2xpbms6aG92ZXIgeyBvcGFjaXR5OiAuODsgdG9wOiAtNHB4OyB9IC5yZXNwby1zaGFyaW5nLWJ1dHRvbl9faWNvbiBzdmcgeyBoZWlnaHQ6IDIwcHg7IHdpZHRoOiAyMHB4OyBwb3NpdGlvbjogcmVsYXRpdmU7IHRvcDogMTBweDsgdmVydGljYWwtYWxpZ246IHRvcDsgfSAucmVzcG8tc2hhcmluZy1idXR0b24gc3ZnIHBhdGggeyBmaWxsOiAjZmZmOyB9IC5yZXNwby1zaGFyaW5nLWJ1dHRvbl9faWNvbiB7IGN1cnNvcjogcG9pbnRlcjsgfSAucmVzcG8tc2hhcmluZy1idXR0b25fX2ljb24geyBmb250LXdlaWdodDogbm9ybWFsOyB9LmRhcmsgLnJlc3BvLXNoYXJpbmctYnV0dG9uX19saW5re2JveC1zaGFkb3c6bm9uZTt9DQovKiBUaW1lICovDQpzcGFuLmNsb2NrLXRpbWV7Zm9udC1zaXplOiAxMHB4O30uYWN0aXZle2NvbG9yOiNmODg7Zm9udC13ZWlnaHQ6NzAwfQ0KLyotLS0gcG9zdCAtLS0qLw0KI2p1ZHVsLXBvc3QgLnBvc3QtdGl0bGUge2ZvbnQtc2l6ZTogMjRweDsgcGFkZGluZy10b3A6IDIwcHg7fS5wb3N0X3RpbWVzbWFwe2p1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjttYXJnaW4tYm90dG9tOiAxOHB4O3BhZGRpbmc6IDIwcHggMDsgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7IGZvbnQtc2l6ZTogMTJweDsgY29sb3I6ICMyMjI7IGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjO30uYXV0aG9yYXZhLXggeyBkaXNwbGF5OiBibG9jazsgd2lkdGg6IDM2cHg7IGhlaWdodDogMzZweDsgYm9yZGVyLXJhZGl1czogNTAlOyBvdmVyZmxvdzogaGlkZGVuOyB9DQogLmhlcm9fdGl0bGV7bWFyZ2luOiAwIGF1dG87dHJhbnNpdGlvbjogYWxsIC4zczt9LnBvc3QgeyBwYWRkaW5nOiAwIDEycHg7IG1hcmdpbjogMDsgfQ0KICAubWFyZ2luIHttYXJnaW46IDIwcHggYXV0bzt0ZXh0LWFsaWduOiBjZW50ZXI7fS5ub3RpZnkgeyBiYWNrZ3JvdW5kOmdyZWVuOyBjb2xvcjogI2ZmZiFpbXBvcnRhbnQ7IHBhZGRpbmc6IDVweCAyMHB4OyB0ZXh0LWFsaWduOiBjZW50ZXI7IHBvc2l0aW9uOiBhYnNvbHV0ZTt6LWluZGV4Ojk7IHJpZ2h0OiAyOCU7IHRvcDo1cHg7IGJvcmRlci1yYWRpdXM6IDVweDsgfS5wb3N0LWJvZHkgYmxvY2txdW90ZTo6YWZ0ZXJ7Y29udGVudDogJ0RvdWJsZSBjbGljayB0byBjb3B5JzsgcG9zaXRpb246IGFic29sdXRlOyB0b3A6IDA7IHJpZ2h0OiA1cHg7IGZvbnQtc2l6ZTogMTBweDsgZGlzcGxheTogaW5saW5lLWJsb2NrOyBjb2xvcjojMDA5Njg4OyBmb250LXdlaWdodDogNzAwOyBwYWRkaW5nOiA1cHg7IHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7fS5kb3dubG9hZC13cmFwcGVye2Rpc3BsYXk6IGlubGluZS1ibG9jazt9LmJ0bjpob3ZlcnthbmltYXRpb246IHNoYWtlIDE1MG1zIDIgbGluZWFyO30NCi5wb3N0LWJvZHkgaDIge2ZvbnQtc2l6ZTogMjdweCAhaW1wb3J0YW50O30ucG9zdC1ib2R5IGgze2ZvbnQtc2l6ZTogMjVweH0ucG9zdC1ib2R5IGg0e2ZvbnQtc2l6ZTogMjNweH0NCi5wb3N0LWJvZHkgYmxvY2txdW90ZSB7IGJhY2tncm91bmQtY29sb3I6ICNFMEYyRjE7IGJvcmRlci1yYWRpdXM6IC4yNXJlbTsgcGFkZGluZzogNDBweCAyMHB4IDIwcHg7IG1hcmdpbjogMXJlbSAwIDEuMnJlbTsgYm9yZGVyOiAxcHggc29saWQgIzAwOTY4ODsgcG9zaXRpb246IHJlbGF0aXZlOyB9IC5jbG9jayB7IHBhZGRpbmc6IDA7ICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTt9LmRhcmsgLnBvc3QtYm9keSBibG9ja3F1b3RlLCAuZGFyayAuZG93bmxvYWQtbGluaywgLmRhcmsgLmJ0bntiYWNrZ3JvdW5kOiMxMjEzMUE7Y29sb3I6IzY5NkM4MDtib3JkZXItY29sb3I6I2ZmZiFpbXBvcnRhbnR9LmRhcmsgLnBvc3QtYm9keSBibG9ja3F1b3RlOjphZnRlcntjb2xvcjojZmZmfQ0KLmRvd25sb2FkLWxpbmsgYSBzdmd7d2lkdGg6MjBweDttYXJnaW4tcmlnaHQ6IDRweDtoZWlnaHQ6MjBweDtkaXNwbGF5OmlubGluZS1ibG9jazt2ZXJ0aWNhbC1hbGlnbjptaWRkbGV9LmRvd25sb2FkLWxpbmsgYSwgYS5idG57dGV4dC1kZWNvcmF0aW9uOm5vbmU7Y29sb3I6ICNmZmYhaW1wb3J0YW50O30uZG93bmxvYWQtbGluaywuYnRuLC5kb3dubG9hZC1saW5rOjphZnRlciwuYnRuOjphZnRlcntkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IHBhZGRpbmc6IDE2cHggMjBweDsgZm9udC1zaXplOiAxOHB4OyBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoNDVkZWcsIHRyYW5zcGFyZW50IDUlLCAjMDA5Njg4IDUlKTttYXJnaW46IDAgMTJweDsgYm9yZGVyOiAwOyBjb2xvcjogI2ZmZjsgbGV0dGVyLXNwYWNpbmc6IDNweDsgbGluZS1oZWlnaHQ6IDE7IGJveC1zaGFkb3c6IDZweCAwcHggMHB4ICNjY2M7IG91dGxpbmU6IHRyYW5zcGFyZW50OyBwb3NpdGlvbjogcmVsYXRpdmU7fS5teWJ1dHRvbntkaXNwbGF5Om5vbmV9LmJnLW92ZXJsYXl4e2JhY2tncm91bmQ6cmdiYSgwLDAsMCwwLjYpO3otaW5kZXg6OTk5IWltcG9ydGFudDtoZWlnaHQ6MTAwdmg7d2lkdGg6MTAwJTtwb3NpdGlvbjpmaXhlZDtsZWZ0OjA7dG9wOjA7cmlnaHQ6MDtib3R0b206MDt6LWluZGV4OjA7LXdlYmtpdC10cmFuc2l0aW9uOmJhY2tncm91bmQgMC4xNXMgbGluZWFyOy1vLXRyYW5zaXRpb246YmFja2dyb3VuZCAwLjE1cyBsaW5lYXI7dHJhbnNpdGlvbjpiYWNrZ3JvdW5kIDAuMTVzIGxpbmVhcn0jZWxlbWVudF90b19wb3BfdXB7ZGlzcGxheTpub25lO3otaW5kZXg6OTk5OTtvcGFjaXR5OjE7b3ZlcmZsb3c6aGlkZGVuO3RvcDoxMDBweH1AbWVkaWEgKG1heC13aWR0aDo0ODBweCl7LmVsZW1lbnRfcG9wX3VwX3dyYXB7bWF4LXdpZHRoOjkwJSFpbXBvcnRhbnR9fS5lbGVtZW50X3BvcF91cF93cmFwe3Bvc2l0aW9uOmZpeGVkO3otaW5kZXg6OTk5OTk7LXdlYmtpdC10cmFuc2Zvcm06dHJhbnNsYXRlKDUwJSw1MCUpO2xlZnQ6NTAlO3RvcDogNTAlO3JpZ2h0OjUwJTt0cmFuc2Zvcm06dHJhbnNsYXRlKC01MCUsLTUwJSk7LXdlYmtpdC10cmFuc2l0aW9uOi13ZWJraXQtdHJhbnNmb3JtIDAuM3MgZWFzZS1vdXQ7LW8tdHJhbnNpdGlvbjotby10cmFuc2Zvcm0gMC4zcyBlYXNlLW91dDt0cmFuc2l0aW9uOi13ZWJraXQtdHJhbnNmb3JtIDAuM3MgZWFzZS1vdXQ7LW8tdHJhbnNpdGlvbjp0cmFuc2Zvcm0gMC4zcyBlYXNlLW91dDt0cmFuc2l0aW9uOnRyYW5zZm9ybSAwLjNzIGVhc2Utb3V0O3RyYW5zaXRpb246dHJhbnNmb3JtIDAuM3MgZWFzZS1vdXQsLXdlYmtpdC10cmFuc2Zvcm0gMC4zcyBlYXNlLW91dDtkaXNwbGF5OmlubGluZS1ibG9jazt2ZXJ0aWNhbC1hbGlnbjptaWRkbGU7d2lkdGg6MzIwcHg7Ym94LXNoYWRvdzowIDVweCAzNXB4IHJnYigwIDAgMC83JSk7LXdlYmtpdC1ib3gtc2l6aW5nOmJvcmRlci1ib3g7LW1vei1ib3gtc2l6aW5nOmJvcmRlci1ib3g7Ym94LXNpemluZzpib3JkZXItYm94O21hcmdpbjozMHB4IGF1dG87cGFkZGluZzoxNXB4O21heC13aWR0aDo4MCU7YmFja2dyb3VuZC1jb2xvcjojZmZmZGZjO2JvcmRlci1yYWRpdXM6NnB4O2JvcmRlcjoxcHggc29saWQgcmdiYSgwLDAsMCwwLjIpO292ZXJmbG93LXk6YXV0bzttYXgtaGVpZ2h0OmNhbGMoMTAwdmggLSA3MHB4KX0uZWxlbWVudF9wb3BfdXBfaGVhZGVyIC5lbGVtZW50X3BvcF91cF9jbG9zZXtjdXJzb3I6cG9pbnRlcjtmb250LXdlaWdodDpib2xkO3otaW5kZXg6NX0uZWxlbWVudF9wb3BfdXBfaGVhZGVye2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7cG9zaXRpb246cmVsYXRpdmU7anVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW47Ym9yZGVyLWJvdHRvbToxcHggI0U1RTVFNSBzb2xpZDtwYWRkaW5nOjAgMCAxM3B4O21hcmdpbi1ib3R0b206MTBweH0uZWxlbWVudF9wb3BfdXBfY29udGVudHtvdXRsaW5lOjA7d2lkdGg6MTAwJTtwb3NpdGlvbjpyZWxhdGl2ZTtkaXNwbGF5OmZsZXg7anVzdGlmeS1jb250ZW50OmNlbnRlcjthbGlnbi1pdGVtczpjZW50ZXI7LXdlYmtpdC1mbGV4LWRpcmVjdGlvbjpjb2x1bW47LW1zLWZsZXgtZGlyZWN0aW9uOmNvbHVtbjtmbGV4LWRpcmVjdGlvbjpjb2x1bW47bWF4LWhlaWdodDpjYWxjKDEwMHZoIC0gNzBweCl9LmVsZW1lbnRfcG9wX3VwX3RpbWVyX2J1dHRvbntkaXNwbGF5Om5vbmU7cG9zaXRpb246cmVsYXRpdmU7YmFja2dyb3VuZDojZTZmZmU2O3BhZGRpbmc6MTJweH0uZWxlbWVudF9wb3BfdXBfYWR7bWFyZ2luOjRweCAwIDRweDtwb3NpdGlvbjpyZWxhdGl2ZTtib3JkZXI6IDFweCBzb2xpZCAjY2NjO2Rpc3BsYXk6aW5saW5lLWJsb2NrO3dpZHRoOjMwMHB4O2hlaWdodDoyMDBweH0uZWxlbWVudF9wb3BfdXBfdGltZXJ7Zm9udC1zaXplOjExcHg7Zm9udC13ZWlnaHQ6NzAwO2NvbG9yOmJyb3duO2JhY2tncm91bmQ6I2ZhZWJlYjtwYWRkaW5nOjEycHggMDt0ZXh0LWFsaWduOmNlbnRlcjtwb3NpdGlvbjpyZWxhdGl2ZX0uZG93bmxvYWRhZG9wZW57YmFja2dyb3VuZC1jb2xvcjojZjNmMmYyO2NvbG9yOiMwMDAhaW1wb3J0YW50O2JveC1zaXppbmc6Ym9yZGVyLWJveDtwYWRkaW5nOjNweCA2MHB4O2ZvbnQtc2l6ZTowLjg3NXJlbTtmb250LXdlaWdodDo2MDA7aW5zZXQ6MC4xMjVyZW07dGV4dC1hbGlnbjpjZW50ZXI7Zm9udC1mYW1pbHk6IkZpcmEgQ29kZSBWRiIsIkZpcmEgQ29kZSIsbW9ub3NwYWNlO2xldHRlci1zcGFjaW5nOjAuMXB4O3RleHQtdHJhbnNmb3JtOmNhcGl0YWxpemU7Ym9yZGVyOjFweCBzb2xpZCAjMjEyMTIxIWltcG9ydGFudH0uZWxlbWVudF9wb3BfdXBfdGltZXJfYnV0dG9uIHB7bWFyZ2luOjVweCAwIDVweDt0ZXh0LWFsaWduOmNlbnRlcjtkaXNwbGF5OmJsb2NrO2ZvbnQtc2l6ZToxMXB4fS5lbGVtZW50X3BvcF91cF90aW1lcl9idXR0b24gcC5kdGV4dHtmb250LXNpemU6MTBweDtjb2xvcjpncmVlbn0uZWxlbWVudF9wb3BfdXBfdGltZXJfYnV0dG9uIHAuZnJlZWRvd25hZHttYXJnaW46MTVweCAwIDVweCFpbXBvcnRhbnR9LmVsZW1lbnRfcG9wX3VwX3RpdGxle2ZvbnQtd2VpZ2h0OmJvbGR9LmVsZW1lbnRfcG9wX3VwX19idXR0b25fY29udGVudHttYXJnaW4tdG9wOjEycHg7cG9zaXRpb246cmVsYXRpdmU7d2lkdGg6MTAwJTtib3gtc2l6aW5nOmJvcmRlci1ib3h9LnRlcm1zaGVhZHsganVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW59LnRlcm1zaGVhZCBzcGFuLmNsb3NleHtjdXJzb3I6cG9pbnRlcjt6LWluZGV4Ojk7fSAuY2xpY2tfcG9we3Bvc2l0aW9uOnJlbGF0aXZlfSNhdF90ZXJtc3t6LWluZGV4OiA5OTk5OyBkaXNwbGF5OiBub25lOyBvdmVyZmxvdzogaGlkZGVuO30gLnRlcm1zX3dyYXB7cGFkZGluZzogMTVweDsgd2lkdGg6IDUwMHB4OyB0b3A6IDUwJTsgZGlzcGxheTogaW5saW5lLWJsb2NrOyByaWdodDogNTAlOyBsZWZ0OiA0MyU7IGFsaWduLWl0ZW1zOiBjZW50ZXI7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7IHotaW5kZXg6IDk5OTsgcG9zaXRpb246IGZpeGVkOyBtYXgtd2lkdGg6IDk1JTsgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwtNTAlKXNjYWxlKDAuNyk7IG1hcmdpbjogMCBhdXRvOyBib3JkZXItcmFkaXVzOiA2cHg7IGJvcmRlcjogMnB4IHNvbGlkICMwMDk2ODg7IG92ZXJmbG93LXk6IGF1dG87IG1heC1oZWlnaHQ6IGNhbGMoMTAwdmggLSA3MHB4KTsgdmVydGljYWwtYWxpZ246IG1pZGRsZTsgYm94LXNoYWRvdzogMCA1cHggMzVweCByZ2IoMCAwIDAgLyAyMCUpO30udGVybXNfY29udGVudHtkaXNwbGF5OiBmbGV4O2p1c3RpZnktY29udGVudDogY2VudGVyO2ZsZXgtZGlyZWN0aW9uOiBjb2x1bW47IGFsaWduLWl0ZW1zOiBjZW50ZXI7fSAudGVybXNoZWFkIHtib3JkZXItYm90dG9tOiAxcHggc29saWQgI2NjYzsgbWFyZ2luLWJvdHRvbTogMTVweDsgcGFkZGluZzogMXB4IDAgMTBweDsgd2lkdGg6IDEwMCU7IGZvbnQtc2l6ZTogMjVweDsgZm9udC13ZWlnaHQ6IDcwMDt9LnRlcm1zX2NvbnRlbnQgPiBwe2Rpc3BsYXk6IGlubGluZS1ibG9jazsgcGFkZGluZzogNnB4O30NCi5wb3N0LWJvZHkgaDEsIC5wb3N0LWJvZHkgaDIsIC5wb3N0LWJvZHkgaDMsIC5wb3N0LWJvZHkgaDQsIC5wb3N0LWJvZHkgaDUsIC5wb3N0LWJvZHkgaDYgeyAgZm9udC13ZWlnaHQ6IDcwMDsgbWFyZ2luOiAwIDAgMTVweDsgfQ0KLnBvc3QtYm9keXtsaW5lLWhlaWdodDoxLjhlbTtvdmVyZmxvdzpoaWRkZW59DQp0ZXh0YXJlYSwucHJlY29kZXt3aWR0aDoxMDAlOy1tb3otYm94LXNpemluZzpib3JkZXItYm94Oy13ZWJraXQtYm94LXNpemluZzpib3JkZXItYm94O2JveC1zaXppbmc6Ym9yZGVyLWJveH0NCi5wb3N0LWJvZHkgcHJle3Bvc2l0aW9uOnJlbGF0aXZlO3BhZGRpbmctdG9wOjE4cHg7bGluZS1oZWlnaHQ6IDEuMzt9DQoucG9zdC1ib2R5IHByZTo6YmVmb3Jle2ZvbnQtc2l6ZToxNHB4O3Bvc2l0aW9uOnZhcigtLTZhcXkwMSk7dG9wOjA7cGFkZGluZzowIDEwcHg7bGVmdDowO3JpZ2h0OjA7Y29sb3I6I2ZmZjsNCmRpc3BsYXk6YmxvY2s7bWFyZ2luOjA7Y29udGVudDomIzM5O0NvZGVsaW5lcyAtIGRvdWJsZWNsaWNrIHRvIHNlbGVjdCBhbGwhJiMzOTs7aGVpZ2h0OjE4cHg7YmFja2dyb3VuZDojZDJjYmI4fQ0KLnNlcGFyYXRvciBhe21hcmdpbi1sZWZ0OjAhaW1wb3J0YW50O21hcmdpbi1yaWdodDowIWltcG9ydGFudH0NCi5wb3N0LWJvZHkgaW1ne21heC13aWR0aDoxMDAlO2hlaWdodDphdXRvO3BhZGRpbmc6MDttYXJnaW46MCBhdXRvO2Rpc3BsYXk6YmxvY2t9LmF0LWFkc2Jsb2NrIHsgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjsgcGFkZGluZzogMjBweDsgcG9zaXRpb246IHJlbGF0aXZlOyBib3gtc2hhZG93OiAwIDAgMzVweCByZ2IoMCAwIDAgLyA5JSk7IGJvcmRlcjogMXB4IGRhc2hlZDsgfQ0KLyotLS0gY3VzdG9tIGNvbW1lbnRzIC0tLSovDQouY29tbWVudHMgaDR7bWFyZ2luLWJvdHRvbToyMHB4fS5ibG9nLXBvc3Rze2Rpc3BsYXk6YmxvY2shaW1wb3J0YW50fQ0KLmRsYnRue2Rpc3BsYXk6aW5saW5lLWJsb2NrO3BhZGRpbmc6NXB4IDIwcHg7YmFja2dyb3VuZDojMDBBMzc2O2JvcmRlci1yYWRpdXM6M3B4O2NvbG9yOiNmZmYhaW1wb3J0YW50O3RleHQtYWxpZ246Y2VudGVyfQ0KLmRsYnRuOmhvdmVye2JhY2tncm91bmQ6b3JhbmdlfS5kYXJrIC5jb21tZW50LnJlcGx5IC5jb21tZW50LWJvZHl7YmFja2dyb3VuZC1jb2xvcjojMTIxMzFBIWltcG9ydGFudH0NCi5oaWRlLWNvbnRlbnR7ZGlzcGxheTpub25lO21hcmdpbjowO3BhZGRpbmc6MDt9DQphLnNob3djb250ZW50LCNjb21tZW50cyBhLmhpZGRlbmNvbnRlbnR7ZGlzcGxheTpibG9jazt0ZXh0LWRlY29yYXRpb246bm9uZTtwb3NpdGlvbjpyZWxhdGl2ZTtmb250LXdlaWdodDo0MDA7Zm9udC1zaXplOjE1cHg7cGFkZGluZzoxMi41cHggMDtib3JkZXI6MnB4IHNvbGlkO2JvcmRlci1yYWRpdXM6NXB4O3RleHQtYWxpZ246Y2VudGVyO21hcmdpbjozMHB4IGF1dG87bGV0dGVyLXNwYWNpbmc6MXB4O3RyYW5zaXRpb246YWxsIC4zc30NCiNjb21tZW50cyBhLmhpZGRlbmNvbnRlbnQge2JhY2tncm91bmQ6I2ZmZjtjb2xvcjojYWNiM2I4O3RyYW5zaXRpb246YWxsIC4zc30NCmEuc2hvd2NvbnRlbnQ6aG92ZXJ7YmFja2dyb3VuZDojZmZmO2NvbG9yOiM1NTkzZjA7fQ0KI2NvbW1lbnRzIGEuaGlkZGVuY29udGVudDpob3ZlcntiYWNrZ3JvdW5kOiNhY2IzYjg7Y29sb3I6I2ZmZjt9LmNvbW1lbnQtY29udGVudHttYXJnaW4tYm90dG9tOiAzOXB4OyBwb3NpdGlvbjogcmVsYXRpdmU7ZGlzcGxheTp2YXIoLS11MmZ4dXEpO2ZsZXgtZGlyZWN0aW9uOiBjb2x1bW47fSNuZXh0cG9zdCwjcG9zdHBhZ2VyLCNwcmV2cG9zdHtoZWlnaHQ6YXV0bztwYWRkaW5nOjB9ICNuZXh0cG9zdCwjcHJldnBvc3R7ZGlzcGxheTppbmxpbmUtYmxvY2t9ICNuZXh0cG9zdCwjcG9zdHBhZ2VyLCNwcmV2cG9zdHstbW96LWJveC1zaXppbmc6Ym9yZGVyLWJveDstd2Via2l0LWJveC1zaXppbmc6Ym9yZGVyLWJveDtib3gtc2l6aW5nOmJvcmRlci1ib3g7bWFyZ2luOjEwcHggMDt9ICNwcmV2cG9zdHtmbG9hdDpyaWdodDt0ZXh0LWFsaWduOmxlZnR9Lm5vdHh0e3BhZGRpbmc6MCA4cHg7ZGlzcGxheTppbmxpbmUtYmxvY2s7dmVydGljYWwtYWxpZ246bWlkZGxlO30gI25leHRwb3N0OmhvdmVyIHN2ZywjcHJldnBvc3Q6aG92ZXIgc3Zne30gLnMtd29yZCwuYy13b3Jke2Zsb2F0OmxlZnQ7bWFyZ2luLXJpZ2h0OjVweH0gLmV4cGFuZC1tb3JlIC5kaXNxdXMtYm94LC5leHBhbmQtbW9yZSAuYmxvZ2dlci1ib3gsLmV4cGFuZC1tb3JlIC5jLXdvcmR7ZGlzcGxheTpibG9ja30gLmV4cGFuZC1tb3JlIC5zLXdvcmQsLmMtd29yZHtkaXNwbGF5Om5vbmV9IC5yZXBseS1zdmd7ZmxvYXQ6bGVmdDttYXJnaW4tdG9wOi0zcHg7fUAtd2Via2l0LWtleWZyYW1lcyBpbmRpY2F0b3J7MCV7b3BhY2l0eTowfTUwJXtvcGFjaXR5OjF9MTAwJXtvcGFjaXR5OjB9fSBALW1vei1rZXlmcmFtZXMgaW5kaWNhdG9yezAle29wYWNpdHk6MH01MCV7b3BhY2l0eToxfTEwMCV7b3BhY2l0eTowfX0gQGtleWZyYW1lcyBpbmRpY2F0b3J7MCV7b3BhY2l0eTowfTUwJXtvcGFjaXR5OjF9MTAwJXtvcGFjaXR5OjB9fQ0KI2N1c3RvbS1jb21tZW50c3ttYXJnaW46MjBweCAwfSAuY29tbWVudC1hdmF0YXIsLmNvbW1lbnQtYm9keSwuY29tbWVudC1oZWFkZXItZGV0aWx7b3ZlcmZsb3c6aGlkZGVufSAjY3VzdG9tLWNvbW1lbnRzIGg0e2ZvbnQtc2l6ZToyMHB4O21hcmdpbi1ib3R0b206MjBweDtjb2xvcjojMDAwO2ZvbnQtd2VpZ2h0OjcwMDtib3JkZXItYm90dG9tOjFweCBzb2xpZCAjZGRkO3BhZGRpbmctYm90dG9tOiAxMHB4O30gLmNvbW1lbnQtYXZhdGFye2Zsb2F0OmxlZnQ7bWFyZ2luOmF1dG87ZGlzcGxheTpibG9jazt3aWR0aDozNnB4O2hlaWdodDozNnB4O2JhY2tncm91bmQ6I2RkZDtib3JkZXItcmFkaXVzOjUwJTttYXJnaW4tdG9wOiAwcHg7fSAuY29tbWVudHMgLnJlcGxpZXMgLmNvbW1lbnQtYXZhdGFye3dpZHRoOjMycHg7aGVpZ2h0OjMycHh9LmNvbW1lbnRzIC5jb21tZW50cy1jb250ZW50IHsgZm9udC1zaXplOiAxNHB4OyBtYXJnaW4tYm90dG9tOiAzMHB4OyBiYWNrZ3JvdW5kOiAjZmZmOyBwYWRkaW5nOiAxN3B4OyBib3JkZXItcmFkaXVzOiAxMHB4OyB0cmFuc2l0aW9uOiBhbGwgLjVzIGVhc2U7IH0gLmNvbW1lbnQtaGVhZGVyLWRldGlse30gLmNvbW1lbnQtdXJse2Rpc3BsYXk6bm9uZX0gLmNvbW1lbnQtbGlzdHttYXJnaW4tYm90dG9tOjE1cHg7cGFkZGluZy1ib3R0b206MTVweDtib3JkZXItYm90dG9tOiAxcHggc29saWQgI2RkZH0gdWwuY29tbWVudHN7bWFyZ2luOjAgMCAyMHB4O3BhZGRpbmc6MH0gLmNvbW1lbnQtYm9keXtmb250LXNpemU6MTRweDttYXJnaW46MCAxMHB4IDIwcHg7Ym9yZGVyOiAxcHggc29saWQgIzAwOTY4ODsgcGFkZGluZzogMjBweDtib3JkZXItcmFkaXVzOiA0cHg7IHBvc2l0aW9uOnJlbGF0aXZlO30gLmNvbW1lbnQucmVwbHl7cG9zaXRpb246cmVsYXRpdmU7fSAuY29tbWVudC5yZXBseSAuY29tbWVudC1ib2R5e21hcmdpbjogMCAyNXB4IDEwcHg7IGJhY2tncm91bmQ6ICNFMEYyRjE7fSAuY29tbWVudC1mb290ZXJ7Zm9udC1zaXplOjEycHg7cG9zaXRpb246cmVsYXRpdmU7bWFyZ2luOiAwO30gLmEtcmVwbHl7cG9zaXRpb246dmFyKC0tNmFxeTAxKTsgYm90dG9tOiAxMnB4O2JvcmRlcjogMXB4IHNvbGlkICNjY2M7Zm9udC1zaXplOiAxMnB4OyBkaXNwbGF5OnZhcigtLXUyZnh1cSk7cGFkZGluZzogM3B4IDEycHg7IGZsZXgtZGlyZWN0aW9uOiByb3c7IGZvbnQtd2VpZ2h0OiA3MDA7fSAuY3VzdG9tLWNvbW1lbnRzLXBhZ2Vye21hcmdpbi1ib3R0b206MjBweH0gI2N1c3RvbS1jb21tZW50cyAjY29tbWVudC1lZGl0b3J7bWFyZ2luOjA7d2lkdGg6IDEwMCU7fSAuY29tbWVudHMucmVwbGllc3ttYXJnaW4tYm90dG9tOjEwcHh9IC5hLXVuZG97YmFja2dyb3VuZDojMzMzO3BhZGRpbmc6MnB4IDVweDtib3JkZXItcmFkaXVzOjJweDtjb2xvcjojZmZmIWltcG9ydGFudDtkaXNwbGF5Om5vbmV9IC5jb21tZW50LWxpc3QgLmEtdW5kb3tkaXNwbGF5OmlubGluZS1ibG9jazttYXJnaW46MjBweCAwO2ZvbnQtc2l6ZToxMnB4fSAuYS1kZWxldGV7ZGlzcGxheTpub25lO3Bvc2l0aW9uOnZhcigtLTZhcXkwMSk7cmlnaHQ6MTBweDtjb2xvcjogI2RkZCAhaW1wb3J0YW50O30gLmNvbW1lbnQtbGlzdDpob3ZlciAuYS1kZWxldGUsLnJlcGxpZXM6aG92ZXIgLmEtZGVsZXRle2Rpc3BsYXk6aW5saW5lIWltcG9ydGFudH0gLmNvbW1lbnQtaGVhZGVyIC5hLWRlbGV0ZXtmb250LXNpemU6MTJweH0gLmNvbW1lbnQtYXV0aG9ye2ZvbnQtd2VpZ2h0OjcwMH0uY29tbWVudC1hdXRob3IgYXtjb2xvcjojNzU1MzllfS5jb21tZW50LWhlYWRlcntmb250LXNpemU6MTRweDt0ZXh0LXRyYW5zZm9ybTpjYXBpdGFsaXplO30gYnV0dG9uLGJ1dHRvbltkaXNhYmxlZF06YWN0aXZle2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtib3JkZXItcmFkaXVzOjNweDtib3JkZXI6MXB4IHNvbGlkICM0OWE1YmY7cGFkZGluZzozcHggMTBweDt0ZXh0LWRlY29yYXRpb246bm9uZTtiYWNrZ3JvdW5kOmxpbmVhci1ncmFkaWVudCh0byBib3R0b20sIzkzY2VkZSAwLCM3NWJkZDEgNDElLCM0OWE1YmYgMTAwJSk7Y29sb3I6I2ZmZjtkaXNwbGF5OmlubGluZS1ibG9jazt0ZXh0LXNoYWRvdzoxcHggMXB4IDAgIzUyOGVjYztib3gtc2hhZG93Omluc2V0IDFweCAxcHggMCAwICNiYmRhZjc7Y3Vyc29yOnBvaW50ZXJ9IGJ1dHRvbjpob3Zlcntjb2xvcjojMDAwfSBidXR0b246YWN0aXZle2NvbG9yOiMwMDB9IGJ1dHRvbltkaXNhYmxlZF0sYnV0dG9uW2Rpc2FibGVkXTphY3RpdmV7Y29sb3I6IzAwMDtjdXJzb3I6ZGVmYXVsdH1AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0ODBweCl7LnBvc3QtYm9keSB7ZGlzcGxheTogYmxvY2shaW1wb3J0YW50O319DQo="
+      rel="stylesheet"
+      type="text/css"/>
+    <link rel="stylesheet" href="css/Countries.css" />
+    <link rel="stylesheet" href="css/Body.css" />
+    <link rel="stylesheet" href="css/MediaQuery.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css"></script>
+    <script src="https://use.fontawesome.com/releases/v5.6.3/css/all.css"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="/" rel="bookmark" title="IFinDoo" />
+    <link rel="icon" href="ifindoo2.png" type="image/icon" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav>
+      <div class="navbar">
+        <i class="bx bx-menu"></i>
+        <div class="logo">
+          <a href="index.html"
+            ><img src="Image/ifindoo2.png" style="width: 50px; height: 50px" />
+            IFinDoo</a
+          >
+        </div>
+        <div class="nav-links">
+          <div class="sidebar-logo">
+            <span class="logo-name"
+              ><img src="Image/ifindoo2.png" style="width: 50px; height: 50px" />
+              IFinDoo</span
+            >
+            <i class="bx bx-x"></i>
+          </div>
+          <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="#" class="active">Markets</a>
+              <i class="bx bxs-chevron-down htmlcss-arrow arrow"></i>
+              <ul class="htmlCss-sub-menu sub-menu">
+                <li><a href="Crypto-Shorts.html">Crypto Shorts</a></li>
+                <li><a href="Blue-Chips.html">Blue Chips</a></li>
+                <li><a href="Countries.html" class="active">Countries</a></li>
+                <li><a href="World-Economy.html">World Economy</a></li>
+                <li class="more">
+                  <span
+                    ><a href="#">Tools</a>
+                    <i class="bx bxs-chevron-right arrow more-arrow"></i>
+                  </span>
+                  <ul class="more-sub-menu sub-menu">
+                    <li>
+                      <a href="Crypto-Calculator.html">Crypto Calculator</a>
+                    </li>
+                    <li>
+                      <a href="Budget-Calculate.html">Budget Calculator</a>
+                    </li>
+                    <li>
+                      <a href="Currency-Converter.html">Currency Converter</a>
+                    </li>
+                    <li><a href="Loan-Calculator.html">Loan Calculator</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Assets</a>
+              <i class="bx bxs-chevron-down asset-arrow arrow"></i>
+              <ul class="asset-sub-menu sub-menu">
+                <li><a href="Crypto.html">Crypto</a></li>
+                <li><a href="Metaverse.html">Metaverse</a></li>
+                <li><a href="NFT.html">NFTs</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Stocks</a>
+              <i class="bx bxs-chevron-down stock-arrow arrow"></i>
+              <ul class="stock-sub-menu sub-menu">
+                <li><a href="Dividends.html">Technology</a></li>
+                <li><a href="Social Media.html">Social Media</a></li>
+                <li><a href="Ecommerce.html">Ecommerce</a></li>
+                <li><a href="Banks.html">Banks</a></li>
+                <li><a href="Cars.html">Cars</a></li>
+                <li><a href="Sports.html">Sports</a></li>
+                <li><a href="Games.html">Games</a></li>
+                <li><a href="Foods.html">Foods</a></li>
+                <li><a href="Movie.html">Movie Industry</a></li>
+                <li><a href="Industrials.html">Industrials</a></li>
+                <li><a href="Healthcare.html">Healthcare</a></li>
+                <li><a href="Energy.html">Energy</a></li>
+                <li><a href="Real Estate.html">Real Estate</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Community</a>
+              <i class="bx bxs-chevron-down community-arrow arrow"></i>
+              <ul class="community-sub-menu sub-menu">
+                <li><a href="Hot-Topics.html">Hot Topic</a></li>
+                <li><a href="Blogs.html">Blogs</a></li>
+                <li><a href="Scams.html">Scams</a></li>
+                <li><a href="Quotes.html">Quotes</a></li>
+              </ul>
+            </li>
+            <li><a href="Trade Guide.html">Trade Guide</a></li>
+          </ul>
+        </div>
+
+        <div id="Anutrickz_translateBTN" class="" title="translate langauge">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.8"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
+            />
+          </svg>
+          <div class="hide" id="ATLang_list">
+            <ul>
+              <li class="language-list" data-google-lang="en">
+                <img src="https://flagcdn.com/w20/us.png" />&nbsp;&nbsp; English
+              </li>
+              <li class="language-list" data-google-lang="zh">
+                <img src="https://flagcdn.com/w20/cn.png" />&nbsp;&nbsp; Chinese
+              </li>
+              <li class="language-list" data-google-lang="hi">
+                <img src="https://flagcdn.com/w20/in.png" />&nbsp;&nbsp; Hindi
+              </li>
+              <li class="language-list" data-google-lang="es">
+                <img src="https://flagcdn.com/w20/es.png" />&nbsp;&nbsp; Spanish
+              </li>
+              <li class="language-list" data-google-lang="fr">
+                <img src="https://flagcdn.com/w20/fr.png" />&nbsp;&nbsp; French
+              </li>
+              <li class="language-list" data-google-lang="ar">
+                <img src="https://flagcdn.com/w20/eg.png" />&nbsp;&nbsp; Arabic
+              </li>
+              <li class="language-list" data-google-lang="pt">
+                <img src="https://flagcdn.com/w20/br.png" />&nbsp;&nbsp;
+                Portuguese
+              </li>
+              <li class="language-list" data-google-lang="ru">
+                <img src="https://flagcdn.com/w20/ru.png" />&nbsp;&nbsp; Russian
+              </li>
+              <li class="language-list" data-google-lang="id">
+                <img src="https://flagcdn.com/w20/id.png" />&nbsp;&nbsp;
+                Indonesian
+              </li>
+              <li class="language-list" data-google-lang="ur">
+                <img src="https://flagcdn.com/w20/pk.png" />&nbsp;&nbsp; Urdu
+              </li>
+              <li class="language-list" data-google-lang="ja">
+                <img src="https://flagcdn.com/w20/jp.png" />&nbsp;&nbsp;
+                Japanese
+              </li>
+              <li class="language-list" data-google-lang="de">
+                <img src="https://flagcdn.com/w20/de.png" />&nbsp;&nbsp; German
+              </li>
+              <li class="language-list" data-google-lang="tr">
+                <img src="https://flagcdn.com/w20/tr.png" />&nbsp;&nbsp; Turkish
+              </li>
+              <li class="language-list" data-google-lang="ko">
+                <img src="https://flagcdn.com/w20/kr.png" />&nbsp;&nbsp; Korean
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="#userProfile">
+          <svg
+            xmlns="https://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.8"
+            stroke="currentColor"
+            class="w-6 h-6 userProfile"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+            />
+          </svg>
+        </a>
+        <div class="search-box" title="search">
+          <i class="bx bx-search"></i>
+        </div>
+      </div>
+    </nav>
+
+    <div class="floatSocial">
+      <li class="floatingSocial">
+        <a href="#" class="twitter"
+          ><span>Twitter</span><i class="fa fa-twitter"></i
+        ></a>
+      </li>
+      <li class="floatingSocial">
+        <a href="#" class="instagram"
+          ><span>Instagram</span><i class="fa fa-instagram"></i
+        ></a>
+      </li>
+      <li class="floatingSocial">
+        <a href="#" class="facebook"
+          ><span>Facebook</span><i class="fa fa-facebook"></i
+        ></a>
+      </li>
+    </div>
+
+    <div id="cd-nav">
+      <a id="cd-nav-trigger" href="#0" class="cd-nav-trigger"><span></span></a>
+      <div>
+        <ul id="cd-main-nav">
+          <li><a href="#usaSection">USA</a></li>
+          <li><a href="#chinaSection">China</a></li>
+          <li><a href="#japanSection">Japan</a></li>
+          <li><a href="#germanySection">Germany</a></li>
+          <li><a href="#ukSection">UK</a></li>
+          <li><a href="#indiaSection">India</a></li>
+          <li><a href="#franceSection">France</a></li>
+          <li><a href="#italySection">Italy</a></li>
+          <li><a href="#canadaSection">Canada</a></li>
+          <li><a href="#southkoreaSection">South Korea</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dividends_title">
+      <h2 id="dividends_title">
+        Data Of top 10 Countries by GDP <br />
+        of last 22 Years
+      </h2>
+    </div>
+    <div class="dividends_para">
+      <div id="dividends_para">
+        Global economic growth has been a major focus for countries around the
+        world in the past two decades. Gross Domestic Product (GDP) is one of
+        the key indicators used to measure a country's economic growth and
+        performance. The period from 2000 to 2022 has seen major shifts in the
+        GDP of various countries, with some experiencing significant growth
+        while others have stagnated or even declined. <br /><br />
+
+        One of the most notable trends in this period has been the rise of
+        emerging economies such as China, India, and Brazil. These countries
+        have experienced tremendous growth in their GDP and have become key
+        players in the global economy. For example, China's GDP has grown at an
+        average annual rate of around 10% since 2000, making it the world's
+        second-largest economy. India's GDP has also grown rapidly, although at
+        a slightly slower pace, with an average annual growth rate of around 7%.
+        Brazil has also experienced significant growth, albeit with some
+        fluctuations, with an average annual growth rate of around 3%.
+        <br /><br />
+
+        On the other hand, developed economies have experienced a more mixed
+        performance. The United States, for example, experienced a period of
+        strong growth in the early 2000s, with its GDP growing at an average
+        annual rate of around 3%. However, the financial crisis of 2008 had a
+        major impact on the country's economic growth, and its GDP growth has
+        been more sluggish since then, with an average annual growth rate of
+        around 2%. Europe has experienced a similar pattern, with a period of
+        strong growth in the early 2000s followed by a slowdown in the aftermath
+        of the financial crisis. Overall, the period from 2000 to 2022 has been
+        characterized by a shift in global economic power from developed
+        economies to emerging economies, as the latter have continued to
+        experience strong growth while the former have faced more challenges.
+        <br /><br />
+      </div>
+    </div>
+
+    <!-- USA Section Start -->
+    <section id="usaSection">
+      <div class="companyTitle">
+        <h2 id="companyTitle">1. United States of America</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          The United States' Gross Domestic Product (GDP) has experienced a
+          rollercoaster ride in the past 22 years. During the early 2000s, the
+          country experienced a period of strong economic growth, with GDP
+          growing at an average annual rate of around 3%. However, the financial
+          crisis of 2008 had a major impact on the US economy, leading to a
+          slowdown in economic growth. In the aftermath of the financial crisis,
+          the country's GDP growth has been more sluggish, with an average
+          annual growth rate of around 2%. <br /><br />
+
+          Despite this, the US economy has remained one of the largest and most
+          influential in the world. The country continues to play a major role
+          in global trade, finance, and technology, and its GDP accounts for a
+          significant portion of the global economy. The US economy has also
+          been helped by its diverse sectors, including finance, technology,
+          manufacturing, and retail, which have all played a key role in driving
+          economic growth. <br /><br />
+
+          Despite its strengths, the US economy also faces significant
+          challenges. Income inequality has become a major issue, with the
+          wealthy becoming increasingly concentrated and the middle class
+          struggling to make ends meet. The country is also facing a rapidly
+          aging population, which is putting pressure on healthcare and
+          retirement systems. Additionally, the US faces significant competition
+          from emerging economies such as China and India, which are rapidly
+          growing and becoming key players in the global economy. Nevertheless,
+          the US remains one of the most influential and powerful economies in
+          the world, and its GDP will continue to be a key indicator of its
+          economic health and performance in the years to come.
+        </div>
+      </div>
+      <div class="tableHead">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-wrap">
+              <table class="table">
+                <thead class="thead-primary">
+                  <tr>
+                    <th>#</th>
+                    <th>Year</th>
+                    <th>GDP</th>
+                    <th>Per Capita</th>
+                    <th>Growth</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>2022</td>
+                    <td>$25,035.2B</td>
+                    <td>$69,288</td>
+                    <td>5.67%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>2021</td>
+                    <td>$22,996.10B</td>
+                    <td>$69,288</td>
+                    <td>5.9%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>2020</td>
+                    <td>$20,893.74B</td>
+                    <td>$63,028</td>
+                    <td>-3.40%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>2019</td>
+                    <td>$21,372.57B</td>
+                    <td>$65,095</td>
+                    <td>2.29%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>2018</td>
+                    <td>$20,527.16B</td>
+                    <td>$62,805</td>
+                    <td>2.92%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>2017</td>
+                    <td>$19,479.62B</td>
+                    <td>$59,915</td>
+                    <td>2.26%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>2016</td>
+                    <td>$18,695.11B</td>
+                    <td>$57,867</td>
+                    <td>1.67%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>2015</td>
+                    <td>$18,206.02B</td>
+                    <td>$56,763</td>
+                    <td>2.71%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>2014</td>
+                    <td>$17,550.68B</td>
+                    <td>$55,124</td>
+                    <td>2.29%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>2013</td>
+                    <td>$16,843.19B</td>
+                    <td>$53,291</td>
+                    <td>1.84%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>2012</td>
+                    <td>$16,253.97B</td>
+                    <td>$51,784</td>
+                    <td>2.28%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>2011</td>
+                    <td>$15,599.73B</td>
+                    <td>$50,066</td>
+                    <td>1.55%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>2010</td>
+                    <td>$15,048.96B</td>
+                    <td>$48,651</td>
+                    <td>2.71%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>2009</td>
+                    <td>$14,478.06B</td>
+                    <td>$47,195</td>
+                    <td>-2.60%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td>2008</td>
+                    <td>$14,769.86B</td>
+                    <td>$48,570</td>
+                    <td>0.12%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16</th>
+                    <td>2007</td>
+                    <td>$14,474.23B</td>
+                    <td>$48,050</td>
+                    <td>2.01%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">17</th>
+                    <td>2006</td>
+                    <td>$13,815.59B</td>
+                    <td>$46,302</td>
+                    <td>2.78%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">18</th>
+                    <td>2005</td>
+                    <td>$13,039.20B</td>
+                    <td>$44,123</td>
+                    <td>3.48%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">19</th>
+                    <td>2004</td>
+                    <td>$12,217.19B</td>
+                    <td>$41,725</td>
+                    <td>3.85%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">20</th>
+                    <td>2003</td>
+                    <td>$11,456.44B</td>
+                    <td>$39,490</td>
+                    <td>2.80%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">21</th>
+                    <td>2002</td>
+                    <td>$10,929.11B</td>
+                    <td>$37,998</td>
+                    <td>1.70%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">22</th>
+                    <td>2001</td>
+                    <td>$10,581.93B</td>
+                    <td>$37,134</td>
+                    <td>0.95%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">23</th>
+                    <td>2000</td>
+                    <td>$10,250.95B</td>
+                    <td>$36,330</td>
+                    <td>4.08%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="countryChart">
+        <canvas id="myChartUSA"></canvas>
+      </div>
+
+      <div class="chartBtn">
+        <div class="barBtn" onclick="chartTypeUSA('bar')">Bar Chart</div>
+        <div class="barBtn" onclick="chartTypeUSA('line')">Line Chart</div>
+      </div>
+    </section>
+    <br /><br />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
+
+    <script>
+      const datasetObjectUSA = {
+        data: [
+          [
+            36330, 37134, 37998, 39490, 41725, 44123, 46302, 48050, 48570,
+            47195, 48651, 50066, 51784, 53291, 55124, 56763, 57867, 59915,
+            62805, 65095, 63028, 69288, 76648,
+          ],
+          [
+            10250.95, 10581.93, 10929.11, 11456.44, 12217.19, 13039.2, 13815.59,
+            14474.23, 14769.86, 14478.06, 15048.96, 15599.73, 16253.97,
+            16843.19, 17550.68, 18206.02, 18695.11, 19479.62, 20527.16,
+            21372.57, 20893.74, 22996.1, 25035.2,
+          ],
+        ],
+      };
+      const accumulateUSA = (array) =>
+        array.map(
+          (
+            (sum) => (value) =>
+              (sum += value)
+          )(0)
+        );
+      const cumulativeSumArrayUSA = accumulateUSA(datasetObjectUSA.data[0]);
+      datasetObjectUSA.data.push(cumulativeSumArrayUSA);
+
+      const lineUSA = cumulativeSumArrayUSA.map((value) => {
+        return value - 5;
+      });
+      datasetObjectUSA.data.push(cumulativeSumArrayUSA, lineUSA);
+      console.log(datasetObjectUSA.data);
+
+      // setup
+      const dataUSA = {
+        labels: [
+          "2000",
+          "2001",
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+        ],
+        datasets: [
+          {
+            label: "Per Capita in Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectUSA.data[0],
+            backgroundColor: ["rgb(54, 162, 235, 0.2)"],
+            borderColor: ["rgb(54, 162, 235)"],
+            borderWidth: 1,
+          },
+          {
+            label: "GDP in Billion Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectUSA.data[1],
+            backgroundColor: ["rgb(75, 192, 92, 0.2)"],
+            borderColor: ["rgb(75, 192, 92, 0.9)"],
+            borderWidth: 1,
+          },
+        ],
+      };
+      // config
+      const configUSA = {
+        type: "bar",
+        data: dataUSA,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      };
+      // render init block
+      const myChartUSA = new Chart(
+        document.getElementById("myChartUSA"),
+        configUSA
+      );
+
+      function chartTypeUSA(type) {
+        myChartUSA.config.type = type;
+        myChartUSA.update();
+      }
+    </script>
+
+    <!-- USA Section End -->
+
+    <section id="chinaSection">
+      <div class="companyTitle">
+        <h2 id="companyTitle">2. China</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          The past 22 years have seen tremendous growth in China's Gross
+          Domestic Product (GDP). Since the turn of the century, the country has
+          experienced an average annual growth rate of around 10%, making it the
+          world's second-largest economy. This rapid growth has been driven by a
+          combination of factors, including a large and rapidly growing
+          population, low labor costs, and significant investments in
+          infrastructure and technology. <br /><br />
+
+          The rise of China as a major economic power has had significant
+          implications for the rest of the world. The country has become a key
+          player in global trade, with its vast manufacturing sector and growing
+          consumer market making it a major source of demand for goods and
+          services. China is also increasingly investing in other countries,
+          through initiatives such as the Belt and Road Initiative, which is
+          aimed at improving connectivity and boosting economic growth across
+          Asia, Europe, and Africa. <br /><br />
+
+          Despite its impressive economic growth, China faces significant
+          challenges. The country is grappling with issues such as income
+          inequality, environmental degradation, and an aging population, all of
+          which could undermine its long-term economic growth. Additionally, the
+          country is facing growing international pressure over issues such as
+          trade and human rights, which could lead to tension and conflict with
+          other countries. Nevertheless, China's GDP will remain a key indicator
+          of its economic health and performance, and will continue to have a
+          major impact on the global economy in the years to come.
+        </div>
+      </div>
+      <div class="tableHead">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-wrap">
+              <table class="table">
+                <thead class="thead-primary">
+                  <tr>
+                    <th>#</th>
+                    <th>Year</th>
+                    <th>GDP</th>
+                    <th>Per Capita</th>
+                    <th>Growth</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>2022</td>
+                    <td>$18,321.2B</td>
+                    <td>$21,291</td>
+                    <td>3.0%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>2021</td>
+                    <td>$17,734.06B</td>
+                    <td>$12,556</td>
+                    <td>8.11%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>2020</td>
+                    <td>$14,687.67B</td>
+                    <td>$10,409</td>
+                    <td>2.24%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>2019</td>
+                    <td>$14,279.94B</td>
+                    <td>$10,144</td>
+                    <td>5.95%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>2018</td>
+                    <td>$13,894.82B</td>
+                    <td>$9,905</td>
+                    <td>6.75%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>2017</td>
+                    <td>$12,310.41B</td>
+                    <td>$8,817</td>
+                    <td>6.95%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>2016</td>
+                    <td>$11,233.28B</td>
+                    <td>$8,094</td>
+                    <td>6.85%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>2015</td>
+                    <td>$11,061.55B</td>
+                    <td>$8,016</td>
+                    <td>7.04%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>2014</td>
+                    <td>$10,475.68B</td>
+                    <td>$7,636</td>
+                    <td>7.43%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>2013</td>
+                    <td>$9,570.41B</td>
+                    <td>$7,020</td>
+                    <td>7.77%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>2012</td>
+                    <td>$8,532.23B</td>
+                    <td>$6,301</td>
+                    <td>7.86%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>2011</td>
+                    <td>$7,551.50B</td>
+                    <td>$5,614</td>
+                    <td>9.55%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>2010</td>
+                    <td>$6,087.16B</td>
+                    <td>$4,550</td>
+                    <td>10.64%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>2009</td>
+                    <td>$5,101.70B</td>
+                    <td>$3,832</td>
+                    <td>9.40%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td>2008</td>
+                    <td>$4,594.31B</td>
+                    <td>$3,468</td>
+                    <td>9.65%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16</th>
+                    <td>2007</td>
+                    <td>$3,550.34B</td>
+                    <td>$2,694</td>
+                    <td>14.23%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">17</th>
+                    <td>2006</td>
+                    <td>$2,752.13B</td>
+                    <td>$2,099</td>
+                    <td>12.72%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">18</th>
+                    <td>2005</td>
+                    <td>$2,285.97B</td>
+                    <td>$1,753</td>
+                    <td>11.39%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">19</th>
+                    <td>2004</td>
+                    <td>$1,955.35B</td>
+                    <td>$1,509</td>
+                    <td>10.11%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">20</th>
+                    <td>2003</td>
+                    <td>$1,660.29B</td>
+                    <td>$1,289</td>
+                    <td>10.04%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">21</th>
+                    <td>2002</td>
+                    <td>$1,470.55B</td>
+                    <td>$1,149</td>
+                    <td>9.13%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">22</th>
+                    <td>2001</td>
+                    <td>$1,339.40B</td>
+                    <td>$1,053</td>
+                    <td>8.34%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">23</th>
+                    <td>2000</td>
+                    <td>$1,211.35B</td>
+                    <td>$959</td>
+                    <td>8.49%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="countryChart">
+        <canvas id="myChartChina"></canvas>
+      </div>
+
+      <div class="chartBtn">
+        <div class="barBtn" onclick="chartTypeChina('bar')">Bar Chart</div>
+        <div class="barBtn" onclick="chartTypeChina('line')">Line Chart</div>
+      </div>
+    </section>
+    <br /><br />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
+
+    <script>
+      const datasetObjectChina = {
+        data: [
+          [
+            959, 1053, 1149, 1289, 1509, 1753, 2099, 2694, 3468, 3832, 4550,
+            5614, 6301, 7020, 7636, 8016, 8094, 8817, 9905, 10144, 10409, 12562,
+            21291,
+          ],
+          [
+            1211.35, 1339.4, 1470.55, 1660.29, 1955.35, 2285.97, 2752.13,
+            3550.34, 4594.31, 5101.7, 6087.16, 7551.5, 8532.23, 9570.41,
+            10475.68, 11061.55, 11233.28, 12310.41, 13894.82, 14279.94,
+            14687.67, 17734.06, 18321.2,
+          ],
+        ],
+      };
+      const accumulateChina = (array) =>
+        array.map(
+          (
+            (sum) => (value) =>
+              (sum += value)
+          )(0)
+        );
+      const cumulativeSumArrayChina = accumulateChina(
+        datasetObjectChina.data[0]
+      );
+      datasetObjectChina.data.push(cumulativeSumArrayChina);
+
+      const lineChina = cumulativeSumArrayChina.map((value) => {
+        return value - 5;
+      });
+      datasetObjectChina.data.push(cumulativeSumArrayChina, lineChina);
+      console.log(datasetObjectChina.data);
+      // setup
+      const dataChina = {
+        labels: [
+          "2000",
+          "2001",
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+        ],
+        datasets: [
+          {
+            label: "Per Capita in Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectChina.data[0],
+            backgroundColor: ["rgb(54, 162, 235, 0.2)"],
+            borderColor: ["rgb(54, 162, 235)"],
+            borderWidth: 1,
+          },
+          {
+            label: "GDP in Billion Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectChina.data[1],
+            backgroundColor: ["rgb(75, 192, 92, 0.2)"],
+            borderColor: ["rgb(75, 192, 92, 0.9)"],
+            borderWidth: 1,
+          },
+        ],
+      };
+      // config
+      const configChina = {
+        type: "bar",
+        data: dataChina,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      };
+      // render init block
+      const myChartChina = new Chart(
+        document.getElementById("myChartChina"),
+        configChina
+      );
+
+      function chartTypeChina(type) {
+        myChartChina.config.type = type;
+        myChartChina.update();
+      }
+    </script>
+
+    <!-- Japan -->
+    <section id="japanSection">
+      <div class="companyTitle">
+        <h2 id="companyTitle">3. Japan</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Japan's Gross Domestic Product (GDP) has experienced a somewhat uneven
+          performance over the past 22 years. During the early 2000s, the
+          country experienced a period of slow growth, with its GDP growing at
+          an average annual rate of around 1%. This was partly due to the
+          long-term economic challenges facing the country, including a rapidly
+          aging population, low birth rates, and a declining workforce.
+          <br /><br />
+
+          However, the Japanese economy has been helped by a number of factors
+          in recent years. The country has made significant investments in
+          technology and innovation, which have helped to boost its
+          competitiveness and drive economic growth. Additionally, the country
+          has been helped by a weaker yen, which has made its exports more
+          competitive on the global market. <br /><br />
+
+          Despite these positive developments, Japan's GDP growth remains
+          relatively sluggish compared to other major economies, such as China
+          and the United States. The country is still facing significant
+          challenges, including an aging population and a declining workforce,
+          which are putting pressure on its social welfare and healthcare
+          systems. Additionally, the country is facing competition from other
+          countries in the region, such as China and South Korea, which are
+          rapidly growing and becoming key players in the global economy.
+          Nevertheless, Japan's GDP will remain an important indicator of its
+          economic health and performance, and will continue to be closely
+          watched by investors, policymakers, and economists in the years to
+          come.
+        </div>
+      </div>
+      <div class="tableHead">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-wrap">
+              <table class="table">
+                <thead class="thead-primary">
+                  <tr>
+                    <th>#</th>
+                    <th>Year</th>
+                    <th>GDP</th>
+                    <th>Per Capita</th>
+                    <th>Growth</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>2022</td>
+                    <td>$4,937.42B</td>
+                    <td>$39,285</td>
+                    <td>1.62%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>2021</td>
+                    <td>$4,937.42B</td>
+                    <td>$39,285</td>
+                    <td>1.62%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>2020</td>
+                    <td>$5,040.11B</td>
+                    <td>$39,918</td>
+                    <td>-4.51%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>2019</td>
+                    <td>$5,123.32B</td>
+                    <td>$40,458</td>
+                    <td>-0.24%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>2018</td>
+                    <td>$5,037.84B</td>
+                    <td>$39,727</td>
+                    <td>0.58%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>2017</td>
+                    <td>$4,930.84B</td>
+                    <td>$38,834</td>
+                    <td>1.68%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>2016</td>
+                    <td>$5,003.68B</td>
+                    <td>$39,375</td>
+                    <td>0.75%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>2015</td>
+                    <td>$4,444.93B</td>
+                    <td>$34,961</td>
+                    <td>1.56%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>2014</td>
+                    <td>$4,896.99B</td>
+                    <td>$38,475</td>
+                    <td>0.30%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>2013</td>
+                    <td>$5,212.33B</td>
+                    <td>$40,899</td>
+                    <td>2.01%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>2012</td>
+                    <td>$6,272.36B</td>
+                    <td>$49,145</td>
+                    <td>1.37%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>2011</td>
+                    <td>$6,233.15B</td>
+                    <td>$48,760</td>
+                    <td>0.02%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>2010</td>
+                    <td>$5,759.07B</td>
+                    <td>$44,968</td>
+                    <td>4.10%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>2009</td>
+                    <td>$5,289.49B</td>
+                    <td>$41,309</td>
+                    <td>-5.69%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td>2008</td>
+                    <td>$5,106.68B</td>
+                    <td>$39,876</td>
+                    <td>-1.22%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16</th>
+                    <td>2007</td>
+                    <td>$4,579.75B</td>
+                    <td>$35,779</td>
+                    <td>1.48%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">17</th>
+                    <td>2006</td>
+                    <td>$4,601.66B</td>
+                    <td>$35,992</td>
+                    <td>1.37%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">18</th>
+                    <td>2005</td>
+                    <td>$4,831.47B</td>
+                    <td>$37,813</td>
+                    <td>1.80%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">19</th>
+                    <td>2004</td>
+                    <td>$4,893.12B</td>
+                    <td>$38,299</td>
+                    <td>2.19%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">20</th>
+                    <td>2003</td>
+                    <td>$4,519.56B</td>
+                    <td>$35,387</td>
+                    <td>1.54%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">21</th>
+                    <td>2002</td>
+                    <td>$4,182.85B</td>
+                    <td>$32,821</td>
+                    <td>0.04%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">22</th>
+                    <td>2001</td>
+                    <td>$4,374.71B</td>
+                    <td>$34,406</td>
+                    <td>0.39%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">23</th>
+                    <td>2000</td>
+                    <td>$4,968.36B</td>
+                    <td>$39,169</td>
+                    <td>2.76%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="countryChart">
+        <canvas id="myChartJapan"></canvas>
+      </div>
+
+      <div class="chartBtn">
+        <div class="barBtn" onclick="chartTypeJapan('bar')">Bar Chart</div>
+        <div class="barBtn" onclick="chartTypeJapan('line')">Line Chart</div>
+      </div>
+    </section>
+    <br /><br />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
+
+    <script>
+      const datasetObjectJapan = {
+        data: [
+          [
+            39169, 34406, 32821, 35387, 38299, 37813, 35992, 35779, 39876,
+            41309, 44968, 48760, 49145, 40899, 38475, 34961, 39375, 38834,
+            39727, 40458, 39918, 39285, 40000,
+          ],
+          [
+            4968.36, 4374.71, 4182.85, 4519.56, 4893.12, 4831.47, 4601.66,
+            4579.75, 5106.68, 5289.49, 5759.07, 6233.15, 6272.36, 5212.33,
+            4896.99, 4444.93, 5003.68, 4930.84, 5037.84, 5123.32, 5040.11,
+            4937.42, 5000.42,
+          ],
+        ],
+      };
+      const accumulateJapan = (array) =>
+        array.map(
+          (
+            (sum) => (value) =>
+              (sum += value)
+          )(0)
+        );
+      const cumulativeSumArrayJapan = accumulateJapan(
+        datasetObjectJapan.data[0]
+      );
+      datasetObjectJapan.data.push(cumulativeSumArrayJapan);
+
+      const lineJapan = cumulativeSumArrayJapan.map((value) => {
+        return value - 5;
+      });
+      datasetObjectJapan.data.push(cumulativeSumArrayJapan, lineJapan);
+      console.log(datasetObjectJapan.data);
+      // setup
+      const dataJapan = {
+        labels: [
+          "2000",
+          "2001",
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+        ],
+        datasets: [
+          {
+            label: "Per Capita in Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectJapan.data[0],
+            backgroundColor: ["rgb(54, 162, 235, 0.2)"],
+            borderColor: ["rgb(54, 162, 235)"],
+            borderWidth: 1,
+          },
+          {
+            label: "GDP in Billion Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectJapan.data[1],
+            backgroundColor: ["rgb(75, 192, 92, 0.2)"],
+            borderColor: ["rgb(75, 192, 92, 0.9)"],
+            borderWidth: 1,
+          },
+        ],
+      };
+      // config
+      const configJapan = {
+        type: "bar",
+        data: dataJapan,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      };
+      // render init block
+      const myChartJapan = new Chart(
+        document.getElementById("myChartJapan"),
+        configJapan
+      );
+
+      function chartTypeJapan(type) {
+        myChartJapan.config.type = type;
+        myChartJapan.update();
+      }
+    </script>
+
+    <!-- Germany -->
+    <section id="germanySection">
+      <div class="companyTitle">
+        <h2 id="companyTitle">4. Germany</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Germany's Gross Domestic Product (GDP) has been one of the strongest
+          in Europe over the past 22 years. The country has experienced steady
+          economic growth, with an average annual growth rate of around 1.5%.
+          This has been driven by a number of factors, including a strong
+          manufacturing sector, a well-educated workforce, and a stable
+          political and economic environment. <br /><br />
+
+          Germany's economic success has been helped by its strong position in
+          the European Union (EU). The country is the largest economy in the EU
+          and plays a key role in shaping the economic and political direction
+          of the bloc. Its strong exports, particularly in the automotive and
+          machinery industries, have helped to drive economic growth and make it
+          a major player in the global economy. <br /><br />
+
+          Despite its strengths, Germany's GDP growth has slowed in recent
+          years, due in part to a slowdown in the global economy and ongoing
+          challenges in the eurozone. The country is also facing demographic
+          challenges, with a rapidly aging population putting pressure on its
+          social welfare and healthcare systems. Additionally, Germany is facing
+          competition from other countries in Europe and around the world, which
+          are investing in technology and innovation and seeking to boost their
+          economic growth. Nevertheless, Germany's GDP will remain an important
+          indicator of its economic health and performance, and will continue to
+          be closely watched by investors, policymakers, and economists in the
+          years to come.
+        </div>
+      </div>
+      <div class="tableHead">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-wrap">
+              <table class="table">
+                <thead class="thead-primary">
+                  <tr>
+                    <th>#</th>
+                    <th>Year</th>
+                    <th>GDP</th>
+                    <th>Per Capita</th>
+                    <th>Growth</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>2022</td>
+                    <td>$4,223.12B</td>
+                    <td>$50,802</td>
+                    <td>2.89%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>2021</td>
+                    <td>$4,223.12B</td>
+                    <td>$50,802</td>
+                    <td>2.89%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>2020</td>
+                    <td>$3,846.41B</td>
+                    <td>$46,253</td>
+                    <td>-4.57%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>2019</td>
+                    <td>$3,888.33B</td>
+                    <td>$46,795</td>
+                    <td>1.06%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>2018</td>
+                    <td>$3,977.29B</td>
+                    <td>$47,974</td>
+                    <td>1.09%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>2017</td>
+                    <td>$3,690.85B</td>
+                    <td>$44,653</td>
+                    <td>2.68%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>2016</td>
+                    <td>$3,469.85B</td>
+                    <td>$42,136</td>
+                    <td>2.23%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>2015</td>
+                    <td>$3,357.59B</td>
+                    <td>$41,103</td>
+                    <td>1.49%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>2014</td>
+                    <td>$3,889.09B</td>
+                    <td>$48,024</td>
+                    <td>2.21%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>2013</td>
+                    <td>$3,733.80B</td>
+                    <td>$46,299</td>
+                    <td>0.44%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>2012</td>
+                    <td>$3,527.14B</td>
+                    <td>$43,856</td>
+                    <td>0.42%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>2011</td>
+                    <td>$3,749.31B</td>
+                    <td>$46,706</td>
+                    <td>3.93%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>2010</td>
+                    <td>$3,399.67B</td>
+                    <td>$41,572</td>
+                    <td>4.18%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>2009</td>
+                    <td>$3,411.26B</td>
+                    <td>$41,650</td>
+                    <td>-5.69%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td>2008</td>
+                    <td>$3,745.26B</td>
+                    <td>$45,613</td>
+                    <td>0.96%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16</th>
+                    <td>2007</td>
+                    <td>$3,425.58B</td>
+                    <td>$41,640</td>
+                    <td>2.98%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">17</th>
+                    <td>2006</td>
+                    <td>$2,994.70B</td>
+                    <td>$36,354</td>
+                    <td>3.82%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">18</th>
+                    <td>2005</td>
+                    <td>$2,846.86B</td>
+                    <td>$34,520</td>
+                    <td>0.73%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">19</th>
+                    <td>2004</td>
+                    <td>$2,814.35B</td>
+                    <td>$34,107</td>
+                    <td>1.18%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">20</th>
+                    <td>2003</td>
+                    <td>$2,501.64B</td>
+                    <td>$30,310</td>
+                    <td>-0.70%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">21</th>
+                    <td>2002</td>
+                    <td>$2,078.48B</td>
+                    <td>$25,197</td>
+                    <td>-0.20%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">22</th>
+                    <td>2001</td>
+                    <td>$4,374.71B</td>
+                    <td>$34,406</td>
+                    <td>0.39%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">23</th>
+                    <td>2000</td>
+                    <td>$1,945.79B</td>
+                    <td>$23,628</td>
+                    <td>1.68%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="countryChart">
+        <canvas id="myChartGermany"></canvas>
+      </div>
+
+      <div class="chartBtn">
+        <div class="barBtn" onclick="chartTypeGermany('bar')">Bar Chart</div>
+        <div class="barBtn" onclick="chartTypeGermany('line')">Line Chart</div>
+      </div>
+    </section>
+    <br /><br />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
+
+    <script>
+      const datasetObjectGermany = {
+        data: [
+          [
+            23695, 23628, 25197, 30310, 34107, 34520, 36354, 41640, 45613,
+            41650, 41572, 46706, 43856, 46299, 48024, 41103, 42136, 44653,
+            47974, 46795, 46253, 50802, 51802,
+          ],
+          [
+            1947.98, 1945.79, 2078.48, 2501.64, 2814.35, 2846.86, 2994.7,
+            3425.58, 3745.26, 3411.26, 3399.67, 3749.31, 3527.14, 3733.8,
+            3889.09, 3357.59, 3469.85, 3690.85, 3977.29, 3888.33, 3846.41,
+            4223.12, 4523.12,
+          ],
+        ],
+      };
+      const accumulateGermany = (array) =>
+        array.map(
+          (
+            (sum) => (value) =>
+              (sum += value)
+          )(0)
+        );
+      const cumulativeSumArrayGermany = accumulateGermany(
+        datasetObjectGermany.data[0]
+      );
+      datasetObjectGermany.data.push(cumulativeSumArrayGermany);
+
+      const lineGermany = cumulativeSumArrayGermany.map((value) => {
+        return value - 5;
+      });
+      datasetObjectGermany.data.push(cumulativeSumArrayGermany, lineGermany);
+      console.log(datasetObjectGermany.data);
+      // setup
+      const dataGermany = {
+        labels: [
+          "2000",
+          "2001",
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+        ],
+        datasets: [
+          {
+            label: "Per Capita in Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectGermany.data[0],
+            backgroundColor: ["rgb(54, 162, 235, 0.2)"],
+            borderColor: ["rgb(54, 162, 235)"],
+            borderWidth: 1,
+          },
+          {
+            label: "GDP in Billion Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectGermany.data[1],
+            backgroundColor: ["rgb(75, 192, 92, 0.2)"],
+            borderColor: ["rgb(75, 192, 92, 0.9)"],
+            borderWidth: 1,
+          },
+        ],
+      };
+      // config
+      const configGermany = {
+        type: "bar",
+        data: dataGermany,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      };
+      // render init block
+      const myChartGermany = new Chart(
+        document.getElementById("myChartGermany"),
+        configGermany
+      );
+
+      function chartTypeGermany(type) {
+        myChartGermany.config.type = type;
+        myChartGermany.update();
+      }
+    </script>
+
+    <!-- United Kingdom -->
+    <section id="ukSection">
+      <div class="companyTitle">
+        <h2 id="companyTitle">5. United Kingdom</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          The United Kingdom's Gross Domestic Product (GDP) has experienced a
+          rollercoaster of a ride over the past 22 years. At the start of the
+          century, the country experienced a period of strong growth, with its
+          economy expanding at an average annual rate of around 2.5%. This was
+          due in part to the financial sector, which was booming and helping to
+          drive economic growth. <br /><br />
+
+          However, the global financial crisis of 2008 had a major impact on the
+          UK's economy, and its GDP growth slowed significantly in the aftermath
+          of the crisis. The country has struggled to regain its footing in the
+          years since, with growth remaining sluggish and uneven. Despite this,
+          the UK has remained a major player in the global economy, with a
+          strong services sector and a large consumer market. <br /><br />
+
+          The UK's economic performance has been further complicated by the
+          ongoing Brexit negotiations and the subsequent departure from the
+          European Union (EU). The uncertainty surrounding Brexit has had a
+          significant impact on the country's economy, with businesses and
+          investors becoming more cautious and holding back on investment.
+          Additionally, the UK is facing challenges related to its aging
+          population, a sluggish housing market, and a growing national debt.
+          Nevertheless, the UK's GDP will remain an important indicator of its
+          economic health and performance, and will continue to be closely
+          watched by investors, policymakers, and economists in the years to
+          come.
+        </div>
+      </div>
+      <div class="tableHead">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-wrap">
+              <table class="table">
+                <thead class="thead-primary">
+                  <tr>
+                    <th>#</th>
+                    <th>Year</th>
+                    <th>GDP</th>
+                    <th>Per Capita</th>
+                    <th>Growth</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>2022</td>
+                    <td>$3,186.86B</td>
+                    <td>$47,334</td>
+                    <td>7.44%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>2021</td>
+                    <td>$3,186.86B</td>
+                    <td>$47,334</td>
+                    <td>7.44%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>2020</td>
+                    <td>$2,756.90B</td>
+                    <td>$41,098</td>
+                    <td>-9.27%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>2019</td>
+                    <td>$2,878.67B</td>
+                    <td>$43,070</td>
+                    <td>1.67%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>2018</td>
+                    <td>$2,900.79B</td>
+                    <td>$43,647</td>
+                    <td>1.65%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>2017</td>
+                    <td>$2,699.02B</td>
+                    <td>$40,858</td>
+                    <td>2.13%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>2016</td>
+                    <td>$2,722.85B</td>
+                    <td>$41,500</td>
+                    <td>2.26%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>2015</td>
+                    <td>$2,956.57B</td>
+                    <td>$45,405</td>
+                    <td>2.62%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>2014</td>
+                    <td>$3,087.17B</td>
+                    <td>$47,787</td>
+                    <td>2.99%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>2013</td>
+                    <td>$2,803.29B</td>
+                    <td>$43,714</td>
+                    <td>1.89%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>2012</td>
+                    <td>$2,719.16B</td>
+                    <td>$42,687</td>
+                    <td>1.47%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>2011</td>
+                    <td>$2,674.89B</td>
+                    <td>$42,285</td>
+                    <td>1.46%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>2010</td>
+                    <td>$2,491.11B</td>
+                    <td>$39,689</td>
+                    <td>2.13%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>2009</td>
+                    <td>$2,425.80B</td>
+                    <td>$38,952</td>
+                    <td>-4.25%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td>2008</td>
+                    <td>$2,938.88B</td>
+                    <td>$47,549</td>
+                    <td>-0.24%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16</th>
+                    <td>2007</td>
+                    <td>$3,106.18B</td>
+                    <td>$50,653</td>
+                    <td>2.27%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">17</th>
+                    <td>2006</td>
+                    <td>$2,717.06B</td>
+                    <td>$44,654</td>
+                    <td>2.58%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">18</th>
+                    <td>2005</td>
+                    <td>$2,544.83B</td>
+                    <td>$42,132</td>
+                    <td>2.59%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">19</th>
+                    <td>2004</td>
+                    <td>$2,421.81B</td>
+                    <td>$40,372</td>
+                    <td>2.36%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">20</th>
+                    <td>2003</td>
+                    <td>$2,057.09B</td>
+                    <td>$34,487</td>
+                    <td>3.03%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">21</th>
+                    <td>2002</td>
+                    <td>$1,784.08B</td>
+                    <td>$30,050</td>
+                    <td>2.12%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">22</th>
+                    <td>2001</td>
+                    <td>$1,643.91B</td>
+                    <td>$27,806</td>
+                    <td>2.07%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">23</th>
+                    <td>2000</td>
+                    <td>$1,662.13B</td>
+                    <td>$28,223</td>
+                    <td>3.67%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="countryChart">
+        <canvas id="myChartUK"></canvas>
+      </div>
+
+      <div class="chartBtn">
+        <div class="barBtn" onclick="chartTypeUK('bar')">Bar Chart</div>
+        <div class="barBtn" onclick="chartTypeUK('line')">Line Chart</div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
+
+    <script>
+      const datasetObjectUK = {
+        data: [
+          [
+            28223, 27806, 30050, 34487, 40372, 42132, 44654, 50653, 47549,
+            38952, 39689, 42285, 42687, 43714, 47787, 45405, 41500, 40858,
+            43647, 43070, 41098, 47334, 47334,
+          ],
+          [
+            1662.13, 1643.91, 1784.08, 2057.09, 2421.81, 2544.83, 2717.06,
+            3106.18, 2938.88, 2425.8, 2491.11, 2674.89, 2719.16, 2803.29,
+            3087.17, 2956.57, 2722.85, 2699.02, 2900.79, 2878.67, 2756.9,
+            3186.86, 3386.12,
+          ],
+        ],
+      };
+      const accumulateUK = (array) =>
+        array.map(
+          (
+            (sum) => (value) =>
+              (sum += value)
+          )(0)
+        );
+      const cumulativeSumArrayUK = accumulateUK(datasetObjectUK.data[0]);
+      datasetObjectUK.data.push(cumulativeSumArrayUK);
+
+      const lineUK = cumulativeSumArrayUK.map((value) => {
+        return value - 5;
+      });
+      datasetObjectUK.data.push(cumulativeSumArrayUK, lineUK);
+      console.log(datasetObjectUK.data);
+      // setup
+      const dataUK = {
+        labels: [
+          "2000",
+          "2001",
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+        ],
+        datasets: [
+          {
+            label: "Per Capita in Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectUK.data[0],
+            backgroundColor: ["rgb(54, 162, 235, 0.2)"],
+            borderColor: ["rgb(54, 162, 235)"],
+            borderWidth: 1,
+          },
+          {
+            label: "GDP in Billion Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectUK.data[1],
+            backgroundColor: ["rgb(75, 192, 92, 0.2)"],
+            borderColor: ["rgb(75, 192, 92, 0.9)"],
+            borderWidth: 1,
+          },
+        ],
+      };
+      // config
+      const configUK = {
+        type: "bar",
+        data: dataUK,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      };
+      // render init block
+      const myChartUK = new Chart(
+        document.getElementById("myChartUK"),
+        configUK
+      );
+
+      function chartTypeUK(type) {
+        myChartUK.config.type = type;
+        myChartUK.update();
+      }
+    </script>
+
+    <!-- India -->
+    <section id="indiaSection">
+      <div class="companyTitle">
+        <h2 id="companyTitle">6. India</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          India's Gross Domestic Product (GDP) has experienced strong growth
+          over the past 22 years, with an average annual growth rate of around
+          7%. This has been driven by a number of factors, including a rapidly
+          expanding workforce, a growing middle class, and a stable political
+          and economic environment. Additionally, India has been able to tap
+          into its large and growing consumer market, which has helped to drive
+          economic growth and increase investment. <br /><br />
+
+          One of the key drivers of India's economic growth has been its IT and
+          tech sector, which has become a major player in the global economy.
+          The country has also been successful in attracting investment from
+          foreign companies, which have been drawn to India by its large and
+          growing market, as well as its favorable business environment and
+          highly skilled workforce. <br /><br />
+
+          Despite these positive developments, India's GDP growth has been
+          uneven, with some regions and industries growing much faster than
+          others. Additionally, the country is facing a number of challenges,
+          including a rapidly aging population, high levels of poverty and
+          inequality, and ongoing political and social unrest. Nevertheless,
+          India's GDP will remain an important indicator of its economic health
+          and performance, and will continue to be closely watched by investors,
+          policymakers, and economists in the years to come.
+        </div>
+      </div>
+      <div class="tableHead">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-wrap">
+              <table class="table">
+                <thead class="thead-primary">
+                  <tr>
+                    <th>#</th>
+                    <th>Year</th>
+                    <th>GDP</th>
+                    <th>Per Capita</th>
+                    <th>Growth</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>2022</td>
+                    <td>$3,203.40B</td>
+                    <td>$2,377</td>
+                    <td>8.95%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>2021</td>
+                    <td>$3,173.40B</td>
+                    <td>$2,277</td>
+                    <td>8.95%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>2020</td>
+                    <td>$2,667.69B</td>
+                    <td>$1,933</td>
+                    <td>-6.60%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>2019</td>
+                    <td>$2,831.55B</td>
+                    <td>$2,072</td>
+                    <td>3.74%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>2018</td>
+                    <td>$2,702.93B</td>
+                    <td>$1,998</td>
+                    <td>6.45%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>2017</td>
+                    <td>$2,651.47B</td>
+                    <td>$1,981</td>
+                    <td>6.80%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>2016</td>
+                    <td>$2,294.80B</td>
+                    <td>$1,733</td>
+                    <td>8.26%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>2015</td>
+                    <td>$2,103.59B</td>
+                    <td>$1,606</td>
+                    <td>8.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>2014</td>
+                    <td>$2,039.13B</td>
+                    <td>$1,574</td>
+                    <td>7.41%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>2013</td>
+                    <td>$1,856.72B</td>
+                    <td>$1,450</td>
+                    <td>6.39%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>2012</td>
+                    <td>$1,827.64B</td>
+                    <td>$1,444</td>
+                    <td>5.46%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>2011</td>
+                    <td>$1,823.05B</td>
+                    <td>$1,458</td>
+                    <td>5.24%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>2010</td>
+                    <td>$1,675.62B</td>
+                    <td>$1,358</td>
+                    <td>8.50%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>2009</td>
+                    <td>$1,341.89B</td>
+                    <td>$1,102</td>
+                    <td>7.86%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td>2008</td>
+                    <td>$1,198.90B</td>
+                    <td>$999</td>
+                    <td>3.09%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16</th>
+                    <td>2007</td>
+                    <td>$1,216.74B</td>
+                    <td>$1,028</td>
+                    <td>7.66%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">17</th>
+                    <td>2006</td>
+                    <td>$940.26B</td>
+                    <td>$807</td>
+                    <td>8.06%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">18</th>
+                    <td>2005</td>
+                    <td>$820.38B</td>
+                    <td>$715</td>
+                    <td>7.92%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">19</th>
+                    <td>2004</td>
+                    <td>$709.15B</td>
+                    <td>$628</td>
+                    <td>7.92%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">20</th>
+                    <td>2003</td>
+                    <td>$607.70B</td>
+                    <td>$547</td>
+                    <td>7.86%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">21</th>
+                    <td>2002</td>
+                    <td>$514.94B</td>
+                    <td>$471</td>
+                    <td>3.80%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">22</th>
+                    <td>2001</td>
+                    <td>$485.44B</td>
+                    <td>$452</td>
+                    <td>4.82%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">23</th>
+                    <td>2000</td>
+                    <td>$468.39B</td>
+                    <td>$443</td>
+                    <td>3.84%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="countryChart">
+        <canvas id="myChartIndia"></canvas>
+      </div>
+
+      <div class="chartBtn">
+        <div class="barBtn" onclick="chartTypeIndia('bar')">Bar Chart</div>
+        <div class="barBtn" onclick="chartTypeIndia('line')">Line Chart</div>
+      </div>
+    </section>
+    <br /><br />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
+
+    <script>
+      const datasetObjectIndia = {
+        data: [
+          [
+            443, 452, 471, 547, 628, 715, 807, 1028, 999, 1102, 1358, 1458,
+            1444, 1450, 1574, 1606, 1733, 1981, 1998, 2072, 1933, 2277, 2387,
+          ],
+          [
+            468.39, 485.44, 514.94, 607.7, 709.15, 820.38, 940.26, 1216.74,
+            1198.9, 1341.89, 1675.62, 1823.05, 1827.64, 1856.72, 2039.13,
+            2103.59, 2294.8, 2651.47, 2702.93, 2831.55, 2667.69, 3173.4, 3203.1,
+          ],
+        ],
+      };
+      const accumulateIndia = (array) =>
+        array.map(
+          (
+            (sum) => (value) =>
+              (sum += value)
+          )(0)
+        );
+      const cumulativeSumArrayIndia = accumulateIndia(
+        datasetObjectIndia.data[0]
+      );
+      datasetObjectIndia.data.push(cumulativeSumArrayIndia);
+
+      const lineIndia = cumulativeSumArrayIndia.map((value) => {
+        return value - 5;
+      });
+      datasetObjectIndia.data.push(cumulativeSumArrayIndia, lineIndia);
+      console.log(datasetObjectIndia.data);
+      // setup
+      const dataIndia = {
+        labels: [
+          "2000",
+          "2001",
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+        ],
+        datasets: [
+          {
+            label: "Per Capita in Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectIndia.data[0],
+            backgroundColor: ["rgb(54, 162, 235, 0.2)"],
+            borderColor: ["rgb(54, 162, 235)"],
+            borderWidth: 1,
+          },
+          {
+            label: "GDP in Billion Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectIndia.data[1],
+            backgroundColor: ["rgb(75, 192, 92, 0.2)"],
+            borderColor: ["rgb(75, 192, 92, 0.9)"],
+            borderWidth: 1,
+          },
+        ],
+      };
+      // config
+      const configIndia = {
+        type: "bar",
+        data: dataIndia,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      };
+      // render init block
+      const myChartIndia = new Chart(
+        document.getElementById("myChartIndia"),
+        configIndia
+      );
+
+      function chartTypeIndia(type) {
+        myChartIndia.config.type = type;
+        myChartIndia.update();
+      }
+    </script>
+
+    <!-- France -->
+    <section id="franceSection">
+      <div class="companyTitle">
+        <h2 id="companyTitle">7. France</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          France's Gross Domestic Product (GDP) has experienced a steady growth
+          over the past 22 years, with an average annual growth rate of around
+          1.5%. This growth has been driven by a number of factors, including a
+          strong services sector, a well-developed manufacturing industry, and a
+          large and growing consumer market. Additionally, France has been able
+          to tap into its highly skilled workforce, which has helped to drive
+          innovation and competitiveness in a number of key industries.
+          <br /><br />
+
+          Despite these positive developments, France's GDP growth has been
+          uneven, with some regions and industries growing much faster than
+          others. Additionally, the country is facing a number of challenges,
+          including a large public debt, ongoing political and social unrest,
+          and a challenging business environment. Nevertheless, France remains a
+          major player in the global economy, with a strong and influential
+          voice in the European Union (EU) and a number of key economic
+          partnerships around the world. <br /><br />
+
+          France's GDP will remain an important indicator of its economic health
+          and performance, and will continue to be closely watched by investors,
+          policymakers, and economists in the years to come. The country will
+          need to continue to address its economic and political challenges in
+          order to promote growth and stability in the years to come. This will
+          require a commitment to reforms and investments that will help to
+          boost its competitiveness and create a more favorable business
+          environment.
+        </div>
+      </div>
+      <div class="tableHead">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-wrap">
+              <table class="table">
+                <thead class="thead-primary">
+                  <tr>
+                    <th>#</th>
+                    <th>Year</th>
+                    <th>GDP</th>
+                    <th>Per Capita</th>
+                    <th>Growth</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>2022</td>
+                    <td>$2,997.27B</td>
+                    <td>$44,539</td>
+                    <td>6.16%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>2021</td>
+                    <td>$2,937.47B</td>
+                    <td>$43,519</td>
+                    <td>6.96%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>2020</td>
+                    <td>$2,630.32B</td>
+                    <td>$39,037</td>
+                    <td>-7.86%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>2019</td>
+                    <td>$2,728.87B</td>
+                    <td>$40,579</td>
+                    <td>1.84%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>2018</td>
+                    <td>$2,790.96B</td>
+                    <td>$41,593</td>
+                    <td>1.87%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>2017</td>
+                    <td>$2,595.15B</td>
+                    <td>$38,781</td>
+                    <td>2.29%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>2016</td>
+                    <td>$2,472.96B</td>
+                    <td>$37,063</td>
+                    <td>1.10%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>2015</td>
+                    <td>$2,439.19B</td>
+                    <td>$36,653</td>
+                    <td>1.11%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>2014</td>
+                    <td>$2,855.96B</td>
+                    <td>$43,069</td>
+                    <td>0.96%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>2013</td>
+                    <td>$2,811.88B</td>
+                    <td>$42,605</td>
+                    <td>0.58%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>2012</td>
+                    <td>$2,683.67B</td>
+                    <td>$40,872</td>
+                    <td>0.31%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>2011</td>
+                    <td>$2,865.16B</td>
+                    <td>$43,848</td>
+                    <td>2.19%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>2010</td>
+                    <td>$2,645.19B</td>
+                    <td>$40,678</td>
+                    <td>1.95%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>2009</td>
+                    <td>$2,700.89B</td>
+                    <td>$41,740</td>
+                    <td>-2.87%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td>2008</td>
+                    <td>$2,930.30B</td>
+                    <td>$45,519</td>
+                    <td>0.25%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16</th>
+                    <td>2007</td>
+                    <td>$2,660.59B</td>
+                    <td>$41,561</td>
+                    <td>2.42%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">17</th>
+                    <td>2006</td>
+                    <td>$2,320.54B</td>
+                    <td>$36,474</td>
+                    <td>2.45%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">18</th>
+                    <td>2005</td>
+                    <td>$2,196.95B</td>
+                    <td>$34,773</td>
+                    <td>1.66%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">19</th>
+                    <td>2004</td>
+                    <td>$2,119.63B</td>
+                    <td>$33,803</td>
+                    <td>2.83%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">20</th>
+                    <td>2003</td>
+                    <td>$1,844.54B</td>
+                    <td>$29,634</td>
+                    <td>0.82%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">21</th>
+                    <td>2002</td>
+                    <td>$1,501.41B</td>
+                    <td>$24,293</td>
+                    <td>1.14%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">22</th>
+                    <td>2001</td>
+                    <td>$1,377.66B</td>
+                    <td>$22,453</td>
+                    <td>1.98%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">23</th>
+                    <td>2000</td>
+                    <td>$1,365.64B</td>
+                    <td>$22,420</td>
+                    <td>3.92%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="countryChart">
+        <canvas id="myChartFrance"></canvas>
+      </div>
+
+      <div class="chartBtn">
+        <div class="barBtn" onclick="chartTypeFrance('bar')">Bar Chart</div>
+        <div class="barBtn" onclick="chartTypeFrance('line')">Line Chart</div>
+      </div>
+    </section>
+    <br /><br />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
+
+    <script>
+      const datasetObjectFrance = {
+        data: [
+          [
+            22420, 22453, 24293, 29634, 33803, 34773, 36474, 41561, 45519,
+            41740, 40678, 43848, 40872, 42605, 43069, 36653, 37063, 38781,
+            41593, 40579, 39037, 43519, 44519,
+          ],
+          [
+            1365.64, 1377.66, 1501.41, 1844.54, 2119.63, 2196.95, 2320.54,
+            2660.59, 2930.3, 2700.89, 2645.19, 2865.16, 2683.67, 2811.88,
+            2855.96, 2439.19, 2472.96, 2595.15, 2790.96, 2728.87, 2630.32,
+            2937.47, 3103.2,
+          ],
+        ],
+      };
+      const accumulateFrance = (array) =>
+        array.map(
+          (
+            (sum) => (value) =>
+              (sum += value)
+          )(0)
+        );
+      const cumulativeSumArrayFrance = accumulateFrance(
+        datasetObjectFrance.data[0]
+      );
+      datasetObjectFrance.data.push(cumulativeSumArrayFrance);
+
+      const lineFrance = cumulativeSumArrayFrance.map((value) => {
+        return value - 5;
+      });
+      datasetObjectFrance.data.push(cumulativeSumArrayFrance, lineFrance);
+      console.log(datasetObjectFrance.data);
+      // setup
+      const dataFrance = {
+        labels: [
+          "2000",
+          "2001",
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+        ],
+        datasets: [
+          {
+            label: "Per Capita in Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectFrance.data[0],
+            backgroundColor: ["rgb(54, 162, 235, 0.2)"],
+            borderColor: ["rgb(54, 162, 235)"],
+            borderWidth: 1,
+          },
+          {
+            label: "GDP in Billion Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectFrance.data[1],
+            backgroundColor: ["rgb(75, 192, 92, 0.2)"],
+            borderColor: ["rgb(75, 192, 92, 0.9)"],
+            borderWidth: 1,
+          },
+        ],
+      };
+      // config
+      const configFrance = {
+        type: "bar",
+        data: dataFrance,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      };
+      // render init block
+      const myChartFrance = new Chart(
+        document.getElementById("myChartFrance"),
+        configFrance
+      );
+
+      function chartTypeFrance(type) {
+        myChartFrance.config.type = type;
+        myChartFrance.update();
+      }
+    </script>
+
+    <!-- Italy -->
+    <section id="italySection">
+      <div class="companyTitle">
+        <h2 id="companyTitle">8. Italy</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Italy's Gross Domestic Product (GDP) has experienced a challenging 22
+          years, with the country facing a number of economic, political, and
+          social challenges. At the start of the century, Italy's economy was
+          growing at an average annual rate of around 1.5%, but this growth has
+          been sluggish and uneven in recent years. Additionally, the country
+          has struggled to deal with a large public debt and a challenging
+          business environment. <br /><br />
+
+          One of the key challenges facing Italy's economy has been the ongoing
+          debt crisis in the eurozone, which has had a major impact on the
+          country's financial stability and economic performance. Additionally,
+          the country has been facing demographic challenges, with a rapidly
+          aging population putting pressure on its social welfare and healthcare
+          systems. Despite these challenges, Italy has remained an important
+          player in the global economy, with a strong manufacturing sector and a
+          well-developed tourism industry. <br /><br />
+
+          Despite these challenges, Italy's GDP will remain an important
+          indicator of its economic health and performance, and will continue to
+          be closely watched by investors, policymakers, and economists in the
+          years to come. The country will need to continue to address its
+          economic and political challenges in order to promote growth and
+          stability in the years to come. This will require a commitment to
+          reforms and investments that will help to boost its competitiveness
+          and create a more favorable business environment.
+        </div>
+      </div>
+      <div class="tableHead">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-wrap">
+              <table class="table">
+                <thead class="thead-primary">
+                  <tr>
+                    <th>#</th>
+                    <th>Year</th>
+                    <th>GDP</th>
+                    <th>Per Capita</th>
+                    <th>Growth</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>2022</td>
+                    <td>$2,099.88B</td>
+                    <td>$35,551</td>
+                    <td>6.16%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>2021</td>
+                    <td>$2,099.88B</td>
+                    <td>$35,551</td>
+                    <td>6.64%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>2020</td>
+                    <td>$1,892.57B</td>
+                    <td>$31,835</td>
+                    <td>-9.03%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>2019</td>
+                    <td>$2,011.29B</td>
+                    <td>$33,673</td>
+                    <td>0.50%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>2018</td>
+                    <td>$2,091.93B</td>
+                    <td>$34,622</td>
+                    <td>0.93%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>2017</td>
+                    <td>$1,961.80B</td>
+                    <td>$32,407</td>
+                    <td>1.67%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>2016</td>
+                    <td>$1,877.07B</td>
+                    <td>$30,961</td>
+                    <td>1.29%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>2015</td>
+                    <td>$1,836.64B</td>
+                    <td>$30,242</td>
+                    <td>0.78%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>2014</td>
+                    <td>$2,162.01B</td>
+                    <td>$35,566</td>
+                    <td>-0.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>2013</td>
+                    <td>$2,141.92B</td>
+                    <td>$35,560</td>
+                    <td>-1.84%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>2012</td>
+                    <td>$2,086.96B</td>
+                    <td>$35,052</td>
+                    <td>-2.98%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>2011</td>
+                    <td>$2,294.99B</td>
+                    <td>$38,650</td>
+                    <td>0.71%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>2010</td>
+                    <td>$2,136.10B</td>
+                    <td>$36,036</td>
+                    <td>1.71%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>2009</td>
+                    <td>$2,199.93B</td>
+                    <td>$37,227</td>
+                    <td>-5.28%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td>2008</td>
+                    <td>$2,408.66B</td>
+                    <td>$40,945</td>
+                    <td>-0.96%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16</th>
+                    <td>2007</td>
+                    <td>$2,213.10B</td>
+                    <td>$37,871</td>
+                    <td>1.49%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">17</th>
+                    <td>2006</td>
+                    <td>$1,949.55B</td>
+                    <td>$33,530</td>
+                    <td>1.79%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">18</th>
+                    <td>2005</td>
+                    <td>$1,858.22B</td>
+                    <td>$32,055</td>
+                    <td>0.82%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">19</th>
+                    <td>2004</td>
+                    <td>$1,806.54B</td>
+                    <td>$31,317</td>
+                    <td>1.42%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">20</th>
+                    <td>2003</td>
+                    <td>$1,577.62B</td>
+                    <td>$27,526</td>
+                    <td>0.14%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">21</th>
+                    <td>2002</td>
+                    <td>$1,276.77B</td>
+                    <td>$22,376</td>
+                    <td>0.25%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">22</th>
+                    <td>2001</td>
+                    <td>$1,168.02B</td>
+                    <td>$20,501</td>
+                    <td>1.95%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">23</th>
+                    <td>2000</td>
+                    <td>$1,146.68B</td>
+                    <td>$20,138</td>
+                    <td>3.79%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="countryChart">
+        <canvas id="myChartItaly"></canvas>
+      </div>
+
+      <div class="chartBtn">
+        <div class="barBtn" onclick="chartTypeItaly('bar')">Bar Chart</div>
+        <div class="barBtn" onclick="chartTypeItaly('line')">Line Chart</div>
+      </div>
+    </section>
+    <br /><br />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
+
+    <script>
+      const datasetObjectItaly = {
+        data: [
+          [
+            20138, 20501, 22376, 27526, 31317, 32055, 33530, 37871, 40945,
+            37227, 36036, 38650, 35052, 35560, 35566, 30242, 30961, 32407,
+            34622, 33673, 31835, 35551, 36551,
+          ],
+          [
+            1146.68, 1168.02, 1276.77, 1577.62, 1806.54, 1858.22, 1949.55,
+            2213.1, 2408.66, 2199.93, 2136.1, 2294.99, 2086.96, 2141.92,
+            2162.01, 1836.64, 1877.07, 1961.8, 2091.93, 2011.29, 1892.57,
+            2099.88, 2199.32,
+          ],
+        ],
+      };
+      const accumulateItaly = (array) =>
+        array.map(
+          (
+            (sum) => (value) =>
+              (sum += value)
+          )(0)
+        );
+      const cumulativeSumArrayItaly = accumulateItaly(
+        datasetObjectItaly.data[0]
+      );
+      datasetObjectItaly.data.push(cumulativeSumArrayItaly);
+
+      const lineItaly = cumulativeSumArrayItaly.map((value) => {
+        return value - 5;
+      });
+      datasetObjectItaly.data.push(cumulativeSumArrayItaly, lineItaly);
+      console.log(datasetObjectItaly.data);
+      // setup
+      const dataItaly = {
+        labels: [
+          "2000",
+          "2001",
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+        ],
+        datasets: [
+          {
+            label: "Per Capita in Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectItaly.data[0],
+            backgroundColor: ["rgb(54, 162, 235, 0.2)"],
+            borderColor: ["rgb(54, 162, 235)"],
+            borderWidth: 1,
+          },
+          {
+            label: "GDP in Billion Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectItaly.data[1],
+            backgroundColor: ["rgb(75, 192, 92, 0.2)"],
+            borderColor: ["rgb(75, 192, 92, 0.9)"],
+            borderWidth: 1,
+          },
+        ],
+      };
+      // config
+      const configItaly = {
+        type: "bar",
+        data: dataItaly,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      };
+      // render init block
+      const myChartItaly = new Chart(
+        document.getElementById("myChartItaly"),
+        configItaly
+      );
+
+      function chartTypeItaly(type) {
+        myChartItaly.config.type = type;
+        myChartItaly.update();
+      }
+    </script>
+
+    <!-- Canada -->
+    <section id="canadaSection">
+      <div class="companyTitle">
+        <h2 id="companyTitle">9. Canada</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          Canada's Gross Domestic Product (GDP) has experienced strong and
+          stable growth over the past 22 years, with an average annual growth
+          rate of around 2%. This has been driven by a number of factors,
+          including a well-developed natural resources sector, a growing
+          services industry, and a highly educated and skilled workforce.
+          Additionally, Canada has been able to tap into its large and growing
+          consumer market, which has helped to drive economic growth and
+          increase investment. <br /><br />
+
+          One of the key drivers of Canada's economic growth has been its oil
+          and gas sector, which has become a major player in the global energy
+          market. Additionally, the country has a thriving technology sector,
+          which has helped to drive innovation and competitiveness in a number
+          of key industries. Despite these positive developments, Canada's
+          economy has faced a number of challenges in recent years, including a
+          large public debt and ongoing political and social unrest.
+          <br /><br />
+
+          Despite these challenges, Canada's GDP will remain an important
+          indicator of its economic health and performance, and will continue to
+          be closely watched by investors, policymakers, and economists in the
+          years to come. The country will need to continue to address its
+          economic and political challenges in order to promote growth and
+          stability in the years to come. This will require a commitment to
+          reforms and investments that will help to boost its competitiveness
+          and create a more favorable business environment.
+        </div>
+      </div>
+      <div class="tableHead">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-wrap">
+              <table class="table">
+                <thead class="thead-primary">
+                  <tr>
+                    <th>#</th>
+                    <th>Year</th>
+                    <th>GDP</th>
+                    <th>Per Capita</th>
+                    <th>Growth</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>2022</td>
+                    <td>$1,290.76B</td>
+                    <td>$53,051</td>
+                    <td>4.56%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>2021</td>
+                    <td>$1,990.76B</td>
+                    <td>$52,051</td>
+                    <td>4.56%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>2020</td>
+                    <td>$1,645.42B</td>
+                    <td>$43,258</td>
+                    <td>-5.23%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>2019</td>
+                    <td>$1,742.02B</td>
+                    <td>$46,329</td>
+                    <td>1.88%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>2018</td>
+                    <td>$1,725.33B</td>
+                    <td>$46,549</td>
+                    <td>2.78%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>2017</td>
+                    <td>$1,649.27B</td>
+                    <td>$45,129</td>
+                    <td>3.04%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>2016</td>
+                    <td>$1,527.99B</td>
+                    <td>$42,316</td>
+                    <td>1.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>2015</td>
+                    <td>$1,556.51B</td>
+                    <td>$43,596</td>
+                    <td>0.66%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>2014</td>
+                    <td>$1,805.75B</td>
+                    <td>$50,956</td>
+                    <td>2.87%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>2013</td>
+                    <td>$1,846.60B</td>
+                    <td>$52,635</td>
+                    <td>2.33%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>2012</td>
+                    <td>$1,828.37B</td>
+                    <td>$52,669</td>
+                    <td>1.76%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>2011</td>
+                    <td>$1,793.33B</td>
+                    <td>$52,224</td>
+                    <td>3.15%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>2010</td>
+                    <td>$1,617.34B</td>
+                    <td>$47,562</td>
+                    <td>3.09%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>2009</td>
+                    <td>$1,374.63B</td>
+                    <td>$40,876</td>
+                    <td>-2.93%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td>2008</td>
+                    <td>$1,552.99B</td>
+                    <td>$46,711</td>
+                    <td>1.01%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16</th>
+                    <td>2007</td>
+                    <td>$1,468.82B</td>
+                    <td>$44,660</td>
+                    <td>6.87%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">17</th>
+                    <td>2006</td>
+                    <td>$1,319.26B</td>
+                    <td>$40,504</td>
+                    <td>4.17%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">18</th>
+                    <td>2005</td>
+                    <td>$1,173.11B</td>
+                    <td>$36,383</td>
+                    <td>5.00%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">19</th>
+                    <td>2004</td>
+                    <td>$1,026.69B</td>
+                    <td>$32,144</td>
+                    <td>3.91%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">20</th>
+                    <td>2003</td>
+                    <td>$895.54B</td>
+                    <td>$28,300</td>
+                    <td>3.81%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">21</th>
+                    <td>2002</td>
+                    <td>$760.65B</td>
+                    <td>$24,255</td>
+                    <td>3.42%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">22</th>
+                    <td>2001</td>
+                    <td>$738.98B</td>
+                    <td>$23,822</td>
+                    <td>1.41%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">23</th>
+                    <td>2000</td>
+                    <td>$744.77B</td>
+                    <td>$24,271</td>
+                    <td>4.92%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="countryChart">
+        <canvas id="myChartCanada"></canvas>
+      </div>
+
+      <div class="chartBtn">
+        <div class="barBtn" onclick="chartTypeCanada('bar')">Bar Chart</div>
+        <div class="barBtn" onclick="chartTypeCanada('line')">Line Chart</div>
+      </div>
+    </section>
+    <br /><br />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
+
+    <script>
+      const datasetObjectCanada = {
+        data: [
+          [
+            24271, 23822, 24255, 28300, 32144, 36383, 40504, 44660, 46711,
+            40876, 47562, 52224, 52669, 52635, 50956, 43596, 42316, 45129,
+            46549, 46329, 43258, 52051, 53051,
+          ],
+          [
+            744.77, 738.98, 760.65, 895.54, 1026.69, 1173.11, 1319.26, 1468.82,
+            1552.99, 1374.63, 1617.34, 1793.33, 1828.37, 1846.6, 1805.75,
+            1556.51, 1527.99, 1649.27, 1725.33, 1742.02, 1645.42, 1990.76,
+            2190.32,
+          ],
+        ],
+      };
+      const accumulateCanada = (array) =>
+        array.map(
+          (
+            (sum) => (value) =>
+              (sum += value)
+          )(0)
+        );
+      const cumulativeSumArrayCanada = accumulateCanada(
+        datasetObjectCanada.data[0]
+      );
+      datasetObjectCanada.data.push(cumulativeSumArrayCanada);
+
+      const lineCanada = cumulativeSumArrayCanada.map((value) => {
+        return value - 5;
+      });
+      datasetObjectCanada.data.push(cumulativeSumArrayCanada, lineCanada);
+      console.log(datasetObjectCanada.data);
+      // setup
+      const dataCanada = {
+        labels: [
+          "2000",
+          "2001",
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+        ],
+        datasets: [
+          {
+            label: "Per Capita in Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectCanada.data[0],
+            backgroundColor: ["rgb(54, 162, 235, 0.2)"],
+            borderColor: ["rgb(54, 162, 235)"],
+            borderWidth: 1,
+          },
+          {
+            label: "GDP in Billion Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectCanada.data[1],
+            backgroundColor: ["rgb(75, 192, 92, 0.2)"],
+            borderColor: ["rgb(75, 192, 92, 0.9)"],
+            borderWidth: 1,
+          },
+        ],
+      };
+      // config
+      const configCanada = {
+        type: "bar",
+        data: dataCanada,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      };
+      // render init block
+      const myChartCanada = new Chart(
+        document.getElementById("myChartCanada"),
+        configCanada
+      );
+
+      function chartTypeCanada(type) {
+        myChartCanada.config.type = type;
+        myChartCanada.update();
+      }
+    </script>
+
+    <!-- South Korea -->
+    <section id="southkoreaSection">
+      <div class="companyTitle">
+        <h2 id="companyTitle">10. South Korea</h2>
+      </div>
+      <div class="companyPara">
+        <div id="companyPara">
+          South Korea's Gross Domestic Product (GDP) has experienced impressive
+          growth over the past 22 years, with an average annual growth rate of
+          around 4%. This has been driven by a number of factors, including a
+          strong manufacturing sector, a growing services industry, and a highly
+          educated and skilled workforce. Additionally, South Korea has been
+          able to tap into its large and growing consumer market, which has
+          helped to drive economic growth and increase investment. <br /><br />
+
+          One of the key drivers of South Korea's economic growth has been its
+          technology sector, which has become a major player in the global
+          electronics and information technology markets. Additionally, the
+          country has a well-developed automotive industry, which has helped to
+          drive innovation and competitiveness in a number of key industries.
+          Despite these positive developments, South Korea's economy has faced a
+          number of challenges in recent years, including a large public debt
+          and ongoing political and social unrest. <br /><br />
+
+          Despite these challenges, South Korea's GDP will remain an important
+          indicator of its economic health and performance, and will continue to
+          be closely watched by investors, policymakers, and economists in the
+          years to come. The country will need to continue to address its
+          economic and political challenges in order to promote growth and
+          stability in the years to come. This will require a commitment to
+          reforms and investments that will help to boost its competitiveness
+          and create a more favorable business environment.
+        </div>
+      </div>
+      <div class="tableHead">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-wrap">
+              <table class="table">
+                <thead class="thead-primary">
+                  <tr>
+                    <th>#</th>
+                    <th>Year</th>
+                    <th>GDP</th>
+                    <th>Per Capita</th>
+                    <th>Growth</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>2022</td>
+                    <td>$1,898.53B</td>
+                    <td>31,758</td>
+                    <td>4.02%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>2021</td>
+                    <td>$1,798.53B</td>
+                    <td>$34,758</td>
+                    <td>4.02%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>2020</td>
+                    <td>$1,637.90B</td>
+                    <td>$31,598</td>
+                    <td>-0.85%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>2019</td>
+                    <td>$1,651.42B</td>
+                    <td>$31,902</td>
+                    <td>2.24%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>2018</td>
+                    <td>$1,724.85B</td>
+                    <td>$33,437</td>
+                    <td>2.91%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>2017</td>
+                    <td>$1,623.90B</td>
+                    <td>$31,617</td>
+                    <td>3.16%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>2016</td>
+                    <td>$1,500.11B</td>
+                    <td>$29,289</td>
+                    <td>2.95%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>2015</td>
+                    <td>$1,465.77B</td>
+                    <td>$28,732</td>
+                    <td>2.81%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>2014</td>
+                    <td>$1,484.32B</td>
+                    <td>$29,250</td>
+                    <td>3.20%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>2013</td>
+                    <td>$1,370.80B</td>
+                    <td>$27,183</td>
+                    <td>3.16%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>2012</td>
+                    <td>$1,278.43B</td>
+                    <td>$25,467</td>
+                    <td>2.40%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>2011</td>
+                    <td>$1,253.22B</td>
+                    <td>$25,096</td>
+                    <td>3.69%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>2010</td>
+                    <td>$1,144.07B</td>
+                    <td>$23,087</td>
+                    <td>6.80%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>2009</td>
+                    <td>$943.94B</td>
+                    <td>$19,144</td>
+                    <td>0.79%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td>2008</td>
+                    <td>$1,047.34B</td>
+                    <td>$21,350</td>
+                    <td>3.01%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16</th>
+                    <td>2007</td>
+                    <td>$1,172.61B</td>
+                    <td>$24,086</td>
+                    <td>5.80%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">17</th>
+                    <td>2006</td>
+                    <td>$1,053.22B</td>
+                    <td>$21,743</td>
+                    <td>5.26%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">18</th>
+                    <td>2005</td>
+                    <td>$934.90B</td>
+                    <td>$19,403</td>
+                    <td>4.31%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">19</th>
+                    <td>2004</td>
+                    <td>$793.18B</td>
+                    <td>$16,496</td>
+                    <td>5.20%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">20</th>
+                    <td>2003</td>
+                    <td>$702.72B</td>
+                    <td>$14,673</td>
+                    <td>3.15%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">21</th>
+                    <td>2002</td>
+                    <td>$627.25B</td>
+                    <td>$13,165</td>
+                    <td>7.73%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">22</th>
+                    <td>2001</td>
+                    <td>$547.66B</td>
+                    <td>$11,561</td>
+                    <td>4.85%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">23</th>
+                    <td>2000</td>
+                    <td>$576.18B</td>
+                    <td>$12,257</td>
+                    <td>9.06%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="countryChart">
+        <canvas id="myChartKorea"></canvas>
+      </div>
+
+      <div class="chartBtn">
+        <div class="barBtn" onclick="chartTypeKorea('bar')">Bar Chart</div>
+        <div class="barBtn" onclick="chartTypeKorea('line')">Line Chart</div>
+      </div>
+    </section>
+    <br /><br />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
+
+    <script>
+      const datasetObjectKorea = {
+        data: [
+          [
+            12257, 11561, 13165, 14673, 16496, 19403, 21743, 24086, 21350,
+            19144, 23087, 25096, 25467, 27183, 29250, 28732, 29289, 31617,
+            33437, 31902, 31598, 34758, 35758,
+          ],
+          [
+            576.18, 547.66, 627.25, 702.72, 793.18, 934.9, 1053.22, 1172.61,
+            1047.34, 943.94, 1144.07, 1253.22, 1278.43, 1370.8, 1484.32,
+            1465.77, 1500.11, 1623.9, 1724.85, 1651.42, 1637.9, 1798.53,
+            1898.53,
+          ],
+        ],
+      };
+      const accumulateKorea = (array) =>
+        array.map(
+          (
+            (sum) => (value) =>
+              (sum += value)
+          )(0)
+        );
+      const cumulativeSumArrayKorea = accumulateKorea(
+        datasetObjectKorea.data[0]
+      );
+      datasetObjectKorea.data.push(cumulativeSumArrayKorea);
+
+      const lineKorea = cumulativeSumArrayKorea.map((value) => {
+        return value - 5;
+      });
+      datasetObjectKorea.data.push(cumulativeSumArrayKorea, lineKorea);
+      console.log(datasetObjectKorea.data);
+      // setup
+      const dataKorea = {
+        labels: [
+          "2000",
+          "2001",
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+        ],
+        datasets: [
+          {
+            label: "Per Capita in Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectKorea.data[0],
+            backgroundColor: ["rgb(54, 162, 235, 0.2)"],
+            borderColor: ["rgb(54, 162, 235)"],
+            borderWidth: 1,
+          },
+          {
+            label: "GDP in Billion Dollars",
+            pointStyle: "circle",
+            pointRadius: 7,
+            pointHoverRadius: 15,
+            data: datasetObjectKorea.data[1],
+            backgroundColor: ["rgb(75, 192, 92, 0.2)"],
+            borderColor: ["rgb(75, 192, 92, 0.9)"],
+            borderWidth: 1,
+          },
+        ],
+      };
+      // config
+      const configKorea = {
+        type: "bar",
+        data: dataKorea,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      };
+      // render init block
+      const myChartKorea = new Chart(
+        document.getElementById("myChartKorea"),
+        configKorea
+      );
+
+      function chartTypeKorea(type) {
+        myChartKorea.config.type = type;
+        myChartKorea.update();
+      }
+    </script>
+
+    <!-- Share API -->
+    <div id="api">
+      <span id="api-value"
+        ><iconify-icon
+          icon="bx:share"
+          rotate="180deg"
+          flip="vertical"
+        ></iconify-icon
+      ></span>
+    </div>
+    <script>
+      const api = document.getElementById("api");
+      // function for web share api
+      function webShareAPI(header, description, link) {
+        navigator
+          .share({
+            title: header,
+            text: description,
+            url: link,
+          })
+          .then(() => console.log("Successful share"))
+          .catch((error) => console.log("Error sharing", error));
+      }
+      if (navigator.share) {
+        // Show button if it supports webShareAPI
+        api.style.display = "block";
+        api.addEventListener("click", () =>
+          webShareAPI(
+            "Share this Website to your friends",
+            "description",
+            "www.ifindoo.com"
+          )
+        );
+      } else {
+        // Hide button if it supports webShareAPI
+        api.style.display = "none";
+        console.error("Your Browser doesn't support Web Share API");
+        document.write("Your Browser doesn't support Web Share API");
+      }
+    </script>
+
+    <!-- Scroll To Top -->
+    <div id="progress">
+      <span id="progress-value">&#8682;</span>
+    </div>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+      <div class="footer-newsletter">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-12 text-center">
+              <h2>Our Newsletter</h2>
+              <p>Subscribe us to get the latest news on up to date</p>
+            </div>
+            <div class="col-lg-6">
+              <form action="" method="post">
+                <input class="inputLoan" type="email" name="email" /><input
+                  class="inputLoan"
+                  type="submit"
+                  value="Subscribe"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-12 footer-info">
+              <a href="#" class="footerLogo d-flex align-items-center">
+                <span>IFinDoo</span>
+              </a>
+              <p>
+                Ifindoo means Knot, Ifindoo or ifindo is an Zulu language Word
+                which is the originated from South Africa, Ifindoo is a Financial
+                Website, Where users are going to get every news related to
+                cryptocurrency, stockmarket, exchanges, scams we also covers the
+                hot topics and trends of Digital World, Join Us for the Best
+                Experience , Soon Launching Crypto Wallet, Coin And NFT Marketing
+                Place!!
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              </div>
+            </div>
+  
+            <div class="col-lg-2 col-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li>
+                  <i class="bi bi-chevron-right"></i> <a href="index.html">Home</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Crypto-Shorts.html">Crypto Shorts</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Blue-Chips.html">Blue Chips</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Countries.html">Countries</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="World-Economy.html">World Economy</a>
+                </li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-2 col-6 footer-links">
+              <h4>Assets</h4>
+              <ul>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Crypto.html">Crypto</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Metaverse.html">Metaverse</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i> <a href="NFT.html">NFTs</a>
+                </li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-2 col-6 footer-links">
+              <h4>Community</h4>
+              <ul>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Hot-Topics.html">Hot Topics</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Blogs.html">Blogs</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Scams.html">Scams</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Quotes.html">Quotes</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Tweets.html">Tweets</a>
+                </li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-2 col-6 footer-links">
+              <h4>Our Tools</h4>
+              <ul>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Crypto-Calculator.html">Crypto Calculator</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Budget-Calculate.html">Budget Calculator</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Currency-Converter.html">Currency Converter</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Loan-Calculator.html">Loan Calculator</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="containerr">
+        <div class="copyright">
+          Copyright
+          <strong><span id="currentYear">2020</span> <span>IFinDoo</span></strong
+          >. All Rights Reserved
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="js/Home.js"></script>
+
+    <!-- ChartJs -->
+    <script src="AmCharts.js"></script>
+    <script src="pie.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/animate/animate.min.js"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/none.js"></script>
+
+    <!-- MainJS-->
+    <script src="js/app.js"></script>
+    <script src="js/modernizr.custom.86080.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
+      integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+      data-cf-beacon='{"rayId":"787acec57e74d1d0","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.11.3","si":100}'
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/jquery-3.6.1.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+  </body>
+</html>

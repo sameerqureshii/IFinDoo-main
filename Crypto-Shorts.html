@@ -1,0 +1,2246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--[ Theme Color ]-->
+    <meta content="#E0F2F1" name="theme-color" />
+    <meta content="#E0F2F1" name="msapplication-navbutton-color" />
+    <meta content="#E0F2F1" name="msapplication-TileColor" />
+    <meta content="#E0F2F1" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      defer=""
+      href="data:text/css;base64,Lyogcm9vdCAqLw0KLmRhcmsgLmF0XDpkYXJrLXNlY29uZGFyeTJ7YmFja2dyb3VuZDojMTIxMzFBIWltcG9ydGFudDtjb2xvcjojZmZmIWltcG9ydGFudH0NCi5hdFw6ZGFyay1ncmV5LWZpbGwye2ZpbGw6IzY5NkM4MH0uYXRcOmRhcmstZ3JleS1jb2xvcjJ7Y29sb3I6IzY5NkM4MH0NCi5zaXRlLW1haW4ge21hcmdpbi10b3A6IC0yMTJweCFpbXBvcnRhbnQ7fSNhdC1tYWluQWRze2Rpc3BsYXk6bm9uZX1AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA5ODBweCl7IC5jb250ZW50e3BhZGRpbmc6MzBweCAwISBpbXBvcnRhbnR9fS5nb29tZWRpYXttYXJnaW46IC0xMnB4IDAgYXV0byFpbXBvcnRhbnQ7fQ0KIC8qIGJyZWFkY3J1bWJzICovDQouZml4ZWRfX2JyZWFkY3J1bWJ7ZGlzcGxheTogYmxvY2s7fS5icmVhZGNydW1icyB7b3ZlcmZsb3c6IGhpZGRlbjsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7IGZvbnQtc2l6ZTogMTNweDsgY29sb3I6ICMyMjIhaW1wb3J0YW50OyB9IC5icmVhZGNydW1icyBhIHtjb2xvcjogIzIyMiFpbXBvcnRhbnQ7IG1hcmdpbjogMCAycHg7IGxpbmUtaGVpZ2h0OiBub3JtYWw7IH0gLmJyZWFkY3J1bWJzIC5icmVhZGhvbWUgYSB7IG1hcmdpbjogMCA1cHggMCAwOyB9IC5icmVhZGNydW1icyAuYnJlYWRsYWJlbDpsYXN0LWNoaWxkIHsgbWFyZ2luOiAwIDAgMCA0cHg7IH0gLmJyZWFkY3J1bWJzIGE6aG92ZXIgeyBjb2xvcjogIzA5ODRlMzsgfSAuYnJlYWRjcnVtYnMgc3ZnIHsgd2lkdGg6IDE2cHg7IGhlaWdodDogMTZweDsgdmVydGljYWwtYWxpZ246IC00cHg7IH0gLmJyZWFkY3J1bWJzIHN2ZyBwYXRoIHsgZmlsbDogIzAwMDsgfQ0KLyogUmVsYXRlZCAqLw0KLnJlbGF0ZWQtcG9zdHMgeyBvdmVyZmxvdzogaGlkZGVuOyBtYXJnaW46IDUwcHggMCAzMHB4OyBwb3NpdGlvbjogcmVsYXRpdmU7IGRpc3BsYXk6IGJsb2NrO30ucmVsYXRlZHtkaXNwbGF5OiBncmlkO2dhcDogMTBweDsgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnIgMWZyIDFmciAxZnI7fSAjcmVsYXRlZC1wb3N0c3tvdmVyZmxvdzpoaWRkZW47bWFyZ2luOjA7ZGlzcGxheTpub25lfS5yZWxhdGVkIGxpe292ZXJmbG93OiBoaWRkZW47IHBvc2l0aW9uOiByZWxhdGl2ZTsgYm94LXNpemluZzogYm9yZGVyLWJveDsgZGlzcGxheTogZmxleDsgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgZmxleDogMSAxIGF1dG87fS5yZWxhdGVkLXRodW1ie292ZXJmbG93OmhpZGRlbjt9LnJlbGF0ZWQgbGkgLnJlbGF0ZWQtaW1ne2Rpc3BsYXk6IGZsZXg7IHBvc2l0aW9uOiByZWxhdGl2ZTsgYm94LXNpemluZzogYm9yZGVyLWJveDsgbWluLWhlaWdodDogOTEuMXB4OyB3aWR0aDogMTAwJTsgdHJhbnNpdGlvbjogYWxsIC4zcyBlYXNlLW91dDt9LnJlbGF0ZWQtdGl0bGV7Zm9udC13ZWlnaHQ6NTAwO3Bvc2l0aW9uOnJlbGF0aXZlO21hcmdpbi10b3A6IDEzcHg7fS5yZWxhdGVkLXRpdGxlIGF7dGV4dC1kZWNvcmF0aW9uOiBub25lOyBmb250LXdlaWdodDogNzAwOyBkaXNwbGF5OiAtd2Via2l0LWJveDsgLXdlYmtpdC1saW5lLWNsYW1wOiAyOyAtd2Via2l0LWJveC1vcmllbnQ6IHZlcnRpY2FsOyBvdmVyZmxvdzogaGlkZGVuO2ZvbnQtc2l6ZTogMThweDt9LnJlbGF0ZWQgbGk6bnRoLW9mLXR5cGUoMyksLnJlbGF0ZWQgbGk6bnRoLW9mLXR5cGUoNiksLnJlbGF0ZWQgbGk6bnRoLW9mLXR5cGUoOSl7bWFyZ2luLXJpZ2h0OjB9LnJlbGF0ZWQgLnJlbGF0ZWQtdGh1bWI6aG92ZXIgLnJlbGF0ZWQtaW1nOmFmdGVye2JhY2tncm91bmQ6cmdiYSgwLDAsMCwwLjM4KX1AbWVkaWEgKG1heC13aWR0aDogNjQwcHgpeyNyZWxhdGVkLXBvc3RzIC5yZWxhdGVke2dyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDFmciFpbXBvcnRhbnQ7fX1AbWVkaWEgKG1heC13aWR0aDogODQwcHgpey5yZWxhdGVke2dyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDFmciAxZnIhaW1wb3J0YW50O319DQovKiBTaGFyZSBidXR0b24gKi8NCi5yZXNwby1zaGFyaW5nIHsgZGlyZWN0aW9uOiBsdHI7IGRpc3BsYXk6IGJsb2NrOyBvcGFjaXR5OiAxOyB0ZXh0LWFsaWduOiBjZW50ZXI7IH0gLnJlc3BvLXNoYXJpbmctYnV0dG9uX19saW5rIHsgYm94LXNpemluZzogYm9yZGVyLWJveDsgLW1vei10cmFuc2l0aW9uOiBvcGFjaXR5IC4ycyBlYXNlLWluLHRvcCAuMnMgZWFzZS1pbjsgLW1zLXRyYW5zaXRpb246IG9wYWNpdHkgLjJzIGVhc2UtaW4sdG9wIC4ycyBlYXNlLWluOyAtby10cmFuc2l0aW9uOiBvcGFjaXR5IC4ycyBlYXNlLWluLHRvcCAuMnMgZWFzZS1pbjsgLW1vei1ib3JkZXItcmFkaXVzOiAwOyBib3JkZXItcmFkaXVzOiAwOyBjdXJzb3I6IHBvaW50ZXI7IGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2IoMCAwIDAgLyA0JSksIDAgMTJweCAyOHB4ICNkZGQ7IGRpc3BsYXk6IGlubGluZS1ibG9jazsgZm9udC1zaXplOiAxMnB4OyBoZWlnaHQ6IDQwcHg7IGxpbmUtaGVpZ2h0OiA0MHB4OyBtYXJnaW4tcmlnaHQ6IDhweDsgcGFkZGluZzogMCAxMHB4OyBwb3NpdGlvbjogcmVsYXRpdmU7IHRleHQtYWxpZ246IGNlbnRlcjsgdG9wOiAwOyB2ZXJ0aWNhbC1hbGlnbjogdG9wOyB3aGl0ZS1zcGFjZTogbm93cmFwOyB9IC5yZXNwby1zaGFyaW5nLW1vcmUtY29udGVudCB7IGRpc3BsYXk6IGJsb2NrOyB9IC5yZXNwby1zaGFyaW5nLWJ1dHRvbl9fbGluayB7IGRpc3BsYXk6IGlubGluZS1ibG9jazsgdGV4dC1kZWNvcmF0aW9uOiBub25lOyBjb2xvcjogI2ZmZjsgbWFyZ2luOiAwIGF1dG87IHRyYW5zaXRpb246IGFsbCAuM3M7IG1pbi13aWR0aDogMTAwcHg7IG1hcmdpbjogNXB4IDVweDsgfSAucmVzcG8tc2hhcmluZy1idXR0b25fX2xpbms6aG92ZXIgeyBvcGFjaXR5OiAuODsgdG9wOiAtNHB4OyB9IC5yZXNwby1zaGFyaW5nLWJ1dHRvbl9faWNvbiBzdmcgeyBoZWlnaHQ6IDIwcHg7IHdpZHRoOiAyMHB4OyBwb3NpdGlvbjogcmVsYXRpdmU7IHRvcDogMTBweDsgdmVydGljYWwtYWxpZ246IHRvcDsgfSAucmVzcG8tc2hhcmluZy1idXR0b24gc3ZnIHBhdGggeyBmaWxsOiAjZmZmOyB9IC5yZXNwby1zaGFyaW5nLWJ1dHRvbl9faWNvbiB7IGN1cnNvcjogcG9pbnRlcjsgfSAucmVzcG8tc2hhcmluZy1idXR0b25fX2ljb24geyBmb250LXdlaWdodDogbm9ybWFsOyB9LmRhcmsgLnJlc3BvLXNoYXJpbmctYnV0dG9uX19saW5re2JveC1zaGFkb3c6bm9uZTt9DQovKiBUaW1lICovDQpzcGFuLmNsb2NrLXRpbWV7Zm9udC1zaXplOiAxMHB4O30uYWN0aXZle2NvbG9yOiNmODg7Zm9udC13ZWlnaHQ6NzAwfQ0KLyotLS0gcG9zdCAtLS0qLw0KI2p1ZHVsLXBvc3QgLnBvc3QtdGl0bGUge2ZvbnQtc2l6ZTogMjRweDsgcGFkZGluZy10b3A6IDIwcHg7fS5wb3N0X3RpbWVzbWFwe2p1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjttYXJnaW4tYm90dG9tOiAxOHB4O3BhZGRpbmc6IDIwcHggMDsgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7IGZvbnQtc2l6ZTogMTJweDsgY29sb3I6ICMyMjI7IGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjO30uYXV0aG9yYXZhLXggeyBkaXNwbGF5OiBibG9jazsgd2lkdGg6IDM2cHg7IGhlaWdodDogMzZweDsgYm9yZGVyLXJhZGl1czogNTAlOyBvdmVyZmxvdzogaGlkZGVuOyB9DQogLmhlcm9fdGl0bGV7bWFyZ2luOiAwIGF1dG87dHJhbnNpdGlvbjogYWxsIC4zczt9LnBvc3QgeyBwYWRkaW5nOiAwIDEycHg7IG1hcmdpbjogMDsgfQ0KICAubWFyZ2luIHttYXJnaW46IDIwcHggYXV0bzt0ZXh0LWFsaWduOiBjZW50ZXI7fS5ub3RpZnkgeyBiYWNrZ3JvdW5kOmdyZWVuOyBjb2xvcjogI2ZmZiFpbXBvcnRhbnQ7IHBhZGRpbmc6IDVweCAyMHB4OyB0ZXh0LWFsaWduOiBjZW50ZXI7IHBvc2l0aW9uOiBhYnNvbHV0ZTt6LWluZGV4Ojk7IHJpZ2h0OiAyOCU7IHRvcDo1cHg7IGJvcmRlci1yYWRpdXM6IDVweDsgfS5wb3N0LWJvZHkgYmxvY2txdW90ZTo6YWZ0ZXJ7Y29udGVudDogJ0RvdWJsZSBjbGljayB0byBjb3B5JzsgcG9zaXRpb246IGFic29sdXRlOyB0b3A6IDA7IHJpZ2h0OiA1cHg7IGZvbnQtc2l6ZTogMTBweDsgZGlzcGxheTogaW5saW5lLWJsb2NrOyBjb2xvcjojMDA5Njg4OyBmb250LXdlaWdodDogNzAwOyBwYWRkaW5nOiA1cHg7IHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7fS5kb3dubG9hZC13cmFwcGVye2Rpc3BsYXk6IGlubGluZS1ibG9jazt9LmJ0bjpob3ZlcnthbmltYXRpb246IHNoYWtlIDE1MG1zIDIgbGluZWFyO30NCi5wb3N0LWJvZHkgaDIge2ZvbnQtc2l6ZTogMjdweCAhaW1wb3J0YW50O30ucG9zdC1ib2R5IGgze2ZvbnQtc2l6ZTogMjVweH0ucG9zdC1ib2R5IGg0e2ZvbnQtc2l6ZTogMjNweH0NCi5wb3N0LWJvZHkgYmxvY2txdW90ZSB7IGJhY2tncm91bmQtY29sb3I6ICNFMEYyRjE7IGJvcmRlci1yYWRpdXM6IC4yNXJlbTsgcGFkZGluZzogNDBweCAyMHB4IDIwcHg7IG1hcmdpbjogMXJlbSAwIDEuMnJlbTsgYm9yZGVyOiAxcHggc29saWQgIzAwOTY4ODsgcG9zaXRpb246IHJlbGF0aXZlOyB9IC5jbG9jayB7IHBhZGRpbmc6IDA7ICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTt9LmRhcmsgLnBvc3QtYm9keSBibG9ja3F1b3RlLCAuZGFyayAuZG93bmxvYWQtbGluaywgLmRhcmsgLmJ0bntiYWNrZ3JvdW5kOiMxMjEzMUE7Y29sb3I6IzY5NkM4MDtib3JkZXItY29sb3I6I2ZmZiFpbXBvcnRhbnR9LmRhcmsgLnBvc3QtYm9keSBibG9ja3F1b3RlOjphZnRlcntjb2xvcjojZmZmfQ0KLmRvd25sb2FkLWxpbmsgYSBzdmd7d2lkdGg6MjBweDttYXJnaW4tcmlnaHQ6IDRweDtoZWlnaHQ6MjBweDtkaXNwbGF5OmlubGluZS1ibG9jazt2ZXJ0aWNhbC1hbGlnbjptaWRkbGV9LmRvd25sb2FkLWxpbmsgYSwgYS5idG57dGV4dC1kZWNvcmF0aW9uOm5vbmU7Y29sb3I6ICNmZmYhaW1wb3J0YW50O30uZG93bmxvYWQtbGluaywuYnRuLC5kb3dubG9hZC1saW5rOjphZnRlciwuYnRuOjphZnRlcntkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IHBhZGRpbmc6IDE2cHggMjBweDsgZm9udC1zaXplOiAxOHB4OyBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoNDVkZWcsIHRyYW5zcGFyZW50IDUlLCAjMDA5Njg4IDUlKTttYXJnaW46IDAgMTJweDsgYm9yZGVyOiAwOyBjb2xvcjogI2ZmZjsgbGV0dGVyLXNwYWNpbmc6IDNweDsgbGluZS1oZWlnaHQ6IDE7IGJveC1zaGFkb3c6IDZweCAwcHggMHB4ICNjY2M7IG91dGxpbmU6IHRyYW5zcGFyZW50OyBwb3NpdGlvbjogcmVsYXRpdmU7fS5teWJ1dHRvbntkaXNwbGF5Om5vbmV9LmJnLW92ZXJsYXl4e2JhY2tncm91bmQ6cmdiYSgwLDAsMCwwLjYpO3otaW5kZXg6OTk5IWltcG9ydGFudDtoZWlnaHQ6MTAwdmg7d2lkdGg6MTAwJTtwb3NpdGlvbjpmaXhlZDtsZWZ0OjA7dG9wOjA7cmlnaHQ6MDtib3R0b206MDt6LWluZGV4OjA7LXdlYmtpdC10cmFuc2l0aW9uOmJhY2tncm91bmQgMC4xNXMgbGluZWFyOy1vLXRyYW5zaXRpb246YmFja2dyb3VuZCAwLjE1cyBsaW5lYXI7dHJhbnNpdGlvbjpiYWNrZ3JvdW5kIDAuMTVzIGxpbmVhcn0jZWxlbWVudF90b19wb3BfdXB7ZGlzcGxheTpub25lO3otaW5kZXg6OTk5OTtvcGFjaXR5OjE7b3ZlcmZsb3c6aGlkZGVuO3RvcDoxMDBweH1AbWVkaWEgKG1heC13aWR0aDo0ODBweCl7LmVsZW1lbnRfcG9wX3VwX3dyYXB7bWF4LXdpZHRoOjkwJSFpbXBvcnRhbnR9fS5lbGVtZW50X3BvcF91cF93cmFwe3Bvc2l0aW9uOmZpeGVkO3otaW5kZXg6OTk5OTk7LXdlYmtpdC10cmFuc2Zvcm06dHJhbnNsYXRlKDUwJSw1MCUpO2xlZnQ6NTAlO3RvcDogNTAlO3JpZ2h0OjUwJTt0cmFuc2Zvcm06dHJhbnNsYXRlKC01MCUsLTUwJSk7LXdlYmtpdC10cmFuc2l0aW9uOi13ZWJraXQtdHJhbnNmb3JtIDAuM3MgZWFzZS1vdXQ7LW8tdHJhbnNpdGlvbjotby10cmFuc2Zvcm0gMC4zcyBlYXNlLW91dDt0cmFuc2l0aW9uOi13ZWJraXQtdHJhbnNmb3JtIDAuM3MgZWFzZS1vdXQ7LW8tdHJhbnNpdGlvbjp0cmFuc2Zvcm0gMC4zcyBlYXNlLW91dDt0cmFuc2l0aW9uOnRyYW5zZm9ybSAwLjNzIGVhc2Utb3V0O3RyYW5zaXRpb246dHJhbnNmb3JtIDAuM3MgZWFzZS1vdXQsLXdlYmtpdC10cmFuc2Zvcm0gMC4zcyBlYXNlLW91dDtkaXNwbGF5OmlubGluZS1ibG9jazt2ZXJ0aWNhbC1hbGlnbjptaWRkbGU7d2lkdGg6MzIwcHg7Ym94LXNoYWRvdzowIDVweCAzNXB4IHJnYigwIDAgMC83JSk7LXdlYmtpdC1ib3gtc2l6aW5nOmJvcmRlci1ib3g7LW1vei1ib3gtc2l6aW5nOmJvcmRlci1ib3g7Ym94LXNpemluZzpib3JkZXItYm94O21hcmdpbjozMHB4IGF1dG87cGFkZGluZzoxNXB4O21heC13aWR0aDo4MCU7YmFja2dyb3VuZC1jb2xvcjojZmZmZGZjO2JvcmRlci1yYWRpdXM6NnB4O2JvcmRlcjoxcHggc29saWQgcmdiYSgwLDAsMCwwLjIpO292ZXJmbG93LXk6YXV0bzttYXgtaGVpZ2h0OmNhbGMoMTAwdmggLSA3MHB4KX0uZWxlbWVudF9wb3BfdXBfaGVhZGVyIC5lbGVtZW50X3BvcF91cF9jbG9zZXtjdXJzb3I6cG9pbnRlcjtmb250LXdlaWdodDpib2xkO3otaW5kZXg6NX0uZWxlbWVudF9wb3BfdXBfaGVhZGVye2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7cG9zaXRpb246cmVsYXRpdmU7anVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW47Ym9yZGVyLWJvdHRvbToxcHggI0U1RTVFNSBzb2xpZDtwYWRkaW5nOjAgMCAxM3B4O21hcmdpbi1ib3R0b206MTBweH0uZWxlbWVudF9wb3BfdXBfY29udGVudHtvdXRsaW5lOjA7d2lkdGg6MTAwJTtwb3NpdGlvbjpyZWxhdGl2ZTtkaXNwbGF5OmZsZXg7anVzdGlmeS1jb250ZW50OmNlbnRlcjthbGlnbi1pdGVtczpjZW50ZXI7LXdlYmtpdC1mbGV4LWRpcmVjdGlvbjpjb2x1bW47LW1zLWZsZXgtZGlyZWN0aW9uOmNvbHVtbjtmbGV4LWRpcmVjdGlvbjpjb2x1bW47bWF4LWhlaWdodDpjYWxjKDEwMHZoIC0gNzBweCl9LmVsZW1lbnRfcG9wX3VwX3RpbWVyX2J1dHRvbntkaXNwbGF5Om5vbmU7cG9zaXRpb246cmVsYXRpdmU7YmFja2dyb3VuZDojZTZmZmU2O3BhZGRpbmc6MTJweH0uZWxlbWVudF9wb3BfdXBfYWR7bWFyZ2luOjRweCAwIDRweDtwb3NpdGlvbjpyZWxhdGl2ZTtib3JkZXI6IDFweCBzb2xpZCAjY2NjO2Rpc3BsYXk6aW5saW5lLWJsb2NrO3dpZHRoOjMwMHB4O2hlaWdodDoyMDBweH0uZWxlbWVudF9wb3BfdXBfdGltZXJ7Zm9udC1zaXplOjExcHg7Zm9udC13ZWlnaHQ6NzAwO2NvbG9yOmJyb3duO2JhY2tncm91bmQ6I2ZhZWJlYjtwYWRkaW5nOjEycHggMDt0ZXh0LWFsaWduOmNlbnRlcjtwb3NpdGlvbjpyZWxhdGl2ZX0uZG93bmxvYWRhZG9wZW57YmFja2dyb3VuZC1jb2xvcjojZjNmMmYyO2NvbG9yOiMwMDAhaW1wb3J0YW50O2JveC1zaXppbmc6Ym9yZGVyLWJveDtwYWRkaW5nOjNweCA2MHB4O2ZvbnQtc2l6ZTowLjg3NXJlbTtmb250LXdlaWdodDo2MDA7aW5zZXQ6MC4xMjVyZW07dGV4dC1hbGlnbjpjZW50ZXI7Zm9udC1mYW1pbHk6IkZpcmEgQ29kZSBWRiIsIkZpcmEgQ29kZSIsbW9ub3NwYWNlO2xldHRlci1zcGFjaW5nOjAuMXB4O3RleHQtdHJhbnNmb3JtOmNhcGl0YWxpemU7Ym9yZGVyOjFweCBzb2xpZCAjMjEyMTIxIWltcG9ydGFudH0uZWxlbWVudF9wb3BfdXBfdGltZXJfYnV0dG9uIHB7bWFyZ2luOjVweCAwIDVweDt0ZXh0LWFsaWduOmNlbnRlcjtkaXNwbGF5OmJsb2NrO2ZvbnQtc2l6ZToxMXB4fS5lbGVtZW50X3BvcF91cF90aW1lcl9idXR0b24gcC5kdGV4dHtmb250LXNpemU6MTBweDtjb2xvcjpncmVlbn0uZWxlbWVudF9wb3BfdXBfdGltZXJfYnV0dG9uIHAuZnJlZWRvd25hZHttYXJnaW46MTVweCAwIDVweCFpbXBvcnRhbnR9LmVsZW1lbnRfcG9wX3VwX3RpdGxle2ZvbnQtd2VpZ2h0OmJvbGR9LmVsZW1lbnRfcG9wX3VwX19idXR0b25fY29udGVudHttYXJnaW4tdG9wOjEycHg7cG9zaXRpb246cmVsYXRpdmU7d2lkdGg6MTAwJTtib3gtc2l6aW5nOmJvcmRlci1ib3h9LnRlcm1zaGVhZHsganVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW59LnRlcm1zaGVhZCBzcGFuLmNsb3NleHtjdXJzb3I6cG9pbnRlcjt6LWluZGV4Ojk7fSAuY2xpY2tfcG9we3Bvc2l0aW9uOnJlbGF0aXZlfSNhdF90ZXJtc3t6LWluZGV4OiA5OTk5OyBkaXNwbGF5OiBub25lOyBvdmVyZmxvdzogaGlkZGVuO30gLnRlcm1zX3dyYXB7cGFkZGluZzogMTVweDsgd2lkdGg6IDUwMHB4OyB0b3A6IDUwJTsgZGlzcGxheTogaW5saW5lLWJsb2NrOyByaWdodDogNTAlOyBsZWZ0OiA0MyU7IGFsaWduLWl0ZW1zOiBjZW50ZXI7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7IHotaW5kZXg6IDk5OTsgcG9zaXRpb246IGZpeGVkOyBtYXgtd2lkdGg6IDk1JTsgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwtNTAlKXNjYWxlKDAuNyk7IG1hcmdpbjogMCBhdXRvOyBib3JkZXItcmFkaXVzOiA2cHg7IGJvcmRlcjogMnB4IHNvbGlkICMwMDk2ODg7IG92ZXJmbG93LXk6IGF1dG87IG1heC1oZWlnaHQ6IGNhbGMoMTAwdmggLSA3MHB4KTsgdmVydGljYWwtYWxpZ246IG1pZGRsZTsgYm94LXNoYWRvdzogMCA1cHggMzVweCByZ2IoMCAwIDAgLyAyMCUpO30udGVybXNfY29udGVudHtkaXNwbGF5OiBmbGV4O2p1c3RpZnktY29udGVudDogY2VudGVyO2ZsZXgtZGlyZWN0aW9uOiBjb2x1bW47IGFsaWduLWl0ZW1zOiBjZW50ZXI7fSAudGVybXNoZWFkIHtib3JkZXItYm90dG9tOiAxcHggc29saWQgI2NjYzsgbWFyZ2luLWJvdHRvbTogMTVweDsgcGFkZGluZzogMXB4IDAgMTBweDsgd2lkdGg6IDEwMCU7IGZvbnQtc2l6ZTogMjVweDsgZm9udC13ZWlnaHQ6IDcwMDt9LnRlcm1zX2NvbnRlbnQgPiBwe2Rpc3BsYXk6IGlubGluZS1ibG9jazsgcGFkZGluZzogNnB4O30NCi5wb3N0LWJvZHkgaDEsIC5wb3N0LWJvZHkgaDIsIC5wb3N0LWJvZHkgaDMsIC5wb3N0LWJvZHkgaDQsIC5wb3N0LWJvZHkgaDUsIC5wb3N0LWJvZHkgaDYgeyAgZm9udC13ZWlnaHQ6IDcwMDsgbWFyZ2luOiAwIDAgMTVweDsgfQ0KLnBvc3QtYm9keXtsaW5lLWhlaWdodDoxLjhlbTtvdmVyZmxvdzpoaWRkZW59DQp0ZXh0YXJlYSwucHJlY29kZXt3aWR0aDoxMDAlOy1tb3otYm94LXNpemluZzpib3JkZXItYm94Oy13ZWJraXQtYm94LXNpemluZzpib3JkZXItYm94O2JveC1zaXppbmc6Ym9yZGVyLWJveH0NCi5wb3N0LWJvZHkgcHJle3Bvc2l0aW9uOnJlbGF0aXZlO3BhZGRpbmctdG9wOjE4cHg7bGluZS1oZWlnaHQ6IDEuMzt9DQoucG9zdC1ib2R5IHByZTo6YmVmb3Jle2ZvbnQtc2l6ZToxNHB4O3Bvc2l0aW9uOnZhcigtLTZhcXkwMSk7dG9wOjA7cGFkZGluZzowIDEwcHg7bGVmdDowO3JpZ2h0OjA7Y29sb3I6I2ZmZjsNCmRpc3BsYXk6YmxvY2s7bWFyZ2luOjA7Y29udGVudDomIzM5O0NvZGVsaW5lcyAtIGRvdWJsZWNsaWNrIHRvIHNlbGVjdCBhbGwhJiMzOTs7aGVpZ2h0OjE4cHg7YmFja2dyb3VuZDojZDJjYmI4fQ0KLnNlcGFyYXRvciBhe21hcmdpbi1sZWZ0OjAhaW1wb3J0YW50O21hcmdpbi1yaWdodDowIWltcG9ydGFudH0NCi5wb3N0LWJvZHkgaW1ne21heC13aWR0aDoxMDAlO2hlaWdodDphdXRvO3BhZGRpbmc6MDttYXJnaW46MCBhdXRvO2Rpc3BsYXk6YmxvY2t9LmF0LWFkc2Jsb2NrIHsgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjsgcGFkZGluZzogMjBweDsgcG9zaXRpb246IHJlbGF0aXZlOyBib3gtc2hhZG93OiAwIDAgMzVweCByZ2IoMCAwIDAgLyA5JSk7IGJvcmRlcjogMXB4IGRhc2hlZDsgfQ0KLyotLS0gY3VzdG9tIGNvbW1lbnRzIC0tLSovDQouY29tbWVudHMgaDR7bWFyZ2luLWJvdHRvbToyMHB4fS5ibG9nLXBvc3Rze2Rpc3BsYXk6YmxvY2shaW1wb3J0YW50fQ0KLmRsYnRue2Rpc3BsYXk6aW5saW5lLWJsb2NrO3BhZGRpbmc6NXB4IDIwcHg7YmFja2dyb3VuZDojMDBBMzc2O2JvcmRlci1yYWRpdXM6M3B4O2NvbG9yOiNmZmYhaW1wb3J0YW50O3RleHQtYWxpZ246Y2VudGVyfQ0KLmRsYnRuOmhvdmVye2JhY2tncm91bmQ6b3JhbmdlfS5kYXJrIC5jb21tZW50LnJlcGx5IC5jb21tZW50LWJvZHl7YmFja2dyb3VuZC1jb2xvcjojMTIxMzFBIWltcG9ydGFudH0NCi5oaWRlLWNvbnRlbnR7ZGlzcGxheTpub25lO21hcmdpbjowO3BhZGRpbmc6MDt9DQphLnNob3djb250ZW50LCNjb21tZW50cyBhLmhpZGRlbmNvbnRlbnR7ZGlzcGxheTpibG9jazt0ZXh0LWRlY29yYXRpb246bm9uZTtwb3NpdGlvbjpyZWxhdGl2ZTtmb250LXdlaWdodDo0MDA7Zm9udC1zaXplOjE1cHg7cGFkZGluZzoxMi41cHggMDtib3JkZXI6MnB4IHNvbGlkO2JvcmRlci1yYWRpdXM6NXB4O3RleHQtYWxpZ246Y2VudGVyO21hcmdpbjozMHB4IGF1dG87bGV0dGVyLXNwYWNpbmc6MXB4O3RyYW5zaXRpb246YWxsIC4zc30NCiNjb21tZW50cyBhLmhpZGRlbmNvbnRlbnQge2JhY2tncm91bmQ6I2ZmZjtjb2xvcjojYWNiM2I4O3RyYW5zaXRpb246YWxsIC4zc30NCmEuc2hvd2NvbnRlbnQ6aG92ZXJ7YmFja2dyb3VuZDojZmZmO2NvbG9yOiM1NTkzZjA7fQ0KI2NvbW1lbnRzIGEuaGlkZGVuY29udGVudDpob3ZlcntiYWNrZ3JvdW5kOiNhY2IzYjg7Y29sb3I6I2ZmZjt9LmNvbW1lbnQtY29udGVudHttYXJnaW4tYm90dG9tOiAzOXB4OyBwb3NpdGlvbjogcmVsYXRpdmU7ZGlzcGxheTp2YXIoLS11MmZ4dXEpO2ZsZXgtZGlyZWN0aW9uOiBjb2x1bW47fSNuZXh0cG9zdCwjcG9zdHBhZ2VyLCNwcmV2cG9zdHtoZWlnaHQ6YXV0bztwYWRkaW5nOjB9ICNuZXh0cG9zdCwjcHJldnBvc3R7ZGlzcGxheTppbmxpbmUtYmxvY2t9ICNuZXh0cG9zdCwjcG9zdHBhZ2VyLCNwcmV2cG9zdHstbW96LWJveC1zaXppbmc6Ym9yZGVyLWJveDstd2Via2l0LWJveC1zaXppbmc6Ym9yZGVyLWJveDtib3gtc2l6aW5nOmJvcmRlci1ib3g7bWFyZ2luOjEwcHggMDt9ICNwcmV2cG9zdHtmbG9hdDpyaWdodDt0ZXh0LWFsaWduOmxlZnR9Lm5vdHh0e3BhZGRpbmc6MCA4cHg7ZGlzcGxheTppbmxpbmUtYmxvY2s7dmVydGljYWwtYWxpZ246bWlkZGxlO30gI25leHRwb3N0OmhvdmVyIHN2ZywjcHJldnBvc3Q6aG92ZXIgc3Zne30gLnMtd29yZCwuYy13b3Jke2Zsb2F0OmxlZnQ7bWFyZ2luLXJpZ2h0OjVweH0gLmV4cGFuZC1tb3JlIC5kaXNxdXMtYm94LC5leHBhbmQtbW9yZSAuYmxvZ2dlci1ib3gsLmV4cGFuZC1tb3JlIC5jLXdvcmR7ZGlzcGxheTpibG9ja30gLmV4cGFuZC1tb3JlIC5zLXdvcmQsLmMtd29yZHtkaXNwbGF5Om5vbmV9IC5yZXBseS1zdmd7ZmxvYXQ6bGVmdDttYXJnaW4tdG9wOi0zcHg7fUAtd2Via2l0LWtleWZyYW1lcyBpbmRpY2F0b3J7MCV7b3BhY2l0eTowfTUwJXtvcGFjaXR5OjF9MTAwJXtvcGFjaXR5OjB9fSBALW1vei1rZXlmcmFtZXMgaW5kaWNhdG9yezAle29wYWNpdHk6MH01MCV7b3BhY2l0eToxfTEwMCV7b3BhY2l0eTowfX0gQGtleWZyYW1lcyBpbmRpY2F0b3J7MCV7b3BhY2l0eTowfTUwJXtvcGFjaXR5OjF9MTAwJXtvcGFjaXR5OjB9fQ0KI2N1c3RvbS1jb21tZW50c3ttYXJnaW46MjBweCAwfSAuY29tbWVudC1hdmF0YXIsLmNvbW1lbnQtYm9keSwuY29tbWVudC1oZWFkZXItZGV0aWx7b3ZlcmZsb3c6aGlkZGVufSAjY3VzdG9tLWNvbW1lbnRzIGg0e2ZvbnQtc2l6ZToyMHB4O21hcmdpbi1ib3R0b206MjBweDtjb2xvcjojMDAwO2ZvbnQtd2VpZ2h0OjcwMDtib3JkZXItYm90dG9tOjFweCBzb2xpZCAjZGRkO3BhZGRpbmctYm90dG9tOiAxMHB4O30gLmNvbW1lbnQtYXZhdGFye2Zsb2F0OmxlZnQ7bWFyZ2luOmF1dG87ZGlzcGxheTpibG9jazt3aWR0aDozNnB4O2hlaWdodDozNnB4O2JhY2tncm91bmQ6I2RkZDtib3JkZXItcmFkaXVzOjUwJTttYXJnaW4tdG9wOiAwcHg7fSAuY29tbWVudHMgLnJlcGxpZXMgLmNvbW1lbnQtYXZhdGFye3dpZHRoOjMycHg7aGVpZ2h0OjMycHh9LmNvbW1lbnRzIC5jb21tZW50cy1jb250ZW50IHsgZm9udC1zaXplOiAxNHB4OyBtYXJnaW4tYm90dG9tOiAzMHB4OyBiYWNrZ3JvdW5kOiAjZmZmOyBwYWRkaW5nOiAxN3B4OyBib3JkZXItcmFkaXVzOiAxMHB4OyB0cmFuc2l0aW9uOiBhbGwgLjVzIGVhc2U7IH0gLmNvbW1lbnQtaGVhZGVyLWRldGlse30gLmNvbW1lbnQtdXJse2Rpc3BsYXk6bm9uZX0gLmNvbW1lbnQtbGlzdHttYXJnaW4tYm90dG9tOjE1cHg7cGFkZGluZy1ib3R0b206MTVweDtib3JkZXItYm90dG9tOiAxcHggc29saWQgI2RkZH0gdWwuY29tbWVudHN7bWFyZ2luOjAgMCAyMHB4O3BhZGRpbmc6MH0gLmNvbW1lbnQtYm9keXtmb250LXNpemU6MTRweDttYXJnaW46MCAxMHB4IDIwcHg7Ym9yZGVyOiAxcHggc29saWQgIzAwOTY4ODsgcGFkZGluZzogMjBweDtib3JkZXItcmFkaXVzOiA0cHg7IHBvc2l0aW9uOnJlbGF0aXZlO30gLmNvbW1lbnQucmVwbHl7cG9zaXRpb246cmVsYXRpdmU7fSAuY29tbWVudC5yZXBseSAuY29tbWVudC1ib2R5e21hcmdpbjogMCAyNXB4IDEwcHg7IGJhY2tncm91bmQ6ICNFMEYyRjE7fSAuY29tbWVudC1mb290ZXJ7Zm9udC1zaXplOjEycHg7cG9zaXRpb246cmVsYXRpdmU7bWFyZ2luOiAwO30gLmEtcmVwbHl7cG9zaXRpb246dmFyKC0tNmFxeTAxKTsgYm90dG9tOiAxMnB4O2JvcmRlcjogMXB4IHNvbGlkICNjY2M7Zm9udC1zaXplOiAxMnB4OyBkaXNwbGF5OnZhcigtLXUyZnh1cSk7cGFkZGluZzogM3B4IDEycHg7IGZsZXgtZGlyZWN0aW9uOiByb3c7IGZvbnQtd2VpZ2h0OiA3MDA7fSAuY3VzdG9tLWNvbW1lbnRzLXBhZ2Vye21hcmdpbi1ib3R0b206MjBweH0gI2N1c3RvbS1jb21tZW50cyAjY29tbWVudC1lZGl0b3J7bWFyZ2luOjA7d2lkdGg6IDEwMCU7fSAuY29tbWVudHMucmVwbGllc3ttYXJnaW4tYm90dG9tOjEwcHh9IC5hLXVuZG97YmFja2dyb3VuZDojMzMzO3BhZGRpbmc6MnB4IDVweDtib3JkZXItcmFkaXVzOjJweDtjb2xvcjojZmZmIWltcG9ydGFudDtkaXNwbGF5Om5vbmV9IC5jb21tZW50LWxpc3QgLmEtdW5kb3tkaXNwbGF5OmlubGluZS1ibG9jazttYXJnaW46MjBweCAwO2ZvbnQtc2l6ZToxMnB4fSAuYS1kZWxldGV7ZGlzcGxheTpub25lO3Bvc2l0aW9uOnZhcigtLTZhcXkwMSk7cmlnaHQ6MTBweDtjb2xvcjogI2RkZCAhaW1wb3J0YW50O30gLmNvbW1lbnQtbGlzdDpob3ZlciAuYS1kZWxldGUsLnJlcGxpZXM6aG92ZXIgLmEtZGVsZXRle2Rpc3BsYXk6aW5saW5lIWltcG9ydGFudH0gLmNvbW1lbnQtaGVhZGVyIC5hLWRlbGV0ZXtmb250LXNpemU6MTJweH0gLmNvbW1lbnQtYXV0aG9ye2ZvbnQtd2VpZ2h0OjcwMH0uY29tbWVudC1hdXRob3IgYXtjb2xvcjojNzU1MzllfS5jb21tZW50LWhlYWRlcntmb250LXNpemU6MTRweDt0ZXh0LXRyYW5zZm9ybTpjYXBpdGFsaXplO30gYnV0dG9uLGJ1dHRvbltkaXNhYmxlZF06YWN0aXZle2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtib3JkZXItcmFkaXVzOjNweDtib3JkZXI6MXB4IHNvbGlkICM0OWE1YmY7cGFkZGluZzozcHggMTBweDt0ZXh0LWRlY29yYXRpb246bm9uZTtiYWNrZ3JvdW5kOmxpbmVhci1ncmFkaWVudCh0byBib3R0b20sIzkzY2VkZSAwLCM3NWJkZDEgNDElLCM0OWE1YmYgMTAwJSk7Y29sb3I6I2ZmZjtkaXNwbGF5OmlubGluZS1ibG9jazt0ZXh0LXNoYWRvdzoxcHggMXB4IDAgIzUyOGVjYztib3gtc2hhZG93Omluc2V0IDFweCAxcHggMCAwICNiYmRhZjc7Y3Vyc29yOnBvaW50ZXJ9IGJ1dHRvbjpob3Zlcntjb2xvcjojMDAwfSBidXR0b246YWN0aXZle2NvbG9yOiMwMDB9IGJ1dHRvbltkaXNhYmxlZF0sYnV0dG9uW2Rpc2FibGVkXTphY3RpdmV7Y29sb3I6IzAwMDtjdXJzb3I6ZGVmYXVsdH1AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0ODBweCl7LnBvc3QtYm9keSB7ZGlzcGxheTogYmxvY2shaW1wb3J0YW50O319DQo="
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/Crypto Shorts.css" />
+    <link rel="stylesheet" href="css/Body.css" />
+    <link rel="stylesheet" href="css/MediaQuery.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css"></script>
+    <script src="https://use.fontawesome.com/releases/v5.6.3/css/all.css"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="/" rel="bookmark" title="IFinDoo" />
+    <link rel="icon" href="ifindoo2.png" type="image/icon" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .cryptoWrapper .yellow {
+        background: #fec006;
+      }
+      .cryptoWrapper .blue {
+        background: #2196f3;
+      }
+      .cryptoWrapper .green {
+        background: #00db00;
+      }
+      .cryptoWrapper .red {
+        background: #ff0000;
+      }
+      .cryptoWrapper .purple {
+        background: #673ab7;
+      }
+      .cryptoWrapper .orange {
+        background: #fe5621;
+      }
+      .cryptoWrapper .gray {
+        background: #61876e;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <i class="bx bx-menu"></i>
+        <div class="logo">
+          <a href="index.html"
+            ><img src="Image/ifindoo2.png" style="width: 50px; height: 50px" />
+            IFinDoo</a
+          >
+        </div>
+        <div class="nav-links">
+          <div class="sidebar-logo">
+            <span class="logo-name"
+              ><img src="Image/ifindoo2.png" style="width: 50px; height: 50px" />
+              IFinDoo</span
+            >
+            <i class="bx bx-x"></i>
+          </div>
+          <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="#" class="active">Markets</a>
+              <i class="bx bxs-chevron-down htmlcss-arrow arrow"></i>
+              <ul class="htmlCss-sub-menu sub-menu">
+                <li>
+                  <a href="Crypto Shorts.html" class="active">Crypto Shorts</a>
+                </li>
+                <li><a href="Blue-Chips.html">Blue Chips</a></li>
+                <li><a href="Countries.html">Countries</a></li>
+                <li><a href="World-Economy.html">World Economy</a></li>
+                <li class="more">
+                  <span
+                    ><a href="#">Tools</a>
+                    <i class="bx bxs-chevron-right arrow more-arrow"></i>
+                  </span>
+                  <ul class="more-sub-menu sub-menu">
+                    <li>
+                      <a href="Crypto Calculator.html">Crypto Calculator</a>
+                    </li>
+                    <li>
+                      <a href="Budget Calculate.html">Budget Calculator</a>
+                    </li>
+                    <li>
+                      <a href="Currency Converter.html">Currency Converter</a>
+                    </li>
+                    <li><a href="Loan Calculator.html">Loan Calculator</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Assets</a>
+              <i class="bx bxs-chevron-down asset-arrow arrow"></i>
+              <ul class="asset-sub-menu sub-menu">
+                <li><a href="Crypto.html">Crypto</a></li>
+                <li><a href="Metaverse.html">Metaverse</a></li>
+                <li><a href="NFT.html">NFTs</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Stocks</a>
+              <i class="bx bxs-chevron-down stock-arrow arrow"></i>
+              <ul class="stock-sub-menu sub-menu">
+                <li><a href="Dividends.html">Technology</a></li>
+                <li><a href="Social Media.html">Social Media</a></li>
+                <li><a href="Ecommerce.html">Ecommerce</a></li>
+                <li><a href="Banks.html">Banks</a></li>
+                <li><a href="Cars.html">Cars</a></li>
+                <li><a href="Sports.html">Sports</a></li>
+                <li><a href="Games.html">Games</a></li>
+                <li><a href="Foods.html">Foods</a></li>
+                <li><a href="Movie.html">Movie Industry</a></li>
+                <li><a href="Industrials.html">Industrials</a></li>
+                <li><a href="Healthcare.html">Healthcare</a></li>
+                <li><a href="Energy.html">Energy</a></li>
+                <li><a href="Real Estate.html">Real Estate</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Community</a>
+              <i class="bx bxs-chevron-down community-arrow arrow"></i>
+              <ul class="community-sub-menu sub-menu">
+                <li><a href="Hot Topics.html">Hot Topic</a></li>
+                <li><a href="Blogs.html">Blogs</a></li>
+                <li><a href="Scams.html">Scams</a></li>
+                <li><a href="Quotes.html">Quotes</a></li>
+              </ul>
+            </li>
+            <li><a href="Trade Guide.html">Trade Guide</a></li>
+          </ul>
+        </div>
+
+        <div id="Anutrickz_translateBTN" class="" title="translate langauge">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.8"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
+            />
+          </svg>
+          <div class="hide" id="ATLang_list">
+            <ul>
+              <li class="language-list" data-google-lang="en">
+                <img src="https://flagcdn.com/w20/us.png" />&nbsp;&nbsp; English
+              </li>
+              <li class="language-list" data-google-lang="zh">
+                <img src="https://flagcdn.com/w20/cn.png" />&nbsp;&nbsp; Chinese
+              </li>
+              <li class="language-list" data-google-lang="hi">
+                <img src="https://flagcdn.com/w20/in.png" />&nbsp;&nbsp; Hindi
+              </li>
+              <li class="language-list" data-google-lang="es">
+                <img src="https://flagcdn.com/w20/es.png" />&nbsp;&nbsp; Spanish
+              </li>
+              <li class="language-list" data-google-lang="fr">
+                <img src="https://flagcdn.com/w20/fr.png" />&nbsp;&nbsp; French
+              </li>
+              <li class="language-list" data-google-lang="ar">
+                <img src="https://flagcdn.com/w20/eg.png" />&nbsp;&nbsp; Arabic
+              </li>
+              <li class="language-list" data-google-lang="pt">
+                <img src="https://flagcdn.com/w20/br.png" />&nbsp;&nbsp;
+                Portuguese
+              </li>
+              <li class="language-list" data-google-lang="ru">
+                <img src="https://flagcdn.com/w20/ru.png" />&nbsp;&nbsp; Russian
+              </li>
+              <li class="language-list" data-google-lang="id">
+                <img src="https://flagcdn.com/w20/id.png" />&nbsp;&nbsp;
+                Indonesian
+              </li>
+              <li class="language-list" data-google-lang="ur">
+                <img src="https://flagcdn.com/w20/pk.png" />&nbsp;&nbsp; Urdu
+              </li>
+              <li class="language-list" data-google-lang="ja">
+                <img src="https://flagcdn.com/w20/jp.png" />&nbsp;&nbsp;
+                Japanese
+              </li>
+              <li class="language-list" data-google-lang="de">
+                <img src="https://flagcdn.com/w20/de.png" />&nbsp;&nbsp; German
+              </li>
+              <li class="language-list" data-google-lang="tr">
+                <img src="https://flagcdn.com/w20/tr.png" />&nbsp;&nbsp; Turkish
+              </li>
+              <li class="language-list" data-google-lang="ko">
+                <img src="https://flagcdn.com/w20/kr.png" />&nbsp;&nbsp; Korean
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="#userProfile">
+          <svg
+            xmlns="https://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.8"
+            stroke="currentColor"
+            class="w-6 h-6 userProfile"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+            />
+          </svg>
+        </a>
+        <div class="search-box" title="search">
+          <i class="bx bx-search"></i>
+        </div>
+      </div>
+    </nav>
+
+    <div class="floatSocial">
+      <li class="floatingSocial">
+        <a href="#" class="twitter"
+          ><span>Twitter</span><i class="fa fa-twitter"></i
+        ></a>
+      </li>
+      <li class="floatingSocial">
+        <a href="#" class="instagram"
+          ><span>Instagram</span><i class="fa fa-instagram"></i
+        ></a>
+      </li>
+      <li class="floatingSocial">
+        <a href="#" class="facebook"
+          ><span>Facebook</span><i class="fa fa-facebook"></i
+        ></a>
+      </li>
+    </div>
+
+    <div class="crypto_title">
+      <h2 id="crypto_title">Crypto Shorts</h2>
+    </div>
+    <div class="crypto__para">
+      <div id="crypto__para">Find Best Crypto Site Links</div>
+    </div>
+
+    <div class="cryptoLinks">
+      <div class="cryptoWrapper">
+        <div class="btn2 yellow">Official Crypto Coins Sites</div>
+        <p>Official Cryptocurrency Coins Websites for Deep Crypto Dive</p>
+        <ul>
+          <li title="Bitcoin (BTC)">
+            <span class="digits">1.</span> Bitcoin (BTC)
+          </li>
+          <li title="Ethereum (ETH)">
+            <span class="digits">2.</span> Ethereum (ETH)
+          </li>
+          <li title="Tether (USDT)">
+            <span class="digits">3.</span> Tether (USDT)
+          </li>
+          <li title="Binance Coin (BNB)">
+            <span class="digits">4.</span> Binance Coin (BNB)
+          </li>
+          <li title="USD Coin (USDC)">
+            <span class="digits">5.</span> USD Coin (USDC)
+          </li>
+          <li title="XRP (Ripple)">
+            <span class="digits">6.</span> XRP (Ripple)
+          </li>
+          <li title="Binance USD (BUSD)">
+            <span class="digits">7.</span> Binance USD (BUSD)
+          </li>
+          <li title="Cardano (ADA)">
+            <span class="digits">8.</span> Cardano (ADA)
+          </li>
+          <li title="Dogecoin (DOGE)">
+            <span class="digits">9.</span> Dogecoin (DOGE)
+          </li>
+          <li title="Solana (SOL)">
+            <span class="digits">10.</span> Solana (SOL)
+          </li>
+          <li title="Polkadot (DOT)">
+            <span class="digits">11.</span> Polkadot (DOT)
+          </li>
+          <li title="Shiba Inu (SHIB)">
+            <span class="digits">12.</span> Shiba Inu (SHIB)
+          </li>
+          <li title="Litecoin (LTC)">
+            <span class="digits">13.</span> Litecoin (LTC)
+          </li>
+          <li title="Staked Ether (STETH)">
+            <span class="digits">14.</span> Staked Ether (STETH)
+          </li>
+          <li title="TRON (TRX)"><span class="digits">15.</span> TRON (TRX)</li>
+          <li title="Avalanche (AVAX)">
+            <span class="digits">16.</span> Avalanche (AVAX)
+          </li>
+          <li title="Uniswap (UNI)">
+            <span class="digits">17.</span> Uniswap (UNI)
+          </li>
+          <li title="Wrapped Bitcoin (WBTC)">
+            <span class="digits">18.</span> Wrapped Bitcoin (WBTC)
+          </li>
+          <li title="ChainLink (LINK)">
+            <span class="digits">19.</span> ChainLink (LINK)
+          </li>
+          <li title="Cosmos (ATOM)">
+            <span class="digits">20.</span> Cosmos (ATOM)
+          </li>
+          <li title="The Open Network (TON)">
+            <span class="digits">21.</span> The Open Network (TON)
+          </li>
+          <li title="UNUS SED LEO (LEO)	">
+            <span class="digits">22.</span> UNUS SED LEO (LEO)
+          </li>
+          <li title="Ethereum Classic (ETC)">
+            <span class="digits">23.</span> Ethereum Classic (ETC)
+          </li>
+          <li title="OKB (OKB)"><span class="digits">24.</span> OKB (OKB)</li>
+          <li title="Matic Network (MATIC)">
+            <span class="digits">25.</span> Matic Network (MATIC)
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 blue">Cryptocurrency Charts</div>
+        <p>Get the latest data and charts to assist your analysis</p>
+        <ul>
+          <li title="Tradingview">
+            <span class="digits">1.</span> Tradingview
+          </li>
+          <li title="Coinmarketcap">
+            <span class="digits">2.</span> Coinmarketcap
+          </li>
+          <li title="Investing.com">
+            <span class="digits">3.</span> Investing.com
+          </li>
+          <li title="Etherscan.io">
+            <span class="digits">4.</span> Etherscan.io
+          </li>
+          <li title="Blockchain"><span class="digits">5.</span> Blockchain</li>
+          <li title="Cryptocompare">
+            <span class="digits">6.</span> Cryptocompare
+          </li>
+          <li title="Ethplorer"><span class="digits">7.</span> Ethplorer</li>
+          <li title="Worldcoinindex">
+            <span class="digits">8.</span> Worldcoinindex
+          </li>
+          <li title="cryptowat.ch">
+            <span class="digits">9.</span> cryptowat.ch
+          </li>
+          <li title="Bitinfocharts">
+            <span class="digits">10.</span> Bitinfocharts
+          </li>
+          <li title="BTC.com"><span class="digits">11.</span> BTC.com</li>
+          <li title="Buybitcoinworldwide">
+            <span class="digits">12.</span> Buybitcoinworldwide
+          </li>
+          <li title="Etherchain"><span class="digits">13.</span> Etherchain</li>
+          <li title="Insight"><span class="digits">14.</span> Insight</li>
+          <li title="Bitcointicker">
+            <span class="digits">15.</span> Bitcointicker
+          </li>
+          <li title="cryptoID"><span class="digits">16.</span> cryptoID</li>
+          <li title="Blockexplorer">
+            <span class="digits">17.</span> Blockexplorer
+          </li>
+          <li title="Bravenewcoin">
+            <span class="digits">18.</span> Bravenewcoin
+          </li>
+          <li title="Tradeblock"><span class="digits">19.</span> Tradeblock</li>
+          <li title="Bitcoinaverage">
+            <span class="digits">20.</span> Bitcoinaverage
+          </li>
+          <li title="Coinmetrics">
+            <span class="digits">21.</span> Coinmetrics
+          </li>
+          <li title="Chainalysis">
+            <span class="digits">22.</span> Chainalysis
+          </li>
+          <li title="BitcoinChain">
+            <span class="digits">23.</span> BitcoinChain
+          </li>
+          <li title="CBIX"><span class="digits">24.</span> CBIX</li>
+          <li title="DAppBoard"><span class="digits">25.</span> DAppBoard</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 green">Bitcoin News Sites</div>
+        <p>
+          Best bitcoin news sites to stay up to date with cryptocurrency
+          developments
+        </p>
+        <ul>
+          <li title="Cointelegraph">
+            <span class="digits">1.</span> Cointelegraph
+          </li>
+          <li title="Coindesk"><span class="digits">2.</span> Coindesk</li>
+          <li title="NewsBitcoin">
+            <span class="digits">3.</span> NewsBitcoin
+          </li>
+          <li title="Bitcoinmagazine">
+            <span class="digits">4.</span> Bitcoinmagazine
+          </li>
+          <li title="CoinCu News">
+            <span class="digits">5.</span> CoinCu News
+          </li>
+          <li title="CryptoLinks News">
+            <span class="digits">6.</span> CryptoLinks News
+          </li>
+          <li title="CoinGape"><span class="digits">7.</span> CoinGape</li>
+          <li title="U.Today"><span class="digits">8.</span> U.Today</li>
+          <li title="CCN"><span class="digits">9.</span> CCN</li>
+          <li title="BeInCrypto"><span class="digits">10.</span> BeInCrypto</li>
+          <li title="The Global Crypto Press">
+            <span class="digits">11.</span> The Global Crypto Press
+          </li>
+          <li title="Crypto Briefing">
+            <span class="digits">12.</span> Crypto Briefing
+          </li>
+          <li title="Ethereumworldnews">
+            <span class="digits">13.</span> Ethereumworldnews
+          </li>
+          <li title="BTC-Echo"><span class="digits">14.</span> BTC-Echo</li>
+          <li title="Crypto Daily">
+            <span class="digits">15.</span> Crypto Daily
+          </li>
+          <li title="Livebitcoinnews">
+            <span class="digits">16.</span> Livebitcoinnews
+          </li>
+          <li title="Brave New Coin">
+            <span class="digits">17.</span> Brave New Coin
+          </li>
+          <li title="Nulltx"><span class="digits">18.</span> Nulltx</li>
+          <li title="Coinspeaker">
+            <span class="digits">19.</span> Coinspeaker
+          </li>
+          <li title="Use The bitcoin">
+            <span class="digits">20.</span> Use The bitcoin
+          </li>
+          <li title="Coinjournal">
+            <span class="digits">21.</span> Coinjournal
+          </li>
+          <li title="CryptoPotato">
+            <span class="digits">22.</span> CryptoPotato
+          </li>
+          <li title="Bitrss"><span class="digits">23.</span> Bitrss</li>
+          <li title="ZyCrypto"><span class="digits">24.</span> ZyCrypto</li>
+          <li title="Bitcoin.pl"><span class="digits">25.</span> Bitcoin.pl</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 red">Cryptocurrency Blogs</div>
+        <p>
+          The latest musings, shuffling’s, and thoughts from cryptocurrency
+          leaders
+        </p>
+        <ul>
+          <li title="Binance Blog">
+            <span class="digits">1.</span> Binance Blog
+          </li>
+          <li title="Coinbase blog">
+            <span class="digits">2.</span> Coinbase blog
+          </li>
+          <li title="Kraken Blog">
+            <span class="digits">3.</span> Kraken Blog
+          </li>
+          <li title="Bitfinex Blog">
+            <span class="digits">4.</span> Bitfinex Blog
+          </li>
+          <li title="Cex Blog"><span class="digits">5.</span> Cex Blog</li>
+          <li title="Gemini Blog">
+            <span class="digits">6.</span> Gemini Blog
+          </li>
+          <li title="Changelly blog">
+            <span class="digits">7.</span> Lisk Wallet
+          </li>
+          <li title="Trezor Blog">
+            <span class="digits">8.</span> Trezor Blog
+          </li>
+          <li title="Ethereum Blog">
+            <span class="digits">9.</span> Ethereum Blog
+          </li>
+          <li title="Paxful Blog">
+            <span class="digits">10.</span> Paxful Blog
+          </li>
+          <li title="BTC Blog"><span class="digits">11.</span> BTC Blog</li>
+          <li title="ShapeShift Blog">
+            <span class="digits">12.</span> ShapeShift Blog
+          </li>
+          <li title="BitPay Blog">
+            <span class="digits">13.</span> BitPay Blog
+          </li>
+          <li title="Zebpay Blog">
+            <span class="digits">14.</span> Zebpay Blog
+          </li>
+          <li title="Cryptomining Blog">
+            <span class="digits">15.</span> Cryptomining Blog
+          </li>
+          <li title="Wirexapp Blog">
+            <span class="digits">16.</span> Wirexapp Blog
+          </li>
+          <li title="Coinjar Blog">
+            <span class="digits">17.</span> Coinjar Blog
+          </li>
+          <li title="Coinatmradar Blog">
+            <span class="digits">18.</span> Coinatmradar Blog
+          </li>
+          <li title="Purse Blog"><span class="digits">19.</span> Purse Blog</li>
+          <li title="Coingate Blog">
+            <span class="digits">20.</span> Coingate Blog
+          </li>
+          <li title="Bitcoincore Blog">
+            <span class="digits">21.</span> Bitcoincore Blog
+          </li>
+          <li title="Coinspectator Blog">
+            <span class="digits">22.</span> Coinspectator Blog
+          </li>
+          <li title="Vaultoro Blog">
+            <span class="digits">23.</span> Vaultoro Blog
+          </li>
+          <li title="Bitedge Blog">
+            <span class="digits">24.</span> Bitedge Blog
+          </li>
+          <li title="UK Bitcoin Blog">
+            <span class="digits">25.</span> UK Bitcoin Blog
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 purple">Bitcoin YouTube</div>
+        <p>
+          Anyone can post but these cryptocurrency channels are worth watching.
+        </p>
+        <ul>
+          <li title="DataDash"><span class="digits">1.</span> DataDash</li>
+          <li title="Altcoin Buzz">
+            <span class="digits">2.</span> Altcoin Buzz
+          </li>
+          <li title="Boxmining"><span class="digits">3.</span> Boxmining</li>
+          <li title="Ivan on Tech">
+            <span class="digits">4.</span> Ivan on Tech
+          </li>
+          <li title="Ameer Rosic">
+            <span class="digits">5.</span> Ameer Rosic
+          </li>
+          <li title="Crypto Investor">
+            <span class="digits">6.</span> Crypto Investor
+          </li>
+          <li title="Crypto Bobby">
+            <span class="digits">7.</span> Crypto Bobby
+          </li>
+          <li title="Crypto Mastery">
+            <span class="digits">8.</span> Crypto Mastery
+          </li>
+          <li title="The Modern Investor">
+            <span class="digits">9.</span> The Modern Investor
+          </li>
+          <li title="Crypto Daily">
+            <span class="digits">10.</span> Crypto Daily
+          </li>
+          <li title="Binance Youtube Channel">
+            <span class="digits">11.</span> Binance Youtube Channel
+          </li>
+          <li title="Ian Balina"><span class="digits">12.</span> Ian Balina</li>
+          <li title="The Crypto Lark">
+            <span class="digits">13.</span> The Crypto Lark
+          </li>
+          <li title="Binance Academy">
+            <span class="digits">14.</span> Binance Academy
+          </li>
+          <li title="Crypto Playhouse">
+            <span class="digits">15.</span> Crypto Playhouse
+          </li>
+          <li title="Cryptobud"><span class="digits">16.</span> Cryptobud</li>
+          <li title="VoskCoin"><span class="digits">17.</span> VoskCoin</li>
+          <li title="The Cryptoverse">
+            <span class="digits">18.</span> The Cryptoverse
+          </li>
+          <li title="Cointelegraph">
+            <span class="digits">19.</span> Cointelegraph
+          </li>
+          <li title="Bits Be Trippin'">
+            <span class="digits">20.</span> Bits Be Trippin'
+          </li>
+          <li title="Crush The Street">
+            <span class="digits">21.</span> Crush The Street
+          </li>
+          <li title="Son of a Tech">
+            <span class="digits">22.</span> Son of a Tech
+          </li>
+          <li title="Crypto Cred">
+            <span class="digits">23.</span> Crypto Cred
+          </li>
+          <li title="Josh Olszewicz">
+            <span class="digits">24.</span> Josh Olszewicz
+          </li>
+          <li title="Coin Crunch">
+            <span class="digits">25.</span> Coin Crunch
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 orange">IOS Crypto Wallet</div>
+        <p>What you need to know about the key wallets on iPhone</p>
+        <ul>
+          <li title="Coinbase IOS Wallet">
+            <span class="digits">1.</span> Coinbase IOS Wallet
+          </li>
+          <li title="Blockchain Wallet: Bitcoin">
+            <span class="digits">2.</span> Blockchain Wallet: Bitcoin...
+          </li>
+          <li title="Luno Bitcoin Wallet">
+            <span class="digits">3.</span> Luno Bitcoin Wallet
+          </li>
+          <li title="WIREX:Bitcoin, Litecoin Wallet">
+            <span class="digits">4.</span> WIREX:Bitcoin, Litecoin...
+          </li>
+          <li title="Bitcoin Wallet By Bitcoin.com">
+            <span class="digits">5.</span> Bitcoin Wallet By...
+          </li>
+          <li title="Dogecoin Wallet by Freewallet">
+            <span class="digits">6.</span> Dogecoin Wallet by...
+          </li>
+          <li title="IndieSquare Wallet">
+            <span class="digits">7.</span> IndieSquare Wallet
+          </li>
+          <li title="Ethereum Wallet by Freewallet">
+            <span class="digits">8.</span> Ethereum Wallet by...
+          </li>
+          <li title="Eidoo Multicurrency Wallet">
+            <span class="digits">9.</span> Eidoo Multicurrency Wallet
+          </li>
+          <li title="Airbitz - Bitcoin Wallet">
+            <span class="digits">10.</span> Airbitz - Bitcoin Wallet
+          </li>
+          <li title="Copay Bitcoin Wallet">
+            <span class="digits">11.</span> Copay Bitcoin Wallet
+          </li>
+          <li title="bitWallet™ — Bitcoin Wallet">
+            <span class="digits">12.</span> bitWallet™ — Bitcoin Wallet
+          </li>
+          <li title="CoinJar Touch - Bitcoin Wallet">
+            <span class="digits">13.</span> CoinJar Touch - Bitcoin...
+          </li>
+          <li title="Bitcoin Wallet by SpectroCoin">
+            <span class="digits">14.</span> Bitcoin Wallet by...
+          </li>
+          <li title="Trust - Ethereum Wallet">
+            <span class="digits">15.</span> Trust - Ethereum Wallet
+          </li>
+          <li title="Lisk Wallet by Freewallet">
+            <span class="digits">16.</span> Lisk Wallet by Freewallet
+          </li>
+          <li title="Monero Wallet by Freewallet">
+            <span class="digits">17.</span> Monero Wallet by...
+          </li>
+          <li title="BRD - bitcoin wallet">
+            <span class="digits">18.</span> BRD - bitcoin wallet
+          </li>
+          <li title="Coin App Wallet">
+            <span class="digits">19.</span> Coin App Wallet
+          </li>
+          <li title="Zebpay Wallet">
+            <span class="digits">20.</span> Zebpay Wallet
+          </li>
+          <li title="Mobi - Global Bitcoin Wallet">
+            <span class="digits">21.</span> Mobi - Global Bitcoin...
+          </li>
+          <li title="NEM Wallet"><span class="digits">22.</span> NEM Wallet</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 gray">Android Wallet App</div>
+        <p>Send, receive, and secure cryptocurrencies all from your Android</p>
+        <ul>
+          <li title="Coinbase Andorid Wallet">
+            <span class="digits">1.</span> Coinbase Andorid Wallet
+          </li>
+          <li title="Blockchain Wallet">
+            <span class="digits">2.</span> Blockchain Wallet
+          </li>
+          <li title="Dogecoin Wallet">
+            <span class="digits">3.</span> Dogecoin Wallet
+          </li>
+          <li title="Luno Bitcoin Wallet">
+            <span class="digits">4.</span> Luno Bitcoin Wallet
+          </li>
+          <li title="Wirex - Bitcoin & Litecoin Wallet">
+            <span class="digits">5.</span> Wirex - Bitcoin & Litecoin...
+          </li>
+          <li title="Bitcoin Wallet">
+            <span class="digits">6.</span> Bitcoin Wallet
+          </li>
+          <li title="Coinspace Coin Wallet">
+            <span class="digits">7.</span> Coinspace Coin Wallet
+          </li>
+          <li title="Mycelium Bitcoin Wallet">
+            <span class="digits">8.</span> Mycelium Bitcoin Wallet
+          </li>
+          <li title="Lykke Wallet">
+            <span class="digits">9.</span> Lykke Wallet
+          </li>
+          <li title="Coinomi Multicurrency Wallet">
+            <span class="digits">10.</span> Coinomi Multicurrency...
+          </li>
+          <li title="CoinPayments Multi Currency Wallet">
+            <span class="digits">11.</span> CoinPayments Multi...
+          </li>
+          <li title="BRD - Bitcoin Wallet">
+            <span class="digits">12.</span> BRD - Bitcoin Wallet...
+          </li>
+          <li title="Bither - Bitcoin Wallet">
+            <span class="digits">13.</span> Bither - Bitcoin Wallet
+          </li>
+          <li title="Bitcoin Wallet by SpectroCoin">
+            <span class="digits">14.</span> Bitcoin Wallet by...
+          </li>
+          <li title="NEM Wallet"><span class="digits">15.</span> NEM Wallet</li>
+          <li title="Zebpay Wallet">
+            <span class="digits">16.</span> Zebpay Wallet
+          </li>
+          <li title="IndieSquare Wallet">
+            <span class="digits">17.</span> IndieSquare Wallet
+          </li>
+          <li title="Dash Wallet">
+            <span class="digits">18.</span> Dash Wallet
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 yellow">Cryptocurrency Exchanges</div>
+        <p>
+          Where to invest, trade, and speculate in the cryptocurrency world!
+        </p>
+        <ul>
+          <li title="Binance"><span class="digits">1.</span> Binance</li>
+          <li title="Coinbase"><span class="digits">2.</span> Coinbase</li>
+          <li title="BitMEX"><span class="digits">3.</span> BitMEX</li>
+          <li title="Huobi Global (Huobi Pro)">
+            <span class="digits">4.</span> Huobi Global (Huobi Pro)
+          </li>
+          <li title="KuCoin"><span class="digits">5.</span> KuCoin</li>
+          <li title="Exmo"><span class="digits">6.</span> Exmo</li>
+          <li title="Bittrex"><span class="digits">7.</span> Bittrex</li>
+          <li title="Poloniex"><span class="digits">8.</span> Poloniex</li>
+          <li title="Bibox"><span class="digits">9.</span> Bibox</li>
+          <li title="Kraken"><span class="digits">10.</span> Kraken</li>
+          <li title="Gate"><span class="digits">11.</span> Gate</li>
+          <li title="Bit-Z"><span class="digits">12.</span> Bit-Z</li>
+          <li title="Okex"><span class="digits">13.</span> Okex</li>
+          <li title="Bitfnex"><span class="digits">14.</span> Bitfnex</li>
+          <li title="Phemex Exchange">
+            <span class="digits">15.</span> Phemex Exchange
+          </li>
+          <li title="Bithoven"><span class="digits">16.</span> Bithoven</li>
+          <li title="Bithumb"><span class="digits">17.</span> Bithumb</li>
+          <li title="HitBTC"><span class="digits">18.</span> HitBTC</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 blue">BTC to USD</div>
+        <p>
+          Delve into decentralized currency from your government issued money
+        </p>
+        <ul>
+          <li title="Coinbase"><span class="digits">1.</span> Coinbase</li>
+          <li title="Binance Jersey">
+            <span class="digits">2.</span> Binance Jersey
+          </li>
+          <li title="Coinmama"><span class="digits">3.</span> Coinmama</li>
+          <li title="bitpanda"><span class="digits">4.</span> bitpanda</li>
+          <li title="BitStamp"><span class="digits">5.</span> BitStamp</li>
+          <li title="Poloniex"><span class="digits">6.</span> Poloniex</li>
+          <li title="Bittrex"><span class="digits">7.</span> Bittrex</li>
+          <li title="Uphold"><span class="digits">8.</span> Uphold</li>
+          <li title="Bitfinex"><span class="digits">9.</span> Bitfinex</li>
+          <li title="Kraken"><span class="digits">10.</span> Kraken</li>
+          <li title="cex.io"><span class="digits">11.</span> cex.io</li>
+          <li title="Paxful"><span class="digits">12.</span> Paxful</li>
+          <li title="Gemini"><span class="digits">13.</span> Gemini</li>
+          <li title="Changelly"><span class="digits">14.</span> Changelly</li>
+          <li title="ShapeShift"><span class="digits">15.</span> ShapeShift</li>
+          <li title="Dether"><span class="digits">16.</span> Dether</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 green">Desktop Wallet</div>
+        <p>Private and public keys on your desktop. We cover the details.</p>
+        <ul>
+          <li title="Trezor Wallet">
+            <span class="digits">1.</span> Trezor Wallet
+          </li>
+          <li title="Ledger Wallet">
+            <span class="digits">2.</span> Ledger Wallet
+          </li>
+          <li title="Exodus Multi Currency Wallet">
+            <span class="digits">3.</span> Exodus Multi Currency...
+          </li>
+          <li title="Stellar Wallets">
+            <span class="digits">4.</span> Stellar Wallets
+          </li>
+          <li title="Electrum Bitcoin Wallet">
+            <span class="digits">5.</span> Electrum Bitcoin Wallet
+          </li>
+          <li title="Dogechain Wallet">
+            <span class="digits">6.</span> Dogechain Wallet
+          </li>
+          <li title="Lisk Wallet">
+            <span class="digits">7.</span> Lisk Wallet
+          </li>
+          <li title="Jaxx Multi Currency Wallet">
+            <span class="digits">8.</span> Jaxx Multi Currency...
+          </li>
+          <li title="Komodo Wallet">
+            <span class="digits">9.</span> Komodo Wallet
+          </li>
+          <li title="Bitcoinarmory Wallet">
+            <span class="digits">10.</span> Bitcoinarmory Wallet
+          </li>
+          <li title="Coin Space Wallet">
+            <span class="digits">11.</span> Coin Space Wallet
+          </li>
+          <li title="Multidoge Wallet">
+            <span class="digits">12.</span> Multidoge Wallet
+          </li>
+          <li title="Parity Wallet">
+            <span class="digits">13.</span> Parity Wallet
+          </li>
+          <li title="Elctroncash Wallet">
+            <span class="digits">14.</span> Elctroncash Wallet
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 red">Altcoin Exchanges</div>
+        <p>
+          Exchanges that delve deeper into facilitating alternative
+          cryptocurrency exchange and trading
+        </p>
+        <ul>
+          <li title="Binance"><span class="digits">1.</span> Binance</li>
+          <li title="Poloniex"><span class="digits">2.</span> Poloniex</li>
+          <li title="KuCoin"><span class="digits">3.</span> KuCoin</li>
+          <li title="BitMEX"><span class="digits">4.</span> BitMEX</li>
+          <li title="Coinbase Pro">
+            <span class="digits">5.</span> Coinbase Pro
+          </li>
+          <li title="Bittrex"><span class="digits">6.</span> Bittrex</li>
+          <li title="Bithoven"><span class="digits">7.</span> Bithoven</li>
+          <li title="Uphold"><span class="digits">8.</span> Uphold</li>
+          <li title="CoinJar Exchange">
+            <span class="digits">9.</span> CoinJar Exchange
+          </li>
+          <li title="HitBTC"><span class="digits">10.</span> HitBTC</li>
+          <li title="Bitfinex"><span class="digits">11.</span> Bitfinex</li>
+          <li title="Bithumb"><span class="digits">12.</span> Bithumb</li>
+          <li title="Gate.io"><span class="digits">13.</span> Gate.io</li>
+          <li title="YObit"><span class="digits">14.</span> YObit</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 purple">Altcoin Wallet</div>
+        <p>Wallets with support for the wide world of cryptocurrencies</p>
+        <ul>
+          <li title="MyEtherWallet">
+            <span class="digits">1.</span> MyEtherWallet
+          </li>
+          <li title="Trezor"><span class="digits">2.</span> Trezor</li>
+          <li title="Trust Wallet">
+            <span class="digits">3.</span> Trust Wallet
+          </li>
+          <li title="Ledger"><span class="digits">4.</span> Ledger</li>
+          <li title="Mycelium"><span class="digits">5.</span> Mycelium</li>
+          <li title="Exodus Multi Currency Wallet">
+            <span class="digits">6.</span> Exodus Multi Currency...
+          </li>
+          <li title="KeepKey"><span class="digits">7.</span> KeepKey</li>
+          <li title="Cryptonator">
+            <span class="digits">8.</span> Cryptonator
+          </li>
+          <li title="Jaxx Multi Currency Wallet">
+            <span class="digits">9.</span> Jaxx Multi Currency...
+          </li>
+          <li title="Coinspot Multi Coin Wallets">
+            <span class="digits">10.</span> Coinspot Multi Coin...
+          </li>
+          <li title="Blockchani Wallet">
+            <span class="digits">11.</span> Blockchani Wallet
+          </li>
+          <li title="Bitgo Wallet">
+            <span class="digits">12.</span> Bitgo Wallet
+          </li>
+          <li title="MyCrypto"><span class="digits">13.</span> MyCrypto</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 orange">Cryptocurrency Gamling</div>
+        <p>
+          From roulette to sports betting, wager your cryptocurrency to win
+          cryptocurrency
+        </p>
+        <ul>
+          <li title="Luckygames.io">
+            <span class="digits">1.</span> Luckygames.io
+          </li>
+          <li title="bitStarz"><span class="digits">2.</span> bitStarz</li>
+          <li title="Nitrogensports">
+            <span class="digits">3.</span> Nitrogensports
+          </li>
+          <li title="Primedice"><span class="digits">4.</span> Primedice</li>
+          <li title="mBit Casino">
+            <span class="digits">5.</span> mBit Casino
+          </li>
+          <li title="bspin"><span class="digits">6.</span> bspin</li>
+          <li title="OneHash"><span class="digits">7.</span> OneHash</li>
+          <li title="Wolf.bet"><span class="digits">8.</span> Wolf.bet</li>
+          <li title="999dice"><span class="digits">9.</span> 999dice</li>
+          <li title="Bitcasino"><span class="digits">10.</span> Bitcasino</li>
+          <li title="BetChain"><span class="digits">11.</span> BetChain</li>
+          <li title="bitplay"><span class="digits">12.</span> bitplay</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 gray">Bitcoin CFD Trading</div>
+        <p>Going long? Going short? There’s a CFD platform for you!</p>
+        <ul>
+          <li title="AvaTrade"><span class="digits">1.</span> AvaTrade</li>
+          <li title="easyMarkets">
+            <span class="digits">2.</span> easyMarkets
+          </li>
+          <li title="Plus500"><span class="digits">3.</span> Plus500</li>
+          <li title="xtb"><span class="digits">4.</span> xtb</li>
+          <li title="Admiral Markets">
+            <span class="digits">5.</span> Admiral Markets
+          </li>
+          <li title="Markets.com">
+            <span class="digits">6.</span> Markets.com
+          </li>
+          <li title="FXopen"><span class="digits">7.</span> FXopen</li>
+          <li title="TRADE.com"><span class="digits">8.</span> TRADE.com</li>
+          <li title="UFX.com"><span class="digits">9.</span> UFX.com</li>
+          <li title="IQ Option"><span class="digits">10.</span> IQ Option</li>
+          <li title="IG"><span class="digits">11.</span> IG</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 yellow">Cryptocurrency Debit Card</div>
+        <p>
+          Bridge the gap between cryptocurrency and everyday life with these
+          cards
+        </p>
+        <ul>
+          <li title="Binance Visa">
+            <span class="digits">1.</span> Binance Visa
+          </li>
+          <li title="Crypto.com Visa">
+            <span class="digits">2.</span> Crypto.com Visa
+          </li>
+          <li title="advcash"><span class="digits">3.</span> advcash</li>
+          <li title="SpectroCoin Prepaid Card">
+            <span class="digits">4.</span> SpectroCoin Prepaid Card
+          </li>
+          <li title="Cryptopay"><span class="digits">5.</span> Cryptopay</li>
+          <li title="Wirex Payment Card">
+            <span class="digits">6.</span> Wirex Payment Card
+          </li>
+          <li title="BitPay Card">
+            <span class="digits">7.</span> BitPay Card
+          </li>
+          <li title="MCO Credit Card">
+            <span class="digits">8.</span> MCO Credit Card
+          </li>
+          <li title="Uquid Prepaid Card">
+            <span class="digits">9.</span> Uquid Prepaid Card
+          </li>
+          <li title="CoinsBank"><span class="digits">10.</span> CoinsBank</li>
+          <li title="Paycent Cards">
+            <span class="digits">11.</span> Paycent Cards
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 blue">Cryptocurrency News</div>
+        <p>
+          The top resources to stay up to date with cryptocurrency developments
+        </p>
+        <ul>
+          <li title="Cointelegraph">
+            <span class="digits">1.</span> Cointelegraph
+          </li>
+          <li title="Coindesk"><span class="digits">2.</span> Coindesk</li>
+          <li title="NewsBitcoin">
+            <span class="digits">3.</span> NewsBitcoin
+          </li>
+          <li title="CCN"><span class="digits">4.</span> CCN</li>
+          <li title="Bitcoinmagazine">
+            <span class="digits">5.</span> Bitcoinmagazine
+          </li>
+          <li title="NewsBTC"><span class="digits">6.</span> NewsBTC</li>
+          <li title="BeInCrypto"><span class="digits">7.</span> BeInCrypto</li>
+          <li title="Bitcoinist"><span class="digits">8.</span> Bitcoinist</li>
+          <li title="The Global Crypto Press">
+            <span class="digits">9.</span> The Global Crypto Press
+          </li>
+          <li title="Crypto Briefing">
+            <span class="digits">10.</span> Crypto Briefing
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 green">Bitcoin Documentary</div>
+        <p>Documentaries delving deep into the new field of cryptocurrencies</p>
+        <ul>
+          <li title="BitcoinFilm.org">
+            <span class="digits">1.</span> BitcoinFilm.org
+          </li>
+          <li title="The Rise And Rise Of Bitcoin">
+            <span class="digits">2.</span> The Rise And Rise Of Bitcoin
+          </li>
+          <li title="I am Satoshi">
+            <span class="digits">3.</span> I am Satoshi
+          </li>
+          <li title="Bitcoins in Argentina">
+            <span class="digits">4.</span> Bitcoins in Argentina
+          </li>
+          <li title="Deep Web The Movie">
+            <span class="digits">5.</span> Deep Web The Movie
+          </li>
+          <li title="Life Inside a Secret Chinese Bitcoin Mine">
+            <span class="digits">6.</span> Life Inside a Secret...
+          </li>
+          <li title="Bitcoin in Uganda - Empowering People">
+            <span class="digits">7.</span> Bitcoin in Uganda...
+          </li>
+          <li title="Bitcoin - Shape the Future">
+            <span class="digits">8.</span> Bitcoin - Shape the Future
+          </li>
+          <li title="The Bitcoin Phenomenon">
+            <span class="digits">9.</span> The Bitcoin Phenomenon
+          </li>
+          <li title="The Bitcoin Gospel">
+            <span class="digits">10.</span> The Bitcoin Gospel
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 red">Cryptocurrency Mining</div>
+        <p>Buy and sell hash power at a rate which suits you</p>
+        <ul>
+          <li title="BitDeer"><span class="digits">1.</span> BitDeer</li>
+          <li title="nicehash"><span class="digits">2.</span> nicehash</li>
+          <li title="ViaBTC"><span class="digits">3.</span> ViaBTC</li>
+          <li title="Bitcoin Pool">
+            <span class="digits">4.</span> Bitcoin Pool
+          </li>
+          <li title="Hashflare"><span class="digits">5.</span> Hashflare</li>
+          <li title="Minergate"><span class="digits">6.</span> Minergate</li>
+          <li title="Genesis Mining">
+            <span class="digits">7.</span> Genesis Mining
+          </li>
+          <li title="hashing24"><span class="digits">8.</span> hashing24</li>
+          <li title="oxbtc"><span class="digits">9.</span> oxbtc</li>
+          <li title="Miningrigrentals">
+            <span class="digits">10.</span> Miningrigrentals
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 purple">Cryptocurrency Price Trackers</div>
+        <p>Always analyze and monitor price with these tasty trackers</p>
+        <ul>
+          <li title="Coinmarketcap">
+            <span class="digits">1.</span> Coinmarketcap
+          </li>
+          <li title="CoinGecko"><span class="digits">2.</span> CoinGecko</li>
+          <li title="Live Coin Watch">
+            <span class="digits">3.</span> Live Coin Watch
+          </li>
+          <li title="CoinCodex"><span class="digits">4.</span> CoinCodex</li>
+          <li title="CryptoView"><span class="digits">5.</span> CryptoView</li>
+          <li title="Coincap"><span class="digits">6.</span> Coincap</li>
+          <li title="Coinbase"><span class="digits">7.</span> Coinbase</li>
+          <li title="Binance"><span class="digits">8.</span> Binance</li>
+          <li title="TradingView">
+            <span class="digits">9.</span> TradingView
+          </li>
+          <li title="CoinStats"><span class="digits">10.</span> CoinStats</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 orange">Reddit Cryptocurrency</div>
+        <p>
+          From Bitcoin to Blockchain, there’s a subreddit for every crypto
+          community
+        </p>
+        <ul>
+          <li><span class="digits">1.</span> r/Bitcoin</li>
+          <li><span class="digits">2.</span> r/CryptoCurrency</li>
+          <li><span class="digits">3.</span> r/CryptoCurrencies</li>
+          <li><span class="digits">4.</span> r/ethereum</li>
+          <li><span class="digits">5.</span> r/btc</li>
+          <li><span class="digits">6.</span> r/Crypto_General</li>
+          <li><span class="digits">7.</span> r/altcoin</li>
+          <li><span class="digits">8.</span> r/litecoin</li>
+          <li><span class="digits">9.</span> r/ethtrader</li>
+          <li><span class="digits">10.</span> r/ico</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 gray">Crypto News Aggregators</div>
+        <p>
+          The top news developments across the cryptocurrency ecosystem in one
+          place
+        </p>
+        <ul>
+          <li title="Cryptopanic">
+            <span class="digits">1.</span> Cryptopanic
+          </li>
+          <li title="Coinlib"><span class="digits">2.</span> Coinlib</li>
+          <li title="Coinspectator">
+            <span class="digits">3.</span> Coinspectator
+          </li>
+          <li title="CryptoControl">
+            <span class="digits">4.</span> CryptoControl
+          </li>
+          <li title="CoinJoy"><span class="digits">5.</span> CoinJoy</li>
+          <li title="Coinlive"><span class="digits">6.</span> Coinlive</li>
+          <li title="CryptoGoat"><span class="digits">7.</span> CryptoGoat</li>
+          <li title="CoinFi"><span class="digits">8.</span> CoinFi</li>
+          <li title="CoinHills"><span class="digits">9.</span> CoinHills</li>
+          <li title="CryptoPanic">
+            <span class="digits">10.</span> CryptoPanic
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 yellow">Advertising Cryptocurrency</div>
+        <p>
+          Whether advertiser or publisher, these are the top crypto advertising
+          networks
+        </p>
+        <ul>
+          <li title="coinpayu"><span class="digits">1.</span> coinpayu</li>
+          <li title="Cointraffic">
+            <span class="digits">2.</span> Cointraffic
+          </li>
+          <li title="A - ADS"><span class="digits">3.</span> A - ADS</li>
+          <li title="Mellow Ads"><span class="digits">4.</span> Mellow Ads</li>
+          <li title="BitMedia"><span class="digits">5.</span> BitMedia</li>
+          <li title="AdBit"><span class="digits">6.</span> AdBit</li>
+          <li title="BitcoinBuzz">
+            <span class="digits">7.</span> BitcoinBuzz
+          </li>
+          <li title="Coinzilla"><span class="digits">8.</span> Coinzilla</li>
+          <li title="Adshares"><span class="digits">9.</span> Adshares</li>
+          <li title="DOT"><span class="digits">10.</span> DOT</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 blue">Crypto Useful Tools</div>
+        <p>
+          Crafty cryptocurrency tools that will give you an edge over
+          competition
+        </p>
+        <ul>
+          <li title="MetaMask"><span class="digits">1.</span> MetaMask</li>
+          <li title="MyEtherWallet">
+            <span class="digits">2.</span> MyEtherWallet
+          </li>
+          <li title="WavesLiteApp">
+            <span class="digits">3.</span> WavesLiteApp
+          </li>
+          <li title="KeepKey Client">
+            <span class="digits">4.</span> KeepKey Client
+          </li>
+          <li title="Cryptocurrency Exchange Rates and Calculator">
+            <span class="digits">5.</span> Cryptocurrency Exchange...
+          </li>
+          <li title="Crypto Price Tracker">
+            <span class="digits">6.</span> Crypto Price Tracker
+          </li>
+          <li title="DigiByte Go Wallet">
+            <span class="digits">7.</span> DigiByte Go Wallet
+          </li>
+          <li title="TradingView">
+            <span class="digits">8.</span> TradingView
+          </li>
+          <li title="Binance"><span class="digits">9.</span> Binance</li>
+          <li title="Coinbase Pro">
+            <span class="digits">10.</span> Coinbase Pro
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 green">Coin Tracking</div>
+        <p>
+          Integrate, input, and analyse holistic holdings by monitoring their
+          movements
+        </p>
+        <ul>
+          <li title="CoinTracking">
+            <span class="digits">1.</span> CoinTracking
+          </li>
+          <li title="CryptoView.com">
+            <span class="digits">2.</span> CryptoView.com
+          </li>
+          <li title="CoinGecko"><span class="digits">3.</span> CoinGecko</li>
+          <li title="Blockfolio"><span class="digits">4.</span> Blockfolio</li>
+          <li title="Delta"><span class="digits">5.</span> Delta</li>
+          <li title="Cryptotrackr">
+            <span class="digits">6.</span> Cryptotrackr
+          </li>
+          <li title="Coinbase"><span class="digits">7.</span> Coinbase</li>
+          <li title="CoinMarketCap">
+            <span class="digits">8.</span> CoinMarketCap
+          </li>
+          <li title="CoinDesk"><span class="digits">9.</span> CoinDesk</li>
+          <li title="Coinbase"><span class="digits">10.</span> Coinbase</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 red">Crypto Exchange Data</div>
+        <p>Delve into exchange data to take trading to the next level</p>
+        <ul>
+          <li title="Coinmarketcap">
+            <span class="digits">1.</span> Coinmarketcap
+          </li>
+          <li title="Crypto View">
+            <span class="digits">2.</span> Crypto View
+          </li>
+          <li title="Cryptowatch">
+            <span class="digits">3.</span> Cryptowatch
+          </li>
+          <li title="bitcoinity.org">
+            <span class="digits">4.</span> bitcoinity.org
+          </li>
+          <li title="Coin360"><span class="digits">5.</span> Coin360</li>
+          <li title="Messari"><span class="digits">6.</span> Messari</li>
+          <li title="Datamish"><span class="digits">7.</span> Datamish</li>
+          <li title="CryptoCompare">
+            <span class="digits">8.</span> CryptoCompare
+          </li>
+          <li title="CoinCheckup">
+            <span class="digits">9.</span> CoinCheckup
+          </li>
+          <li title="Coinlib"><span class="digits">10.</span> Coinlib</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 purple">Play-to-Earn Games</div>
+        <p>Best decentralized blockchain games with NFTs for the gamers</p>
+        <ul>
+          <li title="Decentraland">
+            <span class="digits">1.</span> Decentraland
+          </li>
+          <li title="Axie Infinity">
+            <span class="digits">2.</span> Axie Infinity
+          </li>
+          <li title="Gods Unchained">
+            <span class="digits">3.</span> Gods Unchained
+          </li>
+          <li title="League of Kingdoms">
+            <span class="digits">4.</span> League of Kingdoms
+          </li>
+          <li title="The Sandbox Game">
+            <span class="digits">5.</span> The Sandbox Game
+          </li>
+          <li title="Gala Games"><span class="digits">6.</span> Gala Games</li>
+          <li title="AgeOfGods"><span class="digits">7.</span> AgeOfGods</li>
+          <li title="Planet IX"><span class="digits">8.</span> Planet IX</li>
+          <li title="Sorare"><span class="digits">9.</span> Sorare</li>
+          <li title="Stepn"><span class="digits">10.</span> Stepn</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 orange">Cryptocurrency Statistics</div>
+        <p>We are 95% confident you will find these crypto stats spectacular</p>
+        <ul>
+          <li title="Stats- btc.com">
+            <span class="digits">1.</span> Stats- btc.com
+          </li>
+          <li title="Bitnodes"><span class="digits">2.</span> Bitnodes</li>
+          <li title="TradeBlock"><span class="digits">3.</span> TradeBlock</li>
+          <li title="Coin Dance"><span class="digits">4.</span> Coin Dance</li>
+          <li title="Bitcoin UTXO Stats">
+            <span class="digits">5.</span> Bitcoin UTXO Stats
+          </li>
+          <li title="Bitcoin Reader">
+            <span class="digits">6.</span> Bitcoin Reader
+          </li>
+          <li title="CryptoCompare">
+            <span class="digits">7.</span> CryptoCompare
+          </li>
+          <li title="Messari"><span class="digits">8.</span> Messari</li>
+          <li title="Datamish"><span class="digits">9.</span> Datamish</li>
+          <li title="CoinCheckup">
+            <span class="digits">10.</span> CoinCheckup
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 gray">Cryptocurrency Accounting</div>
+        <p>
+          Tax tools? Crypto accounting category covers the top tax
+          professionals!
+        </p>
+        <ul>
+          <li title="Accointing.com">
+            <span class="digits">1.</span> Accointing.com
+          </li>
+          <li title="TAXbit"><span class="digits">2.</span> TAXbit</li>
+          <li title="ZenLedger"><span class="digits">3.</span> ZenLedger</li>
+          <li title="SoftLedger"><span class="digits">4.</span> SoftLedger</li>
+          <li title="Koinly"><span class="digits">5.</span> Koinly</li>
+          <li title="Cryptoworth">
+            <span class="digits">6.</span> Cryptoworth
+          </li>
+          <li title="Bitwave"><span class="digits">7.</span> Bitwave</li>
+          <li title="Cryptio"><span class="digits">8.</span> Cryptio</li>
+          <li title="Ledgible Tax">
+            <span class="digits">9.</span> Ledgible Tax
+          </li>
+          <li title="NODE40"><span class="digits">10.</span> NODE40</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 yellow">Blockchain Explorers</div>
+        <p>
+          Observe all of the available transactions on top of the public
+          blockchain network
+        </p>
+        <ul>
+          <li title="Etherscan"><span class="digits">1.</span> Etherscan</li>
+          <li title="BlockCypher">
+            <span class="digits">2.</span> BlockCypher
+          </li>
+          <li title="Snowtrace"><span class="digits">3.</span> Snowtrace</li>
+          <li title="GetBlock"><span class="digits">4.</span> GetBlock</li>
+          <li title="Blockchain.com">
+            <span class="digits">5.</span> Blockchain.com
+          </li>
+          <li title="Tokenview"><span class="digits">6.</span> Tokenview</li>
+          <li title="Blockchair"><span class="digits">7.</span> Blockchair</li>
+          <li title="Tradeblock"><span class="digits">8.</span> Tradeblock</li>
+          <li title="CoinMarketCap">
+            <span class="digits">9.</span> CoinMarketCap
+          </li>
+          <li title="Blocktrail"><span class="digits">10.</span> Blocktrail</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 blue">Hardware Wallet</div>
+        <p>
+          Considered the gold standard of security, we the top hardware devices
+        </p>
+        <ul>
+          <li title="Ledger"><span class="digits">1.</span> Ledger</li>
+          <li title="Trezor"><span class="digits">2.</span> Trezor</li>
+          <li title="CoolWallet"><span class="digits">3.</span> CoolWallet</li>
+          <li title="BitLox"><span class="digits">4.</span> BitLox</li>
+          <li title="KeepKey"><span class="digits">5.</span> KeepKey</li>
+          <li title="SafepalS1 "><span class="digits">6.</span> SafepalS1</li>
+          <li title="ELLIPAL Titan">
+            <span class="digits">7.</span> ELLIPAL Titan
+          </li>
+          <li title="Keystone Pro">
+            <span class="digits">8.</span> Keystone Pro
+          </li>
+          <li title="BitBox02"><span class="digits">9.</span> BitBox02</li>
+          <li title="NGRAVE"><span class="digits">10.</span> NGRAVE</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 green">Peer To Peer Cryptocurrency</div>
+        <p>
+          Providing you with the specifics of small-scale exchange operations
+        </p>
+        <ul>
+          <li title="Binance"><span class="digits">1.</span> Binance</li>
+          <li title="Paxful"><span class="digits">2.</span> Paxful</li>
+          <li title="localethereum">
+            <span class="digits">3.</span> localethereum
+          </li>
+          <li title="Bitpanda"><span class="digits">4.</span> Bitpanda</li>
+          <li title="OKX"><span class="digits">5.</span> OKX</li>
+          <li title="Bybit"><span class="digits">6.</span> Bybit</li>
+          <li title="LocalBitcoins">
+            <span class="digits">7.</span> LocalBitcoins
+          </li>
+          <li title="WazirX"><span class="digits">8.</span> WazirX</li>
+          <li title="Huobi"><span class="digits">9.</span> Huobi</li>
+          <li title="Paxful"><span class="digits">10.</span> Paxful</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 red">Mining Pools</div>
+        <p>Pool hash power with the biggest players like Bitmain</p>
+        <ul>
+          <li title="SlushPool"><span class="digits">1.</span> SlushPool</li>
+          <li title="F2Pool"><span class="digits">2.</span> F2Pool</li>
+          <li title="Antpool"><span class="digits">3.</span> Antpool</li>
+          <li title="ViaBTC"><span class="digits">4.</span> ViaBTC</li>
+          <li title="BTC.com"><span class="digits">5.</span> BTC.com</li>
+          <li title="Poolin"><span class="digits">6.</span> Poolin</li>
+          <li title="Genesis Mining">
+            <span class="digits">7.</span> Genesis Mining
+          </li>
+          <li title="Bitfury"><span class="digits">8.</span> Bitfury</li>
+          <li title="Binance Pool">
+            <span class="digits">9.</span> Binance Pool
+          </li>
+          <li title="Kano Pool"><span class="digits">10.</span> Kano Pool</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 purple">Crypto Calendar</div>
+        <p>Calendars covering all the key cryptocurrency and ICO events</p>
+        <ul>
+          <li title="CoinMarketCal">
+            <span class="digits">1.</span> CoinMarketCal
+          </li>
+          <li title="Coindar.org">
+            <span class="digits">2.</span> Coindar.org
+          </li>
+          <li title="CryptoTotem Calendar">
+            <span class="digits">3.</span> CryptoTotem Calendar
+          </li>
+          <li title="Kryptocal"><span class="digits">4.</span> Kryptocal</li>
+          <li title="Coinscalender">
+            <span class="digits">5.</span> Coinscalender
+          </li>
+          <li title="CoinGecko"><span class="digits">6.</span> CoinGecko</li>
+          <li title="ICO Drops"><span class="digits">7.</span> ICO Drops</li>
+          <li title="Cointelligence">
+            <span class="digits">8.</span> Cointelligence
+          </li>
+          <li title="Crypto Dates">
+            <span class="digits">9.</span> Crypto Dates
+          </li>
+          <li title="Cryptocraft">
+            <span class="digits">10.</span> Cryptocraft
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 orange">Coin Payments</div>
+        <p>
+          The businesses that make cryptocurrency payments available to
+          merchants
+        </p>
+        <ul>
+          <li title="Coinbase Commerce">
+            <span class="digits">1.</span> Coinbase Commerce
+          </li>
+          <li title="bitpay"><span class="digits">2.</span> bitpay</li>
+          <li title="Paymium"><span class="digits">3.</span> Paymium</li>
+          <li title="bitonic"><span class="digits">4.</span> bitonic</li>
+          <li title="BitKassa"><span class="digits">5.</span> BitKassa</li>
+          <li title="NOWPayments">
+            <span class="digits">6.</span> NOWPayments
+          </li>
+          <li title="Blockonomics">
+            <span class="digits">7.</span> Blockonomics
+          </li>
+          <li title="Spectrocoin">
+            <span class="digits">8.</span> Spectrocoin
+          </li>
+          <li title="Coingate"><span class="digits">9.</span> Coingate</li>
+          <li title="CoinPayments">
+            <span class="digits">10.</span> CoinPayments
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 gray">Metaverse Sites and Projects</div>
+        <p>
+          What is Metaverse? Digital world that exists alongside our real,
+          outside world
+        </p>
+        <ul>
+          <li title="Decentraland">
+            <span class="digits">1.</span> Decentraland
+          </li>
+          <li title="The Sandbox Game">
+            <span class="digits">2.</span> The Sandbox Game
+          </li>
+          <li title="ApeCoin"><span class="digits">3.</span> ApeCoin</li>
+          <li title="Axie Infinity">
+            <span class="digits">4.</span> Axie Infinity
+          </li>
+          <li title="Bloktopia"><span class="digits">5.</span> Bloktopia</li>
+          <li title="Zepeto"><span class="digits">6.</span> Zepeto</li>
+          <li title="Roblox"><span class="digits">7.</span> Roblox</li>
+          <li title="Nike"><span class="digits">8.</span> Nike</li>
+          <li title="BollyHeroes">
+            <span class="digits">9.</span> BollyHeroes
+          </li>
+          <li title="Space Somnium">
+            <span class="digits">10.</span> Space Somnium
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 yellow">Bitcoin Mining Software</div>
+        <p>
+          Everybody focuses on mining hardware but there is some spectacular
+          software
+        </p>
+        <ul>
+          <li title="BTCMiner"><span class="digits">1.</span> BTCMiner</li>
+          <li title="EasyMiner"><span class="digits">2.</span> EasyMiner</li>
+          <li title="RPCminer"><span class="digits">3.</span> RPCminer</li>
+          <li title="GroupFabric">
+            <span class="digits">4.</span> GroupFabric
+          </li>
+          <li title="BFGMiner"><span class="digits">5.</span> BFGMiner</li>
+          <li title="BeMine"><span class="digits">6.</span> BeMine</li>
+          <li title="MultiMiner"><span class="digits">7.</span> MultiMiner</li>
+          <li title="Kryptex Miner">
+            <span class="digits">8.</span> Kryptex Miner
+          </li>
+          <li title="Cudo Miner"><span class="digits">9.</span> Cudo Miner</li>
+          <li title="Awesome Miner">
+            <span class="digits">10.</span> Awesome Miner
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 blue">Bitcoin Tumbler (Mixer) Sites</div>
+        <p>Make your Cryptocurrency untraceable, blend it, mix it!</p>
+        <ul>
+          <li title="SmartMixer.io">
+            <span class="digits">1.</span> SmartMixer.io
+          </li>
+          <li title="BitMix"><span class="digits">2.</span> BitMix</li>
+          <li title="Bitcoin Mixer">
+            <span class="digits">3.</span> Bitcoin Mixer
+          </li>
+          <li title="YoMix.IO "><span class="digits">4.</span> YoMix.IO</li>
+          <li title="CryptoMixer">
+            <span class="digits">5.</span> CryptoMixer
+          </li>
+          <li title="MixBTC"><span class="digits">6.</span> MixBTC</li>
+          <li title="Coinomize"><span class="digits">7.</span> Coinomize</li>
+          <li title="Sinbad"><span class="digits">8.</span> Sinbad</li>
+          <li title=" UltraMixer"><span class="digits">9.</span> UltraMixer</li>
+          <li title="Mixer.money">
+            <span class="digits">10.</span> Mixer.money
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 green">Cryptocurrency Wallets</div>
+        <p>Everything you need to know about the key web-based wallets</p>
+        <ul>
+          <li title="Metamask"><span class="digits">1.</span> Metamask</li>
+          <li title="Blockchani Wall">
+            <span class="digits">2.</span> Blockchani Wallet
+          </li>
+          <li title="Cryptonator Online Wallet">
+            <span class="digits">3.</span> Cryptonator Online Wallet
+          </li>
+          <li title="Coinbase Wallet">
+            <span class="digits">4.</span> Coinbase Wallet
+          </li>
+          <li title="Btc.com Wallet">
+            <span class="digits">5.</span> Btc.com Wallet
+          </li>
+          <li title="Luno Wallet">
+            <span class="digits">6.</span> Luno Wallet
+          </li>
+          <li title="Bitamp"><span class="digits">7.</span> Bitamp</li>
+          <li title="My Ether Wallet">
+            <span class="digits">8.</span> My Ether Wallet
+          </li>
+          <li title="Trust Wallet">
+            <span class="digits">9.</span> Trust Wallet
+          </li>
+          <li title="Coinspot Multi Coin Wallets">
+            <span class="digits">10.</span> Coinspot Multi Coin Wallets
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 red">Crypto Web Hosting</div>
+        <p>Pay your web hosting or buy a domain with cryptocurrency</p>
+        <ul>
+          <li title="Namecheap"><span class="digits">1.</span> Namecheap</li>
+          <li title="Hostinger"><span class="digits">2.</span> Hostinger</li>
+          <li title="Coin.Host"><span class="digits">3.</span> Coin.Host</li>
+          <li title="Hawk Host"><span class="digits">4.</span> Hawk Host</li>
+          <li title="Hostwinds"><span class="digits">5.</span> Hostwinds</li>
+          <li title="Bitcoin Web Hosting">
+            <span class="digits">6.</span> Bitcoin Web Hosting
+          </li>
+          <li title="Shinjiru"><span class="digits">7.</span> Shinjiru</li>
+          <li title="JAVAPIPE"><span class="digits">8.</span> JAVAPIPE</li>
+          <li title="Glowhost"><span class="digits">9.</span> Glowhost</li>
+          <li title="Hosterbox"><span class="digits">10.</span> Hosterbox</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 purple">Crypto Magazines</div>
+        <p>Magazines with the right mix of cryptocurrency fun and education</p>
+        <ul>
+          <li title="Bitcoin Magazine">
+            <span class="digits">1.</span> Bitcoin Magazine
+          </li>
+          <li title="21Crypto"><span class="digits">2.</span> 21Crypto</li>
+          <li title="The Cryptocurrency Magazine">
+            <span class="digits">3.</span> The Cryptocurrency...
+          </li>
+          <li title="Blockchain Magazine">
+            <span class="digits">4.</span> Blockchain Magazine
+          </li>
+          <li title="Cointelegraph Magazine">
+            <span class="digits">5.</span> Cointelegraph Magazine
+          </li>
+          <li title="CryptoBriefing">
+            <span class="digits">6.</span> CryptoBriefing
+          </li>
+          <li title="Bitcoin.com News">
+            <span class="digits">7.</span> Bitcoin.com News
+          </li>
+          <li title="Cryptonews"><span class="digits">8.</span> Cryptonews</li>
+          <li title="Coin Desk"><span class="digits">9.</span> Coin Desk</li>
+          <li title="Crypto Reporter">
+            <span class="digits">10.</span> Crypto Reporter
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 orange">Cryptocurrency Exchange Fees</div>
+        <p>Easily discern and see developments in different blockchain fees</p>
+        <ul>
+          <li title="Bitcoin Fees">
+            <span class="digits">1.</span> Bitcoin Fees
+          </li>
+          <li title="ETH Gas Station">
+            <span class="digits">2.</span> ETH Gas Station
+          </li>
+          <li title="Transaction Fee Info">
+            <span class="digits">3.</span> Transaction Fee Info
+          </li>
+          <li title="WhatTheFee.io">
+            <span class="digits">4.</span> WhatTheFee.io
+          </li>
+          <li title="BTCFees"><span class="digits">5.</span> BTCFees</li>
+          <li title="Kraken Pro"><span class="digits">6.</span> Kraken Pro</li>
+          <li title="Coinbase"><span class="digits">7.</span> Coinbase</li>
+          <li title="Binance"><span class="digits">8.</span> Binance</li>
+          <li title="PrimeXBT"><span class="digits">9.</span> PrimeXBT</li>
+          <li title="Uphold"><span class="digits">10.</span> Uphold</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 gray">Airdrops</div>
+        <p>Capitalise on crypto airdrops by getting tokens pre-ICO</p>
+        <ul>
+          <li title="ICO Drops"><span class="digits">1.</span> ICO Drops</li>
+          <li title="Airdrops.io">
+            <span class="digits">2.</span> Airdrops.io
+          </li>
+          <li title="AirdropBob"><span class="digits">3.</span> AirdropBob</li>
+          <li title="Airdrop Alert">
+            <span class="digits">4.</span> Airdrop Alert
+          </li>
+          <li title="Coin Airdrops">
+            <span class="digits">5.</span> Coin Airdrops
+          </li>
+          <li title="airdrops.live">
+            <span class="digits">6.</span> airdrops.live
+          </li>
+          <li title="Airdrops - Free Crypto Tokens">
+            <span class="digits">7.</span> Airdrops - Free Crypto...
+          </li>
+          <li title="r/CryptoAirdrop">
+            <span class="digits">8.</span> r/CryptoAirdrop
+          </li>
+          <li title="CoinMarketCap">
+            <span class="digits">9.</span> CoinMarketCap
+          </li>
+          <li title="Airdrop Land">
+            <span class="digits">10.</span> Airdrop Land
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 yellow">Crypto Trading Bot</div>
+        <p>
+          Automating the cryptocurrency trading process with these bot tools and
+          services
+        </p>
+        <ul>
+          <li title="Cryptotrader Bot">
+            <span class="digits">1.</span> Cryptotrader Bot
+          </li>
+          <li title="HAASonline"><span class="digits">2.</span> HAASonline</li>
+          <li title="BTC Robot"><span class="digits">3.</span> BTC Robot</li>
+          <li title="NAGA"><span class="digits">4.</span> NAGA</li>
+          <li title="CryptoHopper">
+            <span class="digits">5.</span> CryptoHopper
+          </li>
+          <li title="eToro"><span class="digits">6.</span> eToro</li>
+          <li title="Pionex"><span class="digits">7.</span> Pionex</li>
+          <li title="Trality"><span class="digits">8.</span> Trality</li>
+          <li title="Coinrule"><span class="digits">9.</span> Coinrule</li>
+          <li title="Botsfolio"><span class="digits">10.</span> Botsfolio</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 blue">Non-Fungible Tokens (NFTs)</div>
+        <p>
+          Non-fungible tokens (NFTs) are tokens that store unique data on the
+          blockchain
+        </p>
+        <ul>
+          <li title="OpenSea"><span class="digits">1.</span> OpenSea</li>
+          <li title="Rarible"><span class="digits">2.</span> Rarible</li>
+          <li title="Binance NFT">
+            <span class="digits">3.</span> Binance NFT
+          </li>
+          <li title="SuperRare"><span class="digits">4.</span> SuperRare</li>
+          <li title="Biswap NFT"><span class="digits">5.</span> Biswap NFT</li>
+          <li title="Foundation"><span class="digits">6.</span> Foundation</li>
+          <li title="Nifty Gateway">
+            <span class="digits">7.</span> Nifty Gateway
+          </li>
+          <li title="Mintable"><span class="digits">8.</span> Mintable</li>
+          <li title="Solanart"><span class="digits">9.</span> Solanart</li>
+          <li title="KnownOrigin">
+            <span class="digits">10.</span> KnownOrigin
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 green">Cryptocurrency Lending</div>
+        <p>
+          Passive income by putting your cryptocurrencies to work earning
+          interest
+        </p>
+        <ul>
+          <li title="Aave"><span class="digits">1.</span> Aave</li>
+          <li title="Oasis.app"><span class="digits">2.</span> Oasis.app</li>
+          <li title="Compound"><span class="digits">3.</span> Compound</li>
+          <li title="Poloniex Lending">
+            <span class="digits">4.</span> Poloniex Lending
+          </li>
+          <li title="Coincheck"><span class="digits">5.</span> Coincheck</li>
+          <li title="Bitbond"><span class="digits">6.</span> Bitbond</li>
+          <li title="BlockFi"><span class="digits">7.</span> BlockFi</li>
+          <li title="Celsius"><span class="digits">8.</span> Celsius</li>
+          <li title="CoinRabbit"><span class="digits">9.</span> CoinRabbit</li>
+          <li title="SpectroCoin">
+            <span class="digits">10.</span> SpectroCoin
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 red">Crypto Margin Trading</div>
+        <p>Trade in Bitcoin/Crypto on up to 100x Leverage!</p>
+        <ul>
+          <li title="BitMEX"><span class="digits">1.</span> BitMEX</li>
+          <li title="Huobi Global">
+            <span class="digits">2.</span> Huobi Global
+          </li>
+          <li title="Binance"><span class="digits">3.</span> Binance</li>
+          <li title="Kraken"><span class="digits">4.</span> Kraken</li>
+          <li title="Phemex"><span class="digits">5.</span> Phemex</li>
+          <li title="Bithoven"><span class="digits">6.</span> Bithoven</li>
+          <li title="KuCoin"><span class="digits">7.</span> KuCoin</li>
+          <li title="Capital.com">
+            <span class="digits">8.</span> Capital.com
+          </li>
+          <li title="Bybit"><span class="digits">9.</span> Bybit</li>
+          <li title="CEX.io."><span class="digits">10.</span> CEX.io.</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 purple">Bitcoin Forums</div>
+        <p>
+          Have your voice heard and contribute to these key cryptocurrency
+          forums
+        </p>
+        <ul>
+          <li title="Bitcointalk">
+            <span class="digits">1.</span> Bitcointalk
+          </li>
+          <li title="Bitcoin.com">
+            <span class="digits">2.</span> Bitcoin.com
+          </li>
+          <li title="Beermoneyforum">
+            <span class="digits">3.</span> Beermoneyforum
+          </li>
+          <li title="Cryptocurrencytalk">
+            <span class="digits">4.</span> Cryptocurrencytalk
+          </li>
+          <li title="Mastersofcrypto">
+            <span class="digits">5.</span> Mastersofcrypto
+          </li>
+          <li title="Bitcoingarden">
+            <span class="digits">6.</span> Bitcoingarden
+          </li>
+          <li title="Bitcoinforum">
+            <span class="digits">7.</span> Bitcoinforum
+          </li>
+          <li title="Bitalk"><span class="digits">8.</span> Bitalk</li>
+          <li title="Overclockers">
+            <span class="digits">9.</span> Overclockers
+          </li>
+          <li title=" Altcoinstalks">
+            <span class="digits">10.</span> Altcoinstalks
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 orange">Crypto Portfolio Tracker</div>
+        <p>
+          Integrate, input, and analyse holistic holdings by monitoring their
+          movements
+        </p>
+        <ul>
+          <li title="CoinTracking">
+            <span class="digits">1.</span> CoinTracking
+          </li>
+          <li title="CryptoView.com">
+            <span class="digits">2.</span> CryptoView.com
+          </li>
+          <li title="coin.fyi"><span class="digits">3.</span> coin.fyi</li>
+          <li title="Blockfolio"><span class="digits">4.</span> Blockfolio</li>
+          <li title="Delta"><span class="digits">5.</span> Delta</li>
+          <li title="Cryptotrackr">
+            <span class="digits">6.</span> Cryptotrackr
+          </li>
+          <li title="ACrypto"><span class="digits">7.</span> ACrypto</li>
+          <li title="CoinStats"><span class="digits">8.</span> CoinStats</li>
+          <li title="Bitstamp"><span class="digits">9.</span> Bitstamp</li>
+          <li title="CoinSmart"><span class="digits">10.</span> CoinSmart</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 gray">Web 3.0 Projects and Sites</div>
+        <p>
+          Web 3.0: where the content is user-owned in the form of a non-fungible
+          token (NFT)
+        </p>
+        <ul>
+          <li title="Polkadot"><span class="digits">1.</span> Polkadot</li>
+          <li title="Filecoin"><span class="digits">2.</span> Filecoin</li>
+          <li title="Chainlink"><span class="digits">3.</span> Chainlink</li>
+          <li title="Helium"><span class="digits">4.</span> Helium</li>
+          <li title="Theta Token">
+            <span class="digits">5.</span> Theta Token
+          </li>
+          <li title="The Graph"><span class="digits">6.</span> The Graph</li>
+          <li title="Internet Computer (ICP)">
+            <span class="digits">7.</span> Internet Computer (ICP)
+          </li>
+          <li title="BitTorrent Chain">
+            <span class="digits">8.</span> BitTorrent Chain
+          </li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 yellow">DEX and Token Swap</div>
+        <p>
+          Decentralized Finance, Decentralized Exchanges, Token Swap exchanges
+        </p>
+        <ul>
+          <li title="Biswap"><span class="digits">1.</span> Biswap</li>
+          <li title="Uniswap"><span class="digits">2.</span> Uniswap</li>
+          <li title="PancakeSwap Exchange">
+            <span class="digits">3.</span> PancakeSwap Exchange
+          </li>
+          <li title="1inch"><span class="digits">4.</span> 1inch</li>
+          <li title="Matcha"><span class="digits">5.</span> Matcha</li>
+          <li title="PolkaBridge">
+            <span class="digits">6.</span> PolkaBridge
+          </li>
+          <li title="Aave"><span class="digits">7.</span> Aave</li>
+          <li title="Covo"><span class="digits">8.</span> Covo</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper">
+        <div class="btn2 blue">Crypto Calculators</div>
+        <p>
+          Quick number crunching for the essential mining and trading fees
+          figures
+        </p>
+        <ul>
+          <li title="WhatToMine Calculator">
+            <span class="digits">1.</span> WhatToMine Calculator
+          </li>
+          <li title="99bitcoins - Bitcoin Mining Calculator">
+            <span class="digits">2.</span> 99bitcoins - Bitcoin...
+          </li>
+          <li title="Coinwarz"><span class="digits">3.</span> Coinwarz</li>
+          <li title="Cryptoground">
+            <span class="digits">4.</span> Cryptoground
+          </li>
+          <li title="MyCryptoBuddy">
+            <span class="digits">5.</span> MyCryptoBuddy
+          </li>
+          <li title="monero.how"><span class="digits">6.</span> monero.how</li>
+          <li title="Bitkoin"><span class="digits">7.</span> Bitkoin</li>
+          <li title="IfinDoo"><span class="digits">8.</span> IfinDoo</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper overflow">
+        <div class="btn2 green">Cryptocurrency API</div>
+        <p>Data digging and bot building with the top API integrations</p>
+        <ul>
+          <li title="Binance Api">
+            <span class="digits">1.</span> Binance Api
+          </li>
+          <li title="Coinmarketcap API">
+            <span class="digits">2.</span> Coinmarketcap API
+          </li>
+          <li title="CEX.IO API"><span class="digits">3.</span> CEX.IO API</li>
+          <li title="KuCoin API"><span class="digits">4.</span> KuCoin API</li>
+          <li title="Bitstamp API">
+            <span class="digits">5.</span> Bitstamp API
+          </li>
+          <li title="coinAPI"><span class="digits">6.</span> coinAPI</li>
+          <li title="CoinCap.io"><span class="digits">7.</span> CoinCap.io</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper overflow">
+        <div class="btn2 red">Tradingview Bitcoin</div>
+        <p>Bounce ideas around with fellow cryptocurrency traders</p>
+        <ul>
+          <li title="Hashtag Investing">
+            <span class="digits">1.</span> Hashtag Investing
+          </li>
+          <li title="Tradingview Chats">
+            <span class="digits">2.</span> Tradingview Chats
+          </li>
+          <li title="CoinFund"><span class="digits">3.</span> CoinFund</li>
+        </ul>
+      </div>
+      <div class="cryptoWrapper overflow">
+        <div class="btn2 purple">Paper Wallet</div>
+        <p>Leading products that put your public and private key on paper.</p>
+        <ul>
+          <li title="bitaddress.org">
+            <span class="digits">1.</span> bitaddress.org
+          </li>
+          <li title="bitcoinpaperwallet">
+            <span class="digits">2.</span> bitcoinpaperwallet
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Share API -->
+    <div id="api">
+      <span id="api-value"
+        ><iconify-icon
+          icon="bx:share"
+          rotate="180deg"
+          flip="vertical"
+        ></iconify-icon
+      ></span>
+    </div>
+    <script>
+      const api = document.getElementById("api");
+      // function for web share api
+      function webShareAPI(header, description, link) {
+        navigator
+          .share({
+            title: header,
+            text: description,
+            url: link,
+          })
+          .then(() => console.log("Successful share"))
+          .catch((error) => console.log("Error sharing", error));
+      }
+      if (navigator.share) {
+        // Show button if it supports webShareAPI
+        api.style.display = "block";
+        api.addEventListener("click", () =>
+          webShareAPI(
+            "Share this page to your friends",
+            "description",
+            "www.ifindoo.com"
+          )
+        );
+      } else {
+        // Hide button if it supports webShareAPI
+        api.style.display = "none";
+        console.error("Your Browser doesn't support Web Share API");
+        document.write("Your Browser doesn't support Web Share API");
+      }
+    </script>
+
+    <!-- Scroll To Top -->
+    <div id="progress">
+      <span id="progress-value">&#8682;</span>
+    </div>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+      <div class="footer-newsletter">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-12 text-center">
+              <h2>Our Newsletter</h2>
+              <p>Subscribe us to get the latest news on up to date</p>
+            </div>
+            <div class="col-lg-6">
+              <form action="" method="post">
+                <input class="inputLoan" type="email" name="email" /><input
+                  class="inputLoan"
+                  type="submit"
+                  value="Subscribe"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-12 footer-info">
+              <a href="#" class="footerLogo d-flex align-items-center">
+                <span>IFinDoo</span>
+              </a>
+              <p>
+                Ifindoo means Knot, Ifindoo or ifindo is an Zulu language Word
+                which is the originated from South Africa, Ifindoo is a Financial
+                Website, Where users are going to get every news related to
+                cryptocurrency, stockmarket, exchanges, scams we also covers the
+                hot topics and trends of Digital World, Join Us for the Best
+                Experience , Soon Launching Crypto Wallet, Coin And NFT Marketing
+                Place!!
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              </div>
+            </div>
+  
+            <div class="col-lg-2 col-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li>
+                  <i class="bi bi-chevron-right"></i> <a href="index.html">Home</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Crypto Shorts.html">Crypto Shorts</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Blue Chips.html">Blue Chips</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Countries.html">Countries</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="World Economy.html">World Economy</a>
+                </li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-2 col-6 footer-links">
+              <h4>Assets</h4>
+              <ul>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Crypto.html">Crypto</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Metaverse.html">Metaverse</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i> <a href="NFT.html">NFTs</a>
+                </li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-2 col-6 footer-links">
+              <h4>Community</h4>
+              <ul>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Hot Topics.html">Hot Topics</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Blogs.html">Blogs</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Scams.html">Scams</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Quotes.html">Quotes</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Tweets.html">Tweets</a>
+                </li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-2 col-6 footer-links">
+              <h4>Our Tools</h4>
+              <ul>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Crypto Calculator.html">Crypto Calculator</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Budget Calculate.html">Budget Calculator</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Currency Converter.html">Currency Converter</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="Loan Calculator.html">Loan Calculator</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="containerr">
+        <div class="copyright">
+          Copyright
+          <strong><span id="currentYear">2020</span> <span>IFinDoo</span></strong
+          >. All Rights Reserved
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="js/Home.js"></script>
+
+    <!-- MainJS-->
+    <script src="js/app.js"></script>
+    <script src="js/modernizr.custom.86080.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
+      integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+      data-cf-beacon='{"rayId":"787acec57e74d1d0","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.11.3","si":100}'
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.1.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+  </body>
+</html>
